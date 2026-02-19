@@ -8,11 +8,11 @@
   }
 
   .container {
-    @apply max-w-6xl mx-auto px-4 py-10;
+    @apply relative z-10 max-w-6xl mx-auto px-4 py-10;
   }
 
   .bg-blur {
-    @apply absolute w-[420px] h-[420px] rounded-full blur-3xl opacity-30;;
+    @apply absolute w-[420px] h-[420px] rounded-full blur-3xl opacity-30;
   }
   .bg-blur.a {
     @apply -top-20 -left-20 bg-indigo-300;
@@ -140,13 +140,20 @@
   }
 
   /* close button fixed */
-  .clear-btn {
+.clear-btn {
   @apply absolute right-3 inset-y-0 my-auto
-  w-9 h-9 rounded-full
-  bg-slate-100 border border-slate-200
-  text-slate-600 hover:bg-slate-200
-  flex items-center justify-center text-xl leading-none;  
-  }
+         w-8 h-8 rounded-full
+         flex items-center justify-center
+         bg-slate-100
+         text-slate-500
+         hover:bg-slate-200
+         hover:text-slate-700
+         transition-all duration-150 ease-in-out
+         cursor-pointer;
+}
+
+
+
 
 
   .btn {
@@ -213,7 +220,7 @@
     @apply absolute inset-0 flex flex-col items-center justify-center text-center;
   }
   .ring-percent {
-    @apply text-lg font-bold;
+  @apply text-xl md:text-2xl lg:text-2xl font-bold;
   }
   .ring-value {
     @apply text-xs text-slate-600 mt-1;
@@ -257,6 +264,12 @@
     @apply text-lg font-semibold mt-1;
   }
 
+  .mini-subtext {
+  @apply text-xs text-gray-500 mt-1;
+}
+
+
+  
   /* NOTE + CHECKLIST */
   .note {
     @apply mt-5 rounded-2xl border px-4 py-4;

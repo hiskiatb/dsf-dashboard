@@ -102,35 +102,43 @@ export function clamp(n, min = 0, max = 1) {
 
 export function mapRowToDSF(row) {
   const brand = row.BRAND || "-";
-
   const idDsf = row.ID_DSF || "";
-
   const namaDsf = row.NAMA_DSF || "-";
-
   const mc = row.MC || "-";
-
+  const branch = row.BRANCH || "-";
   const region = row.REGION || "-";
-
   const idTl = row.ID_TL || "";
-
-  // WAJIB pakai bracket karena ada spasi
   const namaTl = row.NAMA_TL || "-";
-
   const fwaUnits = toNumberSafe(row.TOTAL_FWA || 0);
-
   const rebuyRevenue = toNumberSafe(row.REV_REBUY || 0);
+  const dataFwaIM3 = row.DATA_FWA_IM3 || "";
+const dataFwa3ID = row.DATA_FWA_3ID || "";
+const dataRebuyIM3 = row.DATA_REBUY_IM3 || "";
+const dataRebuy3ID = row.DATA_REBUY_3ID || "";
+
 
   return {
     brand,
     idDsf: String(idDsf).trim(),
     namaDsf,
     mc,
+    branch,
     region,
     idTl: String(idTl).trim(),
     namaTl,
     fwaUnits,
     rebuyRevenue,
+     dataFwaIM3,
+  dataFwa3ID,
+  dataRebuyIM3,
+  dataRebuy3ID,
   };
+}
+
+export function extractDataBasedOn(text) {
+  const firstLine = text.split("\n")[0] || "";
+  const parts = firstLine.split(";");
+  return parts[1]?.trim() || "";
 }
 
 
@@ -241,31 +249,47 @@ export function buildTips(dsf) {
     }
   }
 
-  // ==========================================
-  // TARGET 200K (>=15 FWA + total revenue >= 7.5jt)
-  // ==========================================
-  const needFwa15 = Math.max(0, 15 - fwaNow);
+// ==========================================
+// TARGET 200K (>=15 FWA + total revenue >= 7.5jt)
+// ==========================================
+const needFwa15 = Math.max(0, 15 - fwaNow);
 
-  if (needFwa15 > 0) {
+// Simulasi total revenue kalau dia mencapai 15 FWA (rebuy tetap dihitung dari yang sekarang)
+const totalRevenueIf15 = Math.max(totalRevenueNow, 15 * FWA_UNIT_VALUE + rebuyNow);
+const remainingIf15 = Math.max(0, REVENUE_TARGET - totalRevenueIf15);
+
+if (needFwa15 > 0) {
+  if (remainingIf15 <= 0) {
+    // Rebuy existing sudah cukup, cuma perlu FWA
     tips.push({
       done: false,
-      text: `Untuk dapat insentif 200 ribu, tambah ${needFwa15} FWA lagi agar mencapai minimal 15 FWA.`,
+      text: `Untuk dapat insentif 200 ribu, cukup tambah ${needFwa15} FWA lagi sampai 15 FWA. Rebuy kamu saat ini sudah cukup, jadi fokus kejar FWA dulu ya.`,
     });
   } else {
-    if (totalRevenueNow >= REVENUE_TARGET) {
-      tips.push({
-        done: true,
-        text: "Target insentif 200 ribu sudah tercapai (15+ FWA & revenue ≥ 7,5 juta).",
-      });
-    } else {
-      tips.push({
-        done: false,
-        text: `Untuk dapat insentif 200 ribu, kejar rebuy sekitar ${formatIDR(
-          c.remainingRevenue
-        )} lagi agar total revenue mencapai 7,5 juta.`,
-      });
-    }
+    // Masih butuh tambahan revenue dari rebuy
+    tips.push({
+      done: false,
+      text: `Untuk dapat insentif 200 ribu, tambah ${needFwa15} FWA lagi sampai 15 FWA. Setelah itu kamu masih perlu tambahan rebuy sekitar ${formatIDR(
+        remainingIf15
+      )} agar total revenue mencapai 7,5 juta.`,
+    });
   }
+} else {
+  if (totalRevenueNow >= REVENUE_TARGET) {
+    tips.push({
+      done: true,
+      text: "Target insentif 200 ribu sudah tercapai (15+ FWA & revenue ≥ 7,5 juta).",
+    });
+  } else {
+    tips.push({
+      done: false,
+      text: `Untuk dapat insentif 200 ribu, kejar rebuy sekitar ${formatIDR(
+        REVENUE_TARGET - rebuyNow
+      )} lagi agar total revenue mencapai 7,5 juta. Rebuy saat ini: ${formatIDR(rebuyNow)}`,
+    });
+  }
+}
+
 
   return tips;
 }

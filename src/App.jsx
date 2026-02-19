@@ -4,6 +4,7 @@ import DSFCard from "./components/DSFCard";
 import TLDashboard from "./components/TLDashboard";
 import Pill from "./components/Pill";
 import { CSV_PATH, mapRowToDSF, parseCSV } from "./utils";
+import { X } from "lucide-react";
 
 export default function App() {
   const [dsfData, setDsfData] = useState([]);
@@ -14,6 +15,16 @@ export default function App() {
   const [selectedDSF, setSelectedDSF] = useState(null);
   const [selectedTL, setSelectedTL] = useState(null);
   const [error, setError] = useState("");
+
+  // ================================
+  // DATA BASED ON PER TYPE
+  // ================================
+  const [dataDates, setDataDates] = useState({
+    DATA_FWA_IM3: "",
+    DATA_FWA_3ID: "",
+    DATA_REBUY_IM3: "",
+    DATA_REBUY_3ID: "",
+  });
 
   useEffect(() => {
     let alive = true;
@@ -27,6 +38,47 @@ export default function App() {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
         const text = await res.text();
+
+        // ================================
+        // ✅ Ambil header (baris pertama)
+        // ================================
+// ================================
+// ✅ Ambil baris data pertama (bukan header)
+// ================================
+const lines = text.split("\n").filter((l) => l.trim() !== "");
+
+// Baris ke-0 = header
+// Baris ke-1 = data pertama
+const firstDataLine = lines[1] || "";
+const parts = firstDataLine.split(";");
+
+// Ambil 4 kolom terakhir
+const lastFour = parts.slice(-4).map((v) => v.trim());
+
+function formatDate(raw) {
+  if (!raw) return "";
+  if (/^\d{8}$/.test(raw)) {
+    return `${raw.slice(0, 4)}-${raw.slice(
+      4,
+      6
+    )}-${raw.slice(6, 8)}`;
+  }
+  return raw;
+}
+
+const formattedDates = {
+  DATA_FWA_IM3: formatDate(lastFour[0]),
+  DATA_FWA_3ID: formatDate(lastFour[1]),
+  DATA_REBUY_IM3: formatDate(lastFour[2]),
+  DATA_REBUY_3ID: formatDate(lastFour[3]),
+};
+
+setDataDates(formattedDates);
+
+
+        // ================================
+        // ✅ Parse data normal
+        // ================================
         const rows = parseCSV(text);
         const mapped = rows.map(mapRowToDSF).filter((x) => x.idDsf);
 
@@ -35,7 +87,7 @@ export default function App() {
       } catch (e) {
         if (!alive) return;
         setLoadError(
-          `Failed to load CSV: ${CSV_PATH}. Make sure the file exists in /public. (${e?.message || "error"})`
+          `Failed to load CSV: ${CSV_PATH}. (${e?.message || "error"})`
         );
       } finally {
         if (!alive) return;
@@ -142,10 +194,7 @@ export default function App() {
           transition={{ duration: 0.25 }}
         >
           <div className="search-top">
-            <div>
-              <div className="search-title">Search</div>
-
-            </div>
+            <div className="search-title">Search</div>
           </div>
 
           <div className="search-row">
@@ -161,7 +210,7 @@ export default function App() {
               />
 
               <AnimatePresence>
-                {query.length > 0 ? (
+                {query.length > 0 && (
                   <motion.button
                     type="button"
                     className="clear-btn"
@@ -178,9 +227,9 @@ export default function App() {
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.15 }}
                   >
-                    ×
+                    <X size={16} strokeWidth={2} />
                   </motion.button>
-                ) : null}
+                )}
               </AnimatePresence>
             </div>
 
@@ -190,7 +239,7 @@ export default function App() {
           </div>
 
           <AnimatePresence>
-            {suggestions.length > 0 ? (
+            {suggestions.length > 0 && (
               <motion.div
                 className="suggestions"
                 initial={{ opacity: 0, y: 8 }}
@@ -206,20 +255,25 @@ export default function App() {
                     onClick={() => onPick(s)}
                   >
                     <div className="suggestion-top">
-                      <div className="suggestion-name">{s.namaDsf}</div>
-                      <Pill>{s.idDsf}</Pill>
+                      <span className="suggestion-name">
+                        {s.namaDsf}
+                      </span>
+                      <Pill className="suggestion-pill">
+                        {s.idDsf}
+                      </Pill>
                     </div>
+
                     <div className="suggestion-sub">
-                      TL: {s.idTl || "-"} • {s.region} • {s.brand}
+                      {s.branch || "-"} • {s.region} • {s.brand}
                     </div>
                   </button>
                 ))}
               </motion.div>
-            ) : null}
+            )}
           </AnimatePresence>
 
           <AnimatePresence>
-            {error ? (
+            {error && (
               <motion.div
                 className="error"
                 initial={{ opacity: 0, y: 6 }}
@@ -229,7 +283,7 @@ export default function App() {
               >
                 {error}
               </motion.div>
-            ) : null}
+            )}
           </AnimatePresence>
         </motion.div>
 
@@ -240,9 +294,14 @@ export default function App() {
               tlId={selectedTL.tlId}
               tlName={selectedTL.tlName}
               dsfs={selectedTL.dsfs}
+              dataDates={dataDates}
             />
           ) : selectedDSF ? (
-            <DSFCard key={selectedDSF.idDsf} dsf={selectedDSF} />
+            <DSFCard
+              key={selectedDSF.idDsf}
+              dsf={selectedDSF}
+              dataDates={dataDates}
+            />
           ) : (
             <motion.div
               key="empty"
@@ -261,7 +320,9 @@ export default function App() {
         </AnimatePresence>
 
         <div className="footer">
-          <div className="footer-line">-</div>
+          <div className="footer-line">
+            FWA IM3: {dataDates.DATA_FWA_IM3 || "-"} | FWA 3ID: {dataDates.DATA_FWA_3ID || "-"} | REBUY IM3: {dataDates.DATA_REBUY_IM3 || "-"} | REBUY 3ID: {dataDates.DATA_REBUY_3ID || "-"}
+          </div>
         </div>
       </div>
     </div>

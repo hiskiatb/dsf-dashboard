@@ -3,13 +3,15 @@ import Pill from "./Pill";
 import Ring from "./Ring";
 import { formatIDR, hitungInsentif, REVENUE_TARGET } from "../utils";
 
-export default function TLDashboard({ tlId, tlName, dsfs }) {
+export default function TLDashboard({ tlId, tlName, dsfs, dataBasedOn }) {
   const totalFwa = dsfs.reduce((a, b) => a + (b.fwaUnits || 0), 0);
   const totalRebuy = dsfs.reduce((a, b) => a + (b.rebuyRevenue || 0), 0);
 
   const totalRevenue = totalFwa * 350_000 + totalRebuy;
 
-  const eligibleCount = dsfs.filter((d) => hitungInsentif(d).incentive > 0).length;
+  const eligibleCount = dsfs.filter(
+    (d) => hitungInsentif(d).incentive > 0
+  ).length;
 
   return (
     <motion.div
@@ -24,6 +26,13 @@ export default function TLDashboard({ tlId, tlName, dsfs }) {
           <div className="card-desc">
             Summary performance for DSFs under this TL.
           </div>
+
+          {/* ✅ DATA BASED ON */}
+          {dataBasedOn && (
+            <div className="data-based">
+              Data Based On: <strong>{dataBasedOn}</strong>
+            </div>
+          )}
         </div>
 
         <div className="header-badges">
@@ -49,7 +58,7 @@ export default function TLDashboard({ tlId, tlName, dsfs }) {
           title="Total FWA Units"
           subtitle="All DSFs under TL"
           valueText={`${totalFwa} units`}
-          percent={totalFwa / (dsfs.length * 20 || 1)}
+          percent={dsfs.length ? totalFwa / (dsfs.length * 20) : 0}
           tone={totalFwa > 0 ? "warning" : "default"}
         />
 
@@ -64,12 +73,16 @@ export default function TLDashboard({ tlId, tlName, dsfs }) {
         <div className="dash-right">
           <div className="mini-card">
             <div className="mini-label">Total Rebuy Revenue</div>
-            <div className="mini-value">{formatIDR(totalRebuy)}</div>
+            <div className="mini-value">
+              {formatIDR(totalRebuy)}
+            </div>
           </div>
 
           <div className="mini-card strong">
             <div className="mini-label">Eligible DSFs</div>
-            <div className="mini-value">{eligibleCount}</div>
+            <div className="mini-value">
+              {eligibleCount}
+            </div>
           </div>
         </div>
       </div>

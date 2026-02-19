@@ -8,7 +8,7 @@ import {
   REVENUE_TARGET,
 } from "../utils";
 
-export default function DSFCard({ dsf }) {
+export default function DSFCard({ dsf, dataDates }) {
   const c = hitungInsentif(dsf);
   const tips = buildTips(dsf);
 
@@ -26,7 +26,21 @@ export default function DSFCard({ dsf }) {
   const ringFwaTone =
     dsf.fwaUnits >= 20 ? "success" : dsf.fwaUnits >= 15 ? "warning" : "danger";
 
-  const ringRevTone = c.totalRevenue >= REVENUE_TARGET ? "success" : "warning";
+  const ringRevTone =
+    c.totalRevenue >= REVENUE_TARGET ? "success" : "warning";
+
+  // ================================
+  // DATA BASED ON PER BRAND
+  // ================================
+  const isIM3 = (dsf.brand || "").toUpperCase() === "IM3";
+
+  const dataFwaDate = isIM3
+    ? dataDates?.DATA_FWA_IM3
+    : dataDates?.DATA_FWA_3ID;
+
+  const dataRebuyDate = isIM3
+    ? dataDates?.DATA_REBUY_IM3
+    : dataDates?.DATA_REBUY_3ID;
 
   return (
     <motion.div
@@ -90,31 +104,45 @@ export default function DSFCard({ dsf }) {
       <div className="dash-grid mt-5">
         <Ring
           title="FWA Units"
-          subtitle="Minimum 15 / 20"
-          valueText={`${dsf.fwaUnits} units`}
+          subtitle={`Data based on: ${
+            dataFwaDate || "-"
+          }`}
+          valueText={`${dsf.fwaUnits} / 20`}
           percent={c.fwaProgress}
           tone={ringFwaTone}
         />
 
         <Ring
           title="Total Revenue"
-          subtitle={`Target: ${formatIDR(REVENUE_TARGET)}`}
+          subtitle={`Target: ${formatIDR(
+            REVENUE_TARGET
+          )}`}
           valueText={formatIDR(c.totalRevenue)}
           percent={c.revenueProgress}
           tone={ringRevTone}
         />
 
-        <div className="dash-right">
-          <div className="mini-card">
-            <div className="mini-label">Rebuy Revenue</div>
-            <div className="mini-value">{formatIDR(dsf.rebuyRevenue)}</div>
-          </div>
+<div className="dash-right">
+  <div className="mini-card">
+    <div className="mini-label">Rebuy Revenue</div>
 
-          <div className="mini-card strong">
-            <div className="mini-label">Incentive Earned</div>
-            <div className="mini-value">{formatIDR(c.incentive)}</div>
-          </div>
-        </div>
+    <div className="mini-value">
+      {formatIDR(dsf.rebuyRevenue)}
+    </div>
+
+    <div className="mini-subtext">
+      Data based on: {dataRebuyDate || "-"}
+    </div>
+  </div>
+
+  <div className="mini-card strong">
+    <div className="mini-label">Incentive Earned</div>
+    <div className="mini-value">
+      {formatIDR(c.incentive)}
+    </div>
+  </div>
+</div>
+
       </div>
 
       {/* STATUS + TIPS */}
