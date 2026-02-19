@@ -1,0 +1,314 @@
+/* =========================
+   GLOBAL
+========================= */
+
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #111827;
+  background-color: #f3f4f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(
+      1000px 600px at 15% 10%,
+      rgba(59, 130, 246, 0.14),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 500px at 85% 15%,
+      rgba(236, 72, 153, 0.12),
+      transparent 60%
+    ),
+    #f3f4f6;
+  color: #111827;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.containerLegacy {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 18px 40px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+  max-width: 520px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.searchWrap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 460px;
+  max-width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.85);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.searchInput:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 4px rgba(17, 24, 39, 0.08);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn,
+.btnSecondary {
+  padding: 12px 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 13px;
+  transition: transform 0.08s ease, box-shadow 0.15s ease,
+    background 0.15s ease, border-color 0.15s ease;
+  user-select: none;
+}
+
+.btn {
+  border: 1px solid #111827;
+  background: #111827;
+  color: white;
+  box-shadow: 0 10px 18px rgba(17, 24, 39, 0.14);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 22px rgba(17, 24, 39, 0.18);
+}
+
+.btn:active {
+  transform: translateY(0px);
+}
+
+.btnSecondary {
+  border: 1px solid #e5e7eb;
+  background: rgba(255, 255, 255, 0.9);
+  color: #111827;
+}
+
+.btnSecondary:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .kpiGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   KPI
+========================= */
+
+.kpi {
+  background: rgba(249, 250, 251, 0.9);
+  border: 1px solid #eef2f7;
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.kpiLabel {
+  color: #6b7280;
+  font-size: 12px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.kpiValue {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.kpiNote {
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 900;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.tableWrap {
+  overflow: auto;
+  border-radius: 16px;
+  border: 1px solid #eef2f7;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  min-width: 860px;
+}
+
+th,
+td {
+  padding: 12px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: left;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: rgba(249, 250, 251, 0.95);
+  backdrop-filter: blur(10px);
+  color: #374151;
+  font-weight: 900;
+  z-index: 1;
+}
+
+tbody tr:hover td {
+  background: rgba(17, 24, 39, 0.03);
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.badgeGood {
+  background: #ecfdf5;
+  border-color: #bbf7d0;
+  color: #065f46;
+}
+
+.badgeWarn {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.small {
+  color: #6b7280;
+  font-size: 12px;
+}
