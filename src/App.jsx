@@ -15,6 +15,8 @@ export default function App() {
   const [selectedDSF, setSelectedDSF] = useState(null);
   const [selectedTL, setSelectedTL] = useState(null);
   const [error, setError] = useState("");
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
 
   // ================================
   // DATA BASED ON PER TYPE
@@ -116,6 +118,7 @@ setDataDates(formattedDates);
   }, [query, dsfData]);
 
   function onSearch() {
+    setShowSuggestions(false);
     const q = query.trim().toLowerCase();
 
     if (!q) {
@@ -163,12 +166,14 @@ setDataDates(formattedDates);
     setError("DSF atau TL tidak ditemukan. Silakan periksa input Anda.");
   }
 
-  function onPick(item) {
-    setQuery(item.idDsf);
-    setSelectedDSF(item);
-    setSelectedTL(null);
-    setError("");
-  }
+    function onPick(item) {
+      setQuery(item.idDsf);
+      setSelectedDSF(item);
+      setSelectedTL(null);
+      setShowSuggestions(false);
+      setError("");
+    }
+
 
   return (
     <div className="page">
@@ -178,9 +183,9 @@ setDataDates(formattedDates);
       <div className="container">
         <div className="hero">
           <div>
-            <div className="hero-title">DSF Achievement Dashboard</div>
+            <div className="hero-title">DSF Achievement Tracker</div>
             <div className="hero-subtitle">
-              Search by <b>DSF ID</b>, <b>DSF Name</b>, or <b>TL ID</b>.
+              Pantau hasil penjualan FWA untuk estimasi insentif Anda.
             </div>
           </div>
         </div>
@@ -194,7 +199,7 @@ setDataDates(formattedDates);
           transition={{ duration: 0.25 }}
         >
           <div className="search-top">
-            <div className="search-title">Search</div>
+            <div className="search-title">Lihat Hasil</div>
           </div>
 
           <div className="search-row">
@@ -202,7 +207,12 @@ setDataDates(formattedDates);
               <input
                 className="search-input"
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => {
+                setQuery(e.target.value);
+                setShowSuggestions(true);
+              }}
+
+
                 placeholder="Masukkan ID DSF / Nama DSF / ID TL"
                 onKeyDown={(e) => {
                   if (e.key === "Enter") onSearch();
@@ -239,7 +249,7 @@ setDataDates(formattedDates);
           </div>
 
           <AnimatePresence>
-            {suggestions.length > 0 && (
+{showSuggestions && suggestions.length > 0 && (
               <motion.div
                 className="suggestions"
                 initial={{ opacity: 0, y: 8 }}
@@ -311,20 +321,43 @@ setDataDates(formattedDates);
               exit={{ opacity: 0, y: 12 }}
               transition={{ duration: 0.25 }}
             >
-              <div className="empty-title">No data selected</div>
+              <div className="empty-title">Data Belum Dipilih</div>
               <div className="empty-sub">
-                Search DSF or TL ID to view dashboard.
+                Silakan cari ID DSF atau TL untuk melihat dashboard.
               </div>
             </motion.div>
           )}
         </AnimatePresence>
 
-        <div className="footer">
-          <div className="footer-line">
-            FWA IM3: {dataDates.DATA_FWA_IM3 || "-"} | FWA 3ID: {dataDates.DATA_FWA_3ID || "-"} | REBUY IM3: {dataDates.DATA_REBUY_IM3 || "-"} | REBUY 3ID: {dataDates.DATA_REBUY_3ID || "-"}
-          </div>
+{/* FOOTER SECTION */}
+{/* mt-8 membuat jarak atas lebih rapat (2rem), mb-8 memberikan ruang di bawah halaman */}
+<footer className="mt-8 mb-8 w-full flex flex-col items-center gap-4 text-gray-500">
+  
+  {/* Data References */}
+  {/* pb-2 dikurangi dari pb-4 agar lebih minimalis */}
+  <div className="flex gap-4 text-[10px] sm:text-xs font-medium border-b border-gray-100 pb-2">
+    <div className="flex gap-1">
+      <span className="text-gray-400">IM3 REF:</span>
+      <span className="text-gray-600">{dataDates.DATA_FWA_IM3 || "N/A"}</span>
+    </div>
+    <div className="flex gap-1 border-l border-gray-200 pl-4">
+      <span className="text-gray-400">3ID REF:</span>
+      <span className="text-gray-600">{dataDates.DATA_FWA_3ID || "N/A"}</span>
+    </div>
+  </div>
+
+  {/* Ownership */}
+  <div className="text-center">
+    <p className="text-[9px] uppercase tracking-wider text-gray-400">
+      Managed & Operated by
+    </p>
+    <p className="text-xs sm:text-sm font-bold text-gray-700 mt-0.5 uppercase">
+      SPM SUMATERA
+    </p>
+  </div>
+  
+</footer>
         </div>
       </div>
-    </div>
   );
 }

@@ -8,6 +8,8 @@ import {
   REVENUE_TARGET,
 } from "../utils";
 
+
+
 export default function DSFCard({ dsf, dataDates }) {
   const c = hitungInsentif(dsf);
   const tips = buildTips(dsf);
@@ -42,6 +44,37 @@ export default function DSFCard({ dsf, dataDates }) {
     ? dataDates?.DATA_REBUY_IM3
     : dataDates?.DATA_REBUY_3ID;
 
+    function formatMonthYear(dateStr) {
+  if (!dateStr) return "-";
+
+  const date = new Date(dateStr);
+  if (isNaN(date)) return "-";
+
+  return date.toLocaleString("id-ID", {
+    month: "short",
+    year: "numeric",
+  });
+}
+
+const periodeLabel = formatMonthYear(dataFwaDate);
+
+function formatFullDate(dateStr) {
+  if (!dateStr) return "-";
+
+  const date = new Date(dateStr);
+  if (isNaN(date)) return "-";
+
+  return date.toLocaleString("id-ID", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+}
+
+const fwaUpdateLabel = formatFullDate(dataFwaDate);
+const rebuyUpdateLabel = formatFullDate(dataRebuyDate);
+
+
   return (
     <motion.div
       className="card"
@@ -51,9 +84,11 @@ export default function DSFCard({ dsf, dataDates }) {
     >
       <div className="card-header">
         <div>
-          <div className="card-title">DSF Daily Report</div>
+        <div className="card-title">
+        Penjualan Periode {periodeLabel}
+        </div>
           <div className="card-desc">
-            Search DSF by ID or Name. You can also search by TL ID.
+            Lihat sejauh mana kamu melangkah bulan ini.
           </div>
         </div>
 
@@ -66,19 +101,19 @@ export default function DSFCard({ dsf, dataDates }) {
       {/* MINIMAL VIEW */}
       <div className="grid-2 mt-4">
         <div className="stat">
-          <div className="stat-label">DSF ID</div>
+          <div className="stat-label">ID DSF</div>
           <div className="stat-value">{dsf.idDsf}</div>
         </div>
 
         <div className="stat">
-          <div className="stat-label">DSF Name</div>
+          <div className="stat-label">Nama DSF</div>
           <div className="stat-value">{dsf.namaDsf}</div>
         </div>
       </div>
 
       {/* DETAIL TOGGLE */}
       <details className="details">
-        <summary className="details-summary">Show full details</summary>
+        <summary className="details-summary">Detail Profil</summary>
 
         <div className="grid-2 mt-4">
           <div className="stat">
@@ -104,9 +139,7 @@ export default function DSFCard({ dsf, dataDates }) {
       <div className="dash-grid mt-5">
         <Ring
           title="FWA Units"
-          subtitle={`Data based on: ${
-            dataFwaDate || "-"
-          }`}
+          subtitle={`Update terakhir: ${fwaUpdateLabel}`}
           valueText={`${dsf.fwaUnits} / 20`}
           percent={c.fwaProgress}
           tone={ringFwaTone}
@@ -131,7 +164,10 @@ export default function DSFCard({ dsf, dataDates }) {
     </div>
 
     <div className="mini-subtext">
-      Data based on: {dataRebuyDate || "-"}
+      <div className="mini-subtext">
+  Update terakhir: {rebuyUpdateLabel}
+</div>
+
     </div>
   </div>
 
@@ -147,7 +183,7 @@ export default function DSFCard({ dsf, dataDates }) {
 
       {/* STATUS + TIPS */}
       <div className={`note ${eligible ? "note-ok" : "note-warn"}`}>
-        <div className="note-title">Next Steps</div>
+        <div className="note-title">Tips:</div>
 
         <div className="checklist">
           {tips.map((t, idx) => (
