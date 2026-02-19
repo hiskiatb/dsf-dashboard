@@ -10,7 +10,7 @@ export default function Ring({
   const pctForRing = clamp(percent, 0, 1); // ring tetap max 1
   const pctText = Math.round(percent * 100); // text bisa > 100%
 
-  const size = 120;
+  const size = 150;
   const stroke = 12;
   const r = (size - stroke) / 2;
   const c = 2 * Math.PI * r;

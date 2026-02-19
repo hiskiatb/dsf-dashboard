@@ -49,7 +49,6 @@ export default function App() {
     };
   }, []);
 
-  // suggestions (case-insensitive)
   const suggestions = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return [];
@@ -74,7 +73,6 @@ export default function App() {
       return;
     }
 
-    // 1) try match DSF ID exact
     const foundDSF = dsfData.find((x) => x.idDsf.toLowerCase() === q);
     if (foundDSF) {
       setSelectedDSF(foundDSF);
@@ -83,7 +81,6 @@ export default function App() {
       return;
     }
 
-    // 2) try match DSF name exact
     const foundDSFByName = dsfData.find(
       (x) => x.namaDsf.toLowerCase() === q
     );
@@ -94,7 +91,6 @@ export default function App() {
       return;
     }
 
-    // 3) try match TL ID
     const dsfsUnderTL = dsfData.filter(
       (x) => (x.idTl || "").toLowerCase() === q
     );
@@ -112,7 +108,7 @@ export default function App() {
 
     setSelectedDSF(null);
     setSelectedTL(null);
-    setError("No matching DSF or TL found. Please check your input.");
+    setError("DSF atau TL tidak ditemukan. Silakan periksa input Anda.");
   }
 
   function onPick(item) {
@@ -122,11 +118,6 @@ export default function App() {
     setError("");
   }
 
-  const demoIds = useMemo(
-    () => dsfData.map((d) => d.idDsf).slice(0, 8),
-    [dsfData]
-  );
-
   return (
     <div className="page">
       <div className="bg-blur a" />
@@ -135,20 +126,9 @@ export default function App() {
       <div className="container">
         <div className="hero">
           <div>
-            <div className="hero-title">DSF Daily Report Portal</div>
+            <div className="hero-title">DSF Achievement Dashboard</div>
             <div className="hero-subtitle">
               Search by <b>DSF ID</b>, <b>DSF Name</b>, or <b>TL ID</b>.
-            </div>
-          </div>
-
-          <div className="hero-meta">
-            <div className="meta-item">
-              <div className="meta-label">Source</div>
-              <div className="meta-value">{CSV_PATH}</div>
-            </div>
-            <div className="meta-item">
-              <div className="meta-label">Status</div>
-              <div className="meta-value">{loading ? "Loading..." : "Ready"}</div>
             </div>
           </div>
         </div>
@@ -164,11 +144,8 @@ export default function App() {
           <div className="search-top">
             <div>
               <div className="search-title">Search</div>
-              <div className="search-hint">
-                Input DSF ID / DSF Name / TL ID (case-insensitive)
-              </div>
+
             </div>
-            <Pill variant="info">CSV Data</Pill>
           </div>
 
           <div className="search-row">
@@ -208,7 +185,7 @@ export default function App() {
             </div>
 
             <button className="btn" onClick={onSearch}>
-              Search
+              Cari ID
             </button>
           </div>
 
@@ -254,8 +231,6 @@ export default function App() {
               </motion.div>
             ) : null}
           </AnimatePresence>
-
-          <div className="demo">Contoh ID DSF: {demoIds.join(", ")}</div>
         </motion.div>
 
         <AnimatePresence mode="wait">
@@ -286,9 +261,7 @@ export default function App() {
         </AnimatePresence>
 
         <div className="footer">
-          <div className="footer-line">
-            -
-          </div>
+          <div className="footer-line">-</div>
         </div>
       </div>
     </div>

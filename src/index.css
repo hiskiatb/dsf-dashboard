@@ -12,7 +12,7 @@
   }
 
   .bg-blur {
-    @apply absolute w-[420px] h-[420px] rounded-full blur-3xl opacity-30;
+    @apply absolute w-[420px] h-[420px] rounded-full blur-3xl opacity-30;;
   }
   .bg-blur.a {
     @apply -top-20 -left-20 bg-indigo-300;

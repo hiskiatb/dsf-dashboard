@@ -1,4 +1,4 @@
-export const CSV_PATH = "/DSF_20260131.csv";
+export const CSV_PATH = "/DSF_202602.csv";
 
 export const FWA_UNIT_VALUE = 350_000;
 export const REVENUE_TARGET = 7_500_000;
@@ -221,7 +221,7 @@ export function buildTips(dsf) {
   if (remainingIf20 === 0) {
     tips.push({
       done: false,
-      text: `Untuk dapat insentif 500 ribu, cukup tambah ${needFwa20} FWA lagi sampai 20 FWA. Rebuy kamu saat ini sudah cukup, jadi tidak perlu mengejar rebuy tambahan.`,
+      text: `Untuk dapat insentif 500 ribu, cukup tambah ${needFwa20} FWA lagi sampai 20 FWA. Rebuy kamu saat ini sudah cukup, jadi fokus kejar FWA dulu ya.`,
     });
   } else {
     // Case 2: Sampai 20 FWA masih kurang revenue
