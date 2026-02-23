@@ -88,7 +88,7 @@ export default function BranchRankingDashboard() {
 
   return (
     <motion.div
-      className="text-left"
+      className="card text-left p-6"
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
     >

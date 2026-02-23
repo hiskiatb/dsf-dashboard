@@ -74,7 +74,7 @@ export default function TLDashboard({ tlId, tlName, dsfs, dataBasedOn }) {
             Team Leader Dashboard
           </div>
           <div className="card-desc">
-            Summary performance for DSFs under this TL.
+            Rekap kinerja DSF dalam koordinasi Anda.
           </div>
 
           {dataBasedOn && (

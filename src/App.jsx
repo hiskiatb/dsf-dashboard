@@ -448,17 +448,15 @@ function onSearch() {
             />
           ) : (
             <motion.div
-              key="empty"
-              className="card empty"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 12 }}
-              transition={{ duration: 0.25 }}
-            > 
-              <BranchRankingDashboard />              
-              <div className="empty-sub">
-              </div>
-            </motion.div>
+  key="empty"
+  className="mt-6"
+  initial={{ opacity: 0, y: 12 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: 12 }}
+  transition={{ duration: 0.25 }}
+>
+  <BranchRankingDashboard />
+</motion.div>
           )}
         </AnimatePresence>
 
