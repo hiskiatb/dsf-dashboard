@@ -5,6 +5,7 @@ import TLDashboard from "./components/TLDashboard";
 import Pill from "./components/Pill";
 import { CSV_PATH, mapRowToDSF, parseCSV } from "./utils";
 import { X } from "lucide-react";
+import BranchRankingDashboard from "./components/BranchRankingDashboard";
 
 export default function App() {
   const [dsfData, setDsfData] = useState([]);
@@ -103,76 +104,160 @@ setDataDates(formattedDates);
     };
   }, []);
 
-  const suggestions = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return [];
+const suggestions = useMemo(() => {
+  const q = query.trim().toLowerCase();
+  if (!q) return [];
 
-    return dsfData
-      .filter(
-        (x) =>
-          x.idDsf.toLowerCase().includes(q) ||
-          x.namaDsf.toLowerCase().includes(q) ||
-          (x.idTl || "").toLowerCase().includes(q)
-      )
-      .slice(0, 6);
-  }, [query, dsfData]);
+  const dsfMatches = dsfData
+    .filter(
+      (x) =>
+        x.idDsf.toLowerCase().includes(q) ||
+        x.namaDsf.toLowerCase().includes(q)
+    )
+    .map((x) => ({
+      type: "DSF",
+      data: x,
+    }));
 
-  function onSearch() {
-    setShowSuggestions(false);
-    const q = query.trim().toLowerCase();
+  // ✅ HANYA SATU tlMap
+  const tlMap = new Map();
 
-    if (!q) {
-      setSelectedDSF(null);
-      setSelectedTL(null);
-      setError("Please input DSF ID / DSF Name / TL ID.");
-      return;
+  dsfData.forEach((x) => {
+    if (
+      (x.idTl || "").toLowerCase().includes(q) ||
+      (x.namaTl || "").toLowerCase().includes(q)
+    ) {
+      if (!tlMap.has(x.idTl)) {
+        const dsfsUnder = dsfData.filter((d) => d.idTl === x.idTl);
+
+        const uniqueBranches = [
+          ...new Set(dsfsUnder.map((d) => d.branch).filter(Boolean)),
+        ];
+
+        const hasIM3 = dsfsUnder.some((d) =>
+          (d.brand || "").toLowerCase().includes("im3")
+        );
+        const has3ID = dsfsUnder.some((d) =>
+          (d.brand || "").toLowerCase().includes("3id")
+        );
+
+        let tlBrandLabel = "";
+        if (hasIM3 && has3ID) tlBrandLabel = "TL IM3 & 3ID";
+        else if (hasIM3) tlBrandLabel = "TL IM3";
+        else if (has3ID) tlBrandLabel = "TL 3ID";
+
+        tlMap.set(x.idTl, {
+          type: "TL",
+          data: {
+            idTl: x.idTl,
+            namaTl: x.namaTl,
+            region: x.region,
+            branches: uniqueBranches,
+            tlBrandLabel,
+          },
+        });
+      }
     }
+  });
 
-    const foundDSF = dsfData.find((x) => x.idDsf.toLowerCase() === q);
-    if (foundDSF) {
-      setSelectedDSF(foundDSF);
-      setSelectedTL(null);
-      setError("");
-      return;
-    }
+  return [...tlMap.values(), ...dsfMatches].slice(0, 6);
 
-    const foundDSFByName = dsfData.find(
-      (x) => x.namaDsf.toLowerCase() === q
-    );
-    if (foundDSFByName) {
-      setSelectedDSF(foundDSFByName);
-      setSelectedTL(null);
-      setError("");
-      return;
-    }
+}, [query, dsfData]);
 
-    const dsfsUnderTL = dsfData.filter(
-      (x) => (x.idTl || "").toLowerCase() === q
-    );
 
-    if (dsfsUnderTL.length > 0) {
-      setSelectedDSF(null);
-      setSelectedTL({
-        tlId: dsfsUnderTL[0].idTl,
-        tlName: dsfsUnderTL[0].namaTl,
-        dsfs: dsfsUnderTL,
-      });
-      setError("");
-      return;
-    }
+function onSearch() {
+  setShowSuggestions(false);
+  const q = query.trim().toLowerCase();
 
+  if (!q) {
     setSelectedDSF(null);
     setSelectedTL(null);
-    setError("DSF atau TL tidak ditemukan. Silakan periksa input Anda.");
+    setError("Please input DSF ID / DSF Name / TL ID / TL Name.");
+    return;
   }
 
-    function onPick(item) {
-      setQuery(item.idDsf);
-      setSelectedDSF(item);
-      setSelectedTL(null);
-      setShowSuggestions(false);
-      setError("");
-    }
+  // ✅ 1. Exact DSF ID
+  const foundDSF = dsfData.find(
+    (x) => x.idDsf.toLowerCase() === q
+  );
+  if (foundDSF) {
+    setSelectedDSF(foundDSF);
+    setSelectedTL(null);
+    setError("");
+    return;
+  }
+
+  // ✅ 2. Exact DSF Name
+  const foundDSFByName = dsfData.find(
+    (x) => x.namaDsf.toLowerCase() === q
+  );
+  if (foundDSFByName) {
+    setSelectedDSF(foundDSFByName);
+    setSelectedTL(null);
+    setError("");
+    return;
+  }
+
+  // ✅ 3. TL by ID
+  const dsfsUnderTLById = dsfData.filter(
+    (x) => (x.idTl || "").toLowerCase() === q
+  );
+
+  if (dsfsUnderTLById.length > 0) {
+    setSelectedDSF(null);
+    setSelectedTL({
+      tlId: dsfsUnderTLById[0].idTl,
+      tlName: dsfsUnderTLById[0].namaTl,
+      dsfs: dsfsUnderTLById,
+    });
+    setError("");
+    return;
+  }
+
+  // ✅ 4. TL by NAME (NEW)
+  const dsfsUnderTLByName = dsfData.filter(
+    (x) => (x.namaTl || "").toLowerCase() === q
+  );
+
+  if (dsfsUnderTLByName.length > 0) {
+    setSelectedDSF(null);
+    setSelectedTL({
+      tlId: dsfsUnderTLByName[0].idTl,
+      tlName: dsfsUnderTLByName[0].namaTl,
+      dsfs: dsfsUnderTLByName,
+    });
+    setError("");
+    return;
+  }
+
+  setSelectedDSF(null);
+  setSelectedTL(null);
+  setError("DSF atau TL tidak ditemukan. Silakan periksa input Anda.");
+}
+
+   function onPick(item) {
+  if (item.type === "TL") {
+    const dsfsUnderTL = dsfData.filter(
+      (x) => x.idTl === item.data.idTl
+    );
+
+    setSelectedTL({
+      tlId: item.data.idTl,
+      tlName: item.data.namaTl,
+      dsfs: dsfsUnderTL,
+    });
+
+    setSelectedDSF(null);
+    setQuery(item.data.namaTl);
+  } else {
+    setSelectedDSF(item.data);
+    setSelectedTL(null);
+    setQuery(item.data.idDsf);
+  }
+
+  setShowSuggestions(false);
+  setError("");
+}
 
 
   return (
@@ -185,7 +270,7 @@ setDataDates(formattedDates);
           <div>
             <div className="hero-title">DSF Achievement Tracker</div>
             <div className="hero-subtitle">
-              Pantau hasil penjualan FWA untuk estimasi insentif Anda.
+              Pantau hasil penjualan untuk estimasi insentif Anda.
             </div>
           </div>
         </div>
@@ -199,7 +284,7 @@ setDataDates(formattedDates);
           transition={{ duration: 0.25 }}
         >
           <div className="search-top">
-            <div className="search-title">Lihat Hasil</div>
+            <div className="search-title">Cek Pencapaian DSF / TL</div>
           </div>
 
           <div className="search-row">
@@ -213,7 +298,7 @@ setDataDates(formattedDates);
               }}
 
 
-                placeholder="Masukkan ID DSF / Nama DSF / ID TL"
+                placeholder="Masukkan ID DSF / Nama DSF / ID TL / Nama TL"
                 onKeyDown={(e) => {
                   if (e.key === "Enter") onSearch();
                 }}
@@ -258,26 +343,59 @@ setDataDates(formattedDates);
                 transition={{ duration: 0.2 }}
               >
                 <div className="suggestions-title">Suggestions</div>
-                {suggestions.map((s) => (
-                  <button
-                    key={s.idDsf}
-                    className="suggestion-item"
-                    onClick={() => onPick(s)}
-                  >
-                    <div className="suggestion-top">
-                      <span className="suggestion-name">
-                        {s.namaDsf}
-                      </span>
-                      <Pill className="suggestion-pill">
-                        {s.idDsf}
-                      </Pill>
-                    </div>
+                {suggestions.map((item, index) => {
+  if (item.type === "TL") {
+    return (
+      <button
+        key={`TL-${item.data.idTl}-${index}`}
+        className="suggestion-item"
+        onClick={() => onPick(item)}
+      >
+        <div className="suggestion-top">
+          <span className="suggestion-name">
+            {item.data.namaTl}
+          </span>
+          <Pill>
+            {item.data.tlBrandLabel}
+          </Pill>
+        </div>
 
-                    <div className="suggestion-sub">
-                      {s.branch || "-"} • {s.region} • {s.brand}
-                    </div>
-                  </button>
-                ))}
+        <div className="suggestion-sub">
+          {item.data.idTl} • {item.data.region} •{" "}
+          {item.data.branches.join(", ")}
+        </div>
+      </button>
+    );
+  }
+
+  // ✅ FIX DISINI
+  const dsf = item.data;
+
+  const brandLabel =
+    (dsf.brand || "").toLowerCase().includes("im3")
+      ? "DSF IM3"
+      : "DSF 3ID";
+
+  return (
+    <button
+      key={`DSF-${dsf.idDsf}-${index}`}
+      className="suggestion-item"
+      onClick={() => onPick(item)}
+    >
+      <div className="suggestion-top">
+        <span className="suggestion-name">
+          {dsf.namaDsf}
+        </span>
+        <Pill>{brandLabel}</Pill>
+      </div>
+
+      <div className="suggestion-sub">
+        {dsf.idDsf} • {dsf.branch || "-"} • {dsf.region}
+      </div>
+    </button>
+  );
+})}
+
               </motion.div>
             )}
           </AnimatePresence>
@@ -320,10 +438,9 @@ setDataDates(formattedDates);
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 12 }}
               transition={{ duration: 0.25 }}
-            >
-              <div className="empty-title">Data Belum Dipilih</div>
+            > 
+              <BranchRankingDashboard />              
               <div className="empty-sub">
-                Silakan cari ID DSF atau TL untuk melihat dashboard.
               </div>
             </motion.div>
           )}

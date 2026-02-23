@@ -342,4 +342,154 @@
   .footer-line {
     @apply text-xs text-slate-500;
   }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #f3f4f6;
+}
+
+.filter-btn.active {
+  background: #111827;
+  color: white;
+  border-color: #111827;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid #f1f1f1;
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 720px;
+}
+
+.modern-table thead {
+  background: #f9fafb;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.modern-table th,
+.modern-table td {
+  padding: 14px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.modern-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.top-row {
+  background: #fefce8;
+}
+
+.progress-bg {
+  width: 90px;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 8px;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.percent-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* MOBILE IMPROVEMENT */
+@media (max-width: 640px) {
+  .modern-table {
+    font-size: 12px;
+  }
+
+  .modern-table th,
+  .modern-table td {
+    padding: 10px;
+  }
+
+  .progress-bg {
+    width: 60px;
+  }
+}
+
+.table-wrap-modern {
+  margin-top: 12px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid #f1f1f1;
+  border-radius: 14px;
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+  font-size: 14px;
+}
+
+.modern-table thead {
+  background: #f9fafb;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.modern-table th,
+.modern-table td {
+  padding: 14px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.hover-row:hover {
+  background: #f9fafb;
+  transition: background 0.2s ease;
+}
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+@media (max-width: 640px) {
+  .modern-table {
+    font-size: 12px;
+  }
+
+  .modern-table th,
+  .modern-table td {
+    padding: 10px;
+  }
+}
+
 }

@@ -1,17 +1,64 @@
 import { motion } from "framer-motion";
 import Pill from "./Pill";
 import Ring from "./Ring";
-import { formatIDR, hitungInsentif, REVENUE_TARGET } from "../utils";
+import { formatIDR, hitungInsentif } from "../utils";
+
+const TARGET_PER_DSF = 20;
+const REVENUE_TARGET_PER_DSF = 7_500_000;
 
 export default function TLDashboard({ tlId, tlName, dsfs, dataBasedOn }) {
   const totalFwa = dsfs.reduce((a, b) => a + (b.fwaUnits || 0), 0);
   const totalRebuy = dsfs.reduce((a, b) => a + (b.rebuyRevenue || 0), 0);
-
   const totalRevenue = totalFwa * 350_000 + totalRebuy;
 
-  const eligibleCount = dsfs.filter(
-    (d) => hitungInsentif(d).incentive > 0
-  ).length;
+  // Target TL FWA
+  const totalTargetFwa = dsfs.reduce(
+    (sum, d) => sum + (d.targetFwa || TARGET_PER_DSF),
+    0
+  );
+
+  const fwaPercent = totalTargetFwa
+    ? totalFwa / totalTargetFwa
+    : 0;
+
+  // Target TL Revenue
+  const totalTargetRevenue =
+    REVENUE_TARGET_PER_DSF * dsfs.length;
+
+  const revenuePercent = totalTargetRevenue
+    ? totalRevenue / totalTargetRevenue
+    : 0;
+
+  // =========================
+  // TL INCENTIVE LOGIC
+  // =========================
+
+  const minimumFwaOption1 = dsfs.length * 15;
+
+  let tlIncentive = 0;
+
+  if (
+    totalFwa >= totalTargetFwa &&
+    revenuePercent >= 1
+  ) {
+    tlIncentive = 1_000_000;
+  } else if (
+    totalFwa >= minimumFwaOption1 &&
+    revenuePercent >= 1
+  ) {
+    tlIncentive = 400_000;
+  }
+
+  // =========================
+  // SORT DSF BY TOTAL REVENUE (DESC)
+  // =========================
+
+  const rankedDsfs = [...dsfs]
+    .map((d) => ({
+      ...d,
+      calc: hitungInsentif(d),
+    }))
+    .sort((a, b) => b.calc.totalRevenue - a.calc.totalRevenue);
 
   return (
     <motion.div
@@ -20,14 +67,16 @@ export default function TLDashboard({ tlId, tlName, dsfs, dataBasedOn }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25 }}
     >
+      {/* HEADER */}
       <div className="card-header">
         <div>
-          <div className="card-title">Team Leader Dashboard</div>
+          <div className="card-title">
+            Team Leader Dashboard
+          </div>
           <div className="card-desc">
             Summary performance for DSFs under this TL.
           </div>
 
-          {/* ✅ DATA BASED ON */}
           {dataBasedOn && (
             <div className="data-based">
               Data Based On: <strong>{dataBasedOn}</strong>
@@ -37,11 +86,11 @@ export default function TLDashboard({ tlId, tlName, dsfs, dataBasedOn }) {
 
         <div className="header-badges">
           <Pill variant="info">TL</Pill>
-          <Pill variant="success">{eligibleCount} Eligible</Pill>
           <Pill>{dsfs.length} DSFs</Pill>
         </div>
       </div>
 
+      {/* TL INFO */}
       <div className="grid-2 mt-4">
         <div className="stat">
           <div className="stat-label">TL ID</div>
@@ -49,39 +98,55 @@ export default function TLDashboard({ tlId, tlName, dsfs, dataBasedOn }) {
         </div>
         <div className="stat">
           <div className="stat-label">TL Name</div>
-          <div className="stat-value">{tlName || "-"}</div>
+          <div className="stat-value">
+            {tlName || "-"}
+          </div>
         </div>
       </div>
 
+      {/* SUMMARY RINGS */}
       <div className="dash-grid mt-5">
         <Ring
           title="Total FWA Units"
-          subtitle="All DSFs under TL"
+          subtitle={`Target TL: ${totalTargetFwa} units`}
           valueText={`${totalFwa} units`}
-          percent={dsfs.length ? totalFwa / (dsfs.length * 20) : 0}
-          tone={totalFwa > 0 ? "warning" : "default"}
+          percent={fwaPercent}
+          tone={
+            totalFwa >= totalTargetFwa
+              ? "success"
+              : "warning"
+          }
         />
 
         <Ring
           title="Total Revenue"
-          subtitle={`Target: ${formatIDR(REVENUE_TARGET)}`}
+          subtitle={`Target TL: ${formatIDR(totalTargetRevenue)}`}
           valueText={formatIDR(totalRevenue)}
-          percent={totalRevenue / REVENUE_TARGET}
-          tone={totalRevenue >= REVENUE_TARGET ? "success" : "warning"}
+          percent={revenuePercent}
+          tone={
+            totalRevenue >= totalTargetRevenue
+              ? "success"
+              : "warning"
+          }
         />
 
         <div className="dash-right">
           <div className="mini-card">
-            <div className="mini-label">Total Rebuy Revenue</div>
+            <div className="mini-label">
+              Total Rebuy Revenue
+            </div>
             <div className="mini-value">
               {formatIDR(totalRebuy)}
             </div>
           </div>
 
+          {/* ✅ DIGANTI: Eligible DSFs → Incentive Earned */}
           <div className="mini-card strong">
-            <div className="mini-label">Eligible DSFs</div>
+            <div className="mini-label">
+              Incentive Earned
+            </div>
             <div className="mini-value">
-              {eligibleCount}
+              {formatIDR(tlIncentive)}
             </div>
           </div>
         </div>
@@ -89,43 +154,82 @@ export default function TLDashboard({ tlId, tlName, dsfs, dataBasedOn }) {
 
       <div className="divider" />
 
-      <div className="table-wrap">
-        <div className="table-title">DSF List Under This TL</div>
+      {/* DSF TABLE */}
+      <div className="table-wrap-modern">
+        <div className="table-title mb-3">
+          DSF List Under This TL
+        </div>
 
-        <table className="table">
-          <thead>
-            <tr>
-              <th>DSF ID</th>
-              <th>DSF Name</th>
-              <th>FWA Units</th>
-              <th>Rebuy Revenue</th>
-              <th>Total Revenue</th>
-              <th>Status</th>
-            </tr>
-          </thead>
+        <div className="table-scroll">
+          <table className="modern-table">
+            <thead>
+              <tr>
+                {/* ✅ Tambah kolom Rank */}
+                <th className="text-center">Rank</th>
+                <th className="text-left">DSF ID</th>
+                <th className="text-left">DSF Name</th>
+                <th className="text-right">FWA Units</th>
+                <th className="text-right">Target</th>
+                <th className="text-right">Rebuy Revenue</th>
+                <th className="text-right">Total Revenue</th>
+                <th className="text-center">Status</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            {dsfs.map((d) => {
-              const c = hitungInsentif(d);
-              const eligible = c.incentive > 0;
+            <tbody>
+              {rankedDsfs.map((d, index) => {
+                const eligible =
+                  d.calc.incentive > 0;
 
-              return (
-                <tr key={d.idDsf}>
-                  <td className="mono">{d.idDsf}</td>
-                  <td>{d.namaDsf}</td>
-                  <td>{d.fwaUnits}</td>
-                  <td>{formatIDR(d.rebuyRevenue)}</td>
-                  <td>{formatIDR(c.totalRevenue)}</td>
-                  <td>
-                    <Pill variant={eligible ? "success" : "danger"}>
-                      {eligible ? "Eligible" : "Not Eligible"}
-                    </Pill>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+                const dsfTarget =
+                  d.targetFwa || TARGET_PER_DSF;
+
+                return (
+                  <tr key={d.idDsf} className="hover-row">
+                    {/* ✅ Rank Number */}
+                    <td className="text-center font-bold">
+                      {index + 1}
+                    </td>
+
+                    <td className="mono">{d.idDsf}</td>
+
+                    <td>{d.namaDsf}</td>
+
+                    <td className="text-right font-medium">
+                      {d.fwaUnits}
+                    </td>
+
+                    <td className="text-right">
+                      {dsfTarget}
+                    </td>
+
+                    <td className="text-right">
+                      {formatIDR(d.rebuyRevenue)}
+                    </td>
+
+                    <td className="text-right font-semibold">
+                      {formatIDR(d.calc.totalRevenue)}
+                    </td>
+
+                    <td className="text-center">
+                      <Pill
+                        variant={
+                          eligible
+                            ? "success"
+                            : "danger"
+                        }
+                      >
+                        {eligible
+                          ? "Eligible"
+                          : "Not Eligible"}
+                      </Pill>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </motion.div>
   );
