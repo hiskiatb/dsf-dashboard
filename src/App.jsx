@@ -42,12 +42,7 @@ export default function App() {
 
         const text = await res.text();
 
-        // ================================
-        // ✅ Ambil header (baris pertama)
-        // ================================
-// ================================
-// ✅ Ambil baris data pertama (bukan header)
-// ================================
+
 const lines = text.split("\n").filter((l) => l.trim() !== "");
 
 // Baris ke-0 = header
@@ -78,10 +73,6 @@ const formattedDates = {
 
 setDataDates(formattedDates);
 
-
-        // ================================
-        // ✅ Parse data normal
-        // ================================
         const rows = parseCSV(text);
         const mapped = rows.map(mapRowToDSF).filter((x) => x.idDsf);
 
@@ -268,10 +259,46 @@ function onSearch() {
       <div className="container">
         <div className="hero">
           <div>
-            <div className="hero-title">DSF Achievement Tracker</div>
-            <div className="hero-subtitle">
-              Pantau hasil penjualan untuk estimasi insentif Anda.
-            </div>
+            
+<div className="hero mb-0 pb-4 border-b border-gray-200">
+
+  <div className="flex flex-col items-start">
+
+    {/* TITLE */}
+    <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+      DSF Achievement Tracker
+    </h1>
+
+    {/* DATA INFO */}
+    <div className="mt-3 inline-flex flex-col sm:flex-row 
+                    gap-2 sm:gap-
+                    bg-gray-100 border border-gray-100 
+                    rounded-lg px-4 py-2">
+
+      <div className="text-xs sm:text-sm text-gray-600">
+        <span className="text-gray-3
+        00">Data IM3:</span>{" "}
+        <span className="font-semibold text-gray-800">
+          {dataDates.DATA_FWA_IM3 || "N/A"}
+        </span>
+      </div>
+
+      <div className="hidden sm:block w-px h-4 bg-gray-300" />
+
+      <div className="text-xs sm:text-sm text-gray-600">
+        <span className="text-gray-3
+        00">Data 3ID:</span>{" "}
+        <span className="font-semibold text-gray-900">
+          {dataDates.DATA_FWA_3ID || "N/A"}
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+           
           </div>
         </div>
 
@@ -450,18 +477,6 @@ function onSearch() {
 {/* mt-8 membuat jarak atas lebih rapat (2rem), mb-8 memberikan ruang di bawah halaman */}
 <footer className="mt-8 mb-8 w-full flex flex-col items-center gap-4 text-gray-500">
   
-  {/* Data References */}
-  {/* pb-2 dikurangi dari pb-4 agar lebih minimalis */}
-  <div className="flex gap-4 text-[10px] sm:text-xs font-medium border-b border-gray-100 pb-2">
-    <div className="flex gap-1">
-      <span className="text-gray-400">IM3 REF:</span>
-      <span className="text-gray-600">{dataDates.DATA_FWA_IM3 || "N/A"}</span>
-    </div>
-    <div className="flex gap-1 border-l border-gray-200 pl-4">
-      <span className="text-gray-400">3ID REF:</span>
-      <span className="text-gray-600">{dataDates.DATA_FWA_3ID || "N/A"}</span>
-    </div>
-  </div>
 
   {/* Ownership */}
   <div className="text-center">
