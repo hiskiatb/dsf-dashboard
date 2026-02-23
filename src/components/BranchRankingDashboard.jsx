@@ -7,7 +7,6 @@ const TARGET_PER_DSF = 20;
 export default function BranchRankingDashboard() {
   const [data, setData] = useState([]);
   const [scope, setScope] = useState("ALL");
-  const [rankingType, setRankingType] = useState("SALES");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -54,19 +53,17 @@ export default function BranchRankingDashboard() {
     return data.filter((d) => d.region === scope);
   }, [data, scope]);
 
+  // ✅ Ranking selalu berdasarkan Achievement %
   const rankedData = useMemo(() => {
-    const sorted = [...filteredData].sort((a, b) => {
-      if (rankingType === "SALES") {
-        return b.sales - a.sales;
-      }
-      return b.achievement - a.achievement;
-    });
+    const sorted = [...filteredData].sort(
+      (a, b) => b.achievement - a.achievement
+    );
 
     return sorted.map((item, index) => ({
       ...item,
       rank: index + 1,
     }));
-  }, [filteredData, rankingType]);
+  }, [filteredData]);
 
   function medal(rank) {
     if (rank === 1) return "🥇";
@@ -91,7 +88,7 @@ export default function BranchRankingDashboard() {
 
   return (
     <motion.div
-      className="card text-left"
+      className="text-left"
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
     >
@@ -101,20 +98,13 @@ export default function BranchRankingDashboard() {
           Branch Performance Ranking
         </h2>
 
-
-
         <p className="text-sm text-gray-500 mt-1">
-          Ranking berdasarkan Sales atau Achievement per Branch ·
-          <span className="ml-1">
-            Target per DSF:
-            <span className="font-semibold ml-1">
-              {TARGET_PER_DSF} FWA
-            </span>
-          </span>
+          Ranking berdasarkan Achievement per Branch
+        
         </p>
       </div>
 
-      {/* FILTER SECTION */}
+      {/* FILTER REGION */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
         <div className="filter-group">
           {["ALL", "NSA", "CSA", "SSA"].map((r) => (
@@ -130,24 +120,8 @@ export default function BranchRankingDashboard() {
           ))}
         </div>
 
-        <div className="filter-group">
-          <button
-            onClick={() => setRankingType("SALES")}
-            className={`filter-btn ${
-              rankingType === "SALES" ? "active" : ""
-            }`}
-          >
-            By Sales
-          </button>
+        <div>
 
-          <button
-            onClick={() => setRankingType("ACH")}
-            className={`filter-btn ${
-              rankingType === "ACH" ? "active" : ""
-            }`}
-          >
-            By Achievement %
-          </button>
         </div>
       </div>
 

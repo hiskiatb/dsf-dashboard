@@ -257,50 +257,37 @@ function onSearch() {
       <div className="bg-blur b" />
 
       <div className="container">
-        <div className="hero">
-          <div>
-            
-<div className="hero mb-0 pb-4 border-b border-gray-200">
+        <div className="mb-4 pb-3 border-b border-gray-200">
 
-  <div className="flex flex-col items-start">
+  {/* TITLE */}
+  <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">
+    DSF Achievement Tracker
+  </h1>
 
-    {/* TITLE */}
-    <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-      DSF Achievement Tracker
-    </h1>
+  {/* DATA INFO */}
+  <div className="mt-2 flex flex-col sm:flex-row gap-1 sm:gap-6">
 
-    {/* DATA INFO */}
-    <div className="mt-3 inline-flex flex-col sm:flex-row 
-                    gap-2 sm:gap-
-                    bg-gray-100 border border-gray-100 
-                    rounded-lg px-4 py-2">
+    <div className="text-xs sm:text-sm">
+      <span className="font-medium text-gray-500">
+        Data IM3:
+      </span>{" "}
+      <span className="font-semibold text-gray-900">
+        {dataDates.DATA_FWA_IM3 || "N/A"}
+      </span>
+    </div>
 
-      <div className="text-xs sm:text-sm text-gray-600">
-        <span className="text-gray-3
-        00">Data IM3:</span>{" "}
-        <span className="font-semibold text-gray-800">
-          {dataDates.DATA_FWA_IM3 || "N/A"}
-        </span>
-      </div>
-
-      <div className="hidden sm:block w-px h-4 bg-gray-300" />
-
-      <div className="text-xs sm:text-sm text-gray-600">
-        <span className="text-gray-3
-        00">Data 3ID:</span>{" "}
-        <span className="font-semibold text-gray-900">
-          {dataDates.DATA_FWA_3ID || "N/A"}
-        </span>
-      </div>
-
+    <div className="text-xs sm:text-sm">
+      <span className="font-medium text-gray-500">
+        Data 3ID:
+      </span>{" "}
+      <span className="font-semibold text-gray-900">
+        {dataDates.DATA_FWA_3ID || "N/A"}
+      </span>
     </div>
 
   </div>
-</div>
 
-           
-          </div>
-        </div>
+</div>
 
         {loadError ? <div className="card error">{loadError}</div> : null}
 
