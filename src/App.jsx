@@ -260,32 +260,34 @@ function onSearch() {
         <div className="mb-4 pb-3 border-b border-gray-200">
 
   {/* TITLE */}
-  <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">
-    DSF Achievement Tracker
-  </h1>
+ <h1 className="text-xl sm:text-4xl font-bold text-gray-900 leading-tight">
+  DSF Achievement Tracker
+</h1>
 
   {/* DATA INFO */}
-  <div className="mt-2 flex flex-col sm:flex-row gap-1 sm:gap-6">
+<div className="mt-2 flex items-center text-xs sm:text-sm text-gray-600">
 
-    <div className="text-xs sm:text-sm">
-      <span className="font-medium text-gray-500">
-        Data IM3:
-      </span>{" "}
-      <span className="font-semibold text-gray-900">
-        {dataDates.DATA_FWA_IM3 || "N/A"}
-      </span>
-    </div>
-
-    <div className="text-xs sm:text-sm">
-      <span className="font-medium text-gray-500">
-        Data 3ID:
-      </span>{" "}
-      <span className="font-semibold text-gray-900">
-        {dataDates.DATA_FWA_3ID || "N/A"}
-      </span>
-    </div>
-
+  <div className="flex items-center gap-1 whitespace-nowrap">
+    <span className="text-gray-500 font-medium">
+      Data IM3:
+    </span>
+    <span className="font-semibold text-gray-900">
+      {dataDates.DATA_FWA_IM3 || "N/A"}
+    </span>
   </div>
+
+  <div className="mx-3 h-4 w-px bg-gray-500" />
+
+  <div className="flex items-center gap-1 whitespace-nowrap">
+    <span className="text-gray-500 font-medium">
+      Data 3ID:
+    </span>
+    <span className="font-semibold text-gray-900">
+      {dataDates.DATA_FWA_3ID || "N/A"}
+    </span>
+  </div>
+
+</div>
 
 </div>
 
@@ -312,7 +314,7 @@ function onSearch() {
               }}
 
 
-                placeholder="Masukkan ID DSF / Nama DSF / ID TL / Nama TL"
+                placeholder="Masukkan ID DSF / Nama DSF / ID TL"
                 onKeyDown={(e) => {
                   if (e.key === "Enter") onSearch();
                 }}
