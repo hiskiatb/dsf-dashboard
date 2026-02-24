@@ -260,12 +260,12 @@ function onSearch() {
         <div className="mb-4 pb-3 border-b border-gray-200">
 
   {/* TITLE */}
- <h1 className="text-xl sm:text-4xl font-bold text-gray-900 leading-tight">
+ <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
   DSF Achievement Tracker
 </h1>
 
   {/* DATA INFO */}
-<div className="mt-2 flex items-center text-xs sm:text-sm text-gray-600">
+<div className="mt-2 flex items-center text-m sm:text-m text-gray-600">
 
   <div className="flex items-center gap-1 whitespace-nowrap">
     <span className="text-gray-500 font-medium">
