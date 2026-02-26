@@ -163,71 +163,61 @@ export default function TLDashboard({ tlId, tlName, dsfs, dataBasedOn }) {
         <div className="table-scroll">
           <table className="modern-table">
             <thead>
-              <tr>
-                {/* ✅ Tambah kolom Rank */}
-                <th className="text-center">Rank</th>
-                <th className="text-left">DSF ID</th>
-                <th className="text-left">DSF Name</th>
-                <th className="text-right">FWA Units</th>
-                <th className="text-right">Target</th>
-                <th className="text-right">Rebuy Revenue</th>
-                <th className="text-right">Total Revenue</th>
-                <th className="text-center">Status</th>
-              </tr>
-            </thead>
+  <tr>
+    <th className="text-center">Rank</th>
+    <th className="text-left">DSF ID</th>
+    <th className="text-left">DSF Name</th>
+    <th className="text-left">Branch</th> {/* ✅ Tambahan */}
+    <th className="text-right">FWA Units</th>
+    <th className="text-right">Target</th>
+    <th className="text-right">Rebuy Revenue</th>
+    <th className="text-right">Total Revenue</th>
+    <th className="text-center">Status</th>
+  </tr>
+</thead>
 
             <tbody>
-              {rankedDsfs.map((d, index) => {
-                const eligible =
-                  d.calc.incentive > 0;
+  {rankedDsfs.map((d, index) => {
+    const eligible = d.calc.incentive > 0;
+    const dsfTarget = d.targetFwa || TARGET_PER_DSF;
 
-                const dsfTarget =
-                  d.targetFwa || TARGET_PER_DSF;
+    return (
+      <tr key={d.idDsf} className="hover-row">
+        <td className="text-center font-bold">
+          {index + 1}
+        </td>
 
-                return (
-                  <tr key={d.idDsf} className="hover-row">
-                    {/* ✅ Rank Number */}
-                    <td className="text-center font-bold">
-                      {index + 1}
-                    </td>
+        <td className="mono">{d.idDsf}</td>
 
-                    <td className="mono">{d.idDsf}</td>
+        <td>{d.namaDsf}</td>
 
-                    <td>{d.namaDsf}</td>
+          <td>{d.branch || "-"}</td>
 
-                    <td className="text-right font-medium">
-                      {d.fwaUnits}
-                    </td>
+        <td className="text-right font-medium">
+          {d.fwaUnits}
+        </td>
 
-                    <td className="text-right">
-                      {dsfTarget}
-                    </td>
+        <td className="text-right">
+          {dsfTarget}
+        </td>
 
-                    <td className="text-right">
-                      {formatIDR(d.rebuyRevenue)}
-                    </td>
+        <td className="text-right">
+          {formatIDR(d.rebuyRevenue)}
+        </td>
 
-                    <td className="text-right font-semibold">
-                      {formatIDR(d.calc.totalRevenue)}
-                    </td>
+        <td className="text-right font-semibold">
+          {formatIDR(d.calc.totalRevenue)}
+        </td>
 
-                    <td className="text-center">
-                      <Pill
-                        variant={
-                          eligible
-                            ? "success"
-                            : "danger"
-                        }
-                      >
-                        {eligible
-                          ? "Eligible"
-                          : "Not Eligible"}
-                      </Pill>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
+        <td className="text-center whitespace-nowrap">
+          <Pill variant={eligible ? "success" : "danger"}>
+            {eligible ? "Eligible" : "Not Eligible"}
+          </Pill>
+        </td>
+      </tr>
+    );
+  })}
+</tbody>
           </table>
         </div>
       </div>
