@@ -455,8 +455,8 @@ function onSearch() {
   exit={{ opacity: 0, y: 12 }}
   transition={{ duration: 0.25 }}
 >
-  <BranchRankingDashboard />
-</motion.div>
+  
+<BranchRankingDashboard dsfData={dsfData} /></motion.div>
           )}
         </AnimatePresence>
 
