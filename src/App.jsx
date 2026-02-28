@@ -9,6 +9,8 @@ import RankingDashboard from "./components/RankingDashboard";
 import Breadcrumb from "./components/Breadcrumb";
 
 export default function App() {
+  const [fwa3IDData, setFwa3IDData] = useState([]);
+  const [fwaIM3Data, setFwaIM3Data] = useState([]);
   const [dsfData, setDsfData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
@@ -53,6 +55,18 @@ const parts = firstDataLine.split(";");
 
 // Ambil 4 kolom terakhir
 const lastFour = parts.slice(-4).map((v) => v.trim());
+
+// LOAD FWA 3ID
+const res3 = await fetch("/FWA_3ID.csv", { cache: "no-store" });
+const text3 = await res3.text();
+const parsed3 = parseCSV(text3);
+setFwa3IDData(parsed3);
+
+// LOAD FWA IM3
+const resIM3 = await fetch("/FWA_IM3.csv", { cache: "no-store" });
+const textIM3 = await resIM3.text();
+const parsedIM3 = parseCSV(textIM3);
+setFwaIM3Data(parsedIM3);
 
 function formatDate(raw) {
   if (!raw) return "";
@@ -455,6 +469,8 @@ function onSearch() {
       key={selectedDSF.idDsf}
       dsf={selectedDSF}
       dataDates={dataDates}
+      fwa3IDData={fwa3IDData}
+      fwaIM3Data={fwaIM3Data}
     />
   ) : selectedTL ? (
     <TLDashboard
