@@ -5,7 +5,8 @@ import TLDashboard from "./components/TLDashboard";
 import Pill from "./components/Pill";
 import { CSV_PATH, mapRowToDSF, parseCSV } from "./utils";
 import { X } from "lucide-react";
-import BranchRankingDashboard from "./components/BranchRankingDashboard";
+import RankingDashboard from "./components/RankingDashboard";
+import Breadcrumb from "./components/Breadcrumb";
 
 export default function App() {
   const [dsfData, setDsfData] = useState([]);
@@ -431,34 +432,67 @@ function onSearch() {
           </AnimatePresence>
         </motion.div>
 
+{/* ================= Breadcrumb ================= */}
+{(selectedTL || selectedDSF) && (
+  <Breadcrumb
+    selectedTL={selectedTL}
+    selectedDSF={selectedDSF}
+    onBackRanking={() => {
+      setSelectedDSF(null);
+      setSelectedTL(null);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }}
+    onBackTL={() => {
+      setSelectedDSF(null);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }}
+  />
+)}
+
         <AnimatePresence mode="wait">
-          {selectedTL ? (
-            <TLDashboard
-              key={selectedTL.tlId}
-              tlId={selectedTL.tlId}
-              tlName={selectedTL.tlName}
-              dsfs={selectedTL.dsfs}
-              dataDates={dataDates}
-            />
-          ) : selectedDSF ? (
-            <DSFCard
-              key={selectedDSF.idDsf}
-              dsf={selectedDSF}
-              dataDates={dataDates}
-            />
-          ) : (
-            <motion.div
-  key="empty"
-  className="mt-6"
-  initial={{ opacity: 0, y: 12 }}
-  animate={{ opacity: 1, y: 0 }}
-  exit={{ opacity: 0, y: 12 }}
-  transition={{ duration: 0.25 }}
->
-  
-<BranchRankingDashboard dsfData={dsfData} /></motion.div>
-          )}
-        </AnimatePresence>
+  {selectedDSF ? (
+    <DSFCard
+      key={selectedDSF.idDsf}
+      dsf={selectedDSF}
+      dataDates={dataDates}
+    />
+  ) : selectedTL ? (
+    <TLDashboard
+      key={selectedTL.tlId}
+      tlId={selectedTL.tlId}
+      tlName={selectedTL.tlName}
+      dsfs={selectedTL.dsfs}
+      dataDates={dataDates}
+      onSelectDSF={(dsf) => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        setSelectedDSF(dsf);
+      }}
+    />
+  ) : (
+    <motion.div
+      key="empty"
+      className="mt-6"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 12 }}
+      transition={{ duration: 0.25 }}
+    >
+      <RankingDashboard
+        dsfData={dsfData}
+        onSelectDSF={(dsf) => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          setSelectedDSF(dsf);
+          setSelectedTL(null);
+        }}
+        onSelectTL={(tl) => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          setSelectedTL(tl);
+          setSelectedDSF(null);
+        }}
+      />
+    </motion.div>
+  )}
+</AnimatePresence>
 
 {/* FOOTER SECTION */}
 {/* mt-8 membuat jarak atas lebih rapat (2rem), mb-8 memberikan ruang di bawah halaman */}

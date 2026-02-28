@@ -183,17 +183,29 @@ const rebuyUpdateLabel = formatFullDate(dataRebuyDate);
 
       {/* STATUS + TIPS */}
       <div className={`note ${eligible ? "note-ok" : "note-warn"}`}>
-        <div className="note-title">Tips:</div>
+  <div className="note-header">
+    <div className="note-title">Tips & Progress</div>
+    <div className="note-sub">
+      {eligible ? "Target tercapai 🎉" : "Masih bisa dikejar 💪"}
+    </div>
+  </div>
 
-        <div className="checklist">
-          {tips.map((t, idx) => (
-            <div key={idx} className="check-item">
-              <div className={`check-dot ${t.done ? "done" : ""}`} />
-              <div className="check-text">{t.text}</div>
-            </div>
-          ))}
+  <div className="tips-list">
+    {tips.map((t, idx) => (
+      <div key={idx} className="tip-item">
+        <div className={`tip-icon ${t.done ? "done" : ""}`}>
+          {t.done ? "✓" : ""}
+        </div>
+
+        <div className="tip-content">
+          <div className={`tip-text ${t.done ? "done" : ""}`}>
+            {t.text}
+          </div>
         </div>
       </div>
+    ))}
+  </div>
+</div>
     </motion.div>
   );
 }

@@ -6,7 +6,13 @@ import { formatIDR, hitungInsentif } from "../utils";
 const TARGET_PER_DSF = 20;
 const REVENUE_TARGET_PER_DSF = 7_500_000;
 
-export default function TLDashboard({ tlId, tlName, dsfs, dataBasedOn }) {
+export default function TLDashboard({ 
+  tlId, 
+  tlName, 
+  dsfs, 
+  dataBasedOn,
+  onSelectDSF 
+}){
   const totalFwa = dsfs.reduce((a, b) => a + (b.fwaUnits || 0), 0);
   const totalRebuy = dsfs.reduce((a, b) => a + (b.rebuyRevenue || 0), 0);
   const totalRevenue = totalFwa * 350_000 + totalRebuy;
@@ -182,7 +188,11 @@ export default function TLDashboard({ tlId, tlName, dsfs, dataBasedOn }) {
     const dsfTarget = d.targetFwa || TARGET_PER_DSF;
 
     return (
-      <tr key={d.idDsf} className="hover-row">
+      <tr
+  key={d.idDsf}
+  onClick={() => onSelectDSF && onSelectDSF(d)}
+  className="hover-row cursor-pointer transition hover:bg-gray-50"
+>
         <td className="text-center font-bold">
           {index + 1}
         </td>
