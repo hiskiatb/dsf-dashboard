@@ -226,8 +226,7 @@ const msisdnIM3 = fwaIM3Data.filter(
       {/* ================================
          TABEL MSISDN
       ================================= */}
-
-      {msisdn3ID.length > 0 && (
+{msisdn3ID.length > 0 && (
   <div className="mt-8">
     <h3 className="text-lg font-semibold mb-3">List MSISDN FWA:</h3>
 
@@ -237,15 +236,19 @@ const msisdnIM3 = fwaIM3Data.filter(
           <tr>
             <th className="p-3">No.</th>
             <th className="p-3">MSISDN</th>
-            <th className="p-3">Status</th>
+            <th className="p-3">GA Date</th>
             <th className="p-3">Remarks</th>
           </tr>
         </thead>
 
         <tbody>
           {msisdn3ID.map((row, i) => {
-            const notCounted =
-              (row.REMARKS || "").toUpperCase() !== "REGISTERED";
+            const invalidGA =
+              !row.GA_DATE ||
+              row.GA_DATE === "NULL" ||
+              row.GA_DATE === null;
+
+            const notCounted = row.REMARKS !== "REGISTERED";
 
             return (
               <tr
@@ -256,7 +259,15 @@ const msisdnIM3 = fwaIM3Data.filter(
               >
                 <td className="p-3">{i + 1}</td>
                 <td className="p-3">{row.MSISDN}</td>
-                <td className="p-3">{row.STATUS}</td>
+
+                <td
+                  className={`p-3 font-medium ${
+                    invalidGA ? "text-rose-600" : "text-emerald-600"
+                  }`}
+                >
+                  {invalidGA ? "-" : row.GA_DATE}
+                </td>
+
                 <td
                   className={`p-3 font-medium ${
                     notCounted ? "text-rose-600" : "text-emerald-600"
