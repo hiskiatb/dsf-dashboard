@@ -262,8 +262,8 @@ const msisdnIM3 = fwaIM3Data.filter(
 
                 <td
                   className={`p-3 font-medium ${
-                    invalidGA ? "text-rose-600" : "text-emerald-600"
-                  }`}
+                  invalidGA ? "text-rose-600" : ""
+                }`}
                 >
                   {invalidGA ? "-" : row.GA_DATE}
                 </td>
@@ -316,8 +316,8 @@ const msisdnIM3 = fwaIM3Data.filter(
                 <td className="p-3">{row.MSISDN}</td>
                 <td
                   className={`p-3 font-medium ${
-                    invalid ? "text-rose-600" : "text-emerald-600"
-                  }`}
+                  invalid ? "text-rose-600" : "text-gray-900"
+                }`}
                 >
                   {invalid ? "-" : row.GA_DATE}
                 </td>
