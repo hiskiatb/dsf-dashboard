@@ -7,6 +7,7 @@ import { CSV_PATH, mapRowToDSF, parseCSV } from "./utils";
 import { X } from "lucide-react";
 import RankingDashboard from "./components/RankingDashboard";
 import Breadcrumb from "./components/Breadcrumb";
+import MSISDNCompareCard from "./components/MSISDNCompareCard";
 
 export default function App() {
   const [fwa3IDData, setFwa3IDData] = useState([]);
@@ -20,6 +21,9 @@ export default function App() {
   const [selectedTL, setSelectedTL] = useState(null);
   const [error, setError] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
+
+  const [pbiData, setPbiData] = useState([]);
+  const [selectedPBI, setSelectedPBI] = useState(null);
 
 
   // ================================
@@ -68,6 +72,15 @@ const textIM3 = await resIM3.text();
 const parsedIM3 = parseCSV(textIM3);
 setFwaIM3Data(parsedIM3);
 
+// LOAD PBI
+const resPBI = await fetch("/PBI_202602.csv", { cache: "no-store" });
+const textPBI = await resPBI.text();
+const parsedPBI = parseCSV(textPBI);
+setPbiData(parsedPBI);
+
+console.log("PBI SAMPLE:", parsedPBI[0]);
+console.log("TYPE MSISDN:", typeof parsedPBI[0]?.MSISDN);
+
 function formatDate(raw) {
   if (!raw) return "";
   if (/^\d{8}$/.test(raw)) {
@@ -111,19 +124,47 @@ setDataDates(formattedDates);
   }, []);
 
 const suggestions = useMemo(() => {
+
   const q = query.trim().toLowerCase();
   if (!q) return [];
 
-  const dsfMatches = dsfData
-    .filter(
-      (x) =>
-        x.idDsf.toLowerCase().includes(q) ||
-        x.namaDsf.toLowerCase().includes(q)
+  const pbiMatches = pbiData
+    .filter((row) =>
+      (row.MSISDN || "").toLowerCase().includes(q)
     )
-    .map((x) => ({
-      type: "DSF",
-      data: x,
+    .map((row) => ({
+      type: "PBI",
+      data: row,
     }));
+
+  const raw3IDMatches = fwa3IDData
+    .filter((row) =>
+      (row.MSISDN || "").toLowerCase().includes(q)
+    )
+    .map((row) => ({
+      type: "RAW_3ID",
+      data: row,
+    }));
+
+  const rawIM3Matches = fwaIM3Data
+    .filter((row) =>
+      (row.MSISDN || "").toLowerCase().includes(q)
+    )
+    .map((row) => ({
+      type: "RAW_IM3",
+      data: row,
+    }));
+
+    const dsfMatches = dsfData
+  .filter(
+    (x) =>
+      (x.idDsf || "").toLowerCase().includes(q) ||
+      (x.namaDsf || "").toLowerCase().includes(q)
+  )
+  .map((x) => ({
+    type: "DSF",
+    data: x,
+  }));
 
   // ✅ HANYA SATU tlMap
   const tlMap = new Map();
@@ -166,10 +207,15 @@ const suggestions = useMemo(() => {
     }
   });
 
-  return [...tlMap.values(), ...dsfMatches].slice(0, 6);
+  return [
+  ...pbiMatches,
+  ...rawIM3Matches,
+  ...raw3IDMatches,
+  ...tlMap.values(),
+  ...dsfMatches,
+].slice(0, 8);
 
-}, [query, dsfData]);
-
+}, [query, dsfData, pbiData, fwaIM3Data, fwa3IDData]);
 
 function onSearch() {
   setShowSuggestions(false);
@@ -241,7 +287,9 @@ function onSearch() {
   setError("DSF atau TL tidak ditemukan. Silakan periksa input Anda.");
 }
 
-   function onPick(item) {
+function onPick(item) {
+
+  // ================= TL =================
   if (item.type === "TL") {
     const dsfsUnderTL = dsfData.filter(
       (x) => x.idTl === item.data.idTl
@@ -254,10 +302,30 @@ function onSearch() {
     });
 
     setSelectedDSF(null);
+    setSelectedPBI(null);
     setQuery(item.data.namaTl);
-  } else {
+  }
+
+  // ================= MSISDN (PBI / RAW) =================
+  else if (
+    item.type === "PBI" ||
+    item.type === "RAW_IM3" ||
+    item.type === "RAW_3ID"
+  ) {
+    setSelectedPBI({
+      msisdn: item.data.MSISDN,
+    });
+
+    setSelectedDSF(null);
+    setSelectedTL(null);
+    setQuery(item.data.MSISDN);
+  }
+
+  // ================= DSF =================
+  else {
     setSelectedDSF(item.data);
     setSelectedTL(null);
+    setSelectedPBI(null);
     setQuery(item.data.idDsf);
   }
 
@@ -329,7 +397,7 @@ function onSearch() {
               }}
 
 
-                placeholder="Masukkan ID DSF / Nama DSF / ID TL"
+                placeholder="Masukkan ID DSF / Nama DSF / ID TL / MSISDN"
                 onKeyDown={(e) => {
                   if (e.key === "Enter") onSearch();
                 }}
@@ -375,6 +443,32 @@ function onSearch() {
               >
                 <div className="suggestions-title">Suggestions</div>
                 {suggestions.map((item, index) => {
+
+if (
+  item.type === "PBI" ||
+  item.type === "RAW_IM3" ||
+  item.type === "RAW_3ID"
+) {
+  return (
+    <button
+      key={`${item.type}-${item.data.MSISDN}-${index}`}
+      className="suggestion-item"
+      onClick={() => onPick(item)}
+    >
+      <div className="suggestion-top">
+        <span className="suggestion-name">
+          {item.data.MSISDN}
+        </span>
+        <Pill>{item.type}</Pill>
+      </div>
+
+      <div className="suggestion-sub">
+        GA: {item.data.GA_DATE || item.data.GA_DT || "-"}
+      </div>
+    </button>
+  );
+}
+
   if (item.type === "TL") {
     return (
       <button
@@ -464,7 +558,15 @@ function onSearch() {
 )}
 
         <AnimatePresence mode="wait">
-  {selectedDSF ? (
+  {selectedPBI ? (
+    <MSISDNCompareCard
+      key={selectedPBI.msisdn}
+      msisdn={selectedPBI.msisdn}
+      pbiData={pbiData}
+      fwaIM3Data={fwaIM3Data}
+      fwa3IDData={fwa3IDData}
+    />
+  ) : selectedDSF ? (
     <DSFCard
       key={selectedDSF.idDsf}
       dsf={selectedDSF}
@@ -524,7 +626,7 @@ function onSearch() {
       SPM SUMATERA
     </p>
   </div>
-  
+
 </footer>
         </div>
       </div>
