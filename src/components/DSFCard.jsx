@@ -108,12 +108,14 @@ function formatFullDate(dateStr) {
 }
 
 const dataFwaDate =
-  dataDates?.DATA_FWA_IM3 ??
-  dataDates?.DATA_FWA_3ID ??
-  "";const rebuyDate =
-  dataDates?.DATA_REBUY_3ID ??
-  dataDates?.DATA_REBUY_IM3 ??
-  "";
+  dsf.brand === "IM3"
+    ? dataDates?.DATA_FWA_IM3
+    : dataDates?.DATA_FWA_3ID;
+
+const rebuyDate =
+  dsf.brand === "IM3"
+    ? dataDates?.DATA_REBUY_IM3
+    : dataDates?.DATA_REBUY_3ID;
 
 const periodeLabel = formatMonthYear(dataFwaDate);
 const fwaUpdateLabel = formatFullDate(dataFwaDate);
@@ -122,15 +124,25 @@ const rebuyUpdateLabel = formatFullDate(rebuyDate);
   // ================================
   // FILTER DATA MSISDN
   // ================================
+
+  // ================================
+// NORMALIZE ID (HAPUS 0 DI DEPAN)
+// ================================
+function normalizeId(val) {
+  return String(val ?? "")
+    .trim()
+    .replace(/^0+/, ""); 
+}
+
 const dsfId = String(dsf?.idDsf || "").trim();
 const [searchMsisdn, setSearchMsisdn] = React.useState("");
 
-const rawList = (fwaData || []).filter((row) => {
-  return String(row?.ID_DSF || "").trim() === dsfId;
-});
+const rawList = (fwaData || []).filter((row) =>
+  normalizeId(row?.ID_DSF) === normalizeId(dsf?.idDsf)
+);
 
 const rawCounted = rawList.filter(
-  (x) => x.REMARKS === "REGISTERED"
+  (x) => String(x.REMARKS).trim().toUpperCase() === "REGISTERED"
 );
 
 const rawInvalid = rawList.filter(
@@ -149,9 +161,9 @@ const filteredRawInvalid = rawInvalid.filter((x) =>
 // FILTER ADJUSTMENT DATA
 // ================================
 
-const adjList = (adjData || []).filter((row) => {
-  return String(row?.ID_DSF || "").trim() === dsfId;
-});
+const adjList = (adjData || []).filter((row) =>
+  normalizeId(row?.ID_DSF) === normalizeId(dsf?.idDsf)
+);
 
 const adjValid = adjList.filter(
   (x) => Number(x.VALID_FLAG) > 0
@@ -326,6 +338,7 @@ Raw Data (Counted)
 <th className="p-3">No</th>
 <th className="p-3">MSISDN</th>
 <th className="p-3">GA Date</th>
+<th className="p-3">Device</th>
 <th className="p-3">Remarks</th>
 </tr>
 </thead>
@@ -335,7 +348,7 @@ Raw Data (Counted)
 {filteredRawCounted.length === 0 ? (
 
 <tr>
-<td colSpan="4" className="p-4 text-center text-gray-500">
+<td colSpan="5" className="p-4 text-center text-gray-500">
 No registered MSISDN
 </td>
 </tr>
@@ -349,6 +362,7 @@ filteredRawCounted.map((row,i)=>(
 <td className="p-3">{row.MSISDN}</td>
 <td className="p-3">{formatGA(row.GA_DATE)}</td>
 
+<td className="p-3">{row?.DEVICE?.trim?.() || row?.DEVICE || "-"}</td>
 <td className="p-3 text-blue-700 font-medium">
 {row.REMARKS}
 </td>
@@ -377,6 +391,7 @@ Raw Data (Invalid)
 <th className="p-3">No</th>
 <th className="p-3">MSISDN</th>
 <th className="p-3">GA Date</th>
+<th className="p-3">Device</th>
 <th className="p-3">Remarks</th>
 </tr>
 </thead>
@@ -386,7 +401,7 @@ Raw Data (Invalid)
 {filteredRawInvalid.length === 0 ? (
 
 <tr>
-<td colSpan="4" className="p-4 text-center text-gray-500">
+<td colSpan="5" className="p-4 text-center text-gray-500">
 No invalid data
 </td>
 </tr>
@@ -399,7 +414,7 @@ filteredRawInvalid.map((row,i)=>(
 <td className="p-3">{i+1}</td>
 <td className="p-3">{row.MSISDN}</td>
 <td className="p-3">{formatGA(row.GA_DATE)}</td>
-
+<td className="p-3">{row?.DEVICE?.trim?.() || row?.DEVICE || "-"}</td>
 <td className="p-3 text-rose-700 font-medium">
 {row.REMARKS}
 </td>
@@ -432,6 +447,7 @@ Adjustment (Counted)
 <th className="p-3">No</th>
 <th className="p-3">MSISDN</th>
 <th className="p-3">GA Date</th>
+<th className="p-3">Device</th>
 <th className="p-3">Remarks</th>
 </tr>
 </thead>
@@ -444,7 +460,7 @@ Adjustment (Counted)
 <td className="p-3">{i+1}</td>
 <td className="p-3">{row.MSISDN}</td>
 <td className="p-3">{formatGA(row.GA_DATE)}</td>
-
+<td className="p-3">{row?.DEVICE?.trim?.() || row?.DEVICE || "-"}</td>
 <td className="p-3 text-emerald-700 font-medium">
 {row.REMARKS}
 </td>
@@ -476,6 +492,7 @@ Adjustment (Invalid)
 <th className="p-3">No</th>
 <th className="p-3">MSISDN</th>
 <th className="p-3">GA Date</th>
+<th className="p-3">Device</th>
 <th className="p-3">Remarks</th>
 </tr>
 </thead>
@@ -488,7 +505,7 @@ Adjustment (Invalid)
 <td className="p-3">{i+1}</td>
 <td className="p-3">{row.MSISDN}</td>
 <td className="p-3">{formatGA(row.GA_DATE)}</td>
-
+<td className="p-3">{row?.DEVICE?.trim?.() || row?.DEVICE || "-"}</td>
 <td className="p-3 text-rose-700 font-medium">
 {row.REMARKS}
 </td>

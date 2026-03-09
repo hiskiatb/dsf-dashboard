@@ -55,21 +55,24 @@ const lines = text.split("\n").filter((l) => l.trim() !== "");
 const header = lines[0].split(";").map((h) => h.trim());
 const firstData = lines[1].split(";").map((v) => v.trim());
 
-// cari index berdasarkan nama kolom
-const idxDataFwa = header.findIndex((h) => h === "DATA_FWA");
-const idxRebuyIm3 = header.findIndex((h) => h === "DATA_REBUY_IM3");
-const idxRebuy3id = header.findIndex((h) => h === "DATA_REBUY_3ID");
+const idxFwaIM3 = header.findIndex((h) => h === "DATA_FWA_IM3");
+const idxFwa3ID = header.findIndex((h) => h === "DATA_FWA_3ID");
+
+const idxRebuyIM3 = header.findIndex((h) => h === "DATA_REBUY_IM3");
+const idxRebuy3ID = header.findIndex((h) => h === "DATA_REBUY_3ID");
 
 console.log("HEADER:", header);
-console.log("INDEX DATA_FWA:", idxDataFwa);
-console.log("INDEX REBUY IM3:", idxRebuyIm3);
-console.log("INDEX REBUY 3ID:", idxRebuy3id);
+console.log("INDEX DATA_FWA_IM3:", idxFwaIM3);
+console.log("INDEX DATA_FWA_3ID:", idxFwa3ID);
+console.log("INDEX REBUY_IM3:", idxRebuyIM3);
+console.log("INDEX REBUY_3ID:", idxRebuy3ID);
 
 // ambil value dari baris data pertama
 const rawDates = {
-  DATA_FWA: firstData[idxDataFwa]?.trim(),
-  DATA_REBUY_IM3: firstData[idxRebuyIm3]?.trim(),
-  DATA_REBUY_3ID: firstData[idxRebuy3id]?.trim(),
+  DATA_FWA_IM3: firstData[idxFwaIM3]?.trim(),
+  DATA_FWA_3ID: firstData[idxFwa3ID]?.trim(),
+  DATA_REBUY_IM3: firstData[idxRebuyIM3]?.trim(),
+  DATA_REBUY_3ID: firstData[idxRebuy3ID]?.trim(),
 };
 
 // LOAD FWA DATA
@@ -105,10 +108,9 @@ function formatDate(raw) {
   }
   return raw;
 }
-
 const formattedDates = {
-  DATA_FWA_IM3: formatDate(rawDates.DATA_FWA),
-  DATA_FWA_3ID: formatDate(rawDates.DATA_FWA),
+  DATA_FWA_IM3: formatDate(rawDates.DATA_FWA_IM3),
+  DATA_FWA_3ID: formatDate(rawDates.DATA_FWA_3ID),
   DATA_REBUY_IM3: formatDate(rawDates.DATA_REBUY_IM3),
   DATA_REBUY_3ID: formatDate(rawDates.DATA_REBUY_3ID),
 };
