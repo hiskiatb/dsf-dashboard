@@ -7,11 +7,11 @@ import { CSV_PATH, mapRowToDSF, parseCSV } from "./utils";
 import { X } from "lucide-react";
 import RankingDashboard from "./components/RankingDashboard";
 import Breadcrumb from "./components/Breadcrumb";
-import MSISDNCompareCard from "./components/MSISDNCompareCard";
+// import MSISDNCompareCard from "./components/MSISDNCompareCard";
 
 export default function App() {
-  const [fwa3IDData, setFwa3IDData] = useState([]);
-  const [fwaIM3Data, setFwaIM3Data] = useState([]);
+const [fwaData, setFwaData] = useState([]);
+const [adjData, setAdjData] = useState([]);
   const [dsfData, setDsfData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
@@ -23,7 +23,7 @@ export default function App() {
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const [pbiData, setPbiData] = useState([]);
-  const [selectedPBI, setSelectedPBI] = useState(null);
+ // const [selectedPBI, setSelectedPBI] = useState(null);
 
 
   // ================================
@@ -52,25 +52,39 @@ export default function App() {
 
 const lines = text.split("\n").filter((l) => l.trim() !== "");
 
-// Baris ke-0 = header
-// Baris ke-1 = data pertama
-const firstDataLine = lines[1] || "";
-const parts = firstDataLine.split(";");
+const header = lines[0].split(";").map((h) => h.trim());
+const firstData = lines[1].split(";").map((v) => v.trim());
 
-// Ambil 4 kolom terakhir
-const lastFour = parts.slice(-4).map((v) => v.trim());
+// cari index berdasarkan nama kolom
+const idxDataFwa = header.findIndex((h) => h === "DATA_FWA");
+const idxRebuyIm3 = header.findIndex((h) => h === "DATA_REBUY_IM3");
+const idxRebuy3id = header.findIndex((h) => h === "DATA_REBUY_3ID");
 
-// LOAD FWA 3ID
-const res3 = await fetch("/FWA_3ID.csv", { cache: "no-store" });
-const text3 = await res3.text();
-const parsed3 = parseCSV(text3);
-setFwa3IDData(parsed3);
+console.log("HEADER:", header);
+console.log("INDEX DATA_FWA:", idxDataFwa);
+console.log("INDEX REBUY IM3:", idxRebuyIm3);
+console.log("INDEX REBUY 3ID:", idxRebuy3id);
 
-// LOAD FWA IM3
-const resIM3 = await fetch("/FWA_IM3.csv", { cache: "no-store" });
-const textIM3 = await resIM3.text();
-const parsedIM3 = parseCSV(textIM3);
-setFwaIM3Data(parsedIM3);
+// ambil value dari baris data pertama
+const rawDates = {
+  DATA_FWA: firstData[idxDataFwa]?.trim(),
+  DATA_REBUY_IM3: firstData[idxRebuyIm3]?.trim(),
+  DATA_REBUY_3ID: firstData[idxRebuy3id]?.trim(),
+};
+
+// LOAD FWA DATA
+const resFWA = await fetch("/FWA_202602.csv", { cache: "no-store" });
+const textFWA = await resFWA.text();
+const parsedFWA = parseCSV(textFWA);
+
+setFwaData(parsedFWA);
+
+// LOAD ADJUSTMENT DATA
+const resADJ = await fetch("/ADJ_FWA_202602.csv", { cache: "no-store" });
+const textADJ = await resADJ.text();
+const parsedADJ = parseCSV(textADJ);
+
+setAdjData(parsedADJ);
 
 // LOAD PBI
 const resPBI = await fetch("/PBI_202602.csv", { cache: "no-store" });
@@ -93,10 +107,10 @@ function formatDate(raw) {
 }
 
 const formattedDates = {
-  DATA_FWA_IM3: formatDate(lastFour[0]),
-  DATA_FWA_3ID: formatDate(lastFour[1]),
-  DATA_REBUY_IM3: formatDate(lastFour[2]),
-  DATA_REBUY_3ID: formatDate(lastFour[3]),
+  DATA_FWA_IM3: formatDate(rawDates.DATA_FWA),
+  DATA_FWA_3ID: formatDate(rawDates.DATA_FWA),
+  DATA_REBUY_IM3: formatDate(rawDates.DATA_REBUY_IM3),
+  DATA_REBUY_3ID: formatDate(rawDates.DATA_REBUY_3ID),
 };
 
 setDataDates(formattedDates);
@@ -128,32 +142,23 @@ const suggestions = useMemo(() => {
   const q = query.trim().toLowerCase();
   if (!q) return [];
 
-  const pbiMatches = pbiData
-    .filter((row) =>
-      (row.MSISDN || "").toLowerCase().includes(q)
-    )
-    .map((row) => ({
-      type: "PBI",
-      data: row,
-    }));
+  // const pbiMatches = pbiData
+  //   .filter((row) =>
+  //     (row.MSISDN || "").toLowerCase().includes(q)
+  //   )
+  //   .map((row) => ({
+  //     type: "PBI",
+  //     data: row,
+  //   }));
 
-  const raw3IDMatches = fwa3IDData
-    .filter((row) =>
-      (row.MSISDN || "").toLowerCase().includes(q)
-    )
-    .map((row) => ({
-      type: "RAW_3ID",
-      data: row,
-    }));
-
-  const rawIM3Matches = fwaIM3Data
-    .filter((row) =>
-      (row.MSISDN || "").toLowerCase().includes(q)
-    )
-    .map((row) => ({
-      type: "RAW_IM3",
-      data: row,
-    }));
+  // const rawMatches = fwaData
+  // .filter((row) =>
+  //   (row.MSISDN || "").toLowerCase().includes(q)
+  // )
+  // .map((row) => ({
+  //   type: "RAW",
+  //   data: row,
+  // }));
 
     const dsfMatches = dsfData
   .filter(
@@ -207,15 +212,14 @@ const suggestions = useMemo(() => {
     }
   });
 
-  return [
-  ...pbiMatches,
-  ...rawIM3Matches,
-  ...raw3IDMatches,
+return [
+  // ...pbiMatches,
+  // ...rawMatches,
   ...tlMap.values(),
   ...dsfMatches,
 ].slice(0, 8);
 
-}, [query, dsfData, pbiData, fwaIM3Data, fwa3IDData]);
+}, [query, dsfData, pbiData, fwaData]);
 
 function onSearch() {
   setShowSuggestions(false);
@@ -302,19 +306,18 @@ function onPick(item) {
     });
 
     setSelectedDSF(null);
-    setSelectedPBI(null);
+//    setSelectedPBI(null);
     setQuery(item.data.namaTl);
   }
 
   // ================= MSISDN (PBI / RAW) =================
   else if (
     item.type === "PBI" ||
-    item.type === "RAW_IM3" ||
-    item.type === "RAW_3ID"
+item.type === "RAW"
   ) {
-    setSelectedPBI({
-      msisdn: item.data.MSISDN,
-    });
+    // setSelectedPBI({
+    //   msisdn: item.data.MSISDN,
+    // });
 
     setSelectedDSF(null);
     setSelectedTL(null);
@@ -325,7 +328,7 @@ function onPick(item) {
   else {
     setSelectedDSF(item.data);
     setSelectedTL(null);
-    setSelectedPBI(null);
+  //  setSelectedPBI(null);
     setQuery(item.data.idDsf);
   }
 
@@ -397,7 +400,7 @@ function onPick(item) {
               }}
 
 
-                placeholder="Masukkan ID DSF / Nama DSF / ID TL / MSISDN"
+                placeholder="Masukkan ID DSF / Nama DSF / ID TL"
                 onKeyDown={(e) => {
                   if (e.key === "Enter") onSearch();
                 }}
@@ -446,8 +449,7 @@ function onPick(item) {
 
 if (
   item.type === "PBI" ||
-  item.type === "RAW_IM3" ||
-  item.type === "RAW_3ID"
+item.type === "RAW"
 ) {
   return (
     <button
@@ -557,23 +559,22 @@ if (
   />
 )}
 
-        <AnimatePresence mode="wait">
-  {selectedPBI ? (
-    <MSISDNCompareCard
-      key={selectedPBI.msisdn}
-      msisdn={selectedPBI.msisdn}
-      pbiData={pbiData}
-      fwaIM3Data={fwaIM3Data}
-      fwa3IDData={fwa3IDData}
-    />
-  ) : selectedDSF ? (
-    <DSFCard
-      key={selectedDSF.idDsf}
-      dsf={selectedDSF}
-      dataDates={dataDates}
-      fwa3IDData={fwa3IDData}
-      fwaIM3Data={fwaIM3Data}
-    />
+<AnimatePresence mode="wait">
+  {/* {selectedPBI ? (
+  <MSISDNCompareCard
+    msisdn={selectedPBI.msisdn}
+    pbiData={pbiData}
+    fwaData={fwaData}
+  />
+  ) : */}
+
+  {selectedDSF ? (
+<DSFCard
+  dsf={selectedDSF}
+  dataDates={dataDates}
+  fwaData={fwaData}
+  adjData={adjData}
+/>
   ) : selectedTL ? (
     <TLDashboard
       key={selectedTL.tlId}
