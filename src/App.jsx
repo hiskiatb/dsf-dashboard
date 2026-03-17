@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import DSFCard from "./components/DSFCard";
 import TLDashboard from "./components/TLDashboard";
 import Pill from "./components/Pill";
-import { CSV_PATH, mapRowToDSF, parseCSV } from "./utils";
+import { mapRowToDSF, parseCSV } from "./utils";
 import { X } from "lucide-react";
 import RankingDashboard from "./components/RankingDashboard";
 import Breadcrumb from "./components/Breadcrumb";
@@ -23,6 +23,7 @@ const [adjData, setAdjData] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const [pbiData, setPbiData] = useState([]);
+  const [selectedMonth, setSelectedMonth] = useState("202603"); // default March
  // const [selectedPBI, setSelectedPBI] = useState(null);
 
 
@@ -36,6 +37,23 @@ const [adjData, setAdjData] = useState([]);
     DATA_REBUY_3ID: "",
   });
 
+  const MONTH_FILES = {
+  "202603": {
+    dsf: "/DSF_202603.csv",
+    fwa: "/FWA_202603.csv",
+    adj: "/ADJ_FWA_202603.csv",
+    pbi: "/PBI_202603.csv",
+    label: "March 2026",
+  },
+  "202602": {
+    dsf: "/DSF_202602.csv",
+    fwa: "/FWA_202602.csv",
+    adj: "/ADJ_FWA_202602.csv",
+    pbi: "/PBI_202602.csv",
+    label: "February 2026",
+  },
+};
+
   useEffect(() => {
     let alive = true;
 
@@ -44,7 +62,9 @@ const [adjData, setAdjData] = useState([]);
         setLoading(true);
         setLoadError("");
 
-        const res = await fetch(CSV_PATH, { cache: "no-store" });
+        const files = MONTH_FILES[selectedMonth];
+
+        const res = await fetch(files.dsf, { cache: "no-store" });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
         const text = await res.text();
@@ -76,21 +96,21 @@ const rawDates = {
 };
 
 // LOAD FWA DATA
-const resFWA = await fetch("/FWA_202602.csv", { cache: "no-store" });
+const resFWA = await fetch(files.fwa, { cache: "no-store" });
 const textFWA = await resFWA.text();
 const parsedFWA = parseCSV(textFWA);
 
 setFwaData(parsedFWA);
 
 // LOAD ADJUSTMENT DATA
-const resADJ = await fetch("/ADJ_FWA_202602.csv", { cache: "no-store" });
+const resADJ = await fetch(files.adj, { cache: "no-store" });
 const textADJ = await resADJ.text();
 const parsedADJ = parseCSV(textADJ);
 
 setAdjData(parsedADJ);
 
 // LOAD PBI
-const resPBI = await fetch("/PBI_202602.csv", { cache: "no-store" });
+const resPBI = await fetch(files.pbi, { cache: "no-store" });
 const textPBI = await resPBI.text();
 const parsedPBI = parseCSV(textPBI);
 setPbiData(parsedPBI);
@@ -137,7 +157,24 @@ setDataDates(formattedDates);
     return () => {
       alive = false;
     };
-  }, []);
+}, [selectedMonth]);
+
+// ================================
+// SYNC SELECTED DSF WHEN DATA CHANGES
+// ================================
+useEffect(() => {
+
+  if (!selectedDSF) return;
+
+  const updated = dsfData.find(
+    (x) => x.idDsf === selectedDSF.idDsf
+  );
+
+  if (updated) {
+    setSelectedDSF(updated);
+  }
+
+}, [dsfData]);
 
 const suggestions = useMemo(() => {
 
@@ -345,39 +382,83 @@ item.type === "RAW"
       <div className="bg-blur b" />
 
       <div className="container">
-        <div className="mb-4 pb-3 border-b border-gray-200">
+        
 
-  {/* TITLE */}
- <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
+<div className="mb-5 pb-4 border-b border-gray-200">
+
+<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+{/* LEFT SIDE */}
+<div>
+
+<h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
   DSF Achievement Tracker
 </h1>
 
-  {/* DATA INFO */}
-<div className="mt-2 flex items-center text-m sm:text-m text-gray-600">
+<div className="mt-2 flex items-center text-sm text-gray-600">
 
-  <div className="flex items-center gap-1 whitespace-nowrap">
-    <span className="text-gray-500 font-medium">
-      Data IM3:
-    </span>
-    <span className="font-semibold text-gray-900">
-      {dataDates.DATA_FWA_IM3 || "N/A"}
-    </span>
-  </div>
+<div className="flex items-center gap-1">
+  <span className="text-gray-500 font-medium">
+    Data IM3:
+  </span>
+  <span className="font-semibold text-gray-900">
+    {dataDates.DATA_FWA_IM3 || "N/A"}
+  </span>
+</div>
 
-  <div className="mx-3 h-4 w-px bg-gray-500" />
+<div className="mx-3 h-4 w-px bg-gray-300" />
 
-  <div className="flex items-center gap-1 whitespace-nowrap">
-    <span className="text-gray-500 font-medium">
-      Data 3ID:
-    </span>
-    <span className="font-semibold text-gray-900">
-      {dataDates.DATA_FWA_3ID || "N/A"}
-    </span>
-  </div>
+<div className="flex items-center gap-1">
+  <span className="text-gray-500 font-medium">
+    Data 3ID:
+  </span>
+  <span className="font-semibold text-gray-900">
+    {dataDates.DATA_FWA_3ID || "N/A"}
+  </span>
+</div>
+
+</div>
+
+</div>
+
+{/* RIGHT SIDE (MONTH SWITCHER) */}
+<div className="flex flex-col items-start sm:items-end gap-2">
+
+<div className="text-xs text-gray-500 font-medium">
+  Achievement Month
+</div>
+
+<div className="flex gap-2">
+
+{Object.entries(MONTH_FILES).map(([key, m]) => {
+
+const active = selectedMonth === key;
+
+return (
+<motion.button
+  key={key}
+  onClick={() => setSelectedMonth(key)}
+  className={`px-4 py-2 rounded-lg text-sm font-medium transition
+  ${active
+    ? "bg-blue-600 text-white shadow"
+    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+  }`}
+  whileTap={{ scale: 0.95 }}
+>
+{m.label}
+</motion.button>
+);
+
+})}
 
 </div>
 
 </div>
+
+</div>
+
+</div>
+
 
         {loadError ? <div className="card error">{loadError}</div> : null}
 

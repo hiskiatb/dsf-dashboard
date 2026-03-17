@@ -174,142 +174,153 @@ export function isEligible(dsf) {
   return hitungInsentif(dsf).incentive > 0;
 }
 
-// --------------------------
-// Tips Engine (Checklist)
-// --------------------------
 export function buildTips(dsf) {
-  const c = hitungInsentif(dsf);
 
   const tips = [];
 
-  const rebuyNow = dsf.rebuyRevenue;
   const fwaNow = dsf.fwaUnits;
+  const rebuyNow = dsf.rebuyRevenue;
 
-  // ==========================================
-  // TARGET 500K (>=20 FWA + total revenue >= 7.5jt)
-  // ==========================================
-  const needFwa20 = Math.max(0, 20 - fwaNow);
+  const fwaRevenueNow = fwaNow * FWA_UNIT_VALUE;
+  const totalRevenueNow = fwaRevenueNow + rebuyNow;
 
-  // Jika sudah 20+ FWA → tinggal cek revenue
-  if (needFwa20 === 0) {
-    if (totalRevenueNow >= REVENUE_TARGET) {
-      tips.push({
-        done: true,
-        text: "Target insentif 500 ribu sudah tercapai (20+ FWA & revenue ≥ 7,5 juta).",
-      });
-    } else {
-      tips.push({
-        done: false,
-        text: `Untuk dapat insentif 500 ribu, kamu masih perlu tambahan revenue ${formatIDR(
-          c.remainingRevenue
-        )} (bisa dikejar lewat rebuy).`,
-      });
-    }
+  // ================================
+  // TARGET DEFINITIONS
+  // ================================
+  const TARGET_500_FWA = 20;
+  const TARGET_200_FWA = 15;
 
-    // Kalau sudah masuk blok 500K, kita stop.
-    // Tidak perlu tampilkan info 200K lagi.
-    return tips;
-  }
+  // ================================
+  // CURRENT STATUS
+  // ================================
 
-  // ------------------------------------------
-  // Kalau belum 20 FWA → buat beberapa opsi
-  // ------------------------------------------
+  tips.push({
+    done: false,
+    text: `Revenue saat ini ${formatIDR(totalRevenueNow)} dari ${fwaNow} FWA dan rebuy ${formatIDR(rebuyNow)}.`,
+  });
 
-  // Simulasi total revenue kalau dia mencapai 20 FWA (rebuy tetap dihitung yang sekarang)
-  const totalRevenueIf20 = 20 * FWA_UNIT_VALUE + rebuyNow;
+  // ================================
+  // CHECK 500K INCENTIVE
+  // ================================
 
-  const remainingIf20 = Math.max(0, REVENUE_TARGET - totalRevenueIf20);
-
-  // Simulasi total revenue kalau dia mencapai 22 FWA (tanpa rebuy pun sudah cukup)
-  const totalRevenueIf22 = 22 * FWA_UNIT_VALUE;
-  const needFwa22 = Math.max(0, 22 - fwaNow);
-
-  // Case 1: Kalau sampai 20 FWA, revenue sudah cukup (berkat rebuy existing)
-  if (remainingIf20 === 0) {
-    tips.push({
-      done: false,
-      text: `Untuk dapat insentif 500 ribu, cukup tambah ${needFwa20} FWA lagi sampai 20 FWA. Rebuy kamu saat ini sudah cukup, jadi fokus kejar FWA dulu ya.`,
-    });
-  } else {
-    // Case 2: Sampai 20 FWA masih kurang revenue
-    tips.push({
-      done: false,
-      text: `Untuk dapat insentif 500 ribu, tambah ${needFwa20} FWA lagi sampai 20 FWA. Setelah itu kamu masih perlu tambahan rebuy sekitar ${formatIDR(
-        remainingIf20
-      )} agar total revenue mencapai 7,5 juta.`,
-    });
-
-    // opsi alternatif: kejar 22 FWA supaya tanpa rebuy pun aman
-    if (needFwa22 > 0) {
-      tips.push({
-        done: false,
-        text: `Alternatif tanpa rebuy: kejar sampai 22 FWA (tambah ${needFwa22} FWA lagi). Karena 22 FWA sudah setara ≥ 7,5 juta dari kontribusi FWA saja.`,
-      });
-    }
-  }
-
-// ==========================================
-// TARGET 200K (>=15 FWA + total revenue >= 7.5jt)
-// ==========================================
-
-const needFwa15 = Math.max(0, 15 - fwaNow);
-
-// revenue dari FWA existing
-const fwaRevenueNow = fwaNow * FWA_UNIT_VALUE;
-
-// total revenue sekarang
-const totalRevenueNow = fwaRevenueNow + rebuyNow;
-
-// simulasi jika mencapai 15 FWA
-const fwaRevenueIf15 = 15 * FWA_UNIT_VALUE;
-const totalRevenueIf15 = fwaRevenueIf15 + rebuyNow;
-
-const remainingIf15 = Math.max(0, REVENUE_TARGET - totalRevenueIf15);
-
-if (needFwa15 > 0) {
-
-  if (remainingIf15 === 0) {
-
-    tips.push({
-      done: false,
-      text: `Untuk dapat insentif 200 ribu, cukup tambah ${needFwa15} FWA lagi sampai 15 FWA. Rebuy kamu saat ini sudah cukup.`,
-    });
-
-  } else {
-
-    tips.push({
-      done: false,
-      text: `Untuk dapat insentif 200 ribu, tambah ${needFwa15} FWA lagi sampai 15 FWA. Setelah itu kamu masih perlu tambahan rebuy sekitar ${formatIDR(
-        remainingIf15
-      )} agar total revenue mencapai 7,5 juta.`,
-    });
-
-  }
-
-} else {
-
-  const remainingRevenue = Math.max(0, REVENUE_TARGET - totalRevenueNow);
-
-  if (remainingRevenue === 0) {
+  if (fwaNow >= TARGET_500_FWA && totalRevenueNow >= REVENUE_TARGET) {
 
     tips.push({
       done: true,
-      text: "Target insentif 200 ribu sudah tercapai (15+ FWA & revenue ≥ 7,5 juta).",
+      text: "🎉 Target insentif 500 ribu sudah tercapai.",
     });
 
-  } else {
+    return tips;
+  }
+
+  // ================================
+  // SIMULASI KE 20 FWA
+  // ================================
+
+  const needFwa20 = Math.max(0, TARGET_500_FWA - fwaNow);
+
+  const revenueIf20 =
+    TARGET_500_FWA * FWA_UNIT_VALUE + rebuyNow;
+
+  const remainingIf20 =
+    Math.max(0, REVENUE_TARGET - revenueIf20);
+
+  if (needFwa20 > 0) {
+
+    if (remainingIf20 === 0) {
+
+      tips.push({
+        done: false,
+        text: `Untuk insentif 500 ribu cukup tambah ${needFwa20} FWA lagi sampai 20 FWA.`,
+      });
+
+    } else {
+
+      tips.push({
+        done: false,
+        text: `Tambah ${needFwa20} FWA lagi sampai 20 FWA, lalu masih perlu rebuy sekitar ${formatIDR(remainingIf20)}.`,
+      });
+
+    }
+
+  }
+
+  // ================================
+  // ALTERNATIVE TANPA REBUY
+  // ================================
+
+  const fwaPureTarget =
+    Math.ceil(REVENUE_TARGET / FWA_UNIT_VALUE);
+
+  const needFwaPure =
+    Math.max(0, fwaPureTarget - fwaNow);
+
+  if (needFwaPure > 0) {
 
     tips.push({
       done: false,
-      text: `Untuk dapat insentif 200 ribu, kamu masih perlu tambahan rebuy sekitar ${formatIDR(
-        remainingRevenue
-      )} agar total revenue mencapai 7,5 juta.`,
+      text: `Alternatif tanpa rebuy: capai ${fwaPureTarget} FWA (tambah ${needFwaPure} FWA lagi).`,
     });
 
   }
 
-}
+  // ================================
+  // TARGET 200K
+  // ================================
 
+  const needFwa15 =
+    Math.max(0, TARGET_200_FWA - fwaNow);
+
+  const revenueIf15 =
+    TARGET_200_FWA * FWA_UNIT_VALUE + rebuyNow;
+
+  const remainingIf15 =
+    Math.max(0, REVENUE_TARGET - revenueIf15);
+
+  if (fwaNow >= TARGET_200_FWA && totalRevenueNow >= REVENUE_TARGET) {
+
+    tips.push({
+      done: true,
+      text: "Target insentif 200 ribu sudah tercapai.",
+    });
+
+  } else {
+
+    if (needFwa15 > 0) {
+
+      if (remainingIf15 === 0) {
+
+        tips.push({
+          done: false,
+          text: `Untuk insentif 200 ribu cukup tambah ${needFwa15} FWA lagi sampai 15 FWA.`,
+        });
+
+      } else {
+
+        tips.push({
+          done: false,
+          text: `Tambah ${needFwa15} FWA lagi sampai 15 FWA lalu perlu rebuy sekitar ${formatIDR(remainingIf15)}.`,
+        });
+
+      }
+
+    } else {
+
+      const remainingRevenue =
+        Math.max(0, REVENUE_TARGET - totalRevenueNow);
+
+      if (remainingRevenue > 0) {
+
+        tips.push({
+          done: false,
+          text: `Kamu hanya perlu tambahan rebuy sekitar ${formatIDR(remainingRevenue)} untuk dapat insentif 200 ribu.`,
+        });
+
+      }
+
+    }
+
+  }
 
   return tips;
 }
