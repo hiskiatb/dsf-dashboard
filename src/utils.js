@@ -182,7 +182,6 @@ export function buildTips(dsf) {
 
   const tips = [];
 
-  const totalRevenueNow = c.totalRevenue;
   const rebuyNow = dsf.rebuyRevenue;
   const fwaNow = dsf.fwaUnits;
 
