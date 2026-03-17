@@ -160,18 +160,22 @@ setDataDates(formattedDates);
 }, [selectedMonth]);
 
 // ================================
-// SYNC SELECTED DSF WHEN DATA CHANGES
+// SYNC SELECTED TL WHEN DATA CHANGES
 // ================================
 useEffect(() => {
 
-  if (!selectedDSF) return;
+  if (!selectedTL) return;
 
-  const updated = dsfData.find(
-    (x) => x.idDsf === selectedDSF.idDsf
+  const dsfsUnderTL = dsfData.filter(
+    (x) => x.idTl === selectedTL.tlId
   );
 
-  if (updated) {
-    setSelectedDSF(updated);
+  if (dsfsUnderTL.length > 0) {
+    setSelectedTL({
+      tlId: selectedTL.tlId,
+      tlName: dsfsUnderTL[0].namaTl,
+      dsfs: dsfsUnderTL,
+    });
   }
 
 }, [dsfData]);
@@ -660,7 +664,7 @@ item.type === "RAW"
 />
   ) : selectedTL ? (
     <TLDashboard
-      key={selectedTL.tlId}
+      key={`${selectedTL.tlId}-${selectedMonth}`}
       tlId={selectedTL.tlId}
       tlName={selectedTL.tlName}
       dsfs={selectedTL.dsfs}
