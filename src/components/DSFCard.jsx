@@ -305,6 +305,37 @@ const filteredAdjInvalid = adjInvalid.filter((x) =>
       </div>
 
       {/* ================================
+   TIPS ENGINE
+================================ */}
+
+{tips.length > 0 && (
+  <div className="mt-6">
+
+    <h3 className="text-lg font-semibold mb-3">
+      Tips Pencapaian Insentif
+    </h3>
+
+    <div className="space-y-2">
+
+      {tips.map((tip, i) => (
+        <div
+          key={i}
+          className={`p-3 rounded-lg border text-sm
+          ${tip.done
+            ? "bg-emerald-50 border-emerald-200 text-emerald-800"
+            : "bg-yellow-50 border-yellow-200 text-yellow-800"
+          }`}
+        >
+          {tip.text}
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+)}
+
+      {/* ================================
          TABEL MSISDN
       ================================= */}
 
