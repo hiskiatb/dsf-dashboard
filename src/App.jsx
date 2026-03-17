@@ -7,6 +7,7 @@ import { mapRowToDSF, parseCSV } from "./utils";
 import { X } from "lucide-react";
 import RankingDashboard from "./components/RankingDashboard";
 import Breadcrumb from "./components/Breadcrumb";
+import { Toaster } from "react-hot-toast";
 // import MSISDNCompareCard from "./components/MSISDNCompareCard";
 
 export default function App() {
@@ -381,6 +382,8 @@ item.type === "RAW"
 
 
   return (
+      <>
+    <Toaster position="top-right" />
     <div className="page">
       <div className="bg-blur a" />
       <div className="bg-blur b" />
@@ -717,6 +720,7 @@ item.type === "RAW"
 
 </footer>
         </div>
-      </div>
+            </div>
+    </>
   );
 }

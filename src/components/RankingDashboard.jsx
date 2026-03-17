@@ -1,4 +1,6 @@
 import React, { useMemo, useState } from "react";
+import { useRef } from "react";
+import CopyImageButton from "./CopyImageButton";
 
 const TARGET_DSF = 7500000;
 const FWA_PRICE = 350000;
@@ -46,6 +48,7 @@ export default function RankingDashboard({
   const [filters, setFilters] = useState(initialFilters);
   const [draftFilters, setDraftFilters] = useState(initialFilters);
   const [openFilter, setOpenFilter] = useState(null);
+  const tableRef = useRef(null);
 
   /* ================= FILTER ================= */
 
@@ -390,7 +393,17 @@ if (rankType === "TL" && onSelectTL) {
       </div>
 
       {/* TABLE */}
-      <div className="overflow-x-auto rounded-xl border">
+      {/* TABLE HEADER */}
+<div className="flex items-center justify-between mb-3">
+  <div className="text-sm font-semibold text-gray-700">
+    Leaderboard Table
+  </div>
+
+  <CopyImageButton targetRef={tableRef} />
+</div>
+
+{/* TABLE */}
+<div ref={tableRef} className="overflow-x-auto rounded-xl border">
         <table className="min-w-full text-sm whitespace-nowrap text-left">
           <thead className="bg-gray-100">
             {rankType === "DSF" ? (

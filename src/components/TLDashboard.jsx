@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import Pill from "./Pill";
 import Ring from "./Ring";
 import { formatIDR, hitungInsentif } from "../utils";
+import { useRef } from "react";
+import CopyImageButton from "./CopyImageButton";
+
 
 const TARGET_PER_DSF = 20;
 const REVENUE_TARGET_PER_DSF = 7_500_000;
@@ -13,6 +16,7 @@ export default function TLDashboard({
   dataBasedOn,
   onSelectDSF 
 }){
+  const tableRef = useRef(null);
   const totalFwa = dsfs.reduce((a, b) => a + (b.fwaUnits || 0), 0);
   const totalRebuy = dsfs.reduce((a, b) => a + (b.rebuyRevenue || 0), 0);
   const totalRevenue = totalFwa * 350_000 + totalRebuy;
@@ -161,10 +165,16 @@ export default function TLDashboard({
       <div className="divider" />
 
       {/* DSF TABLE */}
-      <div className="table-wrap-modern">
-        <div className="table-title mb-3">
-          DSF List Under This TL
-        </div>
+  <div className="flex items-center justify-between mb-3">
+
+  <div className="table-title">
+    DSF List Under This TL
+  </div>
+
+  <CopyImageButton targetRef={tableRef} />
+
+</div>
+          <div ref={tableRef} className="table-wrap-modern">
 
         <div className="table-scroll">
           <table className="modern-table">
