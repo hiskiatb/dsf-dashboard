@@ -9,6 +9,7 @@ export default function CopyImageButton({ targetRef }) {
     if (!targetRef?.current) return;
 
     try {
+
       const dataUrl = await htmlToImage.toPng(targetRef.current, {
         pixelRatio: 4,
         backgroundColor: "#ffffff",
@@ -16,6 +17,7 @@ export default function CopyImageButton({ targetRef }) {
 
       const blob = await (await fetch(dataUrl)).blob();
 
+      // TRY COPY CLIPBOARD (desktop)
       await navigator.clipboard.write([
         new ClipboardItem({
           "image/png": blob,
@@ -24,27 +26,34 @@ export default function CopyImageButton({ targetRef }) {
 
       toast.success("Report copied as image", {
         icon: "📋",
-        duration: 2500,
-        style: {
-          borderRadius: "10px",
-          background: "#111827",
-          color: "#fff",
-          fontSize: "14px",
-          padding: "10px 14px",
-        },
       });
 
     } catch (err) {
-      console.error(err);
 
-      toast.error("Failed to copy image", {
-        duration: 2500,
-        style: {
-          borderRadius: "10px",
-          background: "#7f1d1d",
-          color: "#fff",
-        },
-      });
+      console.warn("Clipboard not supported, fallback download");
+
+      try {
+
+        const dataUrl = await htmlToImage.toPng(targetRef.current, {
+          pixelRatio: 4,
+          backgroundColor: "#ffffff",
+        });
+
+        const link = document.createElement("a");
+        link.download = "report.png";
+        link.href = dataUrl;
+        link.click();
+
+        toast.success("Image downloaded (mobile mode)", {
+          icon: "⬇️",
+        });
+
+      } catch (e) {
+
+        toast.error("Failed to export image");
+
+      }
+
     }
   }
 
@@ -61,7 +70,6 @@ export default function CopyImageButton({ targetRef }) {
         rounded-lg
         shadow-sm
         hover:bg-gray-50
-        hover:shadow
         transition
       "
       whileTap={{ scale: 0.95 }}
