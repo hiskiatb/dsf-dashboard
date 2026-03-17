@@ -252,42 +252,63 @@ export function buildTips(dsf) {
 // ==========================================
 // TARGET 200K (>=15 FWA + total revenue >= 7.5jt)
 // ==========================================
+
 const needFwa15 = Math.max(0, 15 - fwaNow);
 
-// Simulasi total revenue kalau dia mencapai 15 FWA (rebuy tetap dihitung dari yang sekarang)
-const totalRevenueIf15 = Math.max(totalRevenueNow, 15 * FWA_UNIT_VALUE + rebuyNow);
+// revenue dari FWA existing
+const fwaRevenueNow = fwaNow * FWA_UNIT_VALUE;
+
+// total revenue sekarang
+const totalRevenueNow = fwaRevenueNow + rebuyNow;
+
+// simulasi jika mencapai 15 FWA
+const fwaRevenueIf15 = 15 * FWA_UNIT_VALUE;
+const totalRevenueIf15 = fwaRevenueIf15 + rebuyNow;
+
 const remainingIf15 = Math.max(0, REVENUE_TARGET - totalRevenueIf15);
 
 if (needFwa15 > 0) {
-  if (remainingIf15 <= 0) {
-    // Rebuy existing sudah cukup, cuma perlu FWA
+
+  if (remainingIf15 === 0) {
+
     tips.push({
       done: false,
-      text: `Untuk dapat insentif 200 ribu, cukup tambah ${needFwa15} FWA lagi sampai 15 FWA. Rebuy kamu saat ini sudah cukup, jadi fokus kejar FWA dulu ya.`,
+      text: `Untuk dapat insentif 200 ribu, cukup tambah ${needFwa15} FWA lagi sampai 15 FWA. Rebuy kamu saat ini sudah cukup.`,
     });
+
   } else {
-    // Masih butuh tambahan revenue dari rebuy
+
     tips.push({
       done: false,
       text: `Untuk dapat insentif 200 ribu, tambah ${needFwa15} FWA lagi sampai 15 FWA. Setelah itu kamu masih perlu tambahan rebuy sekitar ${formatIDR(
         remainingIf15
       )} agar total revenue mencapai 7,5 juta.`,
     });
+
   }
+
 } else {
-  if (totalRevenueNow >= REVENUE_TARGET) {
+
+  const remainingRevenue = Math.max(0, REVENUE_TARGET - totalRevenueNow);
+
+  if (remainingRevenue === 0) {
+
     tips.push({
       done: true,
       text: "Target insentif 200 ribu sudah tercapai (15+ FWA & revenue ≥ 7,5 juta).",
     });
+
   } else {
+
     tips.push({
       done: false,
-      text: `Untuk dapat insentif 200 ribu, kejar rebuy sekitar ${formatIDR(
-        REVENUE_TARGET - rebuyNow
-      )} lagi agar total revenue mencapai 7,5 juta. Rebuy saat ini: ${formatIDR(rebuyNow)}`,
+      text: `Untuk dapat insentif 200 ribu, kamu masih perlu tambahan rebuy sekitar ${formatIDR(
+        remainingRevenue
+      )} agar total revenue mencapai 7,5 juta.`,
     });
+
   }
+
 }
 
 
