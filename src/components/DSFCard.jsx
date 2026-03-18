@@ -1,4 +1,6 @@
-import React from "react";
+import CopyImageButton from "./CopyImageButton"; // sesuaikan path
+import React, { useRef } from "react";
+
 import { motion } from "framer-motion";
 import Pill from "./Pill";
 import Ring from "./Ring";
@@ -15,6 +17,7 @@ export default function DSFCard({
   fwaData = [],
   adjData = []
 }){
+
 
   const c = hitungInsentif(dsf);
   const tips = buildTips(dsf);
@@ -182,6 +185,10 @@ const filteredAdjInvalid = adjInvalid.filter((x) =>
   (x.MSISDN || "").includes(searchMsisdn)
 );
 
+const rawCountedRef = useRef(null);
+const rawInvalidRef = useRef(null);
+const adjValidRef = useRef(null);
+const adjInvalidRef = useRef(null);
 
   return (
     <motion.div
@@ -356,11 +363,18 @@ className="w-full border rounded-lg px-3 py-2 text-sm"
 </div>
 
 
-         <h3 className="text-md font-semibold text-blue-700 mb-2">
-Raw Data (Counted)
-</h3>
+<div className="flex items-start justify-between mb-2">
+  <h3 className="text-md font-semibold text-blue-700">
+    Raw Data (Counted)
+  </h3>
 
-        <div className="overflow-x-auto rounded-xl border">
+  <CopyImageButton 
+    targetRef={rawCountedRef} 
+    dataDates={dataDates} 
+    reportName="Raw Data Counted" 
+  />
+</div>
+<div ref={rawCountedRef} className="overflow-x-auto rounded-xl border">
 
 <table className="min-w-full text-sm whitespace-nowrap text-left">
 

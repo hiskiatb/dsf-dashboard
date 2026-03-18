@@ -56,108 +56,110 @@ const [adjData, setAdjData] = useState([]);
 };
 
   useEffect(() => {
-    let alive = true;
+  let alive = true;
 
-    async function load() {
-      try {
-        setLoading(true);
-        setLoadError("");
+  async function load() {
+    try {
+      setLoading(true);
+      setLoadError("");
 
-        const files = MONTH_FILES[selectedMonth];
+      const files = MONTH_FILES[selectedMonth];
 
-        const res = await fetch(files.dsf, { cache: "no-store" });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      // ================= LOAD DSF =================
+      const res = await fetch(files.dsf, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const text = await res.text();
 
-        const text = await res.text();
+      const lines = text.split("\n").filter((l) => l.trim() !== "");
+      const header = lines[0].split(";").map((h) => h.trim());
+      const firstData = lines[1].split(";").map((v) => v.trim());
 
+      const idxFwaIM3 = header.findIndex((h) => h === "DATA_FWA_IM3");
+      const idxFwa3ID = header.findIndex((h) => h === "DATA_FWA_3ID");
+      const idxRebuyIM3 = header.findIndex((h) => h === "DATA_REBUY_IM3");
+      const idxRebuy3ID = header.findIndex((h) => h === "DATA_REBUY_3ID");
 
-const lines = text.split("\n").filter((l) => l.trim() !== "");
+      const rawDates = {
+        DATA_FWA_IM3: firstData[idxFwaIM3]?.trim(),
+        DATA_FWA_3ID: firstData[idxFwa3ID]?.trim(),
+        DATA_REBUY_IM3: firstData[idxRebuyIM3]?.trim(),
+        DATA_REBUY_3ID: firstData[idxRebuy3ID]?.trim(),
+      };
 
-const header = lines[0].split(";").map((h) => h.trim());
-const firstData = lines[1].split(";").map((v) => v.trim());
-
-const idxFwaIM3 = header.findIndex((h) => h === "DATA_FWA_IM3");
-const idxFwa3ID = header.findIndex((h) => h === "DATA_FWA_3ID");
-
-const idxRebuyIM3 = header.findIndex((h) => h === "DATA_REBUY_IM3");
-const idxRebuy3ID = header.findIndex((h) => h === "DATA_REBUY_3ID");
-
-console.log("HEADER:", header);
-console.log("INDEX DATA_FWA_IM3:", idxFwaIM3);
-console.log("INDEX DATA_FWA_3ID:", idxFwa3ID);
-console.log("INDEX REBUY_IM3:", idxRebuyIM3);
-console.log("INDEX REBUY_3ID:", idxRebuy3ID);
-
-// ambil value dari baris data pertama
-const rawDates = {
-  DATA_FWA_IM3: firstData[idxFwaIM3]?.trim(),
-  DATA_FWA_3ID: firstData[idxFwa3ID]?.trim(),
-  DATA_REBUY_IM3: firstData[idxRebuyIM3]?.trim(),
-  DATA_REBUY_3ID: firstData[idxRebuy3ID]?.trim(),
-};
-
-// LOAD FWA DATA
-const resFWA = await fetch(files.fwa, { cache: "no-store" });
-const textFWA = await resFWA.text();
-const parsedFWA = parseCSV(textFWA);
-
-setFwaData(parsedFWA);
-
-// LOAD ADJUSTMENT DATA
-const resADJ = await fetch(files.adj, { cache: "no-store" });
-const textADJ = await resADJ.text();
-const parsedADJ = parseCSV(textADJ);
-
-setAdjData(parsedADJ);
-
-// LOAD PBI
-const resPBI = await fetch(files.pbi, { cache: "no-store" });
-const textPBI = await resPBI.text();
-const parsedPBI = parseCSV(textPBI);
-setPbiData(parsedPBI);
-
-console.log("PBI SAMPLE:", parsedPBI[0]);
-console.log("TYPE MSISDN:", typeof parsedPBI[0]?.MSISDN);
-
-function formatDate(raw) {
-  if (!raw) return "";
-  if (/^\d{8}$/.test(raw)) {
-    return `${raw.slice(0, 4)}-${raw.slice(
-      4,
-      6
-    )}-${raw.slice(6, 8)}`;
-  }
-  return raw;
-}
-const formattedDates = {
-  DATA_FWA_IM3: formatDate(rawDates.DATA_FWA_IM3),
-  DATA_FWA_3ID: formatDate(rawDates.DATA_FWA_3ID),
-  DATA_REBUY_IM3: formatDate(rawDates.DATA_REBUY_IM3),
-  DATA_REBUY_3ID: formatDate(rawDates.DATA_REBUY_3ID),
-};
-
-setDataDates(formattedDates);
-
-        const rows = parseCSV(text);
-        const mapped = rows.map(mapRowToDSF).filter((x) => x.idDsf);
-
-        if (!alive) return;
-        setDsfData(mapped);
-      } catch (e) {
-        if (!alive) return;
-        setLoadError(
-          `Failed to load CSV: ${CSV_PATH}. (${e?.message || "error"})`
-        );
-      } finally {
-        if (!alive) return;
-        setLoading(false);
+      function formatDate(raw) {
+        if (!raw) return "";
+        if (/^\d{8}$/.test(raw)) {
+          return `${raw.slice(0, 4)}-${raw.slice(4, 6)}-${raw.slice(6, 8)}`;
+        }
+        return raw;
       }
-    }
 
-    load();
-    return () => {
-      alive = false;
-    };
+      const formattedDates = {
+        DATA_FWA_IM3: formatDate(rawDates.DATA_FWA_IM3),
+        DATA_FWA_3ID: formatDate(rawDates.DATA_FWA_3ID),
+        DATA_REBUY_IM3: formatDate(rawDates.DATA_REBUY_IM3),
+        DATA_REBUY_3ID: formatDate(rawDates.DATA_REBUY_3ID),
+      };
+      setDataDates(formattedDates);
+
+      // ================= PARSE CSV =================
+      const rows = parseCSV(text);
+      const mapped = rows.map(mapRowToDSF).filter((x) => x.idDsf);
+
+      if (!alive) return;
+
+      setDsfData(mapped);
+
+      // ================= LOAD FWA =================
+      const resFWA = await fetch(files.fwa, { cache: "no-store" });
+      const textFWA = await resFWA.text();
+      const parsedFWA = parseCSV(textFWA);
+      setFwaData(parsedFWA);
+
+      // ================= LOAD ADJ =================
+      const resADJ = await fetch(files.adj, { cache: "no-store" });
+      const textADJ = await resADJ.text();
+      const parsedADJ = parseCSV(textADJ);
+      setAdjData(parsedADJ);
+
+      // ================= LOAD PBI =================
+      const resPBI = await fetch(files.pbi, { cache: "no-store" });
+      const textPBI = await resPBI.text();
+      const parsedPBI = parseCSV(textPBI);
+      setPbiData(parsedPBI);
+
+      // ================= REFRESH SELECTED DSF / TL =================
+      if (selectedDSF) {
+        const updatedDSF = mapped.find(d => d.idDsf === selectedDSF.idDsf);
+        setSelectedDSF(updatedDSF || null);
+      }
+
+      if (selectedTL) {
+        const dsfsUnderTL = mapped.filter(d => d.idTl === selectedTL.tlId);
+        setSelectedTL(
+          dsfsUnderTL.length > 0
+            ? {
+                tlId: selectedTL.tlId,
+                tlName: dsfsUnderTL[0].namaTl,
+                dsfs: dsfsUnderTL,
+              }
+            : null
+        );
+      }
+
+    } catch (e) {
+      if (!alive) return;
+      setLoadError(`Failed to load CSV. (${e?.message || "error"})`);
+    } finally {
+      if (!alive) return;
+      setLoading(false);
+    }
+  }
+
+  load();
+  return () => {
+    alive = false;
+  };
 }, [selectedMonth]);
 
 // ================================
