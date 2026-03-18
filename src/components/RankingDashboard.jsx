@@ -395,18 +395,18 @@ if (rankType === "TL" && onSelectTL) {
 
       {/* TABLE */}
       {/* TABLE HEADER */}
-<div className="flex items-center justify-between mb-3">
-  <div className="text-sm font-semibold text-gray-700">
+<div className="flex items-center justify-between mt-4 pt-4 pb-4 border-t border-gray-200">
+  <div className="text-lg font-semibold text-gray-700">
     Leaderboard Table
   </div>
 
-<CopyImageButton
-  targetRef={tableRef}
-  dataDates={dataDates}
-  filters={filters}
-  rankType={rankType}
-  sortBy={sortBy}
-/>
+  <CopyImageButton
+    targetRef={tableRef}
+    dataDates={dataDates}
+    filters={filters}
+    rankType={rankType}
+    sortBy={sortBy}
+  />
 </div>
 
 {/* TABLE */}
