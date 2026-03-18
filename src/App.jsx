@@ -688,6 +688,7 @@ item.type === "RAW"
     >
       <RankingDashboard
         dsfData={dsfData}
+        dataDates={dataDates} 
         onSelectDSF={(dsf) => {
           window.scrollTo({ top: 0, behavior: "smooth" });
           setSelectedDSF(dsf);

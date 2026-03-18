@@ -32,7 +32,8 @@ function toTitleCase(str) {
 export default function RankingDashboard({ 
   dsfData = [], 
   onSelectDSF, 
-  onSelectTL 
+  onSelectTL,
+  dataDates 
 }) {
   const initialFilters = {
     BRAND: [],
@@ -399,7 +400,13 @@ if (rankType === "TL" && onSelectTL) {
     Leaderboard Table
   </div>
 
-  <CopyImageButton targetRef={tableRef} />
+<CopyImageButton
+  targetRef={tableRef}
+  dataDates={dataDates}
+  filters={filters}
+  rankType={rankType}
+  sortBy={sortBy}
+/>
 </div>
 
 {/* TABLE */}
