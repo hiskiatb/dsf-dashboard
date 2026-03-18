@@ -5,7 +5,6 @@ import toast from "react-hot-toast";
 
 function getActiveFilters(filters) {
   if (!filters) return null;
-
   const active = [];
   Object.entries(filters).forEach(([key, val]) => {
     if (val && val.length > 0) {
@@ -13,7 +12,7 @@ function getActiveFilters(filters) {
     }
   });
   if (active.length === 0) return null;
-  return active.join(" | ");
+  return active.join(", ");
 }
 
 function getTimestamp() {
@@ -40,7 +39,6 @@ export default function CopyImageButton({
   reportType = null,
   reportName = null
 }) {
-
   async function exportImage() {
     if (!targetRef?.current) {
       toast.error("Table not ready");
@@ -48,76 +46,106 @@ export default function CopyImageButton({
     }
 
     const element = targetRef.current;
-
     const im3Date = dataDates?.DATA_FWA_IM3 || "N/A";
     const threeDate = dataDates?.DATA_FWA_3ID || "N/A";
     const activeFilters = getActiveFilters(filters);
 
-    // Mapping sortBy key ke label yang rapi
-const sortMap = {
-  achievement: "Achievement",
-  revenue: "Revenue",
-  fwa: "FWA",
-  rebuy: "Rebuy",
+    const sortMap = {
+      achievement: "Achievement",
+      revenue: "Revenue",
+      fwa: "FWA",
+      rebuy: "Rebuy",
+    };
+    const sortLabel = sortBy ? sortMap[sortBy] || sortBy : null;
+
+const wrapper = document.createElement("div");
+wrapper.style.background = "#ffffff";
+wrapper.style.padding = "24px";
+wrapper.style.fontFamily = "Inter, sans-serif";
+wrapper.style.color = "#111827";
+wrapper.style.display = "inline-block"; // agar lebar menyesuaikan tabel
+wrapper.style.minWidth = "600px"; // minimum
+wrapper.style.overflow = "visible"; 
+
+// Header
+const header = document.createElement("div");
+header.style.marginBottom = "16px";
+header.style.padding = "16px 24px";
+header.style.background = "#f9fafb";
+header.style.borderRadius = "12px";
+header.style.boxShadow = "0 2px 8px rgba(0,0,0,0.08)";
+header.style.display = "flex";
+header.style.justifyContent = "space-between";
+header.style.alignItems = "flex-start";
+header.style.gap = "16px";
+header.style.flexWrap = "wrap"; // badge wrap jika banyak
+
+// Kolom kiri: Judul + Data Dates
+const leftCol = document.createElement("div");
+leftCol.style.display = "flex";
+leftCol.style.flexDirection = "column";
+leftCol.style.gap = "4px";
+leftCol.style.flex = "1 1 auto";
+
+const title = document.createElement("div");
+title.innerText = "DSF Achievement Tracker";
+title.style.fontSize = "22px";
+title.style.fontWeight = "700";
+title.style.color = "#111827";
+
+const dateInfo = document.createElement("div");
+dateInfo.innerText = `Data IM3: ${im3Date} | Data 3ID: ${threeDate}`;
+dateInfo.style.fontSize = "13px";
+dateInfo.style.fontStyle = "italic";
+dateInfo.style.color = "#6b7280";
+
+leftCol.appendChild(title);
+leftCol.appendChild(dateInfo);
+
+// Kolom kanan: badge
+const rightCol = document.createElement("div");
+rightCol.style.display = "flex";
+rightCol.style.flexWrap = "wrap";
+rightCol.style.gap = "8px";
+rightCol.style.flex = "1 1 auto";
+rightCol.style.justifyContent = "flex-end";
+rightCol.style.maxWidth = "500px"; // agar badge wrap ke bawah jika panjang
+
+// Badge function
+const createBadge = (text, bg, color) => {
+  const badge = document.createElement("span");
+  badge.innerText = text;
+  badge.style.background = bg;
+  badge.style.color = color;
+  badge.style.padding = "2px 8px";
+  badge.style.borderRadius = "8px";
+  badge.style.fontWeight = "500";
+  badge.style.fontSize = "12px";
+  badge.style.whiteSpace = "normal";
+  badge.style.wordBreak = "break-word";
+  return badge;
 };
-const sortLabel = sortBy ? sortMap[sortBy] || sortBy : null;
 
+if (rankType) rightCol.appendChild(createBadge(`Leaderboard: ${rankType}`, "#e0f2fe", "#0369a1"));
+if (sortLabel) rightCol.appendChild(createBadge(`Sort: ${sortLabel}`, "#ede9fe", "#7c3aed"));
+if (activeFilters) rightCol.appendChild(createBadge(`Filters: ${activeFilters}`, "#fef3c7", "#b45309"));
 
-    // Subtitle lengkap
-    const subtitleLines = [];
-    if (rankType) subtitleLines.push(`Leaderboard: ${rankType}`);
-if (sortLabel) subtitleLines.push(`Sort By: ${sortLabel}`);
-    if (activeFilters) subtitleLines.push(`Filters: ${activeFilters}`);
-    subtitleLines.push(`Data IM3: ${im3Date} | Data 3ID: ${threeDate}`);
+header.appendChild(leftCol);
+header.appendChild(rightCol);
+wrapper.appendChild(header);
 
-    // Wrapper utama
-    const wrapper = document.createElement("div");
-    wrapper.style.position = "fixed";
-    wrapper.style.left = "0";
-    wrapper.style.top = "0";
-    wrapper.style.background = "#ffffff";
-    wrapper.style.padding = "32px";
-    wrapper.style.fontFamily = "Inter, sans-serif";
-    wrapper.style.color = "#111827";
-    wrapper.style.width = "max-content";
-    wrapper.style.overflow = "visible";
-
-    // Header
-    const header = document.createElement("div");
-    header.style.marginBottom = "20px";
-
-    const title = document.createElement("div");
-    title.innerText = "DSF Achievement Tracker";
-    title.style.fontSize = "22px";
-    title.style.fontWeight = "700";
-
-    const subtitle = document.createElement("div");
-    subtitle.innerText = subtitleLines.join("\n");
-    subtitle.style.whiteSpace = "pre-line";
-    subtitle.style.fontSize = "12px";
-    subtitle.style.color = "#6b7280";
-    subtitle.style.marginTop = "6px";
-    subtitle.style.lineHeight = "1.5";
-
-    header.appendChild(title);
-    header.appendChild(subtitle);
-
-    // Clone tabel
-    const clone = element.cloneNode(true);
-    clone.style.width = "max-content";
-    clone.style.minWidth = "100%";
-    clone.style.overflow = "visible";
-    clone.style.display = "inline-block";
-
-    wrapper.appendChild(header);
-    wrapper.appendChild(clone);
-
-    // Footer + timestamp
+// Clone tabel langsung, tanpa batasi lebar
+const clone = element.cloneNode(true);
+clone.style.width = "max-content"; // agar tabel asli tidak terpotong
+clone.style.minWidth = "100%";
+clone.style.overflow = "visible";
+clone.style.display = "inline-block";
+wrapper.appendChild(clone);
+    // Footer
     const footer = document.createElement("div");
     footer.style.marginTop = "20px";
     footer.style.fontSize = "11px";
     footer.style.color = "#9ca3af";
-    footer.style.position = "relative";
     footer.style.display = "flex";
     footer.style.justifyContent = "space-between";
 
@@ -126,17 +154,14 @@ if (sortLabel) subtitleLines.push(`Sort By: ${sortLabel}`);
 
     const timestamp = document.createElement("div");
     timestamp.innerText = `Generated: ${new Date().toLocaleString()}`;
-    timestamp.style.fontSize = "11px";
-    timestamp.style.color = "#6b7280";
 
     footer.appendChild(source);
     footer.appendChild(timestamp);
-
     wrapper.appendChild(footer);
 
     document.body.appendChild(wrapper);
 
-    await new Promise((r) => setTimeout(r, 200));
+    await new Promise((r) => setTimeout(r, 100));
 
     try {
       const dataUrl = await htmlToImage.toPng(wrapper, {
@@ -148,9 +173,7 @@ if (sortLabel) subtitleLines.push(`Sort By: ${sortLabel}`);
       const blob = await (await fetch(dataUrl)).blob();
 
       try {
-        await navigator.clipboard.write([
-          new ClipboardItem({ "image/png": blob })
-        ]);
+        await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
         toast.success("Report copied as image", { icon: "📋" });
       } catch {
         const link = document.createElement("a");
