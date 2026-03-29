@@ -572,12 +572,12 @@
 6285882648074;NOT FOUND;sfpekanbaru02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882647308;NOT FOUND;sfpekanbaru02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882648066;NOT FOUND;sfpekanbaru02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882657604;NOT FOUND;DSFGAPJBT202;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882657605;NOT FOUND;DSFGAPJBT202;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882657606;NOT FOUND;DSFGAPJBT202;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882657607;NOT FOUND;DSFGAPJBT202;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882657608;NOT FOUND;DSFGAPJBT202;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285711953163;NOT FOUND;DSFGAPJBK004;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882657604;20260327;DSFGAPJBT202;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882657605;20260327;DSFGAPJBT202;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882657606;20260327;DSFGAPJBT202;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882657607;20260327;DSFGAPJBT202;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882657608;20260327;DSFGAPJBT202;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285711953163;20260327;DSFGAPJBK004;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6289518631357;20260307;389064;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 389064
 6289518631356;20260314;389064;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 389064
 6289531795123;20260318;389064;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 389064
@@ -654,8 +654,6 @@
 6289531795108;20260325;401873;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 401873
 6289531795109;20260325;401873;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 401873
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1307,27 +1305,16 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1335,17 +1322,8 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1574,7 +1552,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1664,7 +1642,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1674,7 +1652,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1694,10 +1672,9 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1705,6 +1682,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1727,7 +1705,6 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1735,9 +1712,9 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1745,6 +1722,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1827,7 +1805,6 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1835,6 +1812,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1874,8 +1852,8 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1904,8 +1882,8 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1937,7 +1915,6 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1945,6 +1922,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1974,8 +1952,8 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2007,8 +1985,6 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2018,8 +1994,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2029,6 +2004,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2036,7 +2012,9 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2046,6 +2024,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2055,6 +2034,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2064,6 +2044,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2073,8 +2054,8 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2083,6 +2064,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2092,9 +2074,9 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2102,6 +2084,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2109,7 +2092,9 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2119,6 +2104,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2128,6 +2114,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2137,6 +2124,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2146,6 +2134,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2153,7 +2142,9 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2162,17 +2153,8 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2181,11 +2163,8 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2193,72 +2172,40 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2269,53 +2216,15 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2334,324 +2243,13 @@
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2672,34 +2270,6 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2717,12 +2287,182 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2734,12 +2474,73 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2749,40 +2550,39 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2790,10 +2590,9 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2806,41 +2605,6 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2850,10 +2614,11 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2863,24 +2628,7 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2888,25 +2636,9 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2915,35 +2647,6 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2960,6 +2663,47 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2984,12 +2728,193 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -3004,53 +2929,10 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -3062,15 +2944,133 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
