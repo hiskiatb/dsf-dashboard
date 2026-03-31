@@ -8,18 +8,21 @@ import { X } from "lucide-react";
 import RankingDashboard from "./components/RankingDashboard";
 import Breadcrumb from "./components/Breadcrumb";
 import { Toaster } from "react-hot-toast";
+import GSECard from "./components/GSECard";
 // import MSISDNCompareCard from "./components/MSISDNCompareCard";
 
 export default function App() {
 const [fwaData, setFwaData] = useState([]);
 const [adjData, setAdjData] = useState([]);
   const [dsfData, setDsfData] = useState([]);
+  const [gseData, setGseData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
 
   const [query, setQuery] = useState("");
   const [selectedDSF, setSelectedDSF] = useState(null);
   const [selectedTL, setSelectedTL] = useState(null);
+  const [selectedGSE, setSelectedGSE] = useState(null);
   const [error, setError] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
 
@@ -128,6 +131,79 @@ const [adjData, setAdjData] = useState([]);
       const parsedPBI = parseCSV(textPBI);
       setPbiData(parsedPBI);
 
+      // ================= LOAD GSE =================
+const resGSE = await fetch("/GSE_202603.csv", { cache: "no-store" });
+const textGSE = await resGSE.text();
+
+const get = (obj, key) => {
+  const cleanKey = Object.keys(obj).find(
+    (k) => k.trim() === key
+  );
+  return cleanKey ? obj[cleanKey] : undefined;
+};
+
+const toNumber = (val) => {
+  if (val === null || val === undefined) return 0;
+
+  let str = String(val).trim();
+
+  if (str === "" || str === "-" || str === " - ") return 0;
+
+  // ✅ HANDLE PERCENT
+  if (str.includes("%")) {
+    const num = parseFloat(str.replace("%", "").replace(",", "."));
+    return isNaN(num) ? 0 : num;
+  }
+
+  // ✅ HANDLE FORMAT:
+  // 2,00 → 2.00
+  // 65.000 → 65000
+  // 1.234,56 → 1234.56
+
+  // jika ada koma → anggap decimal
+  if (str.includes(",")) {
+    str = str.replace(/\./g, ""); // hapus ribuan
+    str = str.replace(",", "."); // decimal
+  } else {
+    // tidak ada koma → hapus titik ribuan
+    str = str.replace(/\./g, "");
+  }
+
+  const num = Number(str);
+  return isNaN(num) ? 0 : num;
+};
+
+const rawGSE = parseCSV(textGSE);
+
+// 🔥 TARUH DI SINI
+console.log("RAW GSE:", rawGSE[0]);
+
+const parsedGSE = parseCSV(textGSE).map((x) => ({
+  idGse: get(x, "ID_GSE"),
+  namaGse: get(x, "NAMA_GSE"),
+  region: get(x, "REGION"),
+  branch: get(x, "BRANCH"),
+  microCluster: get(x, "MICRO_CLUSTER"),
+  brand: get(x, "BRAND"),
+
+  sellIn4G: toNumber(get(x, "SELL-IN_4G")),
+  sellIn5G: toNumber(get(x, "SELL-IN_5G")),
+  ga4G: toNumber(get(x, "GA_4G")),
+  ga5G: toNumber(get(x, "GA_5G")),
+
+  actualOno: toNumber(get(x, "ACTUAL_ONO")),
+  targetOno: toNumber(get(x, "TARGET_ONO")),
+  percentOno: toNumber(get(x, "%_ONO")),
+
+  actualGa: toNumber(get(x, "ACTUAL_GA")),
+  targetGa: toNumber(get(x, "TARGET_GA")),
+  percentGa: toNumber(get(x, "%_GA")),
+
+  lastGaDate: get(x, "LAST_GA_DT_FWA"),
+}));
+
+setGseData(parsedGSE);
+
       // ================= REFRESH SELECTED DSF / TL =================
       if (selectedDSF) {
         const updatedDSF = mapped.find(d => d.idDsf === selectedDSF.idDsf);
@@ -217,6 +293,17 @@ const suggestions = useMemo(() => {
     data: x,
   }));
 
+  const gseMatches = gseData
+  .filter(
+    (x) =>
+      (x.idGse || "").toLowerCase().includes(q) ||
+      (x.namaGse || "").toLowerCase().includes(q)
+  )
+  .map((x) => ({
+    type: "GSE",
+    data: x,
+  }));
+
   // ✅ HANYA SATU tlMap
   const tlMap = new Map();
 
@@ -263,9 +350,11 @@ return [
   // ...rawMatches,
   ...tlMap.values(),
   ...dsfMatches,
+  ...gseMatches,
+
 ].slice(0, 8);
 
-}, [query, dsfData, pbiData, fwaData]);
+}, [query, dsfData, gseData]);
 
 function onSearch() {
   setShowSuggestions(false);
@@ -288,6 +377,19 @@ function onSearch() {
     setError("");
     return;
   }
+
+  // ✅ 0. Exact GSE ID
+const foundGSE = gseData.find(
+  (x) => (x.idGse || "").toLowerCase() === q
+);
+
+if (foundGSE) {
+  setSelectedGSE(foundGSE);
+  setSelectedDSF(null);
+  setSelectedTL(null);
+  setError("");
+  return;
+}
 
   // ✅ 2. Exact DSF Name
   const foundDSFByName = dsfData.find(
@@ -337,7 +439,19 @@ function onSearch() {
   setError("DSF atau TL tidak ditemukan. Silakan periksa input Anda.");
 }
 
+
 function onPick(item) {
+
+  // ✅ HANDLE GSE (TARUH PALING ATAS)
+  if (item.type === "GSE") {
+    setSelectedGSE(item.data);
+    setSelectedDSF(null);
+    setSelectedTL(null);
+    setQuery(item.data.idGse);
+    setShowSuggestions(false);
+    setError("");
+    return;
+  }
 
   // ================= TL =================
   if (item.type === "TL") {
@@ -505,6 +619,7 @@ return (
                     className="clear-btn"
                     onClick={() => {
                       setQuery("");
+                      setSelectedGSE(null)
                       setSelectedDSF(null);
                       setSelectedTL(null);
                       setError("");
@@ -558,6 +673,28 @@ item.type === "RAW"
 
       <div className="suggestion-sub">
         GA: {item.data.GA_DATE || item.data.GA_DT || "-"}
+      </div>
+    </button>
+  );
+}
+
+// ✅ GSE SUGGESTION (TAMBAHKAN DI SINI)
+if (item.type === "GSE") {
+  return (
+    <button
+      key={`GSE-${item.data.idGse}-${index}`}
+      className="suggestion-item"
+      onClick={() => onPick(item)}
+    >
+      <div className="suggestion-top">
+        <span className="suggestion-name">
+          {item.data.namaGse}
+        </span>
+        <Pill>GSE</Pill>
+      </div>
+
+      <div className="suggestion-sub">
+        {item.data.idGse} • {item.data.region || "-"}
       </div>
     </button>
   );
@@ -642,6 +779,7 @@ item.type === "RAW"
     onBackRanking={() => {
       setSelectedDSF(null);
       setSelectedTL(null);
+      setSelectedGSE(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }}
     onBackTL={() => {
@@ -660,7 +798,14 @@ item.type === "RAW"
   />
   ) : */}
 
-  {selectedDSF ? (
+{selectedGSE ? (
+  <GSECard
+    gse={selectedGSE}
+    dataDates={dataDates}
+    fwaData={fwaData}
+    adjData={adjData}
+  />
+) : selectedDSF ? (
 <DSFCard
   dsf={selectedDSF}
   dataDates={dataDates}
