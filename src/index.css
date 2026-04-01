@@ -661,4 +661,28 @@
   font-weight: 500;
 }
 
+.maintenance {
+text-align: center;
+}
+
+.maintenance-body {
+  padding: 40px 20px;
+}
+
+.maintenance-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.maintenance-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.maintenance-text {
+  font-size: 13px;
+  color: #666;
+}
+
 }

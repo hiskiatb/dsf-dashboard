@@ -4,35 +4,16 @@ import Pill from "./Pill";
 import Ring from "./Ring";
 
 // ================================
-// MAINTENANCE FLAG
-// ================================
-const MAINTENANCE_MODE = true;
-
-// ================================
-// SAFE NUMBER PARSER (FIX TOTAL)
+// SAFE NUMBER
 // ================================
 const toNumber = (val) => {
-  if (val === null || val === undefined) return 0;
+  if (!val) return 0;
+  let str = String(val).replace(/[^\d.,-]/g, "");
 
-  let str = String(val).trim();
-  if (str === "" || str === "-" || str === " - ") return 0;
-
-  // HANDLE PERCENT
-  if (str.includes("%")) {
-    const num = parseFloat(str.replace("%", "").replace(",", "."));
-    return isNaN(num) ? 0 : num;
-  }
-
-  // CLEAN
-  str = str.replace(/[^\d.,-]/g, "");
-
-  // FORMAT INDONESIA
-  if (str.includes(".") && !str.includes(",")) {
-    str = str.replace(/\./g, "");
-  }
-
-  if (str.includes(",")) {
+  if (str.includes(",") && !str.includes(".")) {
     str = str.replace(",", ".");
+  } else {
+    str = str.replace(/\./g, "");
   }
 
   const num = Number(str);
@@ -40,80 +21,48 @@ const toNumber = (val) => {
 };
 
 // ================================
-// FORMATTER
+// FORMAT
 // ================================
 const formatIDR = (num) => {
-  if (!num || isNaN(num)) return "Rp 0";
-  return "Rp " + Number(num).toLocaleString("id-ID");
-};
-
-const formatDate = (date) => {
-  if (!date) return "-";
-
-  if (/^\d{8}$/.test(date)) {
-    const y = date.slice(0, 4);
-    const m = date.slice(4, 6);
-    const d = date.slice(6, 8);
-    return new Date(`${y}-${m}-${d}`).toLocaleDateString("id-ID", {
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-    });
-  }
-
-  const parsed = new Date(date);
-  if (isNaN(parsed)) return "-";
-
-  return parsed.toLocaleDateString("id-ID", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
+  return "Rp " + Number(num || 0).toLocaleString("id-ID");
 };
 
 // ================================
 // CALCULATION ENGINE
 // ================================
 function calculateGSE(gse) {
+  const actualOno = toNumber(gse.actualOno);
+  const targetOno = toNumber(gse.targetOno);
+
+  const actualGa = toNumber(gse.actualGa);
+  const targetGa = toNumber(gse.targetGa);
+
   const sellIn4G = toNumber(gse.sellIn4G);
   const sellIn5G = toNumber(gse.sellIn5G);
   const ga4G = toNumber(gse.ga4G);
   const ga5G = toNumber(gse.ga5G);
-  const ono = toNumber(gse.actualOno);
 
-  const targetOno = toNumber(gse.targetOno) || 30;
-  const targetGa = toNumber(gse.targetGa) || 60;
+  const onoPercent = targetOno > 0 ? actualOno / targetOno : 0;
+  const gaPercent = targetGa > 0 ? actualGa / targetGa : 0;
 
-  const totalSellIn = sellIn4G + sellIn5G;
-  const totalGA = ga4G + ga5G;
+  const incSellIn =
+    (sellIn4G >= 3 ? sellIn4G * 5000 : sellIn4G * 3000) +
+    sellIn5G * 25000;
 
-  const onoPercent =
-    targetOno > 0 ? Math.min((ono / targetOno) * 100, 100) : 0;
-
-  const gaPercent =
-    targetGa > 0 ? Math.min((totalGA / targetGa) * 100, 100) : 0;
-
-  // INCENTIVE
-  const inc4G = sellIn4G >= 3 ? sellIn4G * 5000 : sellIn4G * 3000;
-  const inc5G = sellIn5G * 25000;
-  const incGA4G = ga4G * 5000;
-  const incGA5G = ga5G * 40000;
+  const incGA = ga4G * 5000 + ga5G * 40000;
 
   return {
-    ono,
-    totalGA,
-    totalSellIn,
-    sellIn4G,
-    sellIn5G,
-    ga4G,
-    ga5G,
+    actualOno,
+    targetOno,
+    actualGa,
+    targetGa,
     onoPercent,
     gaPercent,
-    incSellIn: inc4G + inc5G,
-    incGA: incGA4G + incGA5G,
-    totalIncentive: inc4G + inc5G + incGA4G + incGA5G,
-    targetOno,
-    targetGa,
+    totalSellIn: sellIn4G + sellIn5G,
+    totalGA: ga4G + ga5G,
+    incSellIn,
+    incGA,
+    totalIncentive: incSellIn + incGA,
   };
 }
 
@@ -123,133 +72,177 @@ function calculateGSE(gse) {
 export default function GSECard({ gse }) {
 
   // ================================
-  // MAINTENANCE VIEW
+  // 🔥 TOGGLE MAINTENANCE DI SINI
   // ================================
-  if (MAINTENANCE_MODE) {
-    return (
-      <div className="bg-white rounded-2xl shadow p-6 text-center space-y-2">
-        <div className="text-lg font-semibold text-gray-700">
-          🚧 Under Maintenance
-        </div>
-        <div className="text-sm text-gray-500">
-          Fitur GSE Dashboard sedang dalam pengembangan dan akan segera tersedia.
-        </div>
-      </div>
-    );
-  }
+  const isMaintenance = true;
 
   const c = calculateGSE(gse);
 
   const onoTone =
-    c.onoPercent >= 80 ? "success" : c.onoPercent >= 50 ? "warning" : "danger";
+    c.onoPercent >= 0.8
+      ? "success"
+      : c.onoPercent >= 0.5
+      ? "warning"
+      : "danger";
 
   const gaTone =
-    c.gaPercent >= 80 ? "success" : c.gaPercent >= 50 ? "warning" : "danger";
+    c.gaPercent >= 0.8
+      ? "success"
+      : c.gaPercent >= 0.5
+      ? "warning"
+      : "danger";
 
+  // ================================
+  // 🚧 MAINTENANCE VIEW
+  // ================================
+  if (isMaintenance) {
+    return (
+      <motion.div
+        className="card maintenance"
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+
+
+        <div className="maintenance-body">
+          <div className="maintenance-icon">🚧</div>
+
+          <div className="maintenance-title">
+            Maintenance Mode
+          </div>
+
+          <div className="maintenance-text">
+            Fitur GSE Dashboard sedang disempurnakan dan akan segera tersedia.
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
+  // ================================
+  // ✅ NORMAL VIEW (NANTI AKTIFKAN)
+  // ================================
   return (
     <motion.div
-      className="space-y-4"
-      initial={{ opacity: 0, y: 10 }}
+      className="card"
+      initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
     >
 
-      {/* CARD 1: NAMA */}
-      <div className="bg-white rounded-2xl shadow p-4 flex justify-between items-center">
+      <div className="card-header">
         <div>
-          <div className="text-lg font-semibold">{gse.namaGse || "-"}</div>
-          <div className="text-sm text-gray-500">{gse.idGse || "-"}</div>
+          <div className="card-title">
+            Performance GSE
+          </div>
+          <div className="card-desc">
+            Monitoring pencapaian ONO & GA
+          </div>
         </div>
-        <Pill variant="info">{gse.brand || "-"}</Pill>
-      </div>
 
-      {/* CARD 2: REGION & BRANCH */}
-      <div className="bg-white rounded-2xl shadow p-4 grid grid-cols-2 gap-3 text-sm">
-        <div>
-          <div className="text-gray-400">Region</div>
-          <div>{gse.region || "-"}</div>
-        </div>
-        <div>
-          <div className="text-gray-400">Branch</div>
-          <div>{gse.branch || "-"}</div>
+        <div className="header-badges">
+          <Pill variant="info">
+            {gse.brand || "-"}
+          </Pill>
         </div>
       </div>
 
-      {/* CARD 3: MICRO CLUSTER */}
-      <div className="bg-white rounded-2xl shadow p-4 text-sm">
-        <div className="text-gray-400">Micro Cluster</div>
-        <div>{gse.microCluster || "-"}</div>
-      </div>
+      <div className="grid-2 mt-4">
 
-      {/* DASHBOARD */}
-      <div className="bg-white rounded-2xl shadow p-4 space-y-4">
-
-        {/* RING */}
-        <div className="grid grid-cols-2 gap-4">
-          <Ring
-            title="ONO"
-            subtitle={`Target ${c.targetOno}`}
-            valueText={`${c.ono}`}
-            percent={c.onoPercent || 0}
-            tone={onoTone}
-          />
-
-          <Ring
-            title="GA"
-            subtitle={`Target ${c.targetGa}`}
-            valueText={`${c.totalGA}`}
-            percent={c.gaPercent || 0}
-            tone={gaTone}
-          />
+        <div className="stat">
+          <div className="stat-label">ID GSE</div>
+          <div className="stat-value">
+            {gse.idGse}
+          </div>
         </div>
 
-        {/* STATS */}
-        <div className="grid grid-cols-2 gap-3">
-          <div className="p-3 rounded-xl bg-gray-50">
-            <div className="text-xs text-gray-500">Sell In</div>
-            <div className="font-semibold">{c.totalSellIn}</div>
-            <div className="text-xs">
-              4G {c.sellIn4G} • 5G {c.sellIn5G}
+        <div className="stat">
+          <div className="stat-label">Nama GSE</div>
+          <div className="stat-value">
+            {gse.namaGse}
+          </div>
+        </div>
+
+      </div>
+
+      <details className="details">
+        <summary className="details-summary">
+          Detail Profil
+        </summary>
+
+        <div className="grid-2 mt-4">
+          <div className="stat">
+            <div className="stat-label">Region</div>
+            <div className="stat-value">
+              {gse.region}
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-gray-50">
-            <div className="text-xs text-gray-500">GA</div>
-            <div className="font-semibold">{c.totalGA}</div>
-            <div className="text-xs">
-              4G {c.ga4G} • 5G {c.ga5G}
+          <div className="stat">
+            <div className="stat-label">Branch</div>
+            <div className="stat-value">
+              {gse.branch}
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-gray-50">
-            <div className="text-xs text-gray-500">Inc Sell In</div>
-            <div className="font-semibold">
+          <div className="stat">
+            <div className="stat-label">Micro Cluster</div>
+            <div className="stat-value">
+              {gse.microCluster}
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <div className="dash-grid mt-5">
+
+        <Ring
+          title="ONO"
+          subtitle={`Target: ${c.targetOno}`}
+          valueText={`${c.actualOno}`}
+          percent={c.onoPercent}
+          tone={onoTone}
+        />
+
+        <Ring
+          title="GA"
+          subtitle={`Target: ${c.targetGa}`}
+          valueText={`${c.actualGa}`}
+          percent={c.gaPercent}
+          tone={gaTone}
+        />
+
+        <div className="dash-right">
+
+          <div className="mini-card">
+            <div className="mini-label">Total Sell In</div>
+            <div className="mini-value">
+              {c.totalSellIn}
+            </div>
+          </div>
+
+          <div className="mini-card">
+            <div className="mini-label">Total GA</div>
+            <div className="mini-value">
+              {c.totalGA}
+            </div>
+          </div>
+
+          <div className="mini-card">
+            <div className="mini-label">Incentive Sell In</div>
+            <div className="mini-value">
               {formatIDR(c.incSellIn)}
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-gray-50">
-            <div className="text-xs text-gray-500">Inc GA</div>
-            <div className="font-semibold">
-              {formatIDR(c.incGA)}
+          <div className="mini-card strong">
+            <div className="mini-label">Total Incentive</div>
+            <div className="mini-value">
+              {formatIDR(c.totalIncentive)}
             </div>
           </div>
+
         </div>
 
-        {/* TOTAL */}
-        <div className="p-4 rounded-xl bg-green-50 border border-green-200">
-          <div className="text-sm text-gray-600">
-            Total Incentive
-          </div>
-          <div className="text-lg font-bold text-green-600">
-            {formatIDR(c.totalIncentive)}
-          </div>
-        </div>
-
-      </div>
-
-      {/* FOOTER */}
-      <div className="text-xs text-gray-400">
-        Last Update: {formatDate(gse.lastGaDate)}
       </div>
 
     </motion.div>

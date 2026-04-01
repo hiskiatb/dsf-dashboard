@@ -131,13 +131,15 @@ const [adjData, setAdjData] = useState([]);
       const parsedPBI = parseCSV(textPBI);
       setPbiData(parsedPBI);
 
-      // ================= LOAD GSE =================
+     // ================= LOAD GSE =================
 const resGSE = await fetch("/GSE_202603.csv", { cache: "no-store" });
 const textGSE = await resGSE.text();
 
 const get = (obj, key) => {
   const cleanKey = Object.keys(obj).find(
-    (k) => k.trim() === key
+    (k) =>
+      k.replace(/\s+/g, "").toUpperCase() ===
+      key.replace(/\s+/g, "").toUpperCase()
   );
   return cleanKey ? obj[cleanKey] : undefined;
 };
@@ -146,64 +148,64 @@ const toNumber = (val) => {
   if (val === null || val === undefined) return 0;
 
   let str = String(val).trim();
-
   if (str === "" || str === "-" || str === " - ") return 0;
 
-  // ✅ HANDLE PERCENT
-  if (str.includes("%")) {
-    const num = parseFloat(str.replace("%", "").replace(",", "."));
-    return isNaN(num) ? 0 : num;
-  }
+  str = str.replace(/[^\d.,-]/g, "");
 
-  // ✅ HANDLE FORMAT:
-  // 2,00 → 2.00
-  // 65.000 → 65000
-  // 1.234,56 → 1234.56
-
-  // jika ada koma → anggap decimal
   if (str.includes(",")) {
-    str = str.replace(/\./g, ""); // hapus ribuan
-    str = str.replace(",", "."); // decimal
-  } else {
-    // tidak ada koma → hapus titik ribuan
     str = str.replace(/\./g, "");
+    str = str.replace(",", ".");
   }
 
   const num = Number(str);
   return isNaN(num) ? 0 : num;
 };
 
+// ✅ PARSE SEKALI SAJA
 const rawGSE = parseCSV(textGSE);
 
-// 🔥 TARUH DI SINI
 console.log("RAW GSE:", rawGSE[0]);
 
-const parsedGSE = parseCSV(textGSE).map((x) => ({
-  idGse: get(x, "ID_GSE"),
-  namaGse: get(x, "NAMA_GSE"),
-  region: get(x, "REGION"),
-  branch: get(x, "BRANCH"),
-  microCluster: get(x, "MICRO_CLUSTER"),
-  brand: get(x, "BRAND"),
+const parsedGSE = rawGSE.map((x) => {
+  const actualOno = toNumber(get(x, "ACTUAL_ONO"));
+  const targetOno = toNumber(get(x, "TARGET_ONO"));
 
-  sellIn4G: toNumber(get(x, "SELL-IN_4G")),
-  sellIn5G: toNumber(get(x, "SELL-IN_5G")),
-  ga4G: toNumber(get(x, "GA_4G")),
-  ga5G: toNumber(get(x, "GA_5G")),
+  const actualGa = toNumber(get(x, "ACTUAL_GA"));
+  const targetGa = toNumber(get(x, "TARGET_GA"));
 
-  actualOno: toNumber(get(x, "ACTUAL_ONO")),
-  targetOno: toNumber(get(x, "TARGET_ONO")),
-  percentOno: toNumber(get(x, "%_ONO")),
+  // ✅ HITUNG PERSENTASE MANUAL
+  const percentOno =
+    targetOno > 0 ? (actualOno / targetOno) * 100 : 0;
 
-  actualGa: toNumber(get(x, "ACTUAL_GA")),
-  targetGa: toNumber(get(x, "TARGET_GA")),
-  percentGa: toNumber(get(x, "%_GA")),
+  const percentGa =
+    targetGa > 0 ? (actualGa / targetGa) * 100 : 0;
 
-  lastGaDate: get(x, "LAST_GA_DT_FWA"),
-}));
+  return {
+    idGse: get(x, "ID_GSE"),
+    namaGse: get(x, "NAMA_GSE"),
+    region: get(x, "REGION"),
+    branch: get(x, "BRANCH"),
+    microCluster: get(x, "MICRO_CLUSTER"),
+    brand: get(x, "BRAND"),
+
+    sellIn4G: toNumber(get(x, "SELL-IN_4G")),
+    sellIn5G: toNumber(get(x, "SELL-IN_5G")),
+    ga4G: toNumber(get(x, "GA_4G")),
+    ga5G: toNumber(get(x, "GA_5G")),
+
+    actualOno,
+    targetOno,
+    percentOno, // ✅ hasil hitung ulang
+
+    actualGa,
+    targetGa,
+    percentGa, // ✅ hasil hitung ulang
+
+    lastGaDate: get(x, "LAST_GA_DT_FWA"),
+  };
+});
 
 setGseData(parsedGSE);
-
       // ================= REFRESH SELECTED DSF / TL =================
       if (selectedDSF) {
         const updatedDSF = mapped.find(d => d.idDsf === selectedDSF.idDsf);

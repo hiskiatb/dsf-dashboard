@@ -6,6 +6,7 @@ export default function Ring({
   valueText,
   percent,
   tone = "default",
+  className = ""
 }) {
   const pctForRing = clamp(percent, 0, 1); // ring tetap max 1
   const pctText = Math.round(percent * 100); // text bisa > 100%
@@ -26,8 +27,7 @@ export default function Ring({
       : "ring-tone-default";
 
   return (
-    <div className={`ring-card ${toneClass}`}>
-      <div className="ring-title">{title}</div>
+<div className={`ring-card ${toneClass} ${className}`}>      <div className="ring-title">{title}</div>
       <div className="ring-subtitle">{subtitle}</div>
 
       <div className="ring-body">
