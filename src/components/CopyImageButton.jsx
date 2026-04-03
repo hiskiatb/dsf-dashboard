@@ -58,89 +58,94 @@ export default function CopyImageButton({
     };
     const sortLabel = sortBy ? sortMap[sortBy] || sortBy : null;
 
-const wrapper = document.createElement("div");
-wrapper.style.background = "#ffffff";
-wrapper.style.padding = "24px";
-wrapper.style.fontFamily = "Inter, sans-serif";
-wrapper.style.color = "#111827";
-wrapper.style.display = "inline-block"; // agar lebar menyesuaikan tabel
-wrapper.style.minWidth = "600px"; // minimum
-wrapper.style.overflow = "visible"; 
+    const wrapper = document.createElement("div");
+    wrapper.style.background = "#ffffff";
+    wrapper.style.padding = "24px";
+    wrapper.style.fontFamily = "Inter, sans-serif";
+    wrapper.style.color = "#111827";
+    wrapper.style.display = "inline-block";
+    wrapper.style.minWidth = "600px";
+    wrapper.style.overflow = "hidden"; // ✅ FIX agar ikut rounded
+    wrapper.style.borderRadius = "16px"; // ✅ global rounded
+    wrapper.style.boxShadow = "0 4px 12px rgba(0,0,0,0.08)";
 
-// Header
-const header = document.createElement("div");
-header.style.marginBottom = "16px";
-header.style.padding = "16px 24px";
-header.style.background = "#f9fafb";
-header.style.borderRadius = "12px";
-header.style.boxShadow = "0 2px 8px rgba(0,0,0,0.08)";
-header.style.display = "flex";
-header.style.justifyContent = "space-between";
-header.style.alignItems = "flex-start";
-header.style.gap = "16px";
-header.style.flexWrap = "wrap"; // badge wrap jika banyak
+    // Header
+    const header = document.createElement("div");
+    header.style.marginBottom = "16px";
+    header.style.padding = "16px 24px";
+    header.style.background = "#f9fafb";
+    header.style.borderTopLeftRadius = "16px"; // ✅ hanya atas
+    header.style.borderTopRightRadius = "16px";
+    header.style.display = "flex";
+    header.style.justifyContent = "space-between";
+    header.style.alignItems = "flex-start";
+    header.style.gap = "16px";
+    header.style.flexWrap = "wrap";
 
-// Kolom kiri: Judul + Data Dates
-const leftCol = document.createElement("div");
-leftCol.style.display = "flex";
-leftCol.style.flexDirection = "column";
-leftCol.style.gap = "4px";
-leftCol.style.flex = "1 1 auto";
+    // Left
+    const leftCol = document.createElement("div");
+    leftCol.style.display = "flex";
+    leftCol.style.flexDirection = "column";
+    leftCol.style.gap = "4px";
+    leftCol.style.flex = "1 1 250px";
 
-const title = document.createElement("div");
-title.innerText = "DSF Achievement Tracker";
-title.style.fontSize = "22px";
-title.style.fontWeight = "700";
-title.style.color = "#111827";
+    const title = document.createElement("div");
+    title.innerText = "DSF Achievement Tracker";
+    title.style.fontSize = "22px";
+    title.style.fontWeight = "700";
 
-const dateInfo = document.createElement("div");
-dateInfo.innerText = `Data IM3: ${im3Date} | Data 3ID: ${threeDate}`;
-dateInfo.style.fontSize = "13px";
-dateInfo.style.fontStyle = "italic";
-dateInfo.style.color = "#6b7280";
+    const dateInfo = document.createElement("div");
+    dateInfo.innerText = `Data IM3: ${im3Date} | Data 3ID: ${threeDate}`;
+    dateInfo.style.fontSize = "13px";
+    dateInfo.style.fontStyle = "italic";
+    dateInfo.style.color = "#6b7280";
 
-leftCol.appendChild(title);
-leftCol.appendChild(dateInfo);
+    leftCol.appendChild(title);
+    leftCol.appendChild(dateInfo);
 
-// Kolom kanan: badge
-const rightCol = document.createElement("div");
-rightCol.style.display = "flex";
-rightCol.style.flexWrap = "wrap";
-rightCol.style.gap = "8px";
-rightCol.style.flex = "1 1 auto";
-rightCol.style.justifyContent = "flex-end";
-rightCol.style.maxWidth = "500px"; // agar badge wrap ke bawah jika panjang
+    // Right
+    const rightCol = document.createElement("div");
+    rightCol.style.display = "flex";
+    rightCol.style.flexWrap = "wrap";
+    rightCol.style.gap = "8px";
+    rightCol.style.flex = "1 1 300px";
+    rightCol.style.justifyContent = "flex-end";
+    rightCol.style.alignItems = "flex-start";
+    rightCol.style.wordBreak = "break-word"; // ✅ FIX overflow text
 
-// Badge function
-const createBadge = (text, bg, color) => {
-  const badge = document.createElement("span");
-  badge.innerText = text;
-  badge.style.background = bg;
-  badge.style.color = color;
-  badge.style.padding = "2px 8px";
-  badge.style.borderRadius = "8px";
-  badge.style.fontWeight = "500";
-  badge.style.fontSize = "12px";
-  badge.style.whiteSpace = "normal";
-  badge.style.wordBreak = "break-word";
-  return badge;
-};
+    const createBadge = (text, bg, color) => {
+      const badge = document.createElement("span");
+      badge.innerText = text;
+      badge.style.background = bg;
+      badge.style.color = color;
+      badge.style.padding = "4px 10px";
+      badge.style.borderRadius = "999px";
+      badge.style.fontWeight = "500";
+      badge.style.fontSize = "12px";
+      badge.style.maxWidth = "100%"; // ✅ supaya tidak keluar
+      badge.style.wordBreak = "break-word";
+      return badge;
+    };
 
-if (rankType) rightCol.appendChild(createBadge(`Leaderboard: ${rankType}`, "#e0f2fe", "#0369a1"));
-if (sortLabel) rightCol.appendChild(createBadge(`Sort: ${sortLabel}`, "#ede9fe", "#7c3aed"));
-if (activeFilters) rightCol.appendChild(createBadge(`Filters: ${activeFilters}`, "#fef3c7", "#b45309"));
+    if (rankType)
+      rightCol.appendChild(createBadge(`Leaderboard: ${rankType}`, "#e0f2fe", "#0369a1"));
+    if (sortLabel)
+      rightCol.appendChild(createBadge(`Sort: ${sortLabel}`, "#ede9fe", "#7c3aed"));
+    if (activeFilters)
+      rightCol.appendChild(createBadge(`Filters: ${activeFilters}`, "#fef3c7", "#b45309"));
 
-header.appendChild(leftCol);
-header.appendChild(rightCol);
-wrapper.appendChild(header);
+    header.appendChild(leftCol);
+    header.appendChild(rightCol);
+    wrapper.appendChild(header);
 
-// Clone tabel langsung, tanpa batasi lebar
-const clone = element.cloneNode(true);
-clone.style.width = "max-content"; // agar tabel asli tidak terpotong
-clone.style.minWidth = "100%";
-clone.style.overflow = "visible";
-clone.style.display = "inline-block";
-wrapper.appendChild(clone);
+    // Table
+    const clone = element.cloneNode(true);
+    clone.style.width = "max-content";
+    clone.style.minWidth = "100%";
+    clone.style.display = "block";
+
+    wrapper.appendChild(clone);
+
     // Footer
     const footer = document.createElement("div");
     footer.style.marginTop = "20px";
