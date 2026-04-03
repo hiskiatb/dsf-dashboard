@@ -233,12 +233,26 @@ if (rankType === "TL" && onSelectTL) {
 }
   /* ================= UI ================= */
 
+  // ===== DYNAMIC TITLE =====
+const brandFilter = filters.BRAND;
+
+let brandLabel = "";
+if (brandFilter.length === 1) {
+  if (brandFilter[0].toLowerCase() === "im3") brandLabel = "IM3";
+  else if (brandFilter[0].toLowerCase() === "3id") brandLabel = "3ID";
+}
+
+let title = `Performance Leaderboard ${toTitleCase(rankType)}`;
+if (brandLabel) {
+  title += ` ${brandLabel}`;
+}
+
   return (
     <div className="bg-white rounded-2xl shadow-xl p-6">
 
-      <h2 className="text-2xl font-bold mb-6">
-        {`Performance Leaderboard ${toTitleCase(rankType.toUpperCase())}`}
-      </h2>
+<h2 className="text-2xl font-bold mb-6">
+  {title}
+</h2>
 
       {/* LEVEL SELECTOR */}
       <div className="flex gap-2 mb-6 flex-wrap">

@@ -89,8 +89,26 @@ export default function CopyImageButton({
     leftCol.style.gap = "4px";
     leftCol.style.flex = "1 1 250px";
 
-    const title = document.createElement("div");
-    title.innerText = "DSF Achievement Tracker";
+ // ===== DYNAMIC TITLE =====
+const brandFilter = filters?.BRAND || [];
+
+let brandLabel = "";
+if (brandFilter.length === 1) {
+  if (brandFilter[0].toLowerCase() === "im3") brandLabel = "IM3";
+  else if (brandFilter[0].toLowerCase() === "3id") brandLabel = "3ID";
+}
+
+let dynamicTitle = "DSF Achievement Tracker";
+
+if (rankType) {
+  dynamicTitle = `LEADERBOARD DSF ${rankType}`;
+  if (brandLabel) {
+    dynamicTitle += ` ${brandLabel}`;
+  }
+}
+
+const title = document.createElement("div");
+title.innerText = dynamicTitle;
     title.style.fontSize = "22px";
     title.style.fontWeight = "700";
 
