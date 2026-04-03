@@ -229,7 +229,7 @@
 6289531781870;20260326;12321841;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321841
 6289531787809;20260330;12321838;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321838
 6289531787812;20260330;12321835;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321835
-62895608130457;20260331;12321841;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
+62895608130457;20260331;12321841;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321841
 6289518635237;20260316;414365;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414365
 6289518635238;20260316;414365;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414365
 6289518635236;20260316;414365;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414365
@@ -361,7 +361,7 @@
 6289531781494;20260328;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
 6289531781509;20260330;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
 6289531781510;20260328;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
-6289531781514;20260331;546798;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
+6289531781514;20260331;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
 6289531781786;20260326;479622;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479622
 6289531781804;20260326;12321838;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321838
 6289531781805;20260326;12321838;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321838
@@ -389,8 +389,8 @@
 62895608130061;20260319;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
 62895608130062;20260319;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
 62895608130063;20260319;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
-62895608130079;20260331;546798;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
-62895608130082;20260331;546798;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
+62895608130079;20260331;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
+62895608130082;20260331;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
 62895608130085;20260313;414365;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414365
 62895608130142;20260313;465802;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 465802
 62895608130143;20260314;414365;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414365
@@ -1404,7 +1404,7 @@
 6289531785210;20260330;496427;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 496427
 6289531785160;20260329;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
 6289531784782;20260330;412536;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 412536
-6289531784783;20260331;412536;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
+6289531784783;20260331;412536;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 412536
 6289531784785;20260330;412536;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 412536
 6289531784786;20260330;412536;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 412536
 6289531784788;20260330;412536;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 412536
@@ -1427,15 +1427,15 @@
 6289531784663;NOT FOUND;395373;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6289531784609;20260330;395373;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 395373
 6289531784636;20260330;395373;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 395373
-6289518631916;20260331;395373;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
+6289518631916;20260331;395373;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 395373
 6289518631918;20260330;395373;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 395373
 6289518631917;20260330;395373;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 395373
 6289518631920;20260330;395373;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 395373
 6289531792943;20260330;395373;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 395373
-6289531785162;20260331;488609;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
-6289531785161;20260331;488609;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
-6289531785163;20260331;488609;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
-6289531785164;20260331;488609;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
+6289531785162;20260331;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
+6289531785161;20260331;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
+6289531785163;20260331;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
+6289531785164;20260331;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
 6289531793119;20260306;496427;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 496427
 6289531793116;20260306;496427;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 496427
 6289518632634;20260311;496427;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 496427
@@ -1444,8 +1444,8 @@
 6289531792961;20260330;395373;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 395373
 6289531792963;20260330;395373;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 395373
 6289531792964;20260330;395373;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 395373
-6289531792962;20260331;395373;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
-6289531794976;20260331;431235;4G Device;0;MSISDN tercatat di REGION: INNER JAKARTA
+6289531792962;20260331;395373;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 395373
+6289531794976;20260331;431235;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 431235
 6285711951172;20260309;SFMEDAN45;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285711951944;20260311;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285711952042;20260311;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -1828,11 +1828,11 @@
 6285882656096;20260330;SFMEDAN35;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882656248;20260330;SFMEDAN35;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729482;20260329;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882729480;NOT FOUND;SFSDP44;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882729480;20260331;SFSDP44;4G Device;0;Ada di Raw Data, namun ORG_ID: 17442158
 6285882729857;20260329;SFSIANTAR03;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729859;20260329;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729483;20260329;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882729481;NOT FOUND;SFSDP55;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882729481;20260331;SFSDP55;4G Device;0;Ada di Raw Data, namun ORG_ID: 17442158
 6285882730271;20260329;TFSMSIADEM3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729863;20260329;TFSMSIADEM3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729858;20260329;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -1903,30 +1903,30 @@
 6285882729442;20260329;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729973;20260329;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729974;20260329;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882729976;NOT FOUND;SFSDP44;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882729976;20260331;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729979;20260329;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729975;20260329;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729385;20260328;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729384;20260328;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729386;20260329;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882730139;NOT FOUND;SFSIANTAR02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882730141;NOT FOUND;SFSIANTAR02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882730142;NOT FOUND;SFSIANTAR02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882730139;20260331;SFSIANTAR02;4G Device;0;Ada di Raw Data, namun ORG_ID: 17797920
+6285882730141;20260331;SFSIANTAR02;4G Device;0;Ada di Raw Data, namun ORG_ID: 17166038
+6285882730142;20260331;SFSIANTAR02;4G Device;0;Ada di Raw Data, namun ORG_ID: 17166038
 6285882656516;20260331;SFSIANTAR01;4G Device;0;Ada di Raw Data, namun ORG_ID: 1370757
 6285882656517;20260331;SFSIANTAR01;4G Device;0;Ada di Raw Data, namun ORG_ID: 1370757
 6285882656518;20260331;SFSIANTAR01;4G Device;0;Ada di Raw Data, namun ORG_ID: 17766097
-6285882730138;NOT FOUND;SFSDP13;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882730138;20260331;SFSDP13;4G Device;0;Ada di Raw Data, namun ORG_ID: 17797920
 6285882656515;NOT FOUND;SFSDP13;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882656519;NOT FOUND;SFSDP13;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882730261;NOT FOUND;SFSDP44;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882730263;NOT FOUND;SFSDP44;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882730262;NOT FOUND;SFSDP44;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882730143;NOT FOUND;SFSDP55;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882730266;NOT FOUND;SFSDP55;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882730264;NOT FOUND;SFSDP55;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882730263;20260331;SFSDP44;4G Device;0;Ada di Raw Data, namun ORG_ID: 17764818
+6285882730262;20260331;SFSDP44;4G Device;0;Ada di Raw Data, namun ORG_ID: 17764818
+6285882730143;20260331;SFSDP55;4G Device;0;Ada di Raw Data, namun ORG_ID: 17764818
+6285882730266;20260331;SFSDP55;4G Device;0;Ada di Raw Data, namun ORG_ID: 17764818
+6285882730264;20260331;SFSDP55;4G Device;0;Ada di Raw Data, namun ORG_ID: 17764818
 6285882656503;20260331;TFSMSIADEM1;4G Device;0;Ada di Raw Data, namun ORG_ID: 1370757
 6285882656504;20260331;TFSMSIADEM1;4G Device;0;Ada di Raw Data, namun ORG_ID: 1370757
-6285882729971;NOT FOUND;TFSMSIADEM1;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882729971;20260331;TFSMSIADEM1;4G Device;0;Ada di Raw Data, namun ORG_ID: 17353876
 6285882729455;20260329;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729454;20260329;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729890;20260328;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -1983,10 +1983,10 @@
 6285882729459;20260329;TFSMSIADEM3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729458;20260329;TFSMSIADEM3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882729457;20260329;TFSMSIADEM3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882729970;NOT FOUND;TFSMSIADEM3;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882729969;NOT FOUND;TFSMSIADEM3;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882729972;NOT FOUND;TFSMSIADEM3;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882729965;NOT FOUND;TFSMSIADEM3;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882729970;20260331;TFSMSIADEM3;4G Device;0;Ada di Raw Data, namun ORG_ID: 17353876
+6285882729969;20260331;TFSMSIADEM3;4G Device;0;Ada di Raw Data, namun ORG_ID: 17764818
+6285882729972;20260331;TFSMSIADEM3;4G Device;0;Ada di Raw Data, namun ORG_ID: 17764818
+6285882729965;20260331;TFSMSIADEM3;4G Device;0;Ada di Raw Data, namun ORG_ID: 17353876
 6285882730257;20260329;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882730256;20260329;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882730258;20260329;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -2172,11 +2172,11 @@
 6285882656520;20260329;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882656526;20260329;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882656521;20260329;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882729821;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882729475;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882729477;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882729474;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882729476;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882729821;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882729475;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882729477;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882729474;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882729476;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882656409;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882656410;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882656408;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -2186,11 +2186,11 @@
 6285882656309;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882656308;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882656306;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882729378;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882729377;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882729374;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882729376;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882729375;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882729378;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882729377;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882729374;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882729376;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882729375;20260331;SFPAKAM17;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285711955802;NOT FOUND;DSFGAPJBK004;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285711385034;NOT FOUND;SFPDGINN19;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882656995;20260318;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
@@ -2435,6 +2435,129 @@
 6285882657683;20260331;DSFGAPJBK006;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882657673;20260331;DSFGAPJBK006;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882657553;20260331;DSFGAPJBK006;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285711082987;20260325;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285711245580;20260331;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711694509;20260328;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285711941131;20260328;SFPEKANBARU18;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPEKANBARU18
+6285711941132;20260328;SFPEKANBARU18;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPEKANBARU18
+6285711941172;20260316;SFSIAK05;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIAK05
+6285711946725;20260317;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711946935;20260330;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711947034;20260311;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711949325;20260331;SFDUMAI02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDUMAI02
+6285711949330;20260326;SFDUMAI02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDUMAI02
+6285711952152;20260310;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711952171;20260328;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711952320;20260315;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711952341;20260316;DSFGAPJBK004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK004
+6285711952355;20260316;DSFGAPJBK004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK004
+6285711952358;20260316;DSFGAPJBK004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK004
+6285711952364;20260316;DSFGAPJBK004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK004
+6285711952365;20260316;DSFGAPJBK004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK004
+6285711952369;20260317;SFDURIDUMAI008;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI008
+6285711952371;20260317;SFDURIDUMAI008;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI008
+6285711952373;20260317;SFDURIDUMAI008;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI008
+6285711952374;20260317;SFDURIDUMAI008;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI008
+6285711952377;20260317;SFDURIDUMAI008;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI008
+6285711952445;20260323;SFDURIDUMAI001;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI001
+6285711952460;20260327;SFDURIDUMAI001;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI001
+6285711952617;20260331;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711952622;20260330;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711952706;20260326;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711952745;20260328;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711952746;20260330;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711952747;20260305;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711952812;20260316;SFDURI03;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURI03
+6285711952826;20260319;SFDURIDUMAI001;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI001
+6285711952829;20260319;SFDURIDUMAI001;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI001
+6285711952831;20260319;SFDURIDUMAI001;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI001
+6285711952835;20260319;SFDURIDUMAI001;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI001
+6285711952837;20260319;SFDURIDUMAI001;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI001
+6285711952874;20260325;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711952900;20260328;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711952902;20260330;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711952907;20260313;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711952935;20260327;DSFGAPJBK006;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK006
+6285711952945;20260318;SFDURIDUMAI008;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI008
+6285711952949;20260318;SFDURIDUMAI008;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI008
+6285711952953;20260318;SFDURIDUMAI008;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURIDUMAI008
+6285711953041;20260330;SFDURI03;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURI03
+6285711953043;20260330;SFDURI03;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURI03
+6285711953121;20260326;SFDUMAI02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDUMAI02
+6285711953122;20260326;SFDUMAI02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDUMAI02
+6285711953141;20260308;SFDUMAI02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDUMAI02
+6285711953148;20260331;SFDUMAI02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDUMAI02
+6285711953164;20260316;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711953167;20260316;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711953172;20260316;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711953173;20260316;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711953207;20260330;SFDURI03;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURI03
+6285711953210;20260330;SFDURI03;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFDURI03
+6285711953259;20260316;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711953261;20260316;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711953262;20260316;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285711953263;20260316;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285881207533;20260319;SFSIAK05;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIAK05
+6285881272539;20260305;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882647260;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882647261;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882647301;20260316;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882647311;20260330;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285882647323;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882647327;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882647363;20260316;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882647366;20260316;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882647372;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882647381;20260317;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285882647384;20260317;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285882647387;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882647398;20260330;SFPEKANBARU01;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPEKANBARU01
+6285882647407;20260316;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882647410;20260327;SFPDGINN19;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPDGINN19
+6285882647415;20260316;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882647503;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882647522;20260316;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882647859;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882647876;20260316;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882647905;20260330;SFPEKANBARU01;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPEKANBARU01
+6285882647938;20260325;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882647941;20260316;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882647951;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882648019;20260327;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285882648021;20260312;SFPDGINN19;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPDGINN19
+6285882648022;20260325;SFPDGINN19;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPDGINN19
+6285882648027;20260330;SFPDGINN19;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPDGINN19
+6285882648029;20260327;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285882648042;20260318;SFPEKANBARU01;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPEKANBARU01
+6285882648071;20260316;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882648073;20260316;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882648377;20260329;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285882648438;20260328;SFPDGINN19;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPDGINN19
+6285882648493;20260328;SFPDGINN19;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPDGINN19
+6285882648495;20260326;SFPDGINN19;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPDGINN19
+6285882649023;20260322;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285882649962;20260317;SFPEKANBARU01;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPEKANBARU01
+6285882649964;20260318;SFPEKANBARU01;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPEKANBARU01
+6285882650046;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882650048;20260325;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882650241;20260328;SFPEKANBARU24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPEKANBARU24
+6285882650449;20260327;SFPDGINN19;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPDGINN19
+6285882650496;20260317;SFPEKANBARU24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPEKANBARU24
+6285882650612;20260326;SFPDGINN19;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPDGINN19
+6285882650616;20260328;SFPDGINN19;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPDGINN19
+6285882650670;20260316;TFSMPADANG2;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMPADANG2
+6285882650673;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882650893;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882650942;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882650943;20260326;SFBKTI08;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI08
+6285882650944;20260330;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285882650954;20260324;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285882656982;20260327;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285882656984;20260327;SFBKTI07;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBKTI07
+6285882657063;20260330;SFPDGINN19;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPDGINN19
+6285882657554;20260329;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285882729245;20260317;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
+6285882729502;20260331;DSFGAPJBK010;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGAPJBK010
 6289518632784;20260304;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
 6289518632779;20260304;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
 6289518633021;20260307;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
@@ -2560,7 +2683,7 @@
 6289518633397;NOT FOUND;12307604;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6289531799610;20260328;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
 6288531798303;NOT FOUND;12318702;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6289531794093;NOT FOUND;440099;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531794093;20260330;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
 6289531794091;20260326;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
 6289531794092;20260326;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
 6289531794088;20260326;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
@@ -2676,11 +2799,11 @@
 62895613271163;NOT FOUND;479629;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 62895613271164;NOT FOUND;479629;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 62895613271165;NOT FOUND;479629;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6289531794002;NOT FOUND;414999;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6289531798182;NOT FOUND;466004;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6289531798189;NOT FOUND;466004;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6289531799117;NOT FOUND;466004;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6289531794004;NOT FOUND;414999;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531794002;20260330;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289531798182;20260331;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531798189;20260331;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531799117;20260331;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531794004;20260331;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
 62895613259599;20260330;12307674;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307674
 62895613259597;20260330;12307674;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307674
 62895613259598;20260330;12307674;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307674
@@ -2716,347 +2839,224 @@
 6289531798303;20260318;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
 6289531798663;20260318;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
 6289531798304;20260317;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
+6289508216985;20260312;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289518313621;20260318;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289518314044;20260318;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289518400495;20260311;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+6289518402091;20260302;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289518402135;20260303;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289518402142;20260304;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289518412761;20260306;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
+6289518422824;20260331;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+6289518429458;20260327;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
+6289518463498;20260306;419330;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 419330
+6289518463509;20260323;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+6289518463541;20260304;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+6289518463872;20260317;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289518465338;20260317;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289518466149;20260322;419330;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 419330
+6289518507225;20260306;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289518543802;20260330;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+6289518543810;20260329;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+6289518547243;20260330;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+6289518547247;20260329;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+6289518550491;20260329;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+6289518550511;20260331;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289518550516;20260330;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+6289518550729;20260329;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+6289518551374;20260331;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289518623876;20260312;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289518632743;20260318;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289518632762;20260312;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289518632763;20260312;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289518632764;20260312;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289518632766;20260312;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289518633048;20260312;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289518633258;20260312;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289518633264;20260312;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289518633265;20260312;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289518633308;20260318;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289518633729;20260312;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289531782462;20260313;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289531782485;20260312;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531782619;20260310;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531785490;20260307;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531785502;20260303;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531785591;20260304;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289531788749;20260311;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
+6289531793962;20260318;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289531794026;20260326;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289531794027;20260326;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289531794029;20260326;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289531794044;20260331;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289531794046;20260331;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289531794047;20260331;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289531794048;20260331;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289531794072;20260319;440099;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 440099
+6289531794087;20260330;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289531794120;20260331;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
+6289531794121;20260331;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
+6289531794122;20260331;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289531794124;20260331;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289531794125;20260331;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
+6289531794127;20260331;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
+6289531794128;20260331;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
+6289531794129;20260331;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
+6289531794130;20260331;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+6289531794131;20260331;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
+6289531794156;20260331;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
+6289531794157;20260331;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
+6289531794159;20260331;12307821;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307821
+6289531794223;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289531794224;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289531794226;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289531794227;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289531794228;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289531794261;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289531794262;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289531794264;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289531794265;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289531794266;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+6289531795232;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531795236;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531795263;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531795273;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531795278;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531795303;20260318;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289531795307;20260318;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289531795320;20260318;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289531795323;20260317;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531795354;20260318;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531795375;20260318;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531795493;20260331;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
+6289531795523;20260318;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531795702;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531795704;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531795719;20260318;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289531795755;20260318;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531798135;20260318;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289531798140;20260313;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798141;20260314;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531798154;20260318;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
+6289531798191;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798192;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798195;20260318;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798219;20260318;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289531798266;20260313;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798271;20260313;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798283;20260318;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289531798297;20260328;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531798299;20260315;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531798305;20260331;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
+6289531798306;20260328;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531798307;20260328;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531798309;20260328;12307674;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307674
+6289531798310;20260328;12307674;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307674
+6289531798312;20260328;12307674;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307674
+6289531798313;20260328;12307674;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307674
+6289531798325;20260318;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531798339;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798465;20260328;12307674;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307674
+6289531798468;20260328;12307674;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307674
+6289531798471;20260313;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531798512;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798543;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798546;20260313;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531798583;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798657;20260313;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531798694;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798702;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798709;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798717;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798738;20260314;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531798756;20260317;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531798801;20260331;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
+6289531798803;20260331;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
+6289531798820;20260331;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
+6289531798824;20260318;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289531798831;20260328;12307674;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307674
+6289531798966;20260318;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531798974;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798976;20260313;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
+6289531798977;20260318;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531798978;20260318;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531798982;20260318;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289531798984;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531798986;20260318;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531798990;20260313;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531798991;20260318;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531799016;20260330;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799017;20260330;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799061;20260330;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799087;20260313;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799108;20260313;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799115;20260330;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799118;20260330;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799120;20260331;12318722;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318722
+6289531799121;20260318;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799124;20260330;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799125;20260330;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799126;20260330;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799127;20260317;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531799132;20260313;12318702;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12318702
+6289531799133;20260318;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+6289531799159;20260318;479642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479642
+6289531799504;20260311;12307599;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
+6289531799505;20260317;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289531799513;20260317;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531799517;20260330;12307599;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
+6289531799530;20260330;12307599;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
+6289531799532;20260313;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289531799537;20260327;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289531799538;20260327;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289531799586;20260311;12307599;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
+6289531799616;20260312;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531799670;20260312;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531799671;20260311;12307599;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
+6289531799689;20260317;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531799690;20260317;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531799702;20260317;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531799753;20260311;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289531799787;20260311;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289531799798;20260311;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289531799801;20260313;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289531799804;20260314;12307599;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
+6289531799807;20260312;12307599;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
+6289531799808;20260316;12307599;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
+6289531799809;20260316;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531799812;20260316;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531799823;20260316;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531799834;20260331;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531799835;20260311;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289531799837;20260331;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531799851;20260311;12307604;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307604
+6289531799853;20260331;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+6289531809573;20260315;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531809578;20260316;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531809579;20260316;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+6289531809598;20260316;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+62895608110968;20260320;466004;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466004
+62895608112031;20260325;479638;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479638
+62895608112062;20260325;400782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 400782
+62895608112207;20260314;419330;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 419330
+62895608112568;20260321;12307599;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
+62895608112759;20260319;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+62895608112879;20260323;12307599;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
+62895613207638;20260318;414999;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 414999
+62895613207658;20260324;12307782;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307782
+62895613207660;20260320;12307599;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
+62895613207804;20260325;419330;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 419330
+62895613270960;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+62895613270961;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+62895613270962;20260327;479629;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 479629
+62895613270963;20260327;419330;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 419330
+62895613270964;20260327;419330;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 419330
+62895613270976;20260327;419330;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 419330
+62895613270984;20260327;419330;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 419330
+62895613271031;20260327;419330;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 419330
+62895613271052;20260327;419330;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 419330
+62895613271103;20260331;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
+62895613271104;20260331;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
 ;;;;;
 ;;;;;
 ;;;;;
