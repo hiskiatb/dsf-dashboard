@@ -9,8 +9,8 @@ const TARGET_FWA_PER_DSF = 20;
 function normalizeRegion(region) {
   if (!region) return "Unknown";
   const val = region.toLowerCase();
-  if (val.includes("northern")) return "NSA";
-  if (val.includes("southern")) return "SSA";
+  if (val.includes("north")) return "NSA";
+  if (val.includes("south")) return "SSA";
   if (val.includes("central")) return "CSA";
   return region.charAt(0).toUpperCase() + region.slice(1);
 }
