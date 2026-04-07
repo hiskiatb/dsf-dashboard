@@ -192,12 +192,6 @@
 6289518617780;20260316;12309642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309642
 6289518617779;20260316;12309642;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309642
 6289531781790;20260326;12321838;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321838
-0;;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
-0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
-0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
-0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
-0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
-0;;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
 6289531782149;20260318;12321835;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321835
 62895608130342;20260318;12321835;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321835
 6289531781788;20260326;12321835;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321835
@@ -783,14 +777,320 @@
 6285882654537;20260330;SFPLMB24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPLMB24
 6285882654538;20260330;SFPLMB24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPLMB24
 6285882654540;20260330;SFPLMB24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPLMB24
-6285882654571;20260317;SFPLMB24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPLMB24
-6285882654578;20260314;SFPLMB24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPLMB24
-6285882654581;20260330;SFPLMB24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPLMB24
 6285882729284;20260317;SFPLMB24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPLMB24
 6285882730498;20260331;SFPLMB24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPLMB24
 6285882730509;20260325;SFPLMB24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPLMB24
 6285882730510;20260325;SFPLMB24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPLMB24
 6285882730511;20260325;SFPLMB24;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPLMB24
+6289531789009;NOT FOUND;517266;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531789017;NOT FOUND;517266;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531789006;NOT FOUND;517266;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531789003;NOT FOUND;517266;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531789015;NOT FOUND;517266;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518619449;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518619434;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518619435;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289602613550;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518607457;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618469;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518430271;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518619475;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518619438;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518612617;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618473;NOT FOUND;12309642;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618401;NOT FOUND;12309642;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618470;NOT FOUND;12309642;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518619484;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518619433;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518612660;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518619437;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518612478;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518612468;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518612819;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518624798;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518624714;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289529269153;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531787104;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518418701;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518418698;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518625034;NOT FOUND;12309089;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518432512;NOT FOUND;12309089;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518430294;NOT FOUND;12309089;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518416546;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518607378;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518416449;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518612602;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792317;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792421;NOT FOUND;479622;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792420;NOT FOUND;479622;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792418;NOT FOUND;479622;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792419;NOT FOUND;479622;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518633984;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518633985;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518633979;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518633973;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518633966;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518633986;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518633987;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518633989;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518633990;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518633991;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531787838;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518612825;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792340;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792316;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518617690;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792318;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531788244;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531787165;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531787166;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531787077;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531787082;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634115;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634201;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634207;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634205;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634203;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634021;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634024;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634023;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634018;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634017;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634135;NOT FOUND;546798;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531787965;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792404;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518619739;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792339;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792319;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531787813;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289602975058;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531787810;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792338;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792343;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518617661;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518625028;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518430297;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518430296;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518430295;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518432514;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608128902;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608128850;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608128848;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608128849;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634885;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634875;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518430292;NOT FOUND;346499;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618404;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618319;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618471;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618402;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618296;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518421695;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618859;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618858;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618865;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518618872;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518423534;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518423532;NOT FOUND;12309640;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518416450;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634007;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518625470;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634067;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634196;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634194;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634197;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634063;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895186334085;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895186334198;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895186334084;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895186334074;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634068;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634006;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634062;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634193;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895186334071;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895186334072;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895186334041;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895186334199;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895186334042;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895186334191;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518407246;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634097;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634103;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634106;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634105;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634104;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518623942;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518623943;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518623940;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518623945;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518623946;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634061;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518634059;NOT FOUND;479631;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130272;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130446;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130462;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130460;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130459;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130461;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531788052;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531788241;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130111;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130125;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130126;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130069;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130262;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130418;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289560813420;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130419;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130458;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130276;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130422;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130421;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531792394;NOT FOUND;12321835;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130112;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130113;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130114;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130067;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130115;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130068;NOT FOUND;12326964;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531787776;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130275;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130274;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130273;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130443;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130447;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130445;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130444;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531788242;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895608130263;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518624017;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518624015;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895184332445;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531781768;20260318;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289531782067;20260318;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289531782068;20260318;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289531782069;20260318;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289531782071;20260318;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289531782072;20260318;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289531792499;20260318;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289531792501;20260318;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289531792504;20260318;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289531792505;20260318;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289518634673;20260301;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+62895608113239;20260302;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289518503415;20260304;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289518634671;20260304;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289531788268;20260304;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289518463489;20260305;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289518634667;20260305;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289518634668;20260305;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289518463844;20260306;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289518505026;20260306;546798;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
+62895608112350;20260306;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518418790;20260307;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289518507239;20260307;12309089;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309089
+6289518505624;20260312;346499;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 346499
+6289518507184;20260312;346499;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 346499
+6289518635876;20260313;546798;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
+6289518635991;20260313;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+62895608112740;20260313;346499;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 346499
+6289518634154;20260314;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635998;20260314;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518635999;20260314;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518636002;20260314;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518501359;20260315;12326964;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518502582;20260315;346499;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 346499
+6289518502667;20260315;346499;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 346499
+628989740532;20260315;12326964;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518505319;20260316;346499;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 346499
+6289518635986;20260316;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518636001;20260316;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518502632;20260317;346499;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 346499
+6289518629306;20260317;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518629309;20260317;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518629310;20260317;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518629311;20260317;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518629312;20260317;12326964;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518629313;20260317;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518629314;20260317;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518629315;20260317;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518629316;20260317;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518629317;20260317;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+6289518636239;20260317;12326964;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326964
+62895608112398;20260317;551048;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6289518466148;20260318;551048;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6289518503374;20260318;346499;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 346499
+6289518636295;20260318;551048;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6289518636297;20260318;551048;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6289531786415;20260318;551048;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+62895608130041;20260318;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+62895613207663;20260318;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518502795;20260319;346499;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 346499
+6289518507180;20260319;346499;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 346499
+62895613207784;20260319;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+62895613207791;20260319;346499;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 346499
+6289518463918;20260320;488493;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488493
+6289518501376;20260320;488493;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488493
+6289518636289;20260320;551048;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6289518502726;20260323;488493;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488493
+6289518502866;20260324;488493;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488493
+6289523674772;20260325;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635220;20260327;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635221;20260327;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635224;20260327;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635229;20260327;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635232;20260327;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635234;20260327;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635865;20260327;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518636704;20260327;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518636705;20260327;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+62895608130076;20260327;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
+6289518503363;20260328;488493;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488493
+6289518635358;20260328;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635376;20260328;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635381;20260328;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635424;20260328;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289531781478;20260328;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289531781479;20260328;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
+6289531781512;20260328;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
+6289531787783;20260328;488493;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488493
+62895608130078;20260328;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
+62895608130130;20260328;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635989;20260329;551048;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6289531781511;20260329;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
+6289531786419;20260329;551048;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6289531786421;20260329;551048;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+62895608130027;20260329;551048;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6289518628296;20260330;551048;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6289518629299;20260330;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518629301;20260330;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518629302;20260330;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518629305;20260330;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635484;20260330;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635921;20260330;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289531781476;20260330;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
+6289531781477;20260330;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
+6289531781482;20260330;546798;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 546798
+6289518635217;20260331;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635222;20260331;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518635857;20260331;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518636703;20260331;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518636712;20260331;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289531781468;20260331;551048;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6289531781469;20260331;551048;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6285882654571;20260317;SFBNGKULU15;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBNGKULU15
+6285882654578;20260314;SFBNGKULU15;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBNGKULU15
+6285882654581;20260330;SFBNGKULU15;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFBNGKULU15
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;;0;0;0;MSISDN tidak ditemukan di Raw Data
+0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 6285711951172;20260309;SFMEDAN45;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285711951944;20260311;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285711952042;20260311;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -3469,306 +3769,6 @@
 62895613271052;20260327;419330;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 419330
 62895613271103;20260331;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
 62895613271104;20260331;12307753;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307753
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
-;;;;;
 ;;;;;
 ;;;;;
 ;;;;;
