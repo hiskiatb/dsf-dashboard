@@ -15,12 +15,18 @@ export default function DSFCard({
   dsf,
   dataDates,
   fwaData = [],
-  adjData = []
+  adjData = [],
+    month
+
 }){
 
 
-  const c = hitungInsentif(dsf);
-  const tips = buildTips(dsf);
+const c = hitungInsentif(dsf, month);
+
+const ENABLE_TIPS = false;
+const tips = ENABLE_TIPS ? buildTips(dsf, month) : [];
+
+const targetFwa = dsf.targetFwa || 20;
 
   const eligible = c.incentive > 0;
 
@@ -33,12 +39,12 @@ export default function DSFCard({
 
   const incentiveTone = eligible ? "success" : "danger";
 
-  const ringFwaTone =
-    dsf.fwaUnits >= 20
-      ? "success"
-      : dsf.fwaUnits >= 15
-      ? "warning"
-      : "danger";
+const ringFwaTone =
+  dsf.fwaUnits >= targetFwa
+    ? "success"
+    : dsf.fwaUnits >= targetFwa * 0.75
+    ? "warning"
+    : "danger";
 
   const ringRevTone =
     c.totalRevenue >= REVENUE_TARGET
@@ -269,13 +275,13 @@ const adjInvalidRef = useRef(null);
       {/* DASHBOARD */}
       <div className="dash-grid mt-5">
 
-        <Ring
-          title="FWA Units"
-          subtitle={`Update terakhir: ${fwaUpdateLabel}`}
-          valueText={`${dsf.fwaUnits} / 20`}
-          percent={c.fwaProgress}
-          tone={ringFwaTone}
-        />
+<Ring
+  title="FWA Units"
+  subtitle={`Update terakhir: ${fwaUpdateLabel}`}
+  valueText={`${dsf.fwaUnits} / ${targetFwa}`}
+  percent={dsf.fwaUnits / targetFwa}
+  tone={ringFwaTone}
+/>
 
         <Ring
           title="Total Revenue"
@@ -287,8 +293,20 @@ const adjInvalidRef = useRef(null);
 
         <div className="dash-right">
 
+       <div className="mini-card">
+  <div className="mini-label">Rebuy Haji</div>
+
+  <div className="mini-value">
+    {formatIDR(dsf.revHajj || 0)}
+  </div>
+
+  <div className="mini-subtext">
+   Update terakhir: {rebuyUpdateLabel}
+  </div>
+</div>
+
           <div className="mini-card">
-            <div className="mini-label">Rebuy Revenue</div>
+            <div className="mini-label">Rebuy FWA</div>
 
             <div className="mini-value">
               {formatIDR(dsf.rebuyRevenue)}

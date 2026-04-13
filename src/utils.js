@@ -100,6 +100,7 @@ export function clamp(n, min = 0, max = 1) {
   return Math.max(min, Math.min(max, n));
 }
 
+
 export function mapRowToDSF(row) {
   const brand = row.BRAND || "-";
   const idDsf = row.ID_DSF || "";
@@ -109,8 +110,11 @@ export function mapRowToDSF(row) {
   const region = row.REGION || "-";
   const idTl = row.ID_TL || "";
   const namaTl = row.NAMA_TL || "-";
+  const targetFwa = toNumberSafe(row.TARGET_FWA || 0);
   const fwaUnits = toNumberSafe(row.TOTAL_FWA || 0);
   const rebuyRevenue = toNumberSafe(row.REV_REBUY || 0);
+  const actualHajj = toNumberSafe(row.ACTUAL_HAJJ || 0);
+const revHajj = toNumberSafe(row.REV_HAJJ || 0);
   const dataFwaIM3 = row.DATA_FWA_IM3 || "";
 const dataFwa3ID = row.DATA_FWA_3ID || "";
 const dataRebuyIM3 = row.DATA_REBUY_IM3 || "";
@@ -128,6 +132,9 @@ const dataRebuy3ID = row.DATA_REBUY_3ID || "";
     namaTl,
     fwaUnits,
     rebuyRevenue,
+      actualHajj,
+  revHajj,
+  targetFwa,
      dataFwaIM3,
   dataFwa3ID,
   dataRebuyIM3,
@@ -143,21 +150,26 @@ export function extractDataBasedOn(text) {
 
 
 export function hitungInsentif(dsf) {
+
+    const targetFwa = dsf.targetFwa ?? 0; // ✅ PINDAH KE ATAS
+
   const fwaRevenue = dsf.fwaUnits * FWA_UNIT_VALUE;
-  const totalRevenue = fwaRevenue + dsf.rebuyRevenue;
+const totalRevenue = fwaRevenue + dsf.rebuyRevenue + (dsf.revHajj || 0);
 
   let incentive = 0;
-  if (dsf.fwaUnits >= 20 && totalRevenue >= REVENUE_TARGET) {
-    incentive = 500_000;
-  } else if (dsf.fwaUnits >= 15 && totalRevenue >= REVENUE_TARGET) {
-    incentive = 200_000;
-  }
+
+if (dsf.fwaUnits >= targetFwa && totalRevenue >= REVENUE_TARGET) {
+  incentive = 500_000;
+} else if (dsf.fwaUnits >= targetFwa * 0.75 && totalRevenue >= REVENUE_TARGET) {
+  incentive = 200_000;
+}
 
   const remainingRevenue = Math.max(0, REVENUE_TARGET - totalRevenue);
 
   // IMPORTANT:
   // progress ring boleh > 100% untuk perhitungan, tapi ringnya tetap penuh.
-  const fwaProgress = dsf.fwaUnits / 20;
+  
+  
   const revenueProgress = totalRevenue / REVENUE_TARGET;
 
   return {
@@ -165,7 +177,7 @@ export function hitungInsentif(dsf) {
     totalRevenue,
     incentive,
     remainingRevenue,
-    fwaProgress,
+fwaProgress: targetFwa > 0 ? dsf.fwaUnits / targetFwa : 0,
     revenueProgress,
   };
 }
@@ -174,7 +186,63 @@ export function isEligible(dsf) {
   return hitungInsentif(dsf).incentive > 0;
 }
 
-export function buildTips(dsf) {
+export function buildTips(dsf, month) {
+ 
+  const isNewScheme = month === "202604" || month === "202605";
+
+if (isNewScheme) {
+  const tips = [];
+
+  const fwaNow = dsf.fwaUnits;
+  const rebuyNow = Math.min(dsf.rebuyRevenue, 500_000);
+  const hajjNow = dsf.revHajj || 0;
+
+  const totalRevenueNow =
+    fwaNow * FWA_UNIT_VALUE + rebuyNow + hajjNow;
+
+  const percent = totalRevenueNow / REVENUE_TARGET;
+
+  tips.push({
+    done: false,
+    text: `Revenue saat ini ${formatIDR(totalRevenueNow)} (${Math.round(percent * 100)}%).`,
+  });
+
+  // ✅ 120%
+  if (percent >= 1.2) {
+    tips.push({
+      done: true,
+      text: "🎉 Target 120% tercapai (insentif 500 ribu).",
+    });
+    return tips;
+  }
+
+  // ✅ 100%
+  if (percent >= 1) {
+    tips.push({
+      done: true,
+      text: "🎉 Target 100% tercapai (insentif 200 ribu).",
+    });
+  } else {
+    const need = REVENUE_TARGET - totalRevenueNow;
+
+    tips.push({
+      done: false,
+      text: `Butuh tambahan ${formatIDR(need)} untuk mencapai 100%.`,
+    });
+  }
+
+  // ✅ menuju 120%
+  const need120 = REVENUE_TARGET * 1.2 - totalRevenueNow;
+
+  if (need120 > 0) {
+    tips.push({
+      done: false,
+      text: `Untuk 500 ribu, tambah sekitar ${formatIDR(need120)} lagi.`,
+    });
+  }
+
+  return tips;
+}
 
   const tips = [];
 
@@ -182,13 +250,14 @@ export function buildTips(dsf) {
   const rebuyNow = dsf.rebuyRevenue;
 
   const fwaRevenueNow = fwaNow * FWA_UNIT_VALUE;
-  const totalRevenueNow = fwaRevenueNow + rebuyNow;
+const hajjNow = dsf.revHajj || 0;
 
+const totalRevenueNow = fwaRevenueNow + rebuyNow + hajjNow;
   // ================================
   // TARGET DEFINITIONS
   // ================================
-  const TARGET_500_FWA = 20;
-  const TARGET_200_FWA = 15;
+const TARGET_500_FWA = dsf.targetFwa ?? 0;
+const TARGET_200_FWA = Math.floor((dsf.targetFwa ?? 0) * 0.75);
 
   // ================================
   // CURRENT STATUS

@@ -27,7 +27,7 @@ const [adjData, setAdjData] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const [pbiData, setPbiData] = useState([]);
-  const [selectedMonth, setSelectedMonth] = useState("202603"); // default March
+  const [selectedMonth, setSelectedMonth] = useState("202604"); // default March
  // const [selectedPBI, setSelectedPBI] = useState(null);
 
 
@@ -42,6 +42,13 @@ const [adjData, setAdjData] = useState([]);
   });
 
   const MONTH_FILES = {
+"202604": {
+  dsf: "/DSF_202604.csv",
+  fwa: "/FWA_202604.csv",
+  adj: "/ADJ_FWA_202604.csv",
+  pbi: "/PBI_202604.csv",
+  label: "April 2026",
+},
   "202603": {
     dsf: "/DSF_202603.csv",
     fwa: "/FWA_202603.csv",
@@ -547,36 +554,40 @@ item.type === "RAW"
 </div>
 
 {/* RIGHT SIDE (MONTH SWITCHER) */}
-<div className="flex flex-col items-start sm:items-end gap-2">
+<div className="flex flex-col items-start sm:items-end gap-2 w-full sm:w-auto">
 
-<div className="text-xs text-gray-500 font-medium">
-  Achievement Month
-</div>
+  <div className="text-xs text-gray-500 font-medium">
+    Achievement Month
+  </div>
 
-<div className="flex gap-2">
+  <div className="relative w-full sm:w-56">
 
-{Object.entries(MONTH_FILES).map(([key, m]) => {
+    <select
+      value={selectedMonth}
+      onChange={(e) => setSelectedMonth(e.target.value)}
+      className="
+        w-full appearance-none
+        bg-white border border-gray-200
+        rounded-xl px-4 py-2.5 pr-10
+        text-sm font-medium text-gray-700
+        shadow-sm
+        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+        transition
+      "
+    >
+      {Object.entries(MONTH_FILES).map(([key, m]) => (
+        <option key={key} value={key}>
+          {m.label}
+        </option>
+      ))}
+    </select>
 
-const active = selectedMonth === key;
+    {/* ICON DROPDOWN */}
+    <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-400">
+      ▼
+    </div>
 
-return (
-<motion.button
-  key={key}
-  onClick={() => setSelectedMonth(key)}
-  className={`px-4 py-2 rounded-lg text-sm font-medium transition
-  ${active
-    ? "bg-blue-600 text-white shadow"
-    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-  }`}
-  whileTap={{ scale: 0.95 }}
->
-{m.label}
-</motion.button>
-);
-
-})}
-
-</div>
+  </div>
 
 </div>
 
@@ -813,6 +824,8 @@ if (item.type === "GSE") {
   dataDates={dataDates}
   fwaData={fwaData}
   adjData={adjData}
+    month={selectedMonth} 
+
 />
   ) : selectedTL ? (
     <TLDashboard

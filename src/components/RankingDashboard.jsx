@@ -28,7 +28,7 @@ function toTitleCase(str) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 }
-
+ 
 export default function RankingDashboard({ 
   dsfData = [], 
   onSelectDSF, 
@@ -152,12 +152,19 @@ export default function RankingDashboard({
 
       grouped[key].totalFWA += Number(row.fwaUnits) || 0;
       grouped[key].rebuyRevenue += Number(row.rebuyRevenue) || 0;
+      grouped[key].hajjRevenue = (grouped[key].hajjRevenue || 0) + (Number(row.revHajj) || 0);
       grouped[key].dsfSet.add(row.idDsf);
     });
 
     let result = Object.values(grouped).map((item) => {
       const dsfCount = item.dsfSet.size;
-      const totalRevenue = item.totalFWA * FWA_PRICE + item.rebuyRevenue;
+
+
+
+const totalRevenue =
+  item.totalFWA * FWA_PRICE +
+  item.rebuyRevenue +
+  (item.hajjRevenue || 0);
 
       const targetRevenue =
         rankType === "DSF"
@@ -434,7 +441,8 @@ if (brandLabel) {
                 <th className="p-3">Nama DSF</th>
                 <th className="p-3">Branch</th>
                 <th className="p-3">FWA</th>
-                <th className="p-3">Rebuy</th>
+                <th className="p-3">Rebuy FWA</th>
+                <th className="p-3">Rebuy Haji</th>
                 <th className="p-3">Total Revenue</th>
                 <th className="p-3">Target</th>
                 <th className="p-3">Achievement</th>
@@ -445,7 +453,8 @@ if (brandLabel) {
                 <th className="p-3">{toTitleCase(rankType)}</th>
                 <th className="p-3">Target FWA</th>
                 <th className="p-3">FWA</th>
-                <th className="p-3">Rebuy</th>
+                <th className="p-3">Rebuy FWA</th>
+                <th className="p-3">Rebuy Haji</th>
                 <th className="p-3">Target Revenue</th>
                 <th className="p-3">Total Revenue</th>
                 <th className="p-3">Achievement</th>
@@ -468,6 +477,7 @@ if (brandLabel) {
                     <td className="p-3">{item.branch}</td>
                     <td className="p-3">{item.totalFWA}</td>
                     <td className="p-3">Rp {formatCurrency(item.rebuyRevenue)}</td>
+                                        <td className="p-3">Rp {formatCurrency(item.hajjRevenue || 0)}</td>
                     <td className="p-3 font-semibold">Rp {formatCurrency(item.totalRevenue)}</td>
                     <td className="p-3">Rp {formatCurrency(TARGET_DSF)}</td>
                     <td className={`p-3 font-bold ${achievementColor(item.achievement)}`}>
@@ -481,6 +491,7 @@ if (brandLabel) {
                     <td className="p-3">{item.targetFWA}</td>
                     <td className="p-3">{item.totalFWA}</td>
                     <td className="p-3">Rp {formatCurrency(item.rebuyRevenue)}</td>
+                    <td className="p-3">Rp {formatCurrency(item.hajjRevenue || 0)}</td>
                     <td className="p-3">Rp {formatCurrency(item.targetRevenue)}</td>
                     <td className="p-3 font-semibold">Rp {formatCurrency(item.totalRevenue)}</td>
                     <td className={`p-3 font-bold ${achievementColor(item.achievement)}`}>
