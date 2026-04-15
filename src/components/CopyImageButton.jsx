@@ -30,6 +30,18 @@ function getTimestamp() {
   return `${date}_${time}`;
 }
 
+function formatRankType(type) {
+  if (!type) return "";
+
+  // khusus yang harus tetap uppercase
+  const keepUpper = ["DSF", "TL", "MC"];
+
+  if (keepUpper.includes(type)) return type;
+
+  return type.charAt(0) + type.slice(1).toLowerCase();
+}
+
+
 export default function CopyImageButton({
   targetRef,
   dataDates = {},
@@ -51,12 +63,14 @@ export default function CopyImageButton({
     const activeFilters = getActiveFilters(filters);
 
     const sortMap = {
-      achievement: "Achievement",
-      revenue: "Revenue",
-      fwa: "FWA",
-      rebuy: "Rebuy",
-    };
-    const sortLabel = sortBy ? sortMap[sortBy] || sortBy : null;
+  achievement: "Achievement",
+  revenue: "Revenue",
+  fwa: "FWA",
+  rebuy: "Rebuy FWA",
+  hajj: "Rebuy Haji",
+};
+
+const sortLabel = sortBy ? sortMap[sortBy] || sortBy : "";
 
     const wrapper = document.createElement("div");
     wrapper.style.background = "#ffffff";
@@ -98,13 +112,10 @@ if (brandFilter.length === 1) {
   else if (brandFilter[0].toLowerCase() === "3id") brandLabel = "3ID";
 }
 
-let dynamicTitle = "DSF Achievement Tracker";
+let dynamicTitle = `Leaderboard ${formatRankType(rankType) || ""} - ${sortLabel}`.trim();
 
-if (rankType) {
-  dynamicTitle = `LEADERBOARD DSF ${rankType}`;
-  if (brandLabel) {
-    dynamicTitle += ` ${brandLabel}`;
-  }
+if (brandLabel) {
+  dynamicTitle += ` ${brandLabel}`;
 }
 
 const title = document.createElement("div");

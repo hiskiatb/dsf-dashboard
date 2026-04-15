@@ -187,20 +187,21 @@ const totalRevenue =
       };
     });
 
-    // UPDATED SORTING (logic lama tidak diubah, hanya mekanisme urut)
-    result.sort((a, b) => {
-      switch (sortBy) {
-        case "fwa":
-          return b.totalFWA - a.totalFWA;
-        case "rebuy":
-          return b.rebuyRevenue - a.rebuyRevenue;
-        case "revenue":
-          return b.totalRevenue - a.totalRevenue;
-        case "achievement":
-        default:
-          return b.achievement - a.achievement;
-      }
-    });
+result.sort((a, b) => {
+  switch (sortBy) {
+    case "fwa":
+      return b.totalFWA - a.totalFWA;
+    case "rebuy":
+      return b.rebuyRevenue - a.rebuyRevenue;
+    case "hajj": // ✅ tambahan
+      return (b.hajjRevenue || 0) - (a.hajjRevenue || 0);
+    case "revenue":
+      return b.totalRevenue - a.totalRevenue;
+    case "achievement":
+    default:
+      return b.achievement - a.achievement;
+  }
+});
 
     return result.map((item, index) => ({
       ...item,
@@ -249,7 +250,16 @@ if (brandFilter.length === 1) {
   else if (brandFilter[0].toLowerCase() === "3id") brandLabel = "3ID";
 }
 
-let title = `Performance Leaderboard ${toTitleCase(rankType)}`;
+const sortLabelMap = {
+  achievement: "Achievement",
+  revenue: "Revenue",
+  fwa: "FWA",
+  rebuy: "Rebuy FWA",
+  hajj: "Rebuy Haji",
+};
+
+let title = `Leaderboard ${toTitleCase(rankType)} - ${sortLabelMap[sortBy]}`;
+
 if (brandLabel) {
   title += ` ${brandLabel}`;
 }
@@ -394,10 +404,13 @@ if (brandLabel) {
 
         <div className="flex gap-2 flex-wrap">
           {[
-            { key: "achievement", label: "Achievement" },
-            { key: "revenue", label: "Revenue" },
-            { key: "fwa", label: "FWA" },
-            { key: "rebuy", label: "Rebuy" },
+
+  { key: "achievement", label: "Achievement" },
+  { key: "revenue", label: "Revenue" },
+  { key: "fwa", label: "FWA" },
+  { key: "rebuy", label: "Rebuy FWA" },
+  { key: "hajj", label: "Rebuy Haji" },
+
           ].map((option) => (
             <button
               key={option.key}
