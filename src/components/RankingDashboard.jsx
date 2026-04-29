@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { useRef } from "react";
 import CopyImageButton from "./CopyImageButton";
+import { hitungInsentif } from "../utils";
 
 const TARGET_DSF = 7500000;
 const FWA_PRICE = 350000;
@@ -146,13 +147,26 @@ export default function RankingDashboard({
           branch: branch || "-",
           totalFWA: 0,
           rebuyRevenue: 0,
+          hajjRevenue: 0,
+          totalIncentive: 0,
           dsfSet: new Set(),
+          dsfIncentiveMap: new Map(), // ✅ TAMBAHAN WAJIB
+
         };
       }
 
       grouped[key].totalFWA += Number(row.fwaUnits) || 0;
       grouped[key].rebuyRevenue += Number(row.rebuyRevenue) || 0;
       grouped[key].hajjRevenue = (grouped[key].hajjRevenue || 0) + (Number(row.revHajj) || 0);
+     const dsfId = row.idDsf;
+
+if (!grouped[key].dsfIncentiveMap.has(dsfId)) {
+  const insentif = hitungInsentif(row, dataDates?.month);
+
+  grouped[key].dsfIncentiveMap.set(dsfId, insentif?.incentive || 0);
+
+  grouped[key].totalIncentive += insentif?.incentive || 0;
+}
       grouped[key].dsfSet.add(row.idDsf);
     });
 
@@ -207,7 +221,7 @@ result.sort((a, b) => {
       ...item,
       rank: index + 1,
     }));
-  }, [filteredData, rankType, sortBy]);
+  }, [filteredData, rankType, sortBy, dataDates]);
 
   function formatCurrency(num) {
     return num.toLocaleString("id-ID");
@@ -458,7 +472,8 @@ if (brandLabel) {
                 <th className="p-3">Rebuy Haji</th>
                 <th className="p-3">Total Revenue</th>
                 <th className="p-3">Target</th>
-                <th className="p-3">Achievement</th>
+                <th className="p-3">% Revenue</th>
+                <th className="p-3">Incentive</th>
               </tr>
             ) : (
               <tr>
@@ -470,7 +485,7 @@ if (brandLabel) {
                 <th className="p-3">Rebuy Haji</th>
                 <th className="p-3">Target Revenue</th>
                 <th className="p-3">Total Revenue</th>
-                <th className="p-3">Achievement</th>
+                <th className="p-3">% Revenue</th>
               </tr>
             )}
           </thead>
@@ -496,6 +511,9 @@ if (brandLabel) {
                     <td className={`p-3 font-bold ${achievementColor(item.achievement)}`}>
                       {item.achievement.toFixed(1)}%
                     </td>
+                    <td className="p-3 font-semibold text-emerald-600">
+  Rp {formatCurrency(item.totalIncentive)}
+</td>
                   </>
                 ) : (
                   <>
