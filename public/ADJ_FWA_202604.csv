@@ -87,7 +87,7 @@
 6285882740540;20260415;SFTGMS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882740535;20260416;SFTGMS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882740530;20260417;SFTGMS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882739343;NOT FOUND;SFTGMS02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882739343;20260424;SFTGMS02;4G Device;0;Ada di Raw Data, namun ORG_ID: 1440751
 6285882739342;20260422;SFTGMS02;4G Device;0;Ada di Raw Data, namun ORG_ID: 1440751
 6285882739340;20260418;SFTGMS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882739341;20260418;SFTGMS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -139,9 +139,9 @@
 6285882738447;20260420;SFSRIBWN11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882738510;20260424;SFSRIBWN11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882738511;20260424;SFSRIBWN11;4G Device;0;Ada di Raw Data, namun ORG_ID: 17798653
-6285882738512;NOT FOUND;SFSRIBWN11;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882738512;20260427;SFSRIBWN11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882738509;20260424;SFSRIBWN11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882738508;NOT FOUND;SFSRIBWN11;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882738508;20260427;SFSRIBWN11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882738488;20260424;SFSRIBWN11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882738489;20260424;SFSRIBWN11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882738490;20260424;SFSRIBWN11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -154,7 +154,7 @@
 6285882738455;20260420;SFSRIBWN09;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSRIBWN09
 6285882740544;20260421;SFKRUI02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285711507116;20260424;SFKRUI02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882740546;NOT FOUND;SFKRUI02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740546;20260424;SFKRUI02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285711507073;20260420;SFMTRLMT14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882740701;20260421;SFMTRLMT14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882740542;20260422;SFMTRLMT14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -170,16 +170,16 @@
 6285882739362;20260421;SFBLMKOTA11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882739364;20260421;SFBLMKOTA11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882739365;20260421;SFBLMKOTA11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882740611;NOT FOUND;SFBLMKOTA11;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882739384;NOT FOUND;SFBLMKOTA11;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740611;20260425;SFBLMKOTA11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739384;20260425;SFBLMKOTA11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882739376;20260421;SFTGMS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882740576;20260420;SFTGMS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882739336;20260420;SFTGMS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882755934;NOT FOUND;SFTGMS02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882755933;NOT FOUND;SFTGMS02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882755933;20260424;SFTGMS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882755932;NOT FOUND;SFTGMS02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882755931;NOT FOUND;SFTGMS02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882755930;NOT FOUND;SFTGMS02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882755931;20260425;SFTGMS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882755930;20260424;SFTGMS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882755979;NOT FOUND;SFTGMS02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882755941;NOT FOUND;SFTGMS02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882755942;NOT FOUND;SFTGMS02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -195,7 +195,7 @@
 6285882738355;20260415;SFPLMB24;4G Device;0;Ada di Raw Data, namun ORG_ID: 17614892
 6285882738292;20260421;SFPLMB24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882738390;20260415;SFPLMB24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882755833;NOT FOUND;SFPLMB24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882755833;20260424;SFPLMB24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882730844;20260413;SFBNGKULU15;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882730840;20260413;SFBNGKULU15;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882730842;20260413;SFBNGKULU15;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -206,6 +206,18 @@
 6285882730915;20260413;SFBNGKULU15;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882730917;20260414;SFBNGKULU15;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882730839;20260414;SFBNGKULU15;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882756020;NOT FOUND;SFMTRLMT14;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882756021;NOT FOUND;SFMTRLMT14;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882756022;NOT FOUND;SFMTRLMT14;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882756032;NOT FOUND;SFMTRLMT14;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740882;20260418;DSFGRAHA15;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740826;20260421;DSFGRAHA15;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285711954450;20260421;DSFGRAHA14;4G Device;0;Ada di Raw Data, namun ORG_ID: 17636100
+6285882754483;20260425;DSFGRAHA14;4G Device;0;Ada di Raw Data, namun ORG_ID: 17752590
+6285882754484;20260424;DSFGRAHA14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882754491;20260426;DSFGRAHA14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882754786;20260424;DSFGRAHA14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882754787;20260424;DSFGRAHA14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285711682108;20260402;SFPLMB43;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285711682504;20260401;SFPLMB43;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882738291;20260421;SFPLMB43;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -226,16 +238,10 @@
 6285882740615;20260415;SFTGMS02;4G Device;0;Ada di Raw Data, namun ORG_ID: 17651726
 6285882740617;20260415;SFTGMS02;4G Device;0;Ada di Raw Data, namun ORG_ID: 17651726
 6285882740671;20260417;SFBLMKOTA11;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882740826;20260421;DSFGRAHA15;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882740882;20260418;DSFGRAHA15;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882754483;20260425;DSFGRAHA14;4G Device;0;Ada di Raw Data, namun ORG_ID: 17752590
-6285882754484;20260424;DSFGRAHA14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882754786;20260424;DSFGRAHA14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882754787;20260424;DSFGRAHA14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882755831;NOT FOUND;SFPLMB58;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882755834;NOT FOUND;SFPLMB43;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882755835;NOT FOUND;SFPLMB43;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882755836;NOT FOUND;SFPLMB43;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882755831;20260424;SFPLMB58;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882755834;20260424;SFPLMB43;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882755835;20260424;SFPLMB43;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882755836;20260424;SFPLMB43;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6289513275741;NOT FOUND;12321838;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6289518618409;20260402;12309640;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309640
 6289518618405;20260402;12309640;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12309640
@@ -305,8 +311,11 @@
 62895613275710;20260415;12321841;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321841
 6289561327513;NOT FOUND;12321841;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 62895608128918;20260415;12321841;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321841
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;517266;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;517266;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;517266;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 62895613227513;NOT FOUND;517266;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;517266;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6289561328248;NOT FOUND;479622;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6289561328249;NOT FOUND;479622;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6289561328250;NOT FOUND;479622;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -337,9 +346,9 @@
 62895613275743;20260417;12321835;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321835
 62895613275641;20260417;12321835;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321835
 6289531781459;20260413;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
-62895613212143;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613212144;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613212145;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613212143;20260423;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+62895613212144;20260423;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+62895613212145;20260423;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
 62895613212146;20260415;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
 62895613212147;20260415;12326998;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
 6289531779680;20260416;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
@@ -348,8 +357,8 @@
 6289518628522;20260422;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
 6289518628520;20260422;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
 6289518628523;20260422;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
-6289518628534;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6289518628525;NOT FOUND;12326998;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289518628534;20260427;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
+6289518628525;20260427;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
 6289518628526;20260422;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
 6289518628529;20260422;12326998;5G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 12326998
 62895613263324;20260422;517266;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 517266
@@ -1082,15 +1091,6 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882730162;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882730158;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882655902;20260407;TFSMLHOK2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -1160,8 +1160,6 @@
 6285882656176;20260420;SFACEHLSW3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882656175;20260419;SFACEHLSW3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882656174;20260419;SFACEHLSW3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882655961;20260420;TFSMLHOK2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882655962;20260420;TFSMLHOK2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882655965;20260420;TFSMLHOK2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -1192,26 +1190,420 @@
 6285862758173;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285862758172;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285862758170;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882758159;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882758161;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882758158;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882758162;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882757963;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882757960;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882757959;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882757961;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882757962;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882758163;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882757973;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882757970;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882757969;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882757972;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882757971;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882758178;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882758176;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882758175;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882758183;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882758177;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882758159;20260425;SFMEDAN33;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758161;20260425;SFMEDAN33;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758158;20260425;SFMEDAN33;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758162;20260425;SFMEDAN33;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757963;20260425;SFMEDAN33;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757960;20260425;SFMEDAN33;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757959;20260425;SFMEDAN33;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757961;20260425;SFMEDAN33;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757962;20260425;SFMEDAN33;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758163;20260425;SFMEDAN33;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757973;20260425;SFMEDAN50;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757970;20260425;SFMEDAN50;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757969;20260425;SFMEDAN50;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757972;20260425;SFMEDAN50;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757971;20260425;SFMEDAN50;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758178;20260425;SFMEDAN50;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758176;20260425;SFMEDAN50;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758175;20260425;SFMEDAN50;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758183;20260425;SFMEDAN50;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758177;20260425;SFMEDAN50;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760090;20260425;SFMEDAN04;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760089;20260425;SFMEDAN04;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760087;20260425;SFMEDAN04;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760085;20260425;SFMEDAN04;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760086;20260425;SFMEDAN04;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758155;20260425;SFMEDAN04;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758156;20260425;SFMEDAN04;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758157;20260425;SFMEDAN04;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758153;20260425;SFMEDAN04;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758152;20260425;SFMEDAN04;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760091;20260425;SFMEDAN27;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760092;20260425;SFMEDAN27;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760093;20260425;SFMEDAN27;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757989;20260425;SFMEDAN27;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760095;20260425;SFMEDAN27;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+628588275798;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882757990;20260425;SFMEDAN27;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757986;20260425;SFMEDAN27;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757988;20260425;SFMEDAN27;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760094;20260425;SFMEDAN27;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758012;20260425;SFMEDAN24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758010;20260425;SFMEDAN24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757978;20260425;SFMEDAN24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758011;20260425;SFMEDAN24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758015;20260425;SFMEDAN24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882758007;20260425;SFMEDAN24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757976;20260425;SFMEDAN24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757977;20260425;SFMEDAN24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757974;20260425;SFMEDAN24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882757975;20260425;SFMEDAN24;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285862750083;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285862760084;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285862760081;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285862760069;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285862760068;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285862760070;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285862760071;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285862760079;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285862760072;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285862760082;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6288274044658;NOT FOUND;TFSMSIADEM3;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740449;NOT FOUND;TFSMSIADEM3;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740445;NOT FOUND;TFSMSIADEM3;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740454;NOT FOUND;TFSMSIADEM3;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740169;NOT FOUND;TFSMSIADEM1;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882739117;NOT FOUND;TFSMSIADEM1;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882739126;NOT FOUND;TFSMSIADEM1;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740451;NOT FOUND;TFSMSIADEM1;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740168;NOT FOUND;SFSDP55;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740165;NOT FOUND;SFSDP13;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740166;NOT FOUND;SFSDP13;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740519;20260427;SFTBI13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740518;20260427;SFTBI13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740523;20260427;SFTBI13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740516;20260427;SFTBI13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740517;20260427;SFTBI13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739118;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882739120;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882739124;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759596;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760057;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760527;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760524;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760543;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760544;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760545;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760546;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759589;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759590;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759591;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759592;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759594;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760547;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760525;NOT FOUND;SFSIANTAR03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882739184;20260427;SFSIANTAR02;4G Device;0;Ada di Raw Data, namun ORG_ID: 17810796
+6285882739195;20260421;SFSIANTAR02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739197;20260421;SFSIANTAR02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739198;20260421;SFSIANTAR02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740116;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740118;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740120;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740124;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740119;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739188;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739189;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739190;20260421;SFSIANTAR01;4G Device;0;Ada di Raw Data, namun ORG_ID: SFSIANTAR02
+6285882739192;20260421;SFSIANTAR01;4G Device;0;Ada di Raw Data, namun ORG_ID: SFSIANTAR02
+6285882739193;20260421;SFSIANTAR01;4G Device;0;Ada di Raw Data, namun ORG_ID: SFSIANTAR02
+6285882740081;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740082;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740084;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740085;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740083;20260421;SFSIANTAR01;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740193;20260421;SFSIANTAR02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740329;20260421;SFSIANTAR02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR02
+6285882740194;20260421;SFSIANTAR02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740192;20260421;SFSIANTAR02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740331;20260421;SFSIANTAR02;4G Device;0;Ada di Raw Data, namun ORG_ID: TFSMSIADEM3
+62885882740195;NOT FOUND;SFSIANTAR02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740334;20260421;SFSIANTAR02;4G Device;0;Ada di Raw Data, namun ORG_ID: SFSDP55
+6285882740191;20260421;SFSIANTAR02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740332;20260421;SFSIANTAR02;4G Device;0;Ada di Raw Data, namun ORG_ID: TFSMSIADEM3
+6285882740328;20260421;SFSIANTAR02;4G Device;0;Ada di Raw Data, namun ORG_ID: SFSIANTAR03
+6285882740370;20260424;TFSMSIADEM3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740364;20260424;TFSMSIADEM3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740367;20260424;TFSMSIADEM3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740368;20260424;TFSMSIADEM3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740371;20260424;TFSMSIADEM3;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739095;20260424;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739096;20260424;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739097;20260424;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739098;20260424;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739099;20260424;TFSMSIADEM1;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739231;20260423;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739232;20260423;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739233;20260423;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739235;20260423;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739236;20260423;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739270;20260423;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739271;20260423;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739269;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739267;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739266;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740210;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740209;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740208;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740206;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740211;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739165;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739166;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739167;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739168;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739169;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740403;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740405;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740406;20260422;SFSDP44;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740349;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739177;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739178;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739180;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739182;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739181;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740394;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740393;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740391;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740397;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740396;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740350;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740352;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740356;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740351;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740354;20260424;SFTEBKIS007;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740343;NOT FOUND;SFTEBKIS007;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740346;NOT FOUND;SFTEBKIS007;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740347;NOT FOUND;SFTEBKIS007;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740348;NOT FOUND;SFTEBKIS007;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740227;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740230;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740232;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740233;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740235;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739162;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739164;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739163;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739161;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739160;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739194;20260421;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739077;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739078;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739079;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739080;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739081;20260424;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740156;20260425;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740157;20260425;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740159;20260425;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740470;20260427;SFSDP55;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740489;20260424;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882720481;NOT FOUND;SFTEBKIS02;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740488;20260424;SFTEBKIS02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFTEBKIS02
+6285882740317;20260424;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740485;20260424;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740482;20260424;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740311;20260424;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740320;20260424;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740318;20260424;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740314;20260424;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740476;20260424;SFTEBKIS02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740282;20260427;SFTEBKIS02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFTEBKIS02
+6285882740278;20260427;SFTEBKIS02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFTEBKIS02
+6285882740284;20260427;SFTEBKIS02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFTEBKIS02
+6285882740283;20260427;SFTEBKIS02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFTEBKIS02
+6285882740292;20260427;SFTEBKIS02;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFTEBKIS02
+6285882739086;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739087;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739136;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739135;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739134;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739133;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740151;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740152;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740153;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740155;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739132;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740148;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740161;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740162;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739083;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739084;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739085;20260425;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740407;20260427;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740408;20260427;SFSDP13;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882729482;NOT FOUND;SFSDP44;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882272948;NOT FOUND;SFSDP44;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882729389;NOT FOUND;SFSDP44;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882729391;NOT FOUND;SFSDP44;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882739071;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739073;20260427;SFTEBKIS14;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: SFTEBKIS14
+6285882739074;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739075;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882739076;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740409;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740410;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740411;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740412;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740413;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740503;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740507;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740506;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740508;20260425;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740509;20260427;SFTEBKIS14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882729834;NOT FOUND;SFTEBKIS14;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759636;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759637;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759638;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759640;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759641;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760616;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760613;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760614;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760615;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760621;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759687;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759685;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759684;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759683;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759686;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760623;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760619;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759705;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759707;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759706;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759708;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759704;NOT FOUND;SFPAKAM17;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759819;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759821;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759820;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759714;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759716;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759717;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759718;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759719;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759871;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759873;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759874;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759875;NOT FOUND;SFMEDAN04;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759877;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759850;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759852;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759853;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759854;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759855;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759740;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759741;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759742;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759743;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759744;NOT FOUND;SFMEDAN27;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759754;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759755;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759757;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759758;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759759;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759885;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760058;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760059;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760060;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760061;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759751;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759838;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759839;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759841;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759842;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882757967;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759843;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759828;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759831;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759833;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759834;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759835;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760062;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760063;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760064;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760065;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760067;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882757966;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759721;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759750;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759845;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759846;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759847;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759848;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759849;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759866;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759867;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759868;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759869;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759870;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759760;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759761;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759763;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759764;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759765;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759730;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759731;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759732;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759733;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759737;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759861;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759862;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759863;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759864;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759865;NOT FOUND;SFMEDAN35;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759752;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759756;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759753;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759773;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759775;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759776;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759780;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759781;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759782;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759783;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759791;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759784;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759785;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882757968;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759720;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759858;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759859;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759860;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759825;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759815;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882730157;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882730155;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759857;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759856;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882730156;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759884;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759798;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759799;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759800;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759801;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759802;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759734;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759735;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759736;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759738;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759739;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759822;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759823;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759824;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759826;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759827;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759879;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759880;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759882;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759883;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759722;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759723;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759724;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759725;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759726;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759727;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759728;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759729;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759767;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759768;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759769;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759770;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759772;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759790;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759792;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759794;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759793;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882759796;NOT FOUND;DSFBINJAI03;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6289531783942;20260407;529461;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 529461
 6289531783941;20260407;529461;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 529461
 6289531783943;20260407;529461;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 529461
@@ -1379,7 +1771,7 @@
 62895613284946;20260418;496430;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 496430
 62895613284945;20260418;496430;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 496430
 62895613284944;20260418;496430;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 496430
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;488170;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6289531783884;20260409;488170;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488170
 6289531783885;20260409;488170;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488170
 6289531783886;20260409;488170;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488170
@@ -1440,7 +1832,6 @@
 62895613259061;20260423;466016;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466016
 62895613259062;20260423;466016;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466016
 62895613259063;20260423;466016;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466016
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 62895613258815;20260422;466114;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466114
 62895613258817;20260422;466114;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 466114
 6289518632631;NOT FOUND;466114;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -1497,469 +1888,78 @@
 62895613260956;20260421;488378;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488378
 62895613260955;20260421;488378;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488378
 62895613260960;20260421;488378;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488378
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531785053;20260421;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
+6289531785054;20260421;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
+6289531785055;20260421;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
+6289531785056;20260421;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
+6289531785155;20260421;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
+6289531785159;20260421;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
+6289531785158;20260421;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
+6289531785157;20260421;488609;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488609
+6289531785156;NOT FOUND;488609;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531784791;20260425;488514;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488514
+6289531784792;20260425;488514;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488514
+6289531784793;20260425;488514;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488514
+6289531784795;20260425;488514;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488514
+6289531784789;20260425;488514;4G Device;1;Dilakukan Adjustment (1) untuk ORG_ID: 488514
+62895613284380;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284382;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895713284383;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284388;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284389;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284379;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284320;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284318;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284319;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284321;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284331;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284332;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284333;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284334;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+995613284335;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284385;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284386;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284387;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284381;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284323;NOT FOUND;400503;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284460;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284461;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284462;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284463;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284497;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284498;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284501;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284502;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284503;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284504;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284505;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284507;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284508;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284509;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613259233;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613259232;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613259231;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613259235;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613259234;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613259165;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284459;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613284363;NOT FOUND;403283;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289561328440;NOT FOUND;423085;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289561328441;NOT FOUND;423085;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289561328442;NOT FOUND;423085;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289561328443;NOT FOUND;423085;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289561328446;NOT FOUND;423085;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289561328410;NOT FOUND;423085;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289561328470;NOT FOUND;423085;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289561328471;NOT FOUND;423085;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289561328472;NOT FOUND;423085;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289561328473;NOT FOUND;423085;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289561328474;NOT FOUND;423085;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531785141;NOT FOUND;488514;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531785139;NOT FOUND;488514;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531785137;NOT FOUND;488514;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531785136;NOT FOUND;488514;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6289531785135;NOT FOUND;488514;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2909,9 +2909,9 @@
 6285711946271;20260406;SFPDGINN02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285711946273;20260406;SFPDGINN02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882657042;20260406;SFPDGINN02;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285711946797;NOT FOUND;SFBKTI07;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285711946785;NOT FOUND;SFBKTI07;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285711946788;NOT FOUND;SFBKTI07;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285711946797;20260427;SFBKTI07;4G Device;0;Ada di Raw Data, namun ORG_ID: 17270475
+6285711946785;20260427;SFBKTI07;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285711946788;20260427;SFBKTI07;4G Device;0;Ada di Raw Data, namun ORG_ID: 17270475
 6285711947028;20260413;SFBKTI08;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285711947029;20260414;SFBKTI08;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882649016;NOT FOUND;SFBKTI08;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -2926,7 +2926,7 @@
 6285882648489;20260413;SFBKTI08;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882648107;20260413;SFBKTI07;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882647446;20260419;SFBKTI07;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882647439;NOT FOUND;SFBKTI07;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882647439;20260424;SFBKTI07;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882650147;20260414;TFSMPADANG2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882647385;20260414;TFSMPADANG2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882647875;20260414;TFSMPADANG2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
@@ -2950,21 +2950,21 @@
 6285882739008;20260424;SFPEKANBARU14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882739010;20260424;SFPEKANBARU14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882739011;20260424;SFPEKANBARU14;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
-6285882648018;NOT FOUND;TFSMPADANG2;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882648023;NOT FOUND;TFSMPADANG2;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882647437;NOT FOUND;TFSMPADANG2;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882647862;NOT FOUND;TFSMPADANG2;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882648034;NOT FOUND;TFSMPADANG2;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882648105;NOT FOUND;SFBKTI07;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882647441;NOT FOUND;SFBKTI07;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882648081;NOT FOUND;SFBKTI07;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882649970;NOT FOUND;SFBKTI07;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882647933;NOT FOUND;SFBKTI07;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882648018;20260424;TFSMPADANG2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882648023;20260424;TFSMPADANG2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882647437;20260424;TFSMPADANG2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882647862;20260424;TFSMPADANG2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882648034;20260424;TFSMPADANG2;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882648105;20260424;SFBKTI07;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882647441;20260424;SFBKTI07;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882648081;20260424;SFBKTI07;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882649970;20260424;SFBKTI07;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882647933;20260424;SFBKTI07;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882647453;NOT FOUND;SFPEKANBARU24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882740012;NOT FOUND;DSFGAPJBK004;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882740003;NOT FOUND;DSFGAPJBK004;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882740015;NOT FOUND;DSFGAPJBK004;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-6285882740014;NOT FOUND;DSFGAPJBK004;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882740003;20260425;DSFGAPJBK004;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740015;20260425;DSFGAPJBK004;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
+6285882740014;20260425;DSFGAPJBK004;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6285882657464;20260425;DSFGAPJBK010;4G Device;0;Sudah terhitung sebelumnya dari Raw Data
 6289531798861;NOT FOUND;12318702;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6289509511036;NOT FOUND;400782;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
@@ -3769,9 +3769,9 @@
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-;;;;;
-;;;;;
-;;;;;
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;0;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 ;;;;;
 ;;;;;
 ;;;;;
