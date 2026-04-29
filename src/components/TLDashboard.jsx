@@ -12,7 +12,8 @@ export default function TLDashboard({
   tlId, 
   tlName, 
   dsfs, 
-  dataDates,       // ✅ FIX
+  dataDates,
+  selectedMonth,       // ✅ FIX
   dataBasedOn,
   onSelectDSF 
 }) {
@@ -47,14 +48,26 @@ export default function TLDashboard({
 
   const minimumFwaOption1 = dsfs.length * 15;
 
-  let tlIncentive = 0;
+let tlIncentive = 0;
 
-  if (totalFwa >= totalTargetFwa && revenuePercent >= 1) {
-    tlIncentive = 1_000_000;
-  } 
-  else if (totalFwa >= minimumFwaOption1 && revenuePercent >= 1) {
+const isAprilOrMay =
+  selectedMonth === "202604" || selectedMonth === "202605";
+
+if (isAprilOrMay) {
+  // ✅ SCHEME KHUSUS APRIL & MAY
+  if (revenuePercent >= 1.2) {
+    tlIncentive = 500_000;
+  } else if (totalFwa >= totalTargetFwa && revenuePercent >= 1) {
     tlIncentive = 400_000;
   }
+} else {
+  // ✅ SCHEME NORMAL
+  if (totalFwa >= totalTargetFwa && revenuePercent >= 1) {
+    tlIncentive = 1_000_000;
+  } else if (totalFwa >= minimumFwaOption1 && revenuePercent >= 1) {
+    tlIncentive = 400_000;
+  }
+}
 
   // =========================
   // SORT DSF

@@ -146,6 +146,7 @@ export default function RankingDashboard({
           name: name,
           branch: branch || "-",
           totalFWA: 0,
+          targetFWA: 0,
           rebuyRevenue: 0,
           hajjRevenue: 0,
           totalIncentive: 0,
@@ -155,6 +156,7 @@ export default function RankingDashboard({
         };
       }
 
+      grouped[key].targetFWA += Number(row.targetFwa || row.TARGET_FWA || 0);
       grouped[key].totalFWA += Number(row.fwaUnits) || 0;
       grouped[key].rebuyRevenue += Number(row.rebuyRevenue) || 0;
       grouped[key].hajjRevenue = (grouped[key].hajjRevenue || 0) + (Number(row.revHajj) || 0);
@@ -185,12 +187,10 @@ const totalRevenue =
           ? TARGET_DSF
           : TARGET_DSF * dsfCount;
 
-      const targetFWA =
-        rankType === "DSF"
-          ? TARGET_FWA_PER_DSF
-          : TARGET_FWA_PER_DSF * dsfCount;
+      const targetFWA = item.targetFWA;
 
       const achievement = (totalRevenue / targetRevenue) * 100;
+      const fwaPercent = targetFWA ? (item.totalFWA / targetFWA) * 100 : 0;
 
       return {
         ...item,
@@ -198,6 +198,7 @@ const totalRevenue =
         targetRevenue,
         targetFWA,
         achievement,
+        fwaPercent
       };
     });
 
@@ -457,84 +458,166 @@ if (brandLabel) {
   />
 </div>
 
+
 {/* TABLE */}
 <div ref={tableRef} className="overflow-x-auto rounded-xl border">
-        <table className="min-w-full text-sm whitespace-nowrap text-left">
-          <thead className="bg-gray-100">
-            {rankType === "DSF" ? (
-              <tr>
-                <th className="p-3">Rank</th>
-                <th className="p-3">ID DSF</th>
-                <th className="p-3">Nama DSF</th>
-                <th className="p-3">Branch</th>
-                <th className="p-3">FWA</th>
-                <th className="p-3">Rebuy FWA</th>
-                <th className="p-3">Rebuy Haji</th>
-                <th className="p-3">Total Revenue</th>
-                <th className="p-3">Target</th>
-                <th className="p-3">% Revenue</th>
-                <th className="p-3">Incentive</th>
-              </tr>
-            ) : (
-              <tr>
-                <th className="p-3">Rank</th>
-                <th className="p-3">{toTitleCase(rankType)}</th>
-                <th className="p-3">Target FWA</th>
-                <th className="p-3">FWA</th>
-                <th className="p-3">Rebuy FWA</th>
-                <th className="p-3">Rebuy Haji</th>
-                <th className="p-3">Target Revenue</th>
-                <th className="p-3">Total Revenue</th>
-                <th className="p-3">% Revenue</th>
-              </tr>
-            )}
-          </thead>
+  <table className="min-w-full text-sm whitespace-nowrap text-left">
+    
+    <thead className="bg-gray-100">
+      {rankType === "DSF" ? (
+        <tr>
+          <th className="p-3">Rank</th>
+          <th className="p-3">ID DSF</th>
+          <th className="p-3">Nama DSF</th>
+          <th className="p-3">Branch</th>
+          <th className="p-3">Target FWA</th>
+          <th className="p-3">FWA</th>
+          <th className="p-3">% FWA</th>
+          <th className="p-3">Rebuy FWA</th>
+          <th className="p-3">Rebuy Haji</th>
+          <th className="p-3">Total Revenue</th>
+          <th className="p-3">Target</th>
+          <th className="p-3">% Revenue</th>
+          <th className="p-3">Incentive</th> {/* ✅ ONLY DSF */}
+        </tr>
+      ) : (
+        <tr>
+          <th className="p-3">Rank</th>
+          <th className="p-3">{toTitleCase(rankType)}</th>
+          <th className="p-3">Target FWA</th>
+          <th className="p-3">FWA</th>
+          <th className="p-3">% FWA</th>
+          <th className="p-3">Rebuy FWA</th>
+          <th className="p-3">Rebuy Haji</th>
+          <th className="p-3">Target Revenue</th>
+          <th className="p-3">Total Revenue</th>
+          <th className="p-3">% Revenue</th>
+          {/* ❌ NO INCENTIVE */}
+        </tr>
+      )}
+    </thead>
 
-          <tbody>
-            {rankedData.map((item) => (
-<tr
-  key={item.rank}
-  onClick={() => handleRowClick(item)}
-  className="border-t hover:bg-gray-50 cursor-pointer"
+    <tbody>
+      {rankedData.map((item) => (
+        <tr
+          key={item.rank}
+          onClick={() => handleRowClick(item)}
+          className="border-t hover:bg-gray-50 cursor-pointer"
+        >
+          {rankType === "DSF" ? (
+            <>
+              <td className="p-3">{item.rank}</td>
+              <td className="p-3">{item.id}</td>
+              <td className="p-3">{item.name}</td>
+              <td className="p-3">{item.branch}</td>
+
+              <td className="p-3">{item.targetFWA}</td>
+              <td className="p-3">{item.totalFWA}</td>
+
+              {/* % FWA */}
+              <td
+                className={`p-3 font-bold ${
+                  item.fwaPercent >= 100
+                    ? "text-emerald-600"
+                    : item.fwaPercent >= 80
+                    ? "text-amber-500"
+                    : "text-rose-600"
+                }`}
+              >
+                {item.fwaPercent.toFixed(1)}%
+              </td>
+
+              <td className="p-3">
+                Rp {formatCurrency(item.rebuyRevenue)}
+              </td>
+
+              <td className="p-3">
+                Rp {formatCurrency(item.hajjRevenue || 0)}
+              </td>
+
+              <td className="p-3 font-semibold">
+                Rp {formatCurrency(item.totalRevenue)}
+              </td>
+
+              <td className="p-3">
+                Rp {formatCurrency(TARGET_DSF)}
+              </td>
+
+              <td
+                className={`p-3 font-bold ${achievementColor(
+                  item.achievement
+                )}`}
+              >
+                {item.achievement.toFixed(1)}%
+              </td>
+
+              {/* ✅ ONLY DSF */}
+              <td
+  className={`p-3 font-semibold ${
+    item.totalIncentive === 0
+      ? "text-rose-600 bg-rose-50"
+      : item.totalIncentive < 500000
+      ? "text-amber-600 bg-amber-50"
+      : "text-emerald-600 bg-emerald-50"
+  }`}
 >
-                  {rankType === "DSF" ? (
-                  <>
-                    <td className="p-3">{item.rank}</td>
-                    <td className="p-3">{item.id}</td>
-                    <td className="p-3">{item.name}</td>
-                    <td className="p-3">{item.branch}</td>
-                    <td className="p-3">{item.totalFWA}</td>
-                    <td className="p-3">Rp {formatCurrency(item.rebuyRevenue)}</td>
-                                        <td className="p-3">Rp {formatCurrency(item.hajjRevenue || 0)}</td>
-                    <td className="p-3 font-semibold">Rp {formatCurrency(item.totalRevenue)}</td>
-                    <td className="p-3">Rp {formatCurrency(TARGET_DSF)}</td>
-                    <td className={`p-3 font-bold ${achievementColor(item.achievement)}`}>
-                      {item.achievement.toFixed(1)}%
-                    </td>
-                    <td className="p-3 font-semibold text-emerald-600">
   Rp {formatCurrency(item.totalIncentive)}
 </td>
-                  </>
-                ) : (
-                  <>
-                    <td className="p-3">{item.rank}</td>
-                    <td className="p-3">{item.name}</td>
-                    <td className="p-3">{item.targetFWA}</td>
-                    <td className="p-3">{item.totalFWA}</td>
-                    <td className="p-3">Rp {formatCurrency(item.rebuyRevenue)}</td>
-                    <td className="p-3">Rp {formatCurrency(item.hajjRevenue || 0)}</td>
-                    <td className="p-3">Rp {formatCurrency(item.targetRevenue)}</td>
-                    <td className="p-3 font-semibold">Rp {formatCurrency(item.totalRevenue)}</td>
-                    <td className={`p-3 font-bold ${achievementColor(item.achievement)}`}>
-                      {item.achievement.toFixed(1)}%
-                    </td>
-                  </>
-                )}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </>
+          ) : (
+            <>
+              <td className="p-3">{item.rank}</td>
+              <td className="p-3">{item.name}</td>
+
+              <td className="p-3">{item.targetFWA}</td>
+              <td className="p-3">{item.totalFWA}</td>
+
+              {/* % FWA */}
+              <td
+                className={`p-3 font-bold ${
+                  item.fwaPercent >= 100
+                    ? "text-emerald-600"
+                    : item.fwaPercent >= 80
+                    ? "text-amber-500"
+                    : "text-rose-600"
+                }`}
+              >
+                {item.fwaPercent.toFixed(1)}%
+              </td>
+
+              <td className="p-3">
+                Rp {formatCurrency(item.rebuyRevenue)}
+              </td>
+
+              <td className="p-3">
+                Rp {formatCurrency(item.hajjRevenue || 0)}
+              </td>
+
+              <td className="p-3">
+                Rp {formatCurrency(item.targetRevenue)}
+              </td>
+
+              <td className="p-3 font-semibold">
+                Rp {formatCurrency(item.totalRevenue)}
+              </td>
+
+              <td
+                className={`p-3 font-bold ${achievementColor(
+                  item.achievement
+                )}`}
+              >
+                {item.achievement.toFixed(1)}%
+              </td>
+
+              {/* ❌ NO INCENTIVE HERE */}
+            </>
+          )}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
 
     </div>
   );

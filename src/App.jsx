@@ -834,6 +834,7 @@ if (item.type === "GSE") {
       tlName={selectedTL.tlName}
       dsfs={selectedTL.dsfs}
       dataDates={dataDates}
+      selectedMonth={selectedMonth}
       onSelectDSF={(dsf) => {
         window.scrollTo({ top: 0, behavior: "smooth" });
         setSelectedDSF(dsf);
