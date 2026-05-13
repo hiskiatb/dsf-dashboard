@@ -41,7 +41,18 @@ const [adjData, setAdjData] = useState([]);
     DATA_REBUY_3ID: "",
   });
 
+  
+
   const MONTH_FILES = {
+
+    "202605": {
+       dsf: "/DSF_202605.csv",
+       fwa: "/FWA_202605.csv",
+       adj: "/ADJ_FWA_202605.csv",
+       pbi: "/PBI_202605.csv",
+       label: "May 2026",
+     },
+  
 "202604": {
   dsf: "/DSF_202604.csv",
   fwa: "/FWA_202604.csv",

@@ -22,7 +22,8 @@ export default function TLDashboard({
 
   const totalFwa = dsfs.reduce((a, b) => a + (b.fwaUnits || 0), 0);
   const totalRebuy = dsfs.reduce((a, b) => a + (b.rebuyRevenue || 0), 0);
-  const totalRevenue = totalFwa * 350000 + totalRebuy;
+  const totalHajj = dsfs.reduce((a, b) => a + (b.revHajj || 0), 0);
+  const totalRevenue = totalFwa * 350000 + totalRebuy + totalHajj;
 
   // =========================
   // TARGET
@@ -43,10 +44,10 @@ export default function TLDashboard({
     : 0;
 
   // =========================
-  // TL INCENTIVE LOGIC
-  // =========================
+// TL INCENTIVE LOGIC
+// =========================
 
-  const minimumFwaOption1 = dsfs.length * 15;
+const minimumFwaOption1 = dsfs.length * 15;
 
 let tlIncentive = 0;
 
@@ -56,8 +57,8 @@ const isAprilOrMay =
 if (isAprilOrMay) {
   // ✅ SCHEME KHUSUS APRIL & MAY
   if (revenuePercent >= 1.2) {
-    tlIncentive = 500_000;
-  } else if (totalFwa >= totalTargetFwa && revenuePercent >= 1) {
+    tlIncentive = 1_000_000;
+  } else if (revenuePercent >= 1) {
     tlIncentive = 400_000;
   }
 } else {
@@ -76,7 +77,7 @@ if (isAprilOrMay) {
   const rankedDsfs = [...dsfs]
     .map((d) => ({
       ...d,
-      calc: hitungInsentif(d),
+      calc: hitungInsentif(d, selectedMonth),
     }))
     .sort((a, b) => b.calc.totalRevenue - a.calc.totalRevenue);
 
@@ -148,126 +149,155 @@ if (isAprilOrMay) {
 
         <div className="dash-right">
 
-          <div className="mini-card">
-            <div className="mini-label">
-              Total Rebuy Revenue
-            </div>
-            <div className="mini-value">
-              {formatIDR(totalRebuy)}
-            </div>
-          </div>
+  {!isAprilOrMay && (
+    <div className="mini-card">
+      <div className="mini-label">
+        Total Rebuy FWA
+      </div>
+      <div className="mini-value">
+        {formatIDR(totalRebuy)}
+      </div>
+    </div>
+  )}
 
-          <div className="mini-card strong">
-            <div className="mini-label">
-              Incentive Earned
-            </div>
-            <div className="mini-value">
-              {formatIDR(tlIncentive)}
-            </div>
-          </div>
-
+  {isAprilOrMay && (
+    <>
+      <div className="mini-card">
+        <div className="mini-label">
+          Total Rebuy FWA
+        </div>
+        <div className="mini-value">
+          {formatIDR(totalRebuy)}
         </div>
       </div>
+
+      <div className="mini-card">
+        <div className="mini-label">
+          Total Rebuy Haji
+        </div>
+        <div className="mini-value">
+          {formatIDR(totalHajj)}
+        </div>
+      </div>
+    </>
+  )}
+
+  <div className="mini-card strong">
+    <div className="mini-label">
+      Incentive Earned
+    </div>
+    <div className="mini-value">
+      {formatIDR(tlIncentive)}
+    </div>
+  </div>
+
+</div>
+</div>
 
       <div className="divider" />
 
       {/* TABLE HEADER */}
- <div className="flex items-center justify-between mb-3">
+      <div className="flex items-center justify-between mb-3">
 
-  <div className="table-title">
-    DSF List Under This TL
-  </div>
+        <div className="table-title">
+          DSF List Under This TL
+        </div>
 
-  <CopyImageButton
-    targetRef={tableRef}
-    dataDates={dataDates}
-    reportType="TL"
-    reportName={tlName}
-  />
+        <CopyImageButton
+          targetRef={tableRef}
+          dataDates={dataDates}
+          reportType="TL"
+          reportName={tlName}
+        />
 
-</div>
+      </div>
 
-<div className="table-wrap-modern">
+      <div className="table-wrap-modern">
 
-  <div ref={tableRef}>
+        <div ref={tableRef}>
 
-    <div className="table-scroll">
-      <table className="modern-table">
+          <div className="table-scroll">
+            <table className="modern-table">
 
-        <thead>
-              <tr>
-                <th className="text-center">Rank</th>
-                <th className="text-left">DSF ID</th>
-                <th className="text-left">DSF Name</th>
-                <th className="text-left">Branch</th>
-                <th className="text-right">FWA Units</th>
-                <th className="text-right">Target</th>
-                <th className="text-right">Rebuy Revenue</th>
-                <th className="text-right">Total Revenue</th>
-                <th className="text-center">Status</th>
-              </tr>
-            </thead>
+              <thead>
+                <tr>
+                  <th className="text-center">Rank</th>
+                  <th className="text-left">DSF ID</th>
+                  <th className="text-left">DSF Name</th>
+                  <th className="text-left">Branch</th>
+                  <th className="text-right">FWA Units</th>
+                  <th className="text-right">Target</th>
+                  <th className="text-right">Rebuy FWA</th>
+                  <th className="text-right">Rebuy Haji</th>
+                  <th className="text-right">Total Revenue</th>
+                  <th className="text-center">Status</th>
+                </tr>
+              </thead>
 
-            <tbody>
+              <tbody>
 
-              {rankedDsfs.map((d, index) => {
+                {rankedDsfs.map((d, index) => {
 
-                const eligible = d.calc.incentive > 0;
-                const dsfTarget = d.targetFwa || TARGET_PER_DSF;
+                  const eligible = d.calc.incentive > 0;
+                  const dsfTarget = d.targetFwa || TARGET_PER_DSF;
 
-                return (
+                  return (
 
-                  <tr
-                    key={d.idDsf}
-                    onClick={() => onSelectDSF && onSelectDSF(d)}
-                    className="hover-row cursor-pointer transition hover:bg-gray-50"
-                  >
+                    <tr
+                      key={d.idDsf}
+                      onClick={() => onSelectDSF && onSelectDSF(d)}
+                      className="hover-row cursor-pointer transition hover:bg-gray-50"
+                    >
 
-                    <td className="text-center font-bold">
-                      {index + 1}
-                    </td>
+                      <td className="text-center font-bold">
+                        {index + 1}
+                      </td>
 
-                    <td className="mono">{d.idDsf}</td>
+                      <td className="mono">{d.idDsf}</td>
 
-                    <td>{d.namaDsf}</td>
+                      <td>{d.namaDsf}</td>
 
-                    <td>{d.branch || "-"}</td>
+                      <td>{d.branch || "-"}</td>
 
-                    <td className="text-right font-medium">
-                      {d.fwaUnits}
-                    </td>
+                      <td className="text-right font-medium">
+                        {d.fwaUnits}
+                      </td>
 
-                    <td className="text-right">
-                      {dsfTarget}
-                    </td>
+                      <td className="text-right">
+                        {dsfTarget}
+                      </td>
 
-                    <td className="text-right">
-                      {formatIDR(d.rebuyRevenue)}
-                    </td>
+                      <td className="text-right">
+                        {formatIDR(d.rebuyRevenue)}
+                      </td>
 
-                    <td className="text-right font-semibold">
-                      {formatIDR(d.calc.totalRevenue)}
-                    </td>
+                      <td className="text-right">
+                        {formatIDR(d.revHajj || 0)}
+                      </td>
 
-                    <td className="text-center whitespace-nowrap">
-                      <Pill variant={eligible ? "success" : "danger"}>
-                        {eligible ? "Eligible" : "Not Eligible"}
-                      </Pill>
-                    </td>
+                      <td className="text-right font-semibold">
+                        {formatIDR(d.calc.totalRevenue)}
+                      </td>
 
-                  </tr>
+                      <td className="text-center whitespace-nowrap">
+                        <Pill variant={eligible ? "success" : "danger"}>
+                          {eligible ? "Eligible" : "Not Eligible"}
+                        </Pill>
+                      </td>
 
-                );
-              })}
+                    </tr>
 
-            </tbody>
+                  );
+                })}
 
-      </table>
-    </div>
+              </tbody>
 
-  </div>
+            </table>
+          </div>
 
-</div>
+        </div>
+
+      </div>
     </motion.div>
   );
 }
