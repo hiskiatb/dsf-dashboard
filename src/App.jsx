@@ -863,6 +863,7 @@ if (item.type === "GSE") {
       <RankingDashboard
         dsfData={dsfData}
         dataDates={dataDates} 
+        month={selectedMonth} // <--- TAMBAHKAN BARIS INI
         onSelectDSF={(dsf) => {
           window.scrollTo({ top: 0, behavior: "smooth" });
           setSelectedDSF(dsf);

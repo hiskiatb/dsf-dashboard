@@ -3,9 +3,9 @@ import { useRef } from "react";
 import CopyImageButton from "./CopyImageButton";
 import { hitungInsentif } from "../utils";
 
-const TARGET_DSF = 7500000;
 const FWA_PRICE = 350000;
 const TARGET_FWA_PER_DSF = 20;
+const BASE_REVENUE_TARGET = 7500000;
 
 function normalizeRegion(region) {
   if (!region) return "Unknown";
@@ -33,6 +33,7 @@ export default function RankingDashboard({
   onSelectDSF,
   onSelectTL,
   dataDates,
+  month, // Menerima prop month dari App.js
 }) {
   const initialFilters = {
     BRAND: [], REGION: [], BRANCH: [], MC: [], TL: [], DSF: [],
@@ -103,28 +104,30 @@ export default function RankingDashboard({
         };
       }
 
-      grouped[key].targetFWA += Number(row.targetFwa || row.TARGET_FWA || 0);
+      grouped[key].targetFWA += Number(row.targetFwa || row.TARGET_FWA || TARGET_FWA_PER_DSF);
       grouped[key].totalFWA += Number(row.fwaUnits) || 0;
       grouped[key].rebuyRevenue += Number(row.rebuyRevenue) || 0;
-      grouped[key].hajjRevenue =
-        (grouped[key].hajjRevenue || 0) + (Number(row.revHajj) || 0);
+      grouped[key].hajjRevenue = (grouped[key].hajjRevenue || 0) + (Number(row.revHajj) || 0);
 
       const dsfId = row.idDsf;
+
       if (!grouped[key].dsfIncentiveMap.has(dsfId)) {
-        const insentif = hitungInsentif(row, dataDates?.month);
-        grouped[key].dsfIncentiveMap.set(dsfId, insentif?.incentive || 0);
-        grouped[key].totalIncentive += insentif?.incentive || 0;
+        // PERHITUNGAN SENTRALISASI DARI UTILS.JS
+        const c = hitungInsentif(row, month);
+        
+        grouped[key].dsfIncentiveMap.set(dsfId, c.incentive);
+        grouped[key].totalIncentive += c.incentive;
       }
       grouped[key].dsfSet.add(row.idDsf);
     });
 
     let result = Object.values(grouped).map((item) => {
       const dsfCount = item.dsfSet.size;
-      const totalRevenue =
-        item.totalFWA * FWA_PRICE + item.rebuyRevenue + (item.hajjRevenue || 0);
-      const targetRevenue =
-        rankType === "DSF" ? TARGET_DSF : TARGET_DSF * dsfCount;
+      
+      const totalRevenue = item.totalFWA * FWA_PRICE + item.rebuyRevenue + (item.hajjRevenue || 0);
+      const targetRevenue = rankType === "DSF" ? BASE_REVENUE_TARGET : BASE_REVENUE_TARGET * dsfCount;
       const targetFWA = item.targetFWA;
+      
       const achievement = (totalRevenue / targetRevenue) * 100;
       const fwaPercent = targetFWA ? (item.totalFWA / targetFWA) * 100 : 0;
 
@@ -143,7 +146,7 @@ export default function RankingDashboard({
     });
 
     return result.map((item, index) => ({ ...item, rank: index + 1 }));
-  }, [filteredData, rankType, sortBy, dataDates]);
+  }, [filteredData, rankType, sortBy, month]);
 
   function formatCurrency(num) {
     return num.toLocaleString("id-ID");
@@ -151,10 +154,19 @@ export default function RankingDashboard({
 
   // === BRAND TOKEN COLORS ===
   function achievementColor(val) {
+    const isSpecialMonth = month === "202604" || month === "202605";
+
+    if (isSpecialMonth) {
+      if (val >= 120) return "text-success-700";
+      if (val >= 100) return "text-warning-700";
+      return "text-danger-700";
+    }
+
     if (val >= 100) return "text-success-700";
-    if (val >= 80)  return "text-warning-700";
+    if (val >= 80) return "text-warning-700";
     return "text-danger-700";
   }
+
   function fwaPercentColor(val) {
     if (val >= 100) return "text-success-700";
     if (val >= 80)  return "text-warning-700";
@@ -198,7 +210,7 @@ export default function RankingDashboard({
         {title}
       </h2>
 
-      {/* LEVEL SELECTOR — scroll on mobile */}
+      {/* LEVEL SELECTOR */}
       <div className="flex gap-2 mb-5 overflow-x-auto -mx-1 px-1 pb-1 scrollbar-hide">
         {["DSF", "TL", "MC", "BRANCH", "REGION"].map((type) => (
           <button
@@ -234,9 +246,7 @@ export default function RankingDashboard({
             return (
               <div key={level} className="relative">
                 <button
-                  onClick={() =>
-                    setOpenFilter(openFilter === level ? null : level)
-                  }
+                  onClick={() => setOpenFilter(openFilter === level ? null : level)}
                   className="w-full border border-ink-200 bg-white rounded-xl px-3 py-2 sm:px-4 sm:py-2.5
                              flex justify-between items-center text-xs sm:text-sm font-semibold text-ink-700
                              hover:border-ink-300 transition"
@@ -262,10 +272,7 @@ export default function RankingDashboard({
                           onChange={() =>
                             setDraftFilters((prev) => ({
                               ...prev,
-                              [level]:
-                                prev[level].length === options.length
-                                  ? []
-                                  : options,
+                              [level]: prev[level].length === options.length ? [] : options,
                             }))
                           }
                           className="accent-brand-600"
@@ -295,14 +302,11 @@ export default function RankingDashboard({
 
                     <div className="border-t border-ink-100 p-2 flex justify-between">
                       <button
-                        onClick={() =>
-                          setDraftFilters((prev) => ({ ...prev, [level]: [] }))
-                        }
+                        onClick={() => setDraftFilters((prev) => ({ ...prev, [level]: [] }))}
                         className="text-xs text-ink-500 hover:text-ink-800"
                       >
                         Clear
                       </button>
-
                       <button
                         onClick={() => {
                           setFilters(draftFilters);
@@ -324,7 +328,6 @@ export default function RankingDashboard({
       {/* SORT SELECTOR */}
       <div className="flex justify-between items-center mb-4 flex-wrap gap-3">
         <div className="text-sm font-bold text-ink-800">Sort By:</div>
-
         <div className="flex gap-2 flex-wrap">
           {[
             { key: "achievement", label: "Achievement" },
@@ -421,7 +424,7 @@ export default function RankingDashboard({
                     <td className="p-3 font-bold text-ink-900">
                       Rp {formatCurrency(item.totalRevenue)}
                     </td>
-                    <td className="p-3">Rp {formatCurrency(TARGET_DSF)}</td>
+                    <td className="p-3">Rp {formatCurrency(item.targetRevenue)}</td>
                     <td className={`p-3 font-bold ${achievementColor(item.achievement)}`}>
                       {item.achievement.toFixed(1)}%
                     </td>
@@ -429,9 +432,9 @@ export default function RankingDashboard({
                       className={`p-3 font-bold ${
                         item.totalIncentive === 0
                           ? "text-danger-700 bg-danger-50"
-                          : item.totalIncentive < 500000
-                          ? "text-warning-700 bg-warning-50"
-                          : "text-success-700 bg-success-50"
+                          : item.totalIncentive >= 500000
+                          ? "text-success-700 bg-success-50"
+                          : "text-warning-700 bg-warning-50"
                       }`}
                     >
                       Rp {formatCurrency(item.totalIncentive)}
