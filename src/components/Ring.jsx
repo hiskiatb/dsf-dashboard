@@ -11,7 +11,8 @@ export default function Ring({
   const pctForRing = clamp(percent, 0, 1); // ring tetap max 1
   const pctText = Math.round(percent * 100); // text bisa > 100%
 
-  const size = 145;
+  // ring size — adaptive: 120 on small screens, 145 from md
+  const size = typeof window !== "undefined" && window.innerWidth < 640 ? 124 : 145;
   const stroke = 12;
   const r = (size - stroke) / 2;
   const c = 2 * Math.PI * r;
@@ -27,18 +28,19 @@ export default function Ring({
       : "ring-tone-default";
 
   return (
-<div className={`ring-card ${toneClass} ${className}`}>      <div className="ring-title">{title}</div>
+    <div className={`ring-card ${toneClass} ${className}`}>
+      <div className="ring-title">{title}</div>
       <div className="ring-subtitle">{subtitle}</div>
 
       <div className="ring-body">
-        <div className="ring-svg">
+        <div className="ring-svg" style={{ width: size, height: size }}>
           <svg width={size} height={size}>
             <circle
               cx={size / 2}
               cy={size / 2}
               r={r}
               fill="none"
-              stroke="rgba(0,0,0,0.08)"
+              stroke="rgba(77,77,79,0.08)"
               strokeWidth={stroke}
             />
             <circle

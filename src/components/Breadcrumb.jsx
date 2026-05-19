@@ -4,7 +4,7 @@ export default function Breadcrumb({
   onBackRanking,
   onBackTL,
 }) {
-  const tlId = selectedTL?.tlId|| "";
+  const tlId = selectedTL?.tlId || "";
   const dsfId = selectedDSF?.idDsf || "";
 
   return (
@@ -21,9 +21,7 @@ export default function Breadcrumb({
           <>
             <span className="crumb-sep">›</span>
             <span
-              className={`crumb ${
-                selectedDSF ? "link" : "active"
-              }`}
+              className={`crumb ${selectedDSF ? "link" : "active"}`}
               onClick={selectedDSF ? onBackTL : undefined}
             >
               {tlId}
@@ -34,9 +32,7 @@ export default function Breadcrumb({
         {selectedDSF && dsfId && (
           <>
             <span className="crumb-sep">›</span>
-            <span className="crumb active">
-              {dsfId}
-            </span>
+            <span className="crumb active">{dsfId}</span>
           </>
         )}
       </div>

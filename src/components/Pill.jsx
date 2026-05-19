@@ -4,6 +4,8 @@ export default function Pill({ children, variant = "default" }) {
       ? "pill pill-success"
       : variant === "danger"
       ? "pill pill-danger"
+      : variant === "warning"
+      ? "pill pill-warning"
       : variant === "info"
       ? "pill pill-info"
       : "pill";
