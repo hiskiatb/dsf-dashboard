@@ -32,19 +32,22 @@ export default function TLDashboard({
   const totalTargetRevenue = REVENUE_TARGET_PER_DSF * dsfs.length;
   const revenuePercent = totalTargetRevenue ? totalRevenue / totalTargetRevenue : 0;
 
-  // TL incentive (unchanged)
+  // TL incentive
   const minimumFwaOption1 = dsfs.length * 15;
   let tlIncentive = 0;
   const isAprilOrMay =
     selectedMonth === "202604" || selectedMonth === "202605";
 
   if (isAprilOrMay) {
-    if (revenuePercent >= 1.2) {
+    // KHUSUS APRIL & MEI: 
+    // Wajib capai total target FWA DAN target Revenue (100% atau 120%)
+    if (totalFwa >= totalTargetFwa && revenuePercent >= 1.2) {
       tlIncentive = 1_000_000;
-    } else if (revenuePercent >= 1) {
+    } else if (totalFwa >= totalTargetFwa && revenuePercent >= 1) {
       tlIncentive = 400_000;
     }
   } else {
+    // BULAN LAINNYA: (Sesuai dengan logika awal kamu)
     if (totalFwa >= totalTargetFwa && revenuePercent >= 1) {
       tlIncentive = 1_000_000;
     } else if (totalFwa >= minimumFwaOption1 && revenuePercent >= 1) {
