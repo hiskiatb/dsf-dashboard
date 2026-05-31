@@ -1,5 +1,5 @@
 import CopyImageButton from "./CopyImageButton";
-import React, { useRef } from "react";
+import React, { useRef, useMemo } from "react";
 
 import { motion } from "framer-motion";
 import Pill from "./Pill";
@@ -10,6 +10,44 @@ import {
   hitungInsentif,
   REVENUE_TARGET,
 } from "../utils";
+
+// HELPER: Auto-parse CSV yang jauh lebih tangguh
+function parseCSVData(data) {
+  if (!data || data.length === 0) return [];
+  if (Array.isArray(data) && typeof data[0] === "object" && data[0] !== null) {
+    return data;
+  }
+
+  let lines = [];
+  if (Array.isArray(data) && typeof data[0] === "string") {
+    lines = data;
+  } else if (typeof data === "string") {
+    lines = data.trim().split(/\r?\n/);
+  } else {
+    return [];
+  }
+
+  if (lines.length < 2) return [];
+
+  const headers = lines[0]
+    .split(";")
+    .map((h) => h.trim().toUpperCase())
+    .filter(Boolean);
+
+  const parsedData = [];
+
+  for (let i = 1; i < lines.length; i++) {
+    const currentLine = lines[i].split(";");
+    if (currentLine.length < headers.length && currentLine[0] === "") continue;
+
+    const rowObj = {};
+    headers.forEach((header, index) => {
+      rowObj[header] = currentLine[index] ? currentLine[index].trim() : "";
+    });
+    parsedData.push(rowObj);
+  }
+  return parsedData;
+}
 
 export default function DSFCard({
   dsf,
@@ -47,7 +85,7 @@ export default function DSFCard({
     c.totalRevenue >= REVENUE_TARGET ? "success" : "warning";
 
   // ================================
-  // DATE FORMATTERS (unchanged logic)
+  // DATE FORMATTERS
   // ================================
   function formatMonthYear(dateStr) {
     if (!dateStr) return "-";
@@ -100,47 +138,67 @@ export default function DSFCard({
   const rebuyUpdateLabel = formatFullDate(rebuyDate);
 
   // ================================
-  // FILTERS (unchanged logic)
+  // FILTERS & DATA PARSING
   // ================================
   function normalizeId(val) {
-    return String(val ?? "").trim().replace(/^0+/, "");
+    return String(val ?? "").trim().toUpperCase().replace(/^0+/, "");
   }
+
+  // Pengaman string bulan (menghilangkan tanda strip jika ada)
+  const safeMonth = String(month || "").replace(/-/g, "");
 
   const [searchMsisdn, setSearchMsisdn] = React.useState("");
 
-  const rawList = (fwaData || []).filter(
-    (row) => normalizeId(row?.ID_DSF) === normalizeId(dsf?.idDsf)
-  );
+  const parsedFwaData = useMemo(() => parseCSVData(fwaData), [fwaData]);
+  const parsedAdjData = useMemo(() => parseCSVData(adjData), [adjData]);
+
+  // RAW DATA
+  const rawList = parsedFwaData.filter((row) => {
+    const isIdMatch = normalizeId(row?.ID_DSF) === normalizeId(dsf?.idDsf);
+    const isMonthMatch = safeMonth ? String(row?.GA_DATE || "").includes(safeMonth) : true;
+    return isIdMatch && isMonthMatch;
+  });
 
   const rawCounted = rawList.filter(
-    (x) => String(x.REMARKS).trim().toUpperCase() === "REGISTERED"
+    (x) => String(x?.REMARKS || "").trim().toUpperCase() === "REGISTERED"
   );
-  const rawInvalid = rawList.filter((x) => x.REMARKS !== "REGISTERED");
+  const rawInvalid = rawList.filter(
+    (x) => String(x?.REMARKS || "").trim().toUpperCase() !== "REGISTERED"
+  );
 
   const filteredRawCounted = rawCounted.filter((x) =>
-    (x.MSISDN || "").includes(searchMsisdn)
+    String(x?.MSISDN || "").includes(searchMsisdn)
   );
   const filteredRawInvalid = rawInvalid.filter((x) =>
-    (x.MSISDN || "").includes(searchMsisdn)
+    String(x?.MSISDN || "").includes(searchMsisdn)
   );
 
-  const adjList = (adjData || []).filter(
-    (row) => normalizeId(row?.ID_DSF) === normalizeId(dsf?.idDsf)
-  );
-  const adjValid = adjList.filter((x) => Number(x.VALID_FLAG) > 0);
-  const adjInvalid = adjList.filter((x) => Number(x.VALID_FLAG) === 0);
+  // ADJUSTMENT DATA
+  const adjList = parsedAdjData.filter((row) => {
+    const isIdMatch = normalizeId(row?.ID_DSF) === normalizeId(dsf?.idDsf);
+    const isMonthMatch = safeMonth ? String(row?.GA_DATE || "").includes(safeMonth) : true;
+    return isIdMatch && isMonthMatch;
+  });
+
+  const adjValid = adjList.filter((x) => Number(x?.VALID_FLAG) > 0);
+  const adjInvalid = adjList.filter((x) => Number(x?.VALID_FLAG) === 0);
 
   const filteredAdjValid = adjValid.filter((x) =>
-    (x.MSISDN || "").includes(searchMsisdn)
+    String(x?.MSISDN || "").includes(searchMsisdn)
   );
   const filteredAdjInvalid = adjInvalid.filter((x) =>
-    (x.MSISDN || "").includes(searchMsisdn)
+    String(x?.MSISDN || "").includes(searchMsisdn)
   );
 
   const rawCountedRef = useRef(null);
   const rawInvalidRef = useRef(null);
   const adjValidRef = useRef(null);
   const adjInvalidRef = useRef(null);
+
+  // HITUNGAN ASLI MENGGUNAKAN VALID_FLAG (Untuk mengatasi unit 5G)
+  const totalRawUnits = rawCounted.reduce((sum, row) => sum + (Number(row?.VALID_FLAG) || 0), 0);
+  const totalAdjUnits = adjValid.reduce((sum, row) => sum + (Number(row?.VALID_FLAG) || 0), 0);
+  const actualCountedTable = totalRawUnits + totalAdjUnits;
 
   return (
     <motion.div
@@ -149,7 +207,6 @@ export default function DSFCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25 }}
     >
-
       {/* HEADER */}
       <div className="card-header">
         <div>
@@ -269,9 +326,19 @@ export default function DSFCard({
 
       {/* MSISDN TABLES */}
       <div className="mt-8">
-        <h3 className="text-base sm:text-lg font-bold text-ink-900 mb-3">
-          List MSISDN FWA
-        </h3>
+        <div className="flex justify-between items-end mb-3">
+           <h3 className="text-base sm:text-lg font-bold text-ink-900">
+             List MSISDN FWA
+             <span className="text-xs font-normal text-ink-500 ml-2">
+               (Real Table Count: {actualCountedTable} Units)
+             </span>
+           </h3>
+           {dsf.fwaUnits !== actualCountedTable && (
+             <span className="text-[10px] text-warning-600 font-semibold bg-warning-50 px-2 py-1 rounded">
+               Data Pusat & Mentah Berbeda!
+             </span>
+           )}
+        </div>
 
         <div className="mb-4">
           <input
@@ -321,7 +388,14 @@ export default function DSFCard({
                     <td className="p-3">{i + 1}</td>
                     <td className="p-3 font-mono text-xs">{row.MSISDN}</td>
                     <td className="p-3">{formatGA(row.GA_DATE)}</td>
-                    <td className="p-3">{row?.DEVICE?.trim?.() || row?.DEVICE || "-"}</td>
+                    <td className="p-3">
+                      {row?.DEVICE?.trim?.() || row?.DEVICE || "-"}
+                      {Number(row?.VALID_FLAG) > 1 && (
+                        <span className="ml-2 text-[10px] bg-brand-200 text-brand-800 px-1.5 py-0.5 rounded font-bold">
+                          +{row.VALID_FLAG} Units
+                        </span>
+                      )}
+                    </td>
                     <td className="p-3 text-brand-700 font-semibold">{row.REMARKS}</td>
                   </tr>
                 ))
@@ -392,7 +466,14 @@ export default function DSFCard({
                       <td className="p-3">{i + 1}</td>
                       <td className="p-3 font-mono text-xs">{row.MSISDN}</td>
                       <td className="p-3">{formatGA(row.GA_DATE)}</td>
-                      <td className="p-3">{row?.DEVICE?.trim?.() || row?.DEVICE || "-"}</td>
+                      <td className="p-3">
+                        {row?.DEVICE?.trim?.() || row?.DEVICE || "-"}
+                        {Number(row?.VALID_FLAG) > 1 && (
+                          <span className="ml-2 text-[10px] bg-success-200 text-success-800 px-1.5 py-0.5 rounded font-bold">
+                            +{row.VALID_FLAG} Units
+                          </span>
+                        )}
+                      </td>
                       <td className="p-3 text-success-700 font-semibold">{row.REMARKS}</td>
                     </tr>
                   ))}

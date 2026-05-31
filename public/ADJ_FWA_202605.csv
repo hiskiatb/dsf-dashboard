@@ -138,7 +138,7 @@
 6285882760208;20260520;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882760209;20260520;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882755884;20260519;SFPLMB58;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-628588275588;NOT FOUND;SFPLMB58;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882755883;20260520;SFPLMB58;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285711956682;NOT FOUND;SFPLMB43;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285711956684;NOT FOUND;SFPLMB43;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882739367;20260521;SFBLMKOTA11;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
@@ -204,6 +204,81 @@
 6285882769367;20260528;SFBLMKOTA11;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882769858;20260528;SFBLMKOTA11;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882769366;20260528;SFBLMKOTA11;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769856;20260528;SFBLMKOTA11;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769849;20260528;SFBLMKOTA11;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769850;20260528;SFBLMKOTA11;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769851;20260528;SFBLMKOTA11;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769852;20260528;SFBLMKOTA11;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769853;20260528;SFBLMKOTA11;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769854;20260526;SFTGMS02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769855;20260526;SFTGMS02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769286;20260528;SFTGMS02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769285;20260528;SFTGMS02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769281;20260528;SFTGMS02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769310;20260528;SFTGMS02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759503;20260526;RDPSF04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759524;20260529;RDPSF04;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 17489678
+6285882759465;20260526;BABELSF15;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759457;20260526;BABELSF15;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759461;20260526;BABELSF15;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759464;20260525;SFBABEL06;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759501;20260526;SFBABEL06;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759499;20260526;SFBABEL06;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759500;20260526;SFBABEL06;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759495;20260526;SFBABEL06;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769007;20260524;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769008;20260524;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769011;20260523;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769010;20260524;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759118;20260526;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759116;20260526;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759114;20260526;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759113;20260526;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759117;20260526;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759261;20260530;DSFGRAHA03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGRAHA03
+6285882759258;20260530;DSFGRAHA03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: DSFGRAHA03
+6285882759259;20260526;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759257;20260526;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882759254;20260526;DSFGRAHA03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771355;20260529;SFBNGKULU29;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771459;20260529;SFBNGKULU29;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771352;20260529;SFBNGKULU29;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771354;20260529;SFBNGKULU29;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771353;20260529;SFBNGKULU29;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771344;20260529;SFBNGKULU29;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882756103;20260529;SFPLMB24;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882756100;20260529;SFPLMB24;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882756102;20260529;SFPLMB24;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882756101;20260529;SFPLMB24;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285711956679;NOT FOUND;SFPLMB58;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882760433;20260525;SFPLMB58;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760435;20260525;SFPLMB58;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760436;20260525;SFPLMB58;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760437;20260525;SFPLMB58;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760438;20260525;SFPLMB58;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771394;20260529;SFBNGKULU15;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771395;20260529;SFBNGKULU15;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771391;20260529;SFBNGKULU15;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771393;20260529;SFBNGKULU15;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771402;20260529;SFBNGKULU15;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771349;20260529;SFBNGKULU30;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771350;20260529;SFBNGKULU30;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770014;20260525;SFKRUI02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770018;20260529;SFKRUI02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770019;20260529;SFKRUI02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882730578;20260530;SFKRUI02;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFKRUI02
+6285882770045;20260522;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770046;20260522;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769956;20260528;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769958;20260528;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769960;20260528;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769963;20260528;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769952;20260528;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760372;20260528;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760374;20260528;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760371;20260528;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760370;20260528;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760369;20260528;SFMTRLMT14;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613278056;20260507;12321835;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12321838
 62895613278057;20260507;12321835;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12321841
 62895613275597;20260508;12321835;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
@@ -230,12 +305,12 @@
 6289518634594;20260516;551048;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6289531781524;20260516;551048;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6289518634606;20260516;551048;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-6289531781527;20260529;551048;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 551048
+6289531781527;20260529;551048;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 435570
 6289531781522;NOT FOUND;551048;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6289518634607;20260518;551048;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6289531781526;20260516;551048;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6289531781525;20260516;551048;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-6289531781701;20260519;551048;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6289531781701;20260519;551048;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12326964
 6289531781690;20260519;551048;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6289531781694;20260519;551048;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6289531781695;20260519;551048;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
@@ -279,15 +354,15 @@
 62895613267093;20260516;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12313320
 62895613267097;20260516;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12313320
 62895613267123;20260516;517266;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613319693;20260518;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12333693
+62895613319693;20260518;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12313320
 62895613319695;20260516;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12333693
-62895613319698;20260516;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12333693
+62895613319698;20260516;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12313320
 62895613319722;20260524;517266;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613319723;20260518;517266;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613319724;20260516;517266;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613267126;20260516;517266;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613267125;20260516;517266;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613267127;20260516;517266;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+62895613267126;20260516;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12313320
+62895613267125;20260516;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12313320
+62895613267127;20260516;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12313320
 62895613267038;20260519;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12333693
 62895613267041;20260519;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12333693
 62895613267042;20260519;517266;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12333693
@@ -334,8 +409,8 @@
 62895613319475;20260516;12328741;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613319476;20260516;12328741;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613319739;20260520;12328741;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613319743;20260520;12328741;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12333693
-62895613319741;20260520;12328741;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 12333693
+62895613319743;20260520;12328741;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+62895613319741;20260520;12328741;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613319479;20260519;12328741;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613319478;20260520;12328741;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613319477;20260520;12328741;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
@@ -373,83 +448,8 @@
 62895613275689;20260525;12321841;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613275690;20260525;12321841;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613275523;20260525;12321841;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613275745;20260529;12321841;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321841
-62895613275746;20260529;12321841;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 12321841
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
+62895613275745;20260529;12321841;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+62895613275746;20260529;12321841;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;;0;0;0;MSISDN tidak ditemukan di Raw Data
@@ -2223,21 +2223,21 @@
 6285882770711;20260526;TFSMLHOK2;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882770712;20260526;TFSMLHOK2;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882770713;20260526;TFSMLHOK2;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-0;;SFMEDAN04;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN04;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN04;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN04;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN04;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN24;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN24;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN24;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN24;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN24;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN27;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN27;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN27;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN27;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN27;0;0;MSISDN tidak ditemukan di Raw Data
+6285882769419;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769421;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769427;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768491;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768509;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+0;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;SFMEDAN24;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882768624;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768622;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768623;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768618;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768625;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882769474;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882769475;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882769478;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
@@ -2248,18 +2248,18 @@
 6285882760523;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882760518;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882760522;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-0;;SFMEDAN50;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN50;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN50;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN50;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFMEDAN50;0;0;MSISDN tidak ditemukan di Raw Data
-0;;DSFBINJAI03;0;0;MSISDN tidak ditemukan di Raw Data
-0;;DSFBINJAI03;0;0;MSISDN tidak ditemukan di Raw Data
-0;;DSFBINJAI03;0;0;MSISDN tidak ditemukan di Raw Data
-0;;DSFBINJAI03;0;0;MSISDN tidak ditemukan di Raw Data
-0;;DSFBINJAI03;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFACEHLSW14;0;0;MSISDN tidak ditemukan di Raw Data
-0;;SFACEHLSW14;0;0;MSISDN tidak ditemukan di Raw Data
+6285882768559;20260528;DSFBINJAI03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768553;20260528;DSFBINJAI03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768556;20260528;DSFBINJAI03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768551;20260528;DSFBINJAI03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768557;20260528;DSFBINJAI03;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+625882770870;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+625882770871;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+625882770868;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+625882770867;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+625882770869;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;SFACEHLSW14;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;NOT FOUND;SFACEHLSW14;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
 6285882759635;20260509;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882760617;20260509;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882759630;20260515;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
@@ -2332,405 +2332,405 @@
 6285882770419;20260526;TFSMSIADEM3;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882770418;20260526;TFSMSIADEM3;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 6285882770413;20260526;TFSMSIADEM3;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258961;20260520;510570;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 424592
-62895613258962;20260520;510570;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 424592
-62895613258963;20260520;510570;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 424592
-62895613261004;20260520;510570;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613261003;20260520;510570;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613261001;20260520;510570;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613260999;20260520;510570;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613260998;20260520;510570;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613260981;20260520;510571;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613260982;20260520;510571;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613260983;20260520;510571;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613260984;20260520;510571;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613260985;20260520;510571;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258959;20260521;496430;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258960;20260521;496430;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 424592
-62895613284976;20260510;401870;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284978;20260506;401870;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284977;20260504;401870;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284975;20260502;401870;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258892;20260507;401870;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284979;20260508;401870;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258905;20260516;401870;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258906;20260518;401870;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258907;20260521;401870;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258904;20260520;401870;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258871;20260503;496427;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258872;20260503;496427;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258873;20260503;496427;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258874;20260503;496427;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258875;20260503;496427;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284925;20260511;496427;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285177;20260511;496427;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613259006;20260511;496427;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284853;NOT FOUND;496427;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613258799;20260506;466114;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258801;20260506;466114;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258796;20260506;466114;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258797;20260506;466114;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258798;20260506;466114;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613259008;20260508;466114;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613259011;20260512;466114;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613259007;20260511;466114;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613259009;20260508;466114;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284417;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284418;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284419;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284420;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284421;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284447;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284449;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284450;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284451;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284452;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284481;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284482;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284483;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284484;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284485;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284464;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284465;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284467;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284468;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284469;20260523;403283;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266589;20260523;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266588;20260523;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266587;20260523;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266586;20260523;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266451;20260523;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266452;20260523;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266453;20260523;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266454;20260523;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266455;20260523;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266471;20260524;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266472;20260524;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266473;20260524;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266474;20260524;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266475;20260524;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613266590;20260524;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283694;20260524;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283695;20260524;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283696;20260524;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283698;20260524;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283697;20260525;400503;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258766;20260513;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258767;20260513;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258765;NOT FOUND;529461;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613258768;20260515;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258769;20260520;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258791;20260520;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258792;20260521;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283750;20260523;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283752;20260523;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283753;20260523;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285212;20260502;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285214;20260502;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285210;20260502;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285211;20260502;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285188;20260502;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285190;20260502;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285191;20260502;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285192;20260502;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285213;20260503;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285189;20260503;529461;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274028;20260519;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274029;20260519;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274031;20260519;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274032;20260519;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274033;20260519;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258775;20260513;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258776;20260513;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258777;20260513;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258778;20260513;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258779;20260513;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285193;20260502;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285194;20260502;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613285196;20260502;488378;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 431235
-62895613285197;20260502;488378;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 431235
-62895613285198;20260502;488378;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 431235
-62895613284913;20260507;488378;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 510571
-62895613284918;20260507;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284917;20260507;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284916;20260507;488378;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613284914;20260507;488378;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 510571
-62895613283689;NOT FOUND;346938;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613283690;NOT FOUND;346938;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613283691;NOT FOUND;346938;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613283693;NOT FOUND;346938;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613283692;NOT FOUND;346938;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613283705;20260529;346938;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 346938
-62895613283706;NOT FOUND;346938;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613283707;20260529;346938;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 346938
-62895613283708;20260528;346938;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283709;20260528;346938;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613258793;20260518;346938;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 346938
-62895613258794;20260518;346938;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 346938
-62895613258795;20260518;346938;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 346938
-62895613283748;NOT FOUND;346938;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613283749;20260526;346938;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283668;NOT FOUND;346938;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613283669;20260524;346938;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283670;20260529;346938;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 346938
-62895613283671;NOT FOUND;346938;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613283672;NOT FOUND;346938;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
-62895613274135;20260525;403290;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274136;20260521;403290;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274137;20260524;403290;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274138;20260525;403290;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274134;20260525;403290;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283646;20260520;403290;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283648;20260520;403290;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283645;20260520;403290;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283647;20260520;403290;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613283644;20260520;403290;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274075;20260520;400372;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274073;20260520;400372;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274076;20260520;400372;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274078;20260520;400372;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274074;20260520;400372;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274114;20260525;400372;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274117;20260525;400372;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 400372
-62895613274116;20260525;400372;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 400372
-62895613274115;20260525;400372;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274118;20260525;400372;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274065;20260525;496435;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274066;20260525;496435;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274064;20260525;496435;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274062;20260525;496435;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274063;20260525;496435;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274119;20260519;496435;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274121;20260519;496435;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274120;20260519;496435;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274122;20260525;496435;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613274123;20260525;496435;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
-0;;0;0;0;MSISDN tidak ditemukan di Raw Data
+6285882768490;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768489;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768488;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768634;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768629;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768628;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768632;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768635;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770849;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770845;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770844;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770848;20260528;SFMEDAN04;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768541;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768521;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768543;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768542;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768523;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760498;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760495;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760493;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760499;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760496;20260528;SFMEDAN27;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769377;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769379;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769380;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769382;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769381;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769440;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769438;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769437;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769436;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769435;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769394;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769390;20260528;SFMEDAN33;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFMEDAN33
+6285882769396;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769395;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769397;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769418;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769416;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769415;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769414;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769413;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769387;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882869386;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882769385;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769389;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769384;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769504;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769601;NOT FOUND;SFMEDAN33;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+6285882769507;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769505;20260528;SFMEDAN33;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768600;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768598;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768602;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768597;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768599;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768520;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768516;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768512;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768514;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768515;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769370;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769376;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769375;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769372;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882769371;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768588;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768584;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768587;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768586;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768590;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768593;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768592;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768596;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768595;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768594;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768455;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768460;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768454;20260528;SFMEDAN35;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+625882770835;NOT FOUND;SFMEDAN50;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+0;;SFMEDAN50;0;0;MSISDN tidak ditemukan di Raw Data
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;0;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;DSFBINJAI03;0;0;MSISDN tidak ditemukan di Raw Data
+0;;DSFBINJAI04;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;DSFBINJAI05;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;DSFBINJAI06;0;0;ORG_ID tidak ditemukan pada data populasi
+0;;DSFBINJAI07;0;0;ORG_ID tidak ditemukan pada data populasi
+6285882768545;20260528;DSFBINJAI08;4G PRODUCT;0;ORG_ID tidak ditemukan pada data populasi
+6285882768544;20260528;DSFBINJAI09;4G PRODUCT;0;ORG_ID tidak ditemukan pada data populasi
+6285882768546;20260528;DSFBINJAI10;4G PRODUCT;0;ORG_ID tidak ditemukan pada data populasi
+6285882768547;20260528;DSFBINJAI11;4G PRODUCT;0;ORG_ID tidak ditemukan pada data populasi
+6285882768549;20260528;DSFBINJAI12;4G PRODUCT;0;ORG_ID tidak ditemukan pada data populasi
+6285882769423;20260528;DSFBINJAI13;4G PRODUCT;0;ORG_ID tidak ditemukan pada data populasi
+6285882769426;20260528;DSFBINJAI14;4G PRODUCT;0;ORG_ID tidak ditemukan pada data populasi
+6285882769453;NOT FOUND;DSFBINJAI15;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+6285882770833;20260528;DSFBINJAI16;4G PRODUCT;0;ORG_ID tidak ditemukan pada data populasi
+6285882760517;20260528;DSFBINJAI17;4G PRODUCT;0;ORG_ID tidak ditemukan pada data populasi
+6285882760513;20260528;DSFBINJAI18;4G PRODUCT;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+0;NOT FOUND;0;NOT FOUND;0;ORG_ID tidak ditemukan pada data populasi
+6285882770850;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770783;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770852;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770853;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770854;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770791;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770785;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770784;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770790;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770787;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760459;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760455;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760458;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770851;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770751;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770750;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770752;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770754;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770780;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770778;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770753;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770774;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770776;20260529;SFMEDAN79;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768461;20260529;SFPAKAM17;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768463;20260529;SFPAKAM17;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768464;20260529;SFPAKAM17;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768465;20260529;SFPAKAM17;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768467;20260529;SFPAKAM17;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770361;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770313;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770314;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770317;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770407;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770410;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770367;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770315;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770316;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770449;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770363;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770453;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770450;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770452;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770362;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770360;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770370;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770372;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770373;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770369;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770368;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770409;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770412;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770417;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770451;20260528;SFSDP44;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770381;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770376;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770375;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770378;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770382;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770574;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770572;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770571;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770569;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770568;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770311;20260528;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770310;20260528;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770448;20260528;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770341;20260526;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770443;20260529;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770339;20260528;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882772730;20260530;SFSIANTAR01;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR01
+6285882772731;20260530;SFSIANTAR01;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR01
+6285882772538;20260530;SFSIANTAR01;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR01
+6285882772540;20260530;SFSIANTAR01;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR01
+6285882770496;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770491;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770493;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770494;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770492;20260524;SFSIANTAR01;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882772728;20260530;SFSIANTAR02;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR02
+6285882772729;20260530;SFSIANTAR02;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR02
+6285882770340;20260528;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770489;20260529;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770487;20260529;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770510;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770512;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770514;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770515;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770516;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770575;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770576;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770582;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770579;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770580;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770352;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770342;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770348;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770344;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770353;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770402;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770401;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770399;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770405;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770403;20260524;SFSIANTAR02;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770895;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770993;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770994;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770960;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770962;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771016;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770885;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770887;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770884;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770897;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770896;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770891;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770997;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770995;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770963;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770958;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770961;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771019;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771014;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771015;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882771017;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770883;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770890;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770761;20260526;SFTEBKIS007;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760489;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882760490;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882760491;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882760492;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882772671;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882772672;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882768470;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882768471;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882768472;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882760500;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882760501;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882760502;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882772668;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882772665;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882768468;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882772670;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882760506;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882760503;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882768469;20260530;SFPAKAM17;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFPAKAM17
+6285882768421;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768423;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768425;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768419;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768420;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760476;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760475;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760474;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760473;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760472;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768410;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768409;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768406;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768405;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768400;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882768426;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760460;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760461;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882760488;20260529;SFMEDAN45;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770509;20260528;SFSDP55;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770507;20260528;SFSDP55;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770500;20260528;SFSDP55;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770498;20260528;SFSDP55;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770497;20260528;SFSDP55;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770389;20260528;SFSDP55;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770387;20260528;SFSDP55;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770385;20260528;SFSDP55;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770384;20260528;SFSDP55;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770383;20260528;SFSDP55;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770327;20260530;SFSDP55;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSDP55
+6285882770328;20260530;SFSDP55;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSDP55
+6285882770329;20260530;SFSDP55;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSDP55
+6285882770337;20260530;SFSDP55;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSDP55
+6285882770446;20260530;SFSDP55;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSDP55
+6285882770445;20260530;SFSDP55;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSDP55
+6285882770332;20260530;SFSDP55;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSDP55
+6285882772536;20260530;SFSDP55;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSDP55
+6285882770324;20260526;SFSDP55;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 1370757
+6285882770322;20260527;SFSDP55;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 17525297
+6285882770323;20260527;SFSDP55;4G PRODUCT;0;Ada di Raw Data, namun ORG_ID: 1370757
+6285882772733;20260530;TFSMSIADEM1;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMSIADEM1
+6285882772734;20260530;TFSMSIADEM1;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: TFSMSIADEM1
+6285882770358;20260526;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770357;20260526;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770354;20260526;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770355;20260526;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770356;20260526;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770421;20260528;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770424;20260528;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770425;20260528;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770423;20260528;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770422;20260528;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770436;20260528;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770437;20260528;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770442;20260528;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770439;20260528;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882770438;20260528;TFSMSIADEM1;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
+6285882772655;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772656;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772653;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772654;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772519;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772520;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772517;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772518;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772516;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772646;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772647;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772648;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772649;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772650;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772644;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772645;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772642;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772643;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772641;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772680;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772681;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772737;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
+6285882772732;20260530;SFSIANTAR03;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: SFSIANTAR03
 0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;;0;0;0;MSISDN tidak ditemukan di Raw Data
 0;;0;0;0;MSISDN tidak ditemukan di Raw Data
@@ -4065,7 +4065,7 @@
 62895613271418;20260528;12307599;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613271417;20260528;12307599;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613271416;20260526;12307599;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
-62895613271415;NOT FOUND;12307599;NOT FOUND;0;MSISDN tidak ditemukan di Raw Data
+62895613271415;20260530;12307599;4G PRODUCT;1;Dilakukan Adjustment (1) untuk ORG_ID: 12307599
 62895613271288;20260526;12307599;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613271287;20260526;12307599;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
 62895613271290;20260525;12307599;4G PRODUCT;0;Sudah terhitung sebelumnya dari Raw Data
