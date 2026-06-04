@@ -81,8 +81,18 @@ export default function DSFCard({
       ? "warning"
       : "danger";
 
-  const ringRevTone =
-    c.totalRevenue >= REVENUE_TARGET ? "success" : "warning";
+  // ✅ FIX: month-aware revenue ring tone, mirror RankingDashboard achievementColor
+  const ringRevTone = (() => {
+    const isAprilOrMay = month === "202604" || month === "202605";
+    if (isAprilOrMay) {
+      if (c.totalRevenue >= REVENUE_TARGET * 1.2) return "success";
+      if (c.totalRevenue >= REVENUE_TARGET)       return "warning";
+      return "danger";
+    }
+    if (c.totalRevenue >= REVENUE_TARGET)         return "success";
+    if (c.totalRevenue >= REVENUE_TARGET * 0.8)   return "warning";
+    return "danger";
+  })();
 
   // ================================
   // DATE FORMATTERS
@@ -144,7 +154,6 @@ export default function DSFCard({
     return String(val ?? "").trim().toUpperCase().replace(/^0+/, "");
   }
 
-  // Pengaman string bulan (menghilangkan tanda strip jika ada)
   const safeMonth = String(month || "").replace(/-/g, "");
 
   const [searchMsisdn, setSearchMsisdn] = React.useState("");
@@ -195,7 +204,6 @@ export default function DSFCard({
   const adjValidRef = useRef(null);
   const adjInvalidRef = useRef(null);
 
-  // HITUNGAN ASLI MENGGUNAKAN VALID_FLAG (Untuk mengatasi unit 5G)
   const totalRawUnits = rawCounted.reduce((sum, row) => sum + (Number(row?.VALID_FLAG) || 0), 0);
   const totalAdjUnits = adjValid.reduce((sum, row) => sum + (Number(row?.VALID_FLAG) || 0), 0);
   const actualCountedTable = totalRawUnits + totalAdjUnits;

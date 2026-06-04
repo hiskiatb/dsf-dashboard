@@ -32,22 +32,32 @@ export default function TLDashboard({
   const totalTargetRevenue = REVENUE_TARGET_PER_DSF * dsfs.length;
   const revenuePercent = totalTargetRevenue ? totalRevenue / totalTargetRevenue : 0;
 
-  // TL incentive
-  const minimumFwaOption1 = dsfs.length * 15;
-  let tlIncentive = 0;
   const isAprilOrMay =
     selectedMonth === "202604" || selectedMonth === "202605";
 
+  // ✅ FIX: month-aware revenue ring tone, mirror RankingDashboard achievementColor
+  const revenueRingTone = (() => {
+    if (isAprilOrMay) {
+      if (revenuePercent >= 1.2) return "success";
+      if (revenuePercent >= 1)   return "warning";
+      return "danger";
+    }
+    if (revenuePercent >= 1)    return "success";
+    if (revenuePercent >= 0.8)  return "warning";
+    return "danger";
+  })();
+
+  // TL incentive
+  const minimumFwaOption1 = dsfs.length * 15;
+  let tlIncentive = 0;
+
   if (isAprilOrMay) {
-    // KHUSUS APRIL & MEI: 
-    // Wajib capai total target FWA DAN target Revenue (100% atau 120%)
     if (totalFwa >= totalTargetFwa && revenuePercent >= 1.2) {
       tlIncentive = 1_000_000;
     } else if (totalFwa >= totalTargetFwa && revenuePercent >= 1) {
       tlIncentive = 400_000;
     }
   } else {
-    // BULAN LAINNYA: (Sesuai dengan logika awal kamu)
     if (totalFwa >= totalTargetFwa && revenuePercent >= 1) {
       tlIncentive = 1_000_000;
     } else if (totalFwa >= minimumFwaOption1 && revenuePercent >= 1) {
@@ -108,7 +118,7 @@ export default function TLDashboard({
           subtitle={`Target TL: ${formatIDR(totalTargetRevenue)}`}
           valueText={formatIDR(totalRevenue)}
           percent={revenuePercent}
-          tone={totalRevenue >= totalTargetRevenue ? "success" : "warning"}
+          tone={revenueRingTone}
         />
 
         <div className="dash-right">
