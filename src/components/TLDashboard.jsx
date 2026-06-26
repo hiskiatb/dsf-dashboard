@@ -4,69 +4,72 @@ import Ring from "./Ring";
 import { formatIDR, hitungInsentif } from "../utils";
 import { useRef } from "react";
 import CopyImageButton from "./CopyImageButton";
+import { useKpi } from "../KpiContext";
 
-const TARGET_PER_DSF = 20;
-const REVENUE_TARGET_PER_DSF = 7_500_000;
+// Nominal insentif level TL/Spv (sesuai slide KPI). Threshold-nya
+// mengikuti tier dari config KPI bulan tsb, jadi tidak hardcode skema.
+const TL_INCENTIVE_TOP = 1_000_000;
+const TL_INCENTIVE_LOW = 400_000;
 
 export default function TLDashboard({
   tlId,
   tlName,
   dsfs,
   dataDates,
-  selectedMonth,
   dataBasedOn,
   onSelectDSF,
 }) {
   const tableRef = useRef(null);
+  const kpi = useKpi();
+
+  const fwaUnitValue = kpi.fwa_unit_value || 0;
+  const targetPerDsf = kpi.target_fwa || 20;
+  const revenueTargetPerDsf = kpi.revenue_target || 0;
+
+  const tiersDesc = [...(kpi.tiers || [])].sort(
+    (a, b) => (b.incentive || 0) - (a.incentive || 0)
+  );
+  const topTier = tiersDesc[0] || { fwa_pct: 1, rev_pct: 1 };
+  const lowTier = tiersDesc[tiersDesc.length - 1] || { fwa_pct: 0.75, rev_pct: 1 };
 
   const totalFwa = dsfs.reduce((a, b) => a + (b.fwaUnits || 0), 0);
   const totalRebuy = dsfs.reduce((a, b) => a + (b.rebuyRevenue || 0), 0);
-  const totalHajj = dsfs.reduce((a, b) => a + (b.revHajj || 0), 0);
-  const totalRevenue = totalFwa * 350000 + totalRebuy + totalHajj;
+  const totalHajj = kpi.include_hajj
+    ? dsfs.reduce((a, b) => a + (b.revHajj || 0), 0)
+    : 0;
+  const totalRevenue = totalFwa * fwaUnitValue + totalRebuy + totalHajj;
 
   const totalTargetFwa = dsfs.reduce(
-    (sum, d) => sum + (d.targetFwa || TARGET_PER_DSF),
+    (sum, d) => sum + (d.targetFwa || targetPerDsf),
     0
   );
   const fwaPercent = totalTargetFwa ? totalFwa / totalTargetFwa : 0;
-  const totalTargetRevenue = REVENUE_TARGET_PER_DSF * dsfs.length;
+  const totalTargetRevenue = revenueTargetPerDsf * dsfs.length;
   const revenuePercent = totalTargetRevenue ? totalRevenue / totalTargetRevenue : 0;
 
-  const isAprilOrMay =
-    selectedMonth === "202604" || selectedMonth === "202605";
-
-  // ✅ FIX: month-aware revenue ring tone, mirror RankingDashboard achievementColor
+  // Tone revenue mengikuti tier tertinggi dari config (bukan hardcode bulan).
   const revenueRingTone = (() => {
-    if (isAprilOrMay) {
-      if (revenuePercent >= 1.2) return "success";
-      if (revenuePercent >= 1)   return "warning";
-      return "danger";
-    }
-    if (revenuePercent >= 1)    return "success";
-    if (revenuePercent >= 0.8)  return "warning";
+    if (revenuePercent >= (topTier.rev_pct ?? 1)) return "success";
+    if (revenuePercent >= 1) return "warning";
     return "danger";
   })();
 
-  // TL incentive
-  const minimumFwaOption1 = dsfs.length * 15;
+  // Insentif TL: threshold FWA & revenue diambil dari tier config.
   let tlIncentive = 0;
-
-  if (isAprilOrMay) {
-    if (totalFwa >= totalTargetFwa && revenuePercent >= 1.2) {
-      tlIncentive = 1_000_000;
-    } else if (totalFwa >= totalTargetFwa && revenuePercent >= 1) {
-      tlIncentive = 400_000;
-    }
-  } else {
-    if (totalFwa >= totalTargetFwa && revenuePercent >= 1) {
-      tlIncentive = 1_000_000;
-    } else if (totalFwa >= minimumFwaOption1 && revenuePercent >= 1) {
-      tlIncentive = 400_000;
-    }
+  if (
+    totalFwa >= totalTargetFwa * (topTier.fwa_pct ?? 1) &&
+    revenuePercent >= (topTier.rev_pct ?? 1)
+  ) {
+    tlIncentive = TL_INCENTIVE_TOP;
+  } else if (
+    totalFwa >= totalTargetFwa * (lowTier.fwa_pct ?? 0.75) &&
+    revenuePercent >= (lowTier.rev_pct ?? 1)
+  ) {
+    tlIncentive = TL_INCENTIVE_LOW;
   }
 
   const rankedDsfs = [...dsfs]
-    .map((d) => ({ ...d, calc: hitungInsentif(d, selectedMonth) }))
+    .map((d) => ({ ...d, calc: hitungInsentif(d, kpi) }))
     .sort((a, b) => b.calc.totalRevenue - a.calc.totalRevenue);
 
   return (
@@ -122,24 +125,16 @@ export default function TLDashboard({
         />
 
         <div className="dash-right">
-          {!isAprilOrMay && (
-            <div className="mini-card">
-              <div className="mini-label">Total Rebuy FWA</div>
-              <div className="mini-value">{formatIDR(totalRebuy)}</div>
-            </div>
-          )}
+          <div className="mini-card">
+            <div className="mini-label">Total Rebuy FWA</div>
+            <div className="mini-value">{formatIDR(totalRebuy)}</div>
+          </div>
 
-          {isAprilOrMay && (
-            <>
-              <div className="mini-card">
-                <div className="mini-label">Total Rebuy FWA</div>
-                <div className="mini-value">{formatIDR(totalRebuy)}</div>
-              </div>
-              <div className="mini-card">
-                <div className="mini-label">Total Rebuy Haji</div>
-                <div className="mini-value">{formatIDR(totalHajj)}</div>
-              </div>
-            </>
+          {kpi.include_hajj && (
+            <div className="mini-card">
+              <div className="mini-label">Total Rebuy Haji</div>
+              <div className="mini-value">{formatIDR(totalHajj)}</div>
+            </div>
           )}
 
           <div className="mini-card strong">
@@ -183,7 +178,7 @@ export default function TLDashboard({
               <tbody>
                 {rankedDsfs.map((d, index) => {
                   const eligible = d.calc.incentive > 0;
-                  const dsfTarget = d.targetFwa || TARGET_PER_DSF;
+                  const dsfTarget = d.targetFwa || targetPerDsf;
 
                   return (
                     <tr

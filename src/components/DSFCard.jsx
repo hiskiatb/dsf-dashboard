@@ -8,8 +8,19 @@ import {
   buildTips,
   formatIDR,
   hitungInsentif,
-  REVENUE_TARGET,
+  maskMsisdn,
 } from "../utils";
+import { useKpi } from "../KpiContext";
+
+// Format nominal insentif ringkas, mis. 500000 -> "500K", 1000000 -> "1JT".
+function shortIncentive(n) {
+  if (!n) return "";
+  if (n >= 1_000_000) {
+    const v = n / 1_000_000;
+    return `${Number.isInteger(v) ? v : v.toFixed(1)}JT`;
+  }
+  return `${Math.round(n / 1000)}K`;
+}
 
 // HELPER: Auto-parse CSV yang jauh lebih tangguh
 function parseCSVData(data) {
@@ -56,41 +67,44 @@ export default function DSFCard({
   adjData = [],
   month,
 }) {
-  const c = hitungInsentif(dsf, month);
+  const kpi = useKpi();
+  const c = hitungInsentif(dsf, kpi);
 
   const ENABLE_TIPS = false;
-  const tips = ENABLE_TIPS ? buildTips(dsf, month) : [];
+  const tips = ENABLE_TIPS ? buildTips(dsf, kpi) : [];
 
-  const targetFwa = dsf.targetFwa || 20;
+  const targetFwa = dsf.targetFwa || kpi.target_fwa || 20;
+  const revenueTarget = kpi.revenue_target || 0;
 
   const eligible = c.incentive > 0;
 
-  const incentiveLabel =
-    c.incentive === 500000
-      ? "INCENTIVE 500K"
-      : c.incentive === 200000
-      ? "INCENTIVE 200K"
-      : "NOT ELIGIBLE";
+  const incentiveLabel = eligible
+    ? `INCENTIVE ${shortIncentive(c.incentive)}`
+    : "NOT ELIGIBLE";
 
   const incentiveTone = eligible ? "success" : "danger";
+
+  // Ambang FWA untuk tier terendah (mis. 0.75 -> 15 dari 20).
+  const tiersDesc = [...(kpi.tiers || [])].sort(
+    (a, b) => (b.incentive || 0) - (a.incentive || 0)
+  );
+  const lowestFwaPct = tiersDesc.length
+    ? tiersDesc[tiersDesc.length - 1].fwa_pct ?? 1
+    : 0.75;
+  const topRevPct = tiersDesc.length ? tiersDesc[0].rev_pct ?? 1 : 1;
 
   const ringFwaTone =
     dsf.fwaUnits >= targetFwa
       ? "success"
-      : dsf.fwaUnits >= targetFwa * 0.75
+      : dsf.fwaUnits >= targetFwa * lowestFwaPct
       ? "warning"
       : "danger";
 
-  // ✅ FIX: month-aware revenue ring tone, mirror RankingDashboard achievementColor
+  // Tone revenue mengikuti tier tertinggi dari config (bukan lagi hardcode bulan).
   const ringRevTone = (() => {
-    const isAprilOrMay = month === "202604" || month === "202605";
-    if (isAprilOrMay) {
-      if (c.totalRevenue >= REVENUE_TARGET * 1.2) return "success";
-      if (c.totalRevenue >= REVENUE_TARGET)       return "warning";
-      return "danger";
-    }
-    if (c.totalRevenue >= REVENUE_TARGET)         return "success";
-    if (c.totalRevenue >= REVENUE_TARGET * 0.8)   return "warning";
+    if (revenueTarget <= 0) return "warning";
+    if (c.totalRevenue >= revenueTarget * topRevPct) return "success";
+    if (c.totalRevenue >= revenueTarget) return "warning";
     return "danger";
   })();
 
@@ -279,7 +293,7 @@ export default function DSFCard({
 
         <Ring
           title="Total Revenue"
-          subtitle={`Target: ${formatIDR(REVENUE_TARGET)}`}
+          subtitle={`Target: ${formatIDR(revenueTarget)}`}
           valueText={formatIDR(c.totalRevenue)}
           percent={c.revenueProgress}
           tone={ringRevTone}
@@ -394,7 +408,7 @@ export default function DSFCard({
                 filteredRawCounted.map((row, i) => (
                   <tr key={i} className="border-t border-ink-100 bg-brand-50">
                     <td className="p-3">{i + 1}</td>
-                    <td className="p-3 font-mono text-xs">{row.MSISDN}</td>
+                    <td className="p-3 font-mono text-xs">{maskMsisdn(row.MSISDN)}</td>
                     <td className="p-3">{formatGA(row.GA_DATE)}</td>
                     <td className="p-3">
                       {row?.DEVICE?.trim?.() || row?.DEVICE || "-"}
@@ -439,7 +453,7 @@ export default function DSFCard({
                   filteredRawInvalid.map((row, i) => (
                     <tr key={i} className="border-t border-ink-100 bg-danger-50">
                       <td className="p-3">{i + 1}</td>
-                      <td className="p-3 font-mono text-xs">{row.MSISDN}</td>
+                      <td className="p-3 font-mono text-xs">{maskMsisdn(row.MSISDN)}</td>
                       <td className="p-3">{formatGA(row.GA_DATE)}</td>
                       <td className="p-3">{row?.DEVICE?.trim?.() || row?.DEVICE || "-"}</td>
                       <td className="p-3 text-danger-700 font-semibold">{row.REMARKS}</td>
@@ -472,7 +486,7 @@ export default function DSFCard({
                   {filteredAdjValid.map((row, i) => (
                     <tr key={i} className="border-t border-ink-100 bg-success-50">
                       <td className="p-3">{i + 1}</td>
-                      <td className="p-3 font-mono text-xs">{row.MSISDN}</td>
+                      <td className="p-3 font-mono text-xs">{maskMsisdn(row.MSISDN)}</td>
                       <td className="p-3">{formatGA(row.GA_DATE)}</td>
                       <td className="p-3">
                         {row?.DEVICE?.trim?.() || row?.DEVICE || "-"}
@@ -512,7 +526,7 @@ export default function DSFCard({
                   {filteredAdjInvalid.map((row, i) => (
                     <tr key={i} className="border-t border-ink-100 bg-danger-100">
                       <td className="p-3">{i + 1}</td>
-                      <td className="p-3 font-mono text-xs">{row.MSISDN}</td>
+                      <td className="p-3 font-mono text-xs">{maskMsisdn(row.MSISDN)}</td>
                       <td className="p-3">{formatGA(row.GA_DATE)}</td>
                       <td className="p-3">{row?.DEVICE?.trim?.() || row?.DEVICE || "-"}</td>
                       <td className="p-3 text-danger-700 font-semibold">{row.REMARKS}</td>

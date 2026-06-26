@@ -1,7 +1,12 @@
+import { DEFAULT_KPI } from "./kpiConfig";
+
 export const CSV_PATH = "/DSF_202602.csv";
 
-export const FWA_UNIT_VALUE = 350_000;
-export const REVENUE_TARGET = 7_500_000;
+// Legacy fallback constants (dipakai hanya jika config tidak tersedia).
+// Nilai KPI sebenarnya sekarang datang dari Supabase (kpi_settings) dan
+// bisa diubah admin per bulan lewat panel KPI.
+export const FWA_UNIT_VALUE = DEFAULT_KPI.fwa_unit_value;
+export const REVENUE_TARGET = DEFAULT_KPI.revenue_target;
 
 export function parseCSV(text) {
   const rows = [];
@@ -72,6 +77,15 @@ export function parseCSV(text) {
     });
 }
 
+// Sembunyikan 5 digit di tengah MSISDN, mis. 081234567890 -> 081*****7890.
+// Menampilkan 3 digit awal & sisanya di belakang; 5 digit tengah jadi *****.
+export function maskMsisdn(value) {
+  const s = String(value ?? "").trim();
+  if (s.length <= 6) return s; // terlalu pendek untuk di-mask
+  const start = Math.floor((s.length - 5) / 2);
+  return s.slice(0, start) + "*****" + s.slice(start + 5);
+}
+
 export function toNumberSafe(v) {
   if (v === null || v === undefined) return 0;
   const s = String(v)
@@ -103,7 +117,12 @@ export function clamp(n, min = 0, max = 1) {
 
 export function mapRowToDSF(row) {
   const brand = row.BRAND || "-";
-  const idDsf = row.ID_DSF || "";
+  // Sejak Juni 2026 kolom ID_DSF dipecah jadi ID_DSF_IM3 & ID_DSF_3ID
+  // (hanya salah satu terisi sesuai brand). Ambil yang pertama tidak kosong.
+  const idDsf =
+    [row.ID_DSF, row.ID_DSF_IM3, row.ID_DSF_3ID]
+      .map((v) => String(v ?? "").trim())
+      .find((v) => v !== "") || "";
   const namaDsf = row.NAMA_DSF || "-";
   const mc = row.MC || "-";
   const branch = row.BRANCH || "-";
@@ -148,38 +167,52 @@ export function extractDataBasedOn(text) {
   return parts[1]?.trim() || "";
 }
 
-export function hitungInsentif(dsf, month) {
-  const targetFwa = dsf.targetFwa ?? 0;
+// ============================================================
+// PERHITUNGAN INSENTIF (config-driven)
+// ------------------------------------------------------------
+// Parameter ke-2 sekarang adalah objek `kpi` (config bulan tsb),
+// bukan lagi string month. KPI tidak hardcode: target FWA, nilai
+// FWA, target revenue, toggle Hajj, dan tier insentif semuanya
+// diambil dari config Supabase (lihat kpiConfig.js / KpiContext).
+//
+// Model tier: array { fwa_pct, rev_pct, incentive } dievaluasi
+// dari atas ke bawah, tier pertama yang terpenuhi menang.
+//   fwa_pct = fraksi target_fwa yang wajib dicapai
+//   rev_pct = fraksi revenue_target yang wajib dicapai
+// ============================================================
 
-  const fwaRevenue = dsf.fwaUnits * FWA_UNIT_VALUE;
-  const totalRevenue = fwaRevenue + dsf.rebuyRevenue + (dsf.revHajj || 0);
+function resolveKpi(kpi) {
+  return kpi && typeof kpi === "object" ? kpi : DEFAULT_KPI;
+}
+
+function tiersSortedDesc(cfg) {
+  return [...(cfg.tiers || [])].sort(
+    (a, b) => (b.incentive || 0) - (a.incentive || 0)
+  );
+}
+
+export function hitungInsentif(dsf, kpi) {
+  const cfg = resolveKpi(kpi);
+  const targetFwa = dsf.targetFwa ?? cfg.target_fwa ?? 0;
+  const revenueTarget = cfg.revenue_target || 0;
+  const fwaUnitValue = cfg.fwa_unit_value || 0;
+
+  const fwaRevenue = dsf.fwaUnits * fwaUnitValue;
+  const hajj = cfg.include_hajj ? dsf.revHajj || 0 : 0;
+  const totalRevenue = fwaRevenue + dsf.rebuyRevenue + hajj;
 
   let incentive = 0;
-
-  const isAprilOrMay = month === "202604" || month === "202605";
-
-  if (isAprilOrMay) {
-    const target100 = REVENUE_TARGET;       // 7.500.000
-    const target120 = REVENUE_TARGET * 1.2; // 9.000.000
-
-    if (dsf.fwaUnits >= targetFwa && totalRevenue >= target120) {
-      incentive = 500_000;
-    } else if (dsf.fwaUnits >= targetFwa && totalRevenue >= target100) {
-      incentive = 200_000;
-    }
-  } else {
-    if (dsf.fwaUnits >= targetFwa && totalRevenue >= REVENUE_TARGET) {
-      incentive = 500_000;
-    } else if (
-      dsf.fwaUnits >= targetFwa * 0.75 &&
-      totalRevenue >= REVENUE_TARGET
-    ) {
-      incentive = 200_000;
+  for (const tier of tiersSortedDesc(cfg)) {
+    const fwaNeeded = targetFwa * (tier.fwa_pct ?? 1);
+    const revNeeded = revenueTarget * (tier.rev_pct ?? 1);
+    if (dsf.fwaUnits >= fwaNeeded && totalRevenue >= revNeeded) {
+      incentive = tier.incentive || 0;
+      break;
     }
   }
 
-  const remainingRevenue = Math.max(0, REVENUE_TARGET - totalRevenue);
-  const revenueProgress = totalRevenue / REVENUE_TARGET;
+  const remainingRevenue = Math.max(0, revenueTarget - totalRevenue);
+  const revenueProgress = revenueTarget > 0 ? totalRevenue / revenueTarget : 0;
 
   return {
     fwaRevenue,
@@ -191,158 +224,72 @@ export function hitungInsentif(dsf, month) {
   };
 }
 
-
-export function isEligible(dsf, month) {
-  return hitungInsentif(dsf, month).incentive > 0;
+export function isEligible(dsf, kpi) {
+  return hitungInsentif(dsf, kpi).incentive > 0;
 }
 
-export function buildTips(dsf, month) {
-  const isNewScheme = month === "202604" || month === "202605";
-  const tips = [];
-  const targetFwa = dsf.targetFwa || 20;
+export function buildTips(dsf, kpi) {
+  const cfg = resolveKpi(kpi);
+  const targetFwa = dsf.targetFwa ?? cfg.target_fwa ?? 0;
+  const revenueTarget = cfg.revenue_target || 0;
+  const fwaUnitValue = cfg.fwa_unit_value || 0;
 
-  if (isNewScheme) {
-    const fwaNow = dsf.fwaUnits;
-    const rebuyNow = dsf.rebuyRevenue;
-    const hajjNow = dsf.revHajj || 0;
-
-    const totalRevenueNow = fwaNow * FWA_UNIT_VALUE + rebuyNow + hajjNow;
-    const percent = totalRevenueNow / REVENUE_TARGET;
-    
-    // Cek apakah target FWA wajib sudah terpenuhi
-    const isFwaMet = fwaNow >= targetFwa;
-
-    tips.push({
-      done: false,
-      text: `Revenue saat ini ${formatIDR(totalRevenueNow)} (${Math.round(percent * 100)}%). FWA Units: ${fwaNow}/${targetFwa}.`,
-    });
-
-    if (isFwaMet && percent >= 1.2) {
-      tips.push({
-        done: true,
-        text: "🎉 Target FWA terpenuhi dan Revenue mencapai 120% (insentif Rp500.000).",
-      });
-    } 
-    else if (isFwaMet && percent >= 1) {
-      tips.push({
-        done: true,
-        text: "🎉 Target FWA terpenuhi dan Revenue mencapai 100% (insentif Rp200.000).",
-      });
-
-      tips.push({
-        done: false,
-        text: `Tambah ${formatIDR(REVENUE_TARGET * 1.2 - totalRevenueNow)} lagi untuk naik ke insentif Rp500.000.`,
-      });
-    } 
-    else {
-      if (!isFwaMet) {
-        tips.push({
-          done: false,
-          text: `⚠️ FWA Units masih kurang ${targetFwa - fwaNow} unit. Target FWA WAJIB terpenuhi untuk dapat insentif.`,
-        });
-      }
-      
-      if (percent < 1) {
-        tips.push({
-          done: false,
-          text: `Butuh tambahan revenue ${formatIDR(REVENUE_TARGET - totalRevenueNow)} untuk mencapai 100% (insentif Rp200.000).`,
-        });
-      }
-
-      if (percent >= 1 && !isFwaMet) {
-        tips.push({
-          done: false,
-          text: `💡 Revenue sudah aman (${Math.round(percent * 100)}%), ayo kejar sisa target FWA agar insentif cair!`,
-        });
-      }
-    }
-
-    return tips;
-  }
-
-  // ================================
-  // OLD SCHEME (Bulan Lainnya)
-  // ================================
   const fwaNow = dsf.fwaUnits;
   const rebuyNow = dsf.rebuyRevenue;
-  const fwaRevenueNow = fwaNow * FWA_UNIT_VALUE;
-  const hajjNow = dsf.revHajj || 0;
-  const totalRevenueNow = fwaRevenueNow + rebuyNow + hajjNow;
+  const hajjNow = cfg.include_hajj ? dsf.revHajj || 0 : 0;
+  const totalRevenueNow = fwaNow * fwaUnitValue + rebuyNow + hajjNow;
+  const percent = revenueTarget > 0 ? totalRevenueNow / revenueTarget : 0;
 
-  const TARGET_500_FWA = targetFwa;
-  const TARGET_200_FWA = Math.floor(targetFwa * 0.75);
-
+  const tips = [];
   tips.push({
     done: false,
-    text: `Revenue saat ini ${formatIDR(totalRevenueNow)} dari ${fwaNow} FWA dan rebuy ${formatIDR(rebuyNow)}.`,
+    text: `Revenue saat ini ${formatIDR(totalRevenueNow)} (${Math.round(
+      percent * 100
+    )}%). FWA Units: ${fwaNow}/${targetFwa}.`,
   });
 
-  if (fwaNow >= TARGET_500_FWA && totalRevenueNow >= REVENUE_TARGET) {
+  const calc = hitungInsentif(dsf, cfg);
+  const tiers = tiersSortedDesc(cfg);
+
+  if (calc.incentive > 0) {
     tips.push({
       done: true,
-      text: "🎉 Target insentif 500 ribu sudah tercapai.",
+      text: `🎉 Saat ini berhak atas insentif ${formatIDR(calc.incentive)}.`,
     });
-    return tips;
   }
 
-  const needFwa20 = Math.max(0, TARGET_500_FWA - fwaNow);
-  const revenueIf20 = TARGET_500_FWA * FWA_UNIT_VALUE + rebuyNow;
-  const remainingIf20 = Math.max(0, REVENUE_TARGET - revenueIf20);
+  // Saran untuk naik ke tier yang lebih tinggi yang belum tercapai.
+  for (const tier of tiers) {
+    if ((tier.incentive || 0) <= calc.incentive) continue;
+    const fwaNeeded = Math.ceil(targetFwa * (tier.fwa_pct ?? 1));
+    const revNeeded = revenueTarget * (tier.rev_pct ?? 1);
+    const needFwa = Math.max(0, fwaNeeded - fwaNow);
+    const needRev = Math.max(0, revNeeded - totalRevenueNow);
 
-  if (needFwa20 > 0) {
-    if (remainingIf20 === 0) {
-      tips.push({
-        done: false,
-        text: `Untuk insentif 500 ribu cukup tambah ${needFwa20} FWA lagi sampai ${TARGET_500_FWA} FWA.`,
-      });
-    } else {
-      tips.push({
-        done: false,
-        text: `Tambah ${needFwa20} FWA lagi sampai ${TARGET_500_FWA} FWA, lalu masih perlu rebuy sekitar ${formatIDR(remainingIf20)}.`,
-      });
-    }
-  }
+    const parts = [];
+    if (needFwa > 0) parts.push(`tambah ${needFwa} unit FWA (jadi ${fwaNeeded})`);
+    if (needRev > 0) parts.push(`tambah revenue ${formatIDR(needRev)}`);
+    if (parts.length === 0) continue;
 
-  const fwaPureTarget = Math.ceil(REVENUE_TARGET / FWA_UNIT_VALUE);
-  const needFwaPure = Math.max(0, fwaPureTarget - fwaNow);
-
-  if (needFwaPure > 0) {
     tips.push({
       done: false,
-      text: `Alternatif tanpa rebuy: capai ${fwaPureTarget} FWA (tambah ${needFwaPure} FWA lagi).`,
+      text: `Untuk insentif ${formatIDR(tier.incentive)}: ${parts.join(
+        " dan "
+      )}.`,
     });
   }
 
-  const needFwa15 = Math.max(0, TARGET_200_FWA - fwaNow);
-  const revenueIf15 = TARGET_200_FWA * FWA_UNIT_VALUE + rebuyNow;
-  const remainingIf15 = Math.max(0, REVENUE_TARGET - revenueIf15);
-
-  if (fwaNow >= TARGET_200_FWA && totalRevenueNow >= REVENUE_TARGET) {
-    tips.push({
-      done: true,
-      text: "Target insentif 200 ribu sudah tercapai.",
-    });
-  } else {
-    if (needFwa15 > 0) {
-      if (remainingIf15 === 0) {
-        tips.push({
-          done: false,
-          text: `Untuk insentif 200 ribu cukup tambah ${needFwa15} FWA lagi sampai ${TARGET_200_FWA} FWA.`,
-        });
-      } else {
-        tips.push({
-          done: false,
-          text: `Tambah ${needFwa15} FWA lagi sampai ${TARGET_200_FWA} FWA lalu perlu rebuy sekitar ${formatIDR(remainingIf15)}.`,
-        });
-      }
-    } else {
-      const remainingRevenue = Math.max(0, REVENUE_TARGET - totalRevenueNow);
-      if (remainingRevenue > 0) {
-        tips.push({
-          done: false,
-          text: `Kamu hanya perlu tambahan rebuy sekitar ${formatIDR(remainingRevenue)} untuk dapat insentif 200 ribu.`,
-        });
-      }
+  // Kalau belum dapat insentif sama sekali, tegaskan syarat FWA minimum.
+  if (calc.incentive === 0 && tiers.length) {
+    const lowest = tiers[tiers.length - 1];
+    const fwaNeeded = Math.ceil(targetFwa * (lowest.fwa_pct ?? 1));
+    if (fwaNow < fwaNeeded) {
+      tips.push({
+        done: false,
+        text: `⚠️ FWA wajib minimal ${fwaNeeded} unit (kurang ${
+          fwaNeeded - fwaNow
+        }) agar insentif cair.`,
+      });
     }
   }
 

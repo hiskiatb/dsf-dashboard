@@ -8,27 +8,23 @@ import { X } from "lucide-react";
 import RankingDashboard from "./components/RankingDashboard";
 import Breadcrumb from "./components/Breadcrumb";
 import { Toaster } from "react-hot-toast";
-import GSECard from "./components/GSECard";
-// import MSISDNCompareCard from "./components/MSISDNCompareCard";
+import { KpiProvider } from "./KpiContext";
+import AdminKpiPanel from "./components/AdminKpiPanel";
 
 export default function App() {
 const [fwaData, setFwaData] = useState([]);
 const [adjData, setAdjData] = useState([]);
   const [dsfData, setDsfData] = useState([]);
-  const [gseData, setGseData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
 
   const [query, setQuery] = useState("");
   const [selectedDSF, setSelectedDSF] = useState(null);
   const [selectedTL, setSelectedTL] = useState(null);
-  const [selectedGSE, setSelectedGSE] = useState(null);
   const [error, setError] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const [pbiData, setPbiData] = useState([]);
-  const [selectedMonth, setSelectedMonth] = useState("202605"); // default March
- // const [selectedPBI, setSelectedPBI] = useState(null);
+  const [selectedMonth, setSelectedMonth] = useState("202606"); // default June 2026
 
 
   // ================================
@@ -45,11 +41,17 @@ const [adjData, setAdjData] = useState([]);
 
   const MONTH_FILES = {
 
+    "202606": {
+       dsf: "/DSF_202606.csv",
+       fwa: "/FWA_202606.csv",
+       adj: "/ADJ_FWA_202606.csv",
+       label: "June 2026",
+     },
+
     "202605": {
        dsf: "/DSF_202605.csv",
        fwa: "/FWA_202605.csv",
        adj: "/ADJ_FWA_202605.csv",
-       pbi: "/PBI_202605.csv",
        label: "May 2026",
      },
   
@@ -91,40 +93,29 @@ const [adjData, setAdjData] = useState([]);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const text = await res.text();
 
-      const lines = text.split("\n").filter((l) => l.trim() !== "");
-      const header = lines[0].split(";").map((h) => h.trim());
-      const firstData = lines[1].split(";").map((v) => v.trim());
-
-      const idxFwaIM3 = header.findIndex((h) => h === "DATA_FWA_IM3");
-      const idxFwa3ID = header.findIndex((h) => h === "DATA_FWA_3ID");
-      const idxRebuyIM3 = header.findIndex((h) => h === "DATA_REBUY_IM3");
-      const idxRebuy3ID = header.findIndex((h) => h === "DATA_REBUY_3ID");
-
-      const rawDates = {
-        DATA_FWA_IM3: firstData[idxFwaIM3]?.trim(),
-        DATA_FWA_3ID: firstData[idxFwa3ID]?.trim(),
-        DATA_REBUY_IM3: firstData[idxRebuyIM3]?.trim(),
-        DATA_REBUY_3ID: firstData[idxRebuy3ID]?.trim(),
-      };
+      // ================= PARSE CSV =================
+      // parseCSV menangani sel ber-tanda kutip / multi-baris (format Juni 2026),
+      // jadi tanggal data diambil dari baris hasil parse, bukan split manual.
+      const rows = parseCSV(text);
 
       function formatDate(raw) {
-        if (!raw) return "";
-        if (/^\d{8}$/.test(raw)) {
-          return `${raw.slice(0, 4)}-${raw.slice(4, 6)}-${raw.slice(6, 8)}`;
+        const s = String(raw ?? "").trim();
+        if (!s) return "";
+        if (/^\d{8}$/.test(s)) {
+          return `${s.slice(0, 4)}-${s.slice(4, 6)}-${s.slice(6, 8)}`;
         }
-        return raw;
+        return s;
       }
 
+      const firstRow = rows[0] || {};
       const formattedDates = {
-        DATA_FWA_IM3: formatDate(rawDates.DATA_FWA_IM3),
-        DATA_FWA_3ID: formatDate(rawDates.DATA_FWA_3ID),
-        DATA_REBUY_IM3: formatDate(rawDates.DATA_REBUY_IM3),
-        DATA_REBUY_3ID: formatDate(rawDates.DATA_REBUY_3ID),
+        DATA_FWA_IM3: formatDate(firstRow.DATA_FWA_IM3),
+        DATA_FWA_3ID: formatDate(firstRow.DATA_FWA_3ID),
+        DATA_REBUY_IM3: formatDate(firstRow.DATA_REBUY_IM3),
+        DATA_REBUY_3ID: formatDate(firstRow.DATA_REBUY_3ID),
       };
       setDataDates(formattedDates);
 
-      // ================= PARSE CSV =================
-      const rows = parseCSV(text);
       const mapped = rows.map(mapRowToDSF).filter((x) => x.idDsf);
 
       if (!alive) return;
@@ -143,87 +134,6 @@ const [adjData, setAdjData] = useState([]);
       const parsedADJ = parseCSV(textADJ);
       setAdjData(parsedADJ);
 
-      // ================= LOAD PBI =================
-      const resPBI = await fetch(files.pbi, { cache: "no-store" });
-      const textPBI = await resPBI.text();
-      const parsedPBI = parseCSV(textPBI);
-      setPbiData(parsedPBI);
-
-     // ================= LOAD GSE =================
-const resGSE = await fetch("/GSE_202603.csv", { cache: "no-store" });
-const textGSE = await resGSE.text();
-
-const get = (obj, key) => {
-  const cleanKey = Object.keys(obj).find(
-    (k) =>
-      k.replace(/\s+/g, "").toUpperCase() ===
-      key.replace(/\s+/g, "").toUpperCase()
-  );
-  return cleanKey ? obj[cleanKey] : undefined;
-};
-
-const toNumber = (val) => {
-  if (val === null || val === undefined) return 0;
-
-  let str = String(val).trim();
-  if (str === "" || str === "-" || str === " - ") return 0;
-
-  str = str.replace(/[^\d.,-]/g, "");
-
-  if (str.includes(",")) {
-    str = str.replace(/\./g, "");
-    str = str.replace(",", ".");
-  }
-
-  const num = Number(str);
-  return isNaN(num) ? 0 : num;
-};
-
-// ✅ PARSE SEKALI SAJA
-const rawGSE = parseCSV(textGSE);
-
-console.log("RAW GSE:", rawGSE[0]);
-
-const parsedGSE = rawGSE.map((x) => {
-  const actualOno = toNumber(get(x, "ACTUAL_ONO"));
-  const targetOno = toNumber(get(x, "TARGET_ONO"));
-
-  const actualGa = toNumber(get(x, "ACTUAL_GA"));
-  const targetGa = toNumber(get(x, "TARGET_GA"));
-
-  // ✅ HITUNG PERSENTASE MANUAL
-  const percentOno =
-    targetOno > 0 ? (actualOno / targetOno) * 100 : 0;
-
-  const percentGa =
-    targetGa > 0 ? (actualGa / targetGa) * 100 : 0;
-
-  return {
-    idGse: get(x, "ID_GSE"),
-    namaGse: get(x, "NAMA_GSE"),
-    region: get(x, "REGION"),
-    branch: get(x, "BRANCH"),
-    microCluster: get(x, "MICRO_CLUSTER"),
-    brand: get(x, "BRAND"),
-
-    sellIn4G: toNumber(get(x, "SELL-IN_4G")),
-    sellIn5G: toNumber(get(x, "SELL-IN_5G")),
-    ga4G: toNumber(get(x, "GA_4G")),
-    ga5G: toNumber(get(x, "GA_5G")),
-
-    actualOno,
-    targetOno,
-    percentOno, // ✅ hasil hitung ulang
-
-    actualGa,
-    targetGa,
-    percentGa, // ✅ hasil hitung ulang
-
-    lastGaDate: get(x, "LAST_GA_DT_FWA"),
-  };
-});
-
-setGseData(parsedGSE);
       // ================= REFRESH SELECTED DSF / TL =================
       if (selectedDSF) {
         const updatedDSF = mapped.find(d => d.idDsf === selectedDSF.idDsf);
@@ -284,24 +194,6 @@ const suggestions = useMemo(() => {
   const q = query.trim().toLowerCase();
   if (!q) return [];
 
-  // const pbiMatches = pbiData
-  //   .filter((row) =>
-  //     (row.MSISDN || "").toLowerCase().includes(q)
-  //   )
-  //   .map((row) => ({
-  //     type: "PBI",
-  //     data: row,
-  //   }));
-
-  // const rawMatches = fwaData
-  // .filter((row) =>
-  //   (row.MSISDN || "").toLowerCase().includes(q)
-  // )
-  // .map((row) => ({
-  //   type: "RAW",
-  //   data: row,
-  // }));
-
     const dsfMatches = dsfData
   .filter(
     (x) =>
@@ -310,17 +202,6 @@ const suggestions = useMemo(() => {
   )
   .map((x) => ({
     type: "DSF",
-    data: x,
-  }));
-
-  const gseMatches = gseData
-  .filter(
-    (x) =>
-      (x.idGse || "").toLowerCase().includes(q) ||
-      (x.namaGse || "").toLowerCase().includes(q)
-  )
-  .map((x) => ({
-    type: "GSE",
     data: x,
   }));
 
@@ -366,15 +247,11 @@ const suggestions = useMemo(() => {
   });
 
 return [
-  // ...pbiMatches,
-  // ...rawMatches,
   ...tlMap.values(),
   ...dsfMatches,
-  ...gseMatches,
-
 ].slice(0, 8);
 
-}, [query, dsfData, gseData]);
+}, [query, dsfData]);
 
 function onSearch() {
   setShowSuggestions(false);
@@ -397,19 +274,6 @@ function onSearch() {
     setError("");
     return;
   }
-
-  // ✅ 0. Exact GSE ID
-const foundGSE = gseData.find(
-  (x) => (x.idGse || "").toLowerCase() === q
-);
-
-if (foundGSE) {
-  setSelectedGSE(foundGSE);
-  setSelectedDSF(null);
-  setSelectedTL(null);
-  setError("");
-  return;
-}
 
   // ✅ 2. Exact DSF Name
   const foundDSFByName = dsfData.find(
@@ -462,17 +326,6 @@ if (foundGSE) {
 
 function onPick(item) {
 
-  // ✅ HANDLE GSE (TARUH PALING ATAS)
-  if (item.type === "GSE") {
-    setSelectedGSE(item.data);
-    setSelectedDSF(null);
-    setSelectedTL(null);
-    setQuery(item.data.idGse);
-    setShowSuggestions(false);
-    setError("");
-    return;
-  }
-
   // ================= TL =================
   if (item.type === "TL") {
     const dsfsUnderTL = dsfData.filter(
@@ -486,29 +339,13 @@ function onPick(item) {
     });
 
     setSelectedDSF(null);
-//    setSelectedPBI(null);
     setQuery(item.data.namaTl);
-  }
-
-  // ================= MSISDN (PBI / RAW) =================
-  else if (
-    item.type === "PBI" ||
-item.type === "RAW"
-  ) {
-    // setSelectedPBI({
-    //   msisdn: item.data.MSISDN,
-    // });
-
-    setSelectedDSF(null);
-    setSelectedTL(null);
-    setQuery(item.data.MSISDN);
   }
 
   // ================= DSF =================
   else {
     setSelectedDSF(item.data);
     setSelectedTL(null);
-  //  setSelectedPBI(null);
     setQuery(item.data.idDsf);
   }
 
@@ -518,7 +355,7 @@ item.type === "RAW"
 
 
   return (
-      <>
+      <KpiProvider month={selectedMonth}>
     <Toaster position="top-right" />
     <div className="page">
       <div className="bg-blur a" />
@@ -527,84 +364,55 @@ item.type === "RAW"
       <div className="container">
         
 
-<div className="mb-5 pb-4 border-b border-gray-200">
+<header className="mb-5 sm:mb-6">
+  <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
 
-<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    {/* LEFT: identity */}
+    <div className="min-w-0">
+      <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">
+        <span className="inline-block h-2 w-2 rounded-full bg-brand-500" />
+        SPM Sumatera · Indosat
+      </div>
+      <h1 className="mt-1.5 text-[26px] leading-[1.1] sm:text-4xl font-extrabold tracking-tight text-ink-900">
+        DSF Achievement Tracker
+      </h1>
 
-{/* LEFT SIDE */}
-<div>
+      {/* Data freshness chips */}
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-white px-3 py-1 text-xs font-medium text-ink-600">
+          <span className="h-1.5 w-1.5 rounded-full bg-brand-500" />
+          IM3 <span className="font-bold text-ink-900">{dataDates.DATA_FWA_IM3 || "N/A"}</span>
+        </span>
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-white px-3 py-1 text-xs font-medium text-ink-600">
+          <span className="h-1.5 w-1.5 rounded-full bg-success-500" />
+          3ID <span className="font-bold text-ink-900">{dataDates.DATA_FWA_3ID || "N/A"}</span>
+        </span>
+      </div>
+    </div>
 
-<h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-  DSF Achievement Tracker
-</h1>
-
-<div className="mt-2 flex items-center text-sm text-gray-600">
-
-<div className="flex items-center gap-1">
-  <span className="text-gray-500 font-medium">
-    Data IM3:
-  </span>
-  <span className="font-semibold text-gray-900">
-    {dataDates.DATA_FWA_IM3 || "N/A"}
-  </span>
-</div>
-
-<div className="mx-3 h-4 w-px bg-gray-300" />
-
-<div className="flex items-center gap-1">
-  <span className="text-gray-500 font-medium">
-    Data 3ID:
-  </span>
-  <span className="font-semibold text-gray-900">
-    {dataDates.DATA_FWA_3ID || "N/A"}
-  </span>
-</div>
-
-</div>
-
-</div>
-
-{/* RIGHT SIDE (MONTH SWITCHER) */}
-<div className="flex flex-col items-start sm:items-end gap-2 w-full sm:w-auto">
-
-  <div className="text-xs text-gray-500 font-medium">
-    Achievement Month
-  </div>
-
-  <div className="relative w-full sm:w-56">
-
-    <select
-      value={selectedMonth}
-      onChange={(e) => setSelectedMonth(e.target.value)}
-      className="
-        w-full appearance-none
-        bg-white border border-gray-200
-        rounded-xl px-4 py-2.5 pr-10
-        text-sm font-medium text-gray-700
-        shadow-sm
-        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
-        transition
-      "
-    >
-      {Object.entries(MONTH_FILES).map(([key, m]) => (
-        <option key={key} value={key}>
-          {m.label}
-        </option>
-      ))}
-    </select>
-
-    {/* ICON DROPDOWN */}
-    <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-400">
-      ▼
+    {/* RIGHT: month switcher */}
+    <div className="w-full sm:w-auto">
+      <label className="block text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-1.5 sm:text-right">
+        Bulan Pencapaian
+      </label>
+      <div className="relative w-full sm:w-56">
+        <select
+          value={selectedMonth}
+          onChange={(e) => setSelectedMonth(e.target.value)}
+          className="w-full appearance-none bg-white border border-ink-200 rounded-xl px-4 py-2.5 pr-10 text-sm font-semibold text-ink-800 shadow-soft focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition"
+        >
+          {Object.entries(MONTH_FILES).map(([key, m]) => (
+            <option key={key} value={key}>{m.label}</option>
+          ))}
+        </select>
+        <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink-400 text-[10px]">▼</div>
+      </div>
     </div>
 
   </div>
 
-</div>
-
-</div>
-
-</div>
+  <div className="mt-4 h-px w-full bg-gradient-to-r from-brand-200 via-ink-200 to-transparent" />
+</header>
 
 
         {loadError ? <div className="card error">{loadError}</div> : null}
@@ -643,7 +451,6 @@ item.type === "RAW"
                     className="clear-btn"
                     onClick={() => {
                       setQuery("");
-                      setSelectedGSE(null)
                       setSelectedDSF(null);
                       setSelectedTL(null);
                       setError("");
@@ -677,52 +484,6 @@ item.type === "RAW"
               >
                 <div className="suggestions-title">Suggestions</div>
                 {suggestions.map((item, index) => {
-
-if (
-  item.type === "PBI" ||
-item.type === "RAW"
-) {
-  return (
-    <button
-      key={`${item.type}-${item.data.MSISDN}-${index}`}
-      className="suggestion-item"
-      onClick={() => onPick(item)}
-    >
-      <div className="suggestion-top">
-        <span className="suggestion-name">
-          {item.data.MSISDN}
-        </span>
-        <Pill>{item.type}</Pill>
-      </div>
-
-      <div className="suggestion-sub">
-        GA: {item.data.GA_DATE || item.data.GA_DT || "-"}
-      </div>
-    </button>
-  );
-}
-
-// ✅ GSE SUGGESTION (TAMBAHKAN DI SINI)
-if (item.type === "GSE") {
-  return (
-    <button
-      key={`GSE-${item.data.idGse}-${index}`}
-      className="suggestion-item"
-      onClick={() => onPick(item)}
-    >
-      <div className="suggestion-top">
-        <span className="suggestion-name">
-          {item.data.namaGse}
-        </span>
-        <Pill>GSE</Pill>
-      </div>
-
-      <div className="suggestion-sub">
-        {item.data.idGse} • {item.data.region || "-"}
-      </div>
-    </button>
-  );
-}
 
   if (item.type === "TL") {
     return (
@@ -803,7 +564,6 @@ if (item.type === "GSE") {
     onBackRanking={() => {
       setSelectedDSF(null);
       setSelectedTL(null);
-      setSelectedGSE(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }}
     onBackTL={() => {
@@ -814,28 +574,13 @@ if (item.type === "GSE") {
 )}
 
 <AnimatePresence mode="wait">
-  {/* {selectedPBI ? (
-  <MSISDNCompareCard
-    msisdn={selectedPBI.msisdn}
-    pbiData={pbiData}
-    fwaData={fwaData}
-  />
-  ) : */}
-
-{selectedGSE ? (
-  <GSECard
-    gse={selectedGSE}
-    dataDates={dataDates}
-    fwaData={fwaData}
-    adjData={adjData}
-  />
-) : selectedDSF ? (
+{selectedDSF ? (
 <DSFCard
   dsf={selectedDSF}
   dataDates={dataDates}
   fwaData={fwaData}
   adjData={adjData}
-    month={selectedMonth} 
+    month={selectedMonth}
 
 />
   ) : selectedTL ? (
@@ -845,7 +590,6 @@ if (item.type === "GSE") {
       tlName={selectedTL.tlName}
       dsfs={selectedTL.dsfs}
       dataDates={dataDates}
-      selectedMonth={selectedMonth}
       onSelectDSF={(dsf) => {
         window.scrollTo({ top: 0, behavior: "smooth" });
         setSelectedDSF(dsf);
@@ -862,8 +606,7 @@ if (item.type === "GSE") {
     >
       <RankingDashboard
         dsfData={dsfData}
-        dataDates={dataDates} 
-        month={selectedMonth} // <--- TAMBAHKAN BARIS INI
+        dataDates={dataDates}
         onSelectDSF={(dsf) => {
           window.scrollTo({ top: 0, behavior: "smooth" });
           setSelectedDSF(dsf);
@@ -897,6 +640,7 @@ if (item.type === "GSE") {
 </footer>
         </div>
             </div>
-    </>
+    <AdminKpiPanel currentMonth={selectedMonth} monthFiles={MONTH_FILES} />
+    </KpiProvider>
   );
 }
