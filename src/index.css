@@ -88,6 +88,9 @@ html, body {
   @screen md {
     .container { padding: 32px 24px 64px; }
   }
+  /* Lebih luas di desktop, tetap responsif (di bawah lebar ini tetap full-width). */
+  @screen xl  { .container { max-width: 1536px; padding-left: 32px; padding-right: 32px; } }
+  @screen 2xl { .container { max-width: 1800px; padding-left: 40px; padding-right: 40px; } }
 
   .bg-blur {
     @apply absolute rounded-full pointer-events-none;

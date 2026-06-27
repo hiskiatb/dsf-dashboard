@@ -168,6 +168,18 @@ export default function CopyImageButton({
     clone.style.width = "max-content";
     clone.style.minWidth = "100%";
     clone.style.display = "block";
+    // Tampilkan tabel penuh tanpa scrollbar / pemotongan saat di-export.
+    clone.style.overflow = "visible";
+    clone.style.overflowX = "visible";
+    clone.style.overflowY = "visible";
+    clone.style.maxWidth = "none";
+    clone.style.maxHeight = "none";
+    clone.querySelectorAll("*").forEach((el) => {
+      el.style.overflow = "visible";
+      el.style.overflowX = "visible";
+      el.style.overflowY = "visible";
+      el.style.maxHeight = "none";
+    });
 
     wrapper.appendChild(clone);
 

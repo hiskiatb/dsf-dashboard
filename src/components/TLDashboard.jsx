@@ -33,11 +33,13 @@ export default function TLDashboard({
   const lowTier = tiersDesc[tiersDesc.length - 1] || { fwa_pct: 0.75, rev_pct: 1 };
 
   const totalFwa = dsfs.reduce((a, b) => a + (b.fwaUnits || 0), 0);
+  const totalRevFwa = dsfs.reduce((a, b) => a + (b.revFwa || 0), 0);
   const totalRebuy = dsfs.reduce((a, b) => a + (b.rebuyRevenue || 0), 0);
   const totalHajj = kpi.include_hajj
     ? dsfs.reduce((a, b) => a + (b.revHajj || 0), 0)
     : 0;
-  const totalRevenue = totalFwa * fwaUnitValue + totalRebuy + totalHajj;
+  const fwaRevenue = totalRevFwa > 0 ? totalRevFwa : totalFwa * fwaUnitValue;
+  const totalRevenue = fwaRevenue + totalRebuy + totalHajj;
 
   const totalTargetFwa = dsfs.reduce(
     (sum, d) => sum + (d.targetFwa || targetPerDsf),
@@ -170,8 +172,9 @@ export default function TLDashboard({
                   <th className="text-right">FWA Units</th>
                   <th className="text-right">Target</th>
                   <th className="text-right">Rebuy FWA</th>
-                  <th className="text-right">Rebuy Haji</th>
+                  {kpi.include_hajj && <th className="text-right">Rebuy Haji</th>}
                   <th className="text-right">Total Revenue</th>
+                  <th className="text-right">Insentif</th>
                   <th className="text-center">Status</th>
                 </tr>
               </thead>
@@ -195,9 +198,20 @@ export default function TLDashboard({
                       <td className="text-right font-semibold">{d.fwaUnits}</td>
                       <td className="text-right">{dsfTarget}</td>
                       <td className="text-right">{formatIDR(d.rebuyRevenue)}</td>
-                      <td className="text-right">{formatIDR(d.revHajj || 0)}</td>
+                      {kpi.include_hajj && <td className="text-right">{formatIDR(d.revHajj || 0)}</td>}
                       <td className="text-right font-bold text-ink-900">
                         {formatIDR(d.calc.totalRevenue)}
+                      </td>
+                      <td
+                        className={`text-right font-bold whitespace-nowrap ${
+                          d.calc.incentive === 0
+                            ? "text-danger-700"
+                            : d.calc.incentive >= 500000
+                            ? "text-success-700"
+                            : "text-warning-700"
+                        }`}
+                      >
+                        {formatIDR(d.calc.incentive)}
                       </td>
                       <td className="text-center whitespace-nowrap">
                         <Pill variant={eligible ? "success" : "danger"}>

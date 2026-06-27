@@ -10,6 +10,8 @@ import Breadcrumb from "./components/Breadcrumb";
 import { Toaster } from "react-hot-toast";
 import { KpiProvider } from "./KpiContext";
 import AdminKpiPanel from "./components/AdminKpiPanel";
+import { fetchDsfMonth } from "./supabaseData";
+import { isAdmin as checkAdmin } from "./supabaseAuth";
 
 export default function App() {
 const [fwaData, setFwaData] = useState([]);
@@ -24,6 +26,8 @@ const [adjData, setAdjData] = useState([]);
   const [error, setError] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
 
+  const [admin, setAdmin] = useState(checkAdmin());
+  const [dataVersion, setDataVersion] = useState(0);
   const [selectedMonth, setSelectedMonth] = useState("202606"); // default June 2026
 
 
@@ -88,6 +92,45 @@ const [adjData, setAdjData] = useState([]);
 
       const files = MONTH_FILES[selectedMonth];
 
+      // ================= COBA SUPABASE DULU =================
+      const sb = await fetchDsfMonth(selectedMonth);
+      if (sb) {
+        if (!alive) return;
+        setDsfData(sb.rows);
+        setDataDates(sb.dates);
+
+        // FWA/ADJ dari CSV hanya sebagai fallback (DSFCard utamakan Supabase).
+        if (files) {
+          try {
+            const rf = await fetch(files.fwa, { cache: "no-store" });
+            setFwaData(rf.ok ? parseCSV(await rf.text()) : []);
+            const ra = await fetch(files.adj, { cache: "no-store" });
+            setAdjData(ra.ok ? parseCSV(await ra.text()) : []);
+          } catch {
+            setFwaData([]); setAdjData([]);
+          }
+        } else {
+          setFwaData([]); setAdjData([]);
+        }
+
+        if (selectedDSF) {
+          const u = sb.rows.find((d) => d.idDsf === selectedDSF.idDsf);
+          setSelectedDSF(u || null);
+        }
+        if (selectedTL) {
+          const us = sb.rows.filter((d) => d.idTl === selectedTL.tlId);
+          setSelectedTL(us.length ? { tlId: selectedTL.tlId, tlName: us[0].namaTl, dsfs: us } : null);
+        }
+        return;
+      }
+
+      // ================= FALLBACK CSV =================
+      if (!files) {
+        throw new Error(
+          `Data bulan ${selectedMonth} belum tersedia (belum di-upload ke Supabase & tidak ada file CSV).`
+        );
+      }
+
       // ================= LOAD DSF =================
       const res = await fetch(files.dsf, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -116,7 +159,25 @@ const [adjData, setAdjData] = useState([]);
       };
       setDataDates(formattedDates);
 
-      const mapped = rows.map(mapRowToDSF).filter((x) => x.idDsf);
+      const mapped = rows.map((r, i) => mapRowToDSF(r, i)).filter((x) => x.idDsf);
+
+      // ===== VALIDASI FORMAT BULAN =====
+      if (rows.length === 0) {
+        throw new Error("File DSF kosong atau format tidak dikenal.");
+      }
+      const hasIdCol = ["ID_DSF", "ID_DSF_IM3", "ID_DSF_3ID"].some(
+        (k) => k in firstRow
+      );
+      if (!hasIdCol || !("TARGET_FWA" in firstRow)) {
+        throw new Error(
+          `Format kolom bulan ${files.label || selectedMonth} tidak sesuai (kolom ID_DSF / TARGET_FWA tidak ditemukan).`
+        );
+      }
+      if (mapped.length === 0) {
+        throw new Error(
+          `Tidak ada DSF terbaca dari ${files.label || selectedMonth}. Kemungkinan format kolom berubah.`
+        );
+      }
 
       if (!alive) return;
 
@@ -124,15 +185,13 @@ const [adjData, setAdjData] = useState([]);
 
       // ================= LOAD FWA =================
       const resFWA = await fetch(files.fwa, { cache: "no-store" });
-      const textFWA = await resFWA.text();
-      const parsedFWA = parseCSV(textFWA);
-      setFwaData(parsedFWA);
+      const textFWA = resFWA.ok ? await resFWA.text() : "";
+      setFwaData(parseCSV(textFWA));
 
       // ================= LOAD ADJ =================
       const resADJ = await fetch(files.adj, { cache: "no-store" });
-      const textADJ = await resADJ.text();
-      const parsedADJ = parseCSV(textADJ);
-      setAdjData(parsedADJ);
+      const textADJ = resADJ.ok ? await resADJ.text() : "";
+      setAdjData(parseCSV(textADJ));
 
       // ================= REFRESH SELECTED DSF / TL =================
       if (selectedDSF) {
@@ -155,7 +214,8 @@ const [adjData, setAdjData] = useState([]);
 
     } catch (e) {
       if (!alive) return;
-      setLoadError(`Failed to load CSV. (${e?.message || "error"})`);
+      setDsfData([]);
+      setLoadError(e?.message || "Gagal memuat data bulan ini.");
     } finally {
       if (!alive) return;
       setLoading(false);
@@ -166,7 +226,7 @@ const [adjData, setAdjData] = useState([]);
   return () => {
     alive = false;
   };
-}, [selectedMonth]);
+}, [selectedMonth, dataVersion]);
 
 // ================================
 // SYNC SELECTED TL WHEN DATA CHANGES
@@ -226,11 +286,15 @@ const suggestions = useMemo(() => {
         const has3ID = dsfsUnder.some((d) =>
           (d.brand || "").toLowerCase().includes("3id")
         );
+        const hasHybrid = dsfsUnder.some((d) =>
+          (d.brand || "").toLowerCase().includes("hybrid")
+        );
 
-        let tlBrandLabel = "";
-        if (hasIM3 && has3ID) tlBrandLabel = "TL IM3 & 3ID";
-        else if (hasIM3) tlBrandLabel = "TL IM3";
-        else if (has3ID) tlBrandLabel = "TL 3ID";
+        const brandParts = [];
+        if (hasIM3) brandParts.push("IM3");
+        if (has3ID) brandParts.push("3ID");
+        if (hasHybrid) brandParts.push("HYBRID");
+        const tlBrandLabel = brandParts.length ? "TL " + brandParts.join(" & ") : "";
 
         tlMap.set(x.idTl, {
           type: "TL",
@@ -369,8 +433,8 @@ function onPick(item) {
 
     {/* LEFT: identity */}
     <div className="min-w-0">
-      <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">
-        <span className="inline-block h-2 w-2 rounded-full bg-brand-500" />
+      <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-success-700">
+        <span className="inline-block h-2 w-2 rounded-full bg-success-500" />
         SPM Sumatera · Indosat
       </div>
       <h1 className="mt-1.5 text-[26px] leading-[1.1] sm:text-4xl font-extrabold tracking-tight text-ink-900">
@@ -380,11 +444,11 @@ function onPick(item) {
       {/* Data freshness chips */}
       <div className="mt-3 flex flex-wrap items-center gap-2">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-white px-3 py-1 text-xs font-medium text-ink-600">
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-500" />
+          <span className="h-1.5 w-1.5 rounded-full bg-warning-500" />
           IM3 <span className="font-bold text-ink-900">{dataDates.DATA_FWA_IM3 || "N/A"}</span>
         </span>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-white px-3 py-1 text-xs font-medium text-ink-600">
-          <span className="h-1.5 w-1.5 rounded-full bg-success-500" />
+          <span className="h-1.5 w-1.5 rounded-full bg-brand-500" />
           3ID <span className="font-bold text-ink-900">{dataDates.DATA_FWA_3ID || "N/A"}</span>
         </span>
       </div>
@@ -415,7 +479,15 @@ function onPick(item) {
 </header>
 
 
-        {loadError ? <div className="card error">{loadError}</div> : null}
+        {loadError ? (
+          <div className="card error flex items-center gap-3">
+            <span className="text-lg">⚠️</span>
+            <div>
+              <div className="font-bold">Gagal memuat data</div>
+              <div className="text-sm">{loadError}</div>
+            </div>
+          </div>
+        ) : null}
 
         <motion.div
           className="card search-card"
@@ -512,10 +584,14 @@ function onPick(item) {
   // ✅ FIX DISINI
   const dsf = item.data;
 
-  const brandLabel =
-    (dsf.brand || "").toLowerCase().includes("im3")
-      ? "DSF IM3"
-      : "DSF 3ID";
+  const _b = (dsf.brand || "").toLowerCase();
+  const brandLabel = _b.includes("hybrid")
+    ? "DSF HYBRID"
+    : _b.includes("im3")
+    ? "DSF IM3"
+    : _b.includes("3id")
+    ? "DSF 3ID"
+    : "DSF";
 
   return (
     <button
@@ -556,8 +632,23 @@ function onPick(item) {
           </AnimatePresence>
         </motion.div>
 
+{/* ================= Loading skeleton ================= */}
+{loading && (
+  <div className="card mt-6">
+    <div className="flex items-center gap-3 text-ink-600">
+      <span className="inline-block h-5 w-5 rounded-full border-2 border-ink-200 border-t-brand-600 animate-spin" />
+      <span className="text-sm font-semibold">Memuat data pencapaian…</span>
+    </div>
+    <div className="mt-5 space-y-3 animate-pulse">
+      <div className="h-20 rounded-xl bg-ink-100" />
+      <div className="h-8 w-1/3 rounded-lg bg-ink-100" />
+      <div className="h-64 rounded-xl bg-ink-100" />
+    </div>
+  </div>
+)}
+
 {/* ================= Breadcrumb ================= */}
-{(selectedTL || selectedDSF) && (
+{!loading && !loadError && (selectedTL || selectedDSF) && (
   <Breadcrumb
     selectedTL={selectedTL}
     selectedDSF={selectedDSF}
@@ -573,15 +664,17 @@ function onPick(item) {
   />
 )}
 
+{!loading && !loadError && (
 <AnimatePresence mode="wait">
 {selectedDSF ? (
 <DSFCard
+  key={`${selectedDSF.idDsf}-${selectedMonth}-${admin}`}
   dsf={selectedDSF}
   dataDates={dataDates}
   fwaData={fwaData}
   adjData={adjData}
-    month={selectedMonth}
-
+  month={selectedMonth}
+  isAdmin={admin}
 />
   ) : selectedTL ? (
     <TLDashboard
@@ -607,6 +700,7 @@ function onPick(item) {
       <RankingDashboard
         dsfData={dsfData}
         dataDates={dataDates}
+        month={selectedMonth}
         onSelectDSF={(dsf) => {
           window.scrollTo({ top: 0, behavior: "smooth" });
           setSelectedDSF(dsf);
@@ -621,6 +715,7 @@ function onPick(item) {
     </motion.div>
   )}
 </AnimatePresence>
+)}
 
 {/* FOOTER SECTION */}
 {/* mt-8 membuat jarak atas lebih rapat (2rem), mb-8 memberikan ruang di bawah halaman */}
@@ -640,7 +735,12 @@ function onPick(item) {
 </footer>
         </div>
             </div>
-    <AdminKpiPanel currentMonth={selectedMonth} monthFiles={MONTH_FILES} />
+    <AdminKpiPanel
+      currentMonth={selectedMonth}
+      monthFiles={MONTH_FILES}
+      onAuthChange={setAdmin}
+      onDataChanged={() => setDataVersion((v) => v + 1)}
+    />
     </KpiProvider>
   );
 }

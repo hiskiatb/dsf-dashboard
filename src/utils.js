@@ -115,15 +115,29 @@ export function clamp(n, min = 0, max = 1) {
 }
 
 
-export function mapRowToDSF(row) {
+// Nilai placeholder/sampah yang TIDAK boleh dipakai sebagai id.
+const ID_JUNK = new Set(["", "#N/A", "#REF!", "0", "-", "VACANT", "NULL", "NA"]);
+function pickId(...vals) {
+  for (const v of vals) {
+    const s = String(v ?? "").trim();
+    if (!ID_JUNK.has(s.toUpperCase())) return s;
+  }
+  return "";
+}
+
+export function mapRowToDSF(row, index) {
   const brand = row.BRAND || "-";
-  // Sejak Juni 2026 kolom ID_DSF dipecah jadi ID_DSF_IM3 & ID_DSF_3ID
-  // (hanya salah satu terisi sesuai brand). Ambil yang pertama tidak kosong.
-  const idDsf =
-    [row.ID_DSF, row.ID_DSF_IM3, row.ID_DSF_3ID]
-      .map((v) => String(v ?? "").trim())
-      .find((v) => v !== "") || "";
-  const namaDsf = row.NAMA_DSF || "-";
+  // Sejak Juni 2026: kolom ID_DSF dipecah jadi ID_DSF_IM3 & ID_DSF_3ID, dan
+  // muncul brand HYBRID. Kolom id bisa berisi sampah (#N/A / 0 / VACANT).
+  // Ambil id asli pertama: brand-spesifik dulu (cocok utk join FWA), lalu
+  // ID_STAFFINC sebagai cadangan unik per orang.
+  const realId = pickId(row.ID_DSF, row.ID_DSF_IM3, row.ID_DSF_3ID, row.ID_STAFFINC);
+  const rawNama = String(row.NAMA_DSF ?? "").trim();
+  const isVacant = rawNama.toUpperCase() === "VACANT";
+  // Slot kosong (VACANT / tanpa id asli) TETAP DIHITUNG: diberi id sintetis
+  // unik per baris agar tidak bentrok antar-slot dan tetap masuk ke total.
+  const idDsf = realId && !isVacant ? realId : `VACANT-${index ?? 0}`;
+  const namaDsf = realId && !isVacant ? rawNama || "-" : rawNama || "VACANT";
   const mc = row.MC || "-";
   const branch = row.BRANCH || "-";
   const region = row.REGION || "-";
@@ -134,6 +148,10 @@ export function mapRowToDSF(row) {
   const rebuyRevenue = toNumberSafe(row.REV_REBUY || 0);
   const actualHajj = toNumberSafe(row.ACTUAL_HAJJ || 0);
   const revHajj = toNumberSafe(row.REV_HAJJ || 0);
+  // Revenue FWA langsung dari CSV (sudah memperhitungkan FWA 5G @Rp1,75jt).
+  // Dipakai sebagai sumber kebenaran; fallback ke fwaUnits*nilai bila kosong.
+  const revFwa = toNumberSafe(row.REV_FWA || 0);
+  const totalRevenueCsv = toNumberSafe(row.TOTAL_REVENUE || 0);
   const dataFwaIM3 = row.DATA_FWA_IM3 || "";
   const dataFwa3ID = row.DATA_FWA_3ID || "";
   const dataRebuyIM3 = row.DATA_REBUY_IM3 || "";
@@ -153,6 +171,8 @@ export function mapRowToDSF(row) {
     rebuyRevenue,
     actualHajj,
     revHajj,
+    revFwa,
+    totalRevenueCsv,
     targetFwa,
     dataFwaIM3,
     dataFwa3ID,
@@ -197,7 +217,9 @@ export function hitungInsentif(dsf, kpi) {
   const revenueTarget = cfg.revenue_target || 0;
   const fwaUnitValue = cfg.fwa_unit_value || 0;
 
-  const fwaRevenue = dsf.fwaUnits * fwaUnitValue;
+  // Utamakan REV_FWA dari CSV (akurat utk FWA 5G); fallback hitung flat.
+  const fwaRevenue =
+    dsf.revFwa && dsf.revFwa > 0 ? dsf.revFwa : dsf.fwaUnits * fwaUnitValue;
   const hajj = cfg.include_hajj ? dsf.revHajj || 0 : 0;
   const totalRevenue = fwaRevenue + dsf.rebuyRevenue + hajj;
 
@@ -237,7 +259,9 @@ export function buildTips(dsf, kpi) {
   const fwaNow = dsf.fwaUnits;
   const rebuyNow = dsf.rebuyRevenue;
   const hajjNow = cfg.include_hajj ? dsf.revHajj || 0 : 0;
-  const totalRevenueNow = fwaNow * fwaUnitValue + rebuyNow + hajjNow;
+  const fwaRevNow =
+    dsf.revFwa && dsf.revFwa > 0 ? dsf.revFwa : fwaNow * fwaUnitValue;
+  const totalRevenueNow = fwaRevNow + rebuyNow + hajjNow;
   const percent = revenueTarget > 0 ? totalRevenueNow / revenueTarget : 0;
 
   const tips = [];

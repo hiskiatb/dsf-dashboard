@@ -1,8 +1,18 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { useRef } from "react";
 import CopyImageButton from "./CopyImageButton";
 import { hitungInsentif } from "../utils";
 import { useKpi } from "../KpiContext";
+import { fetchManpower } from "../supabaseData";
+
+// Normalisasi brand: IM3 / 3ID / HYBRID (HYBRID mulai periode Juni 2026).
+function normalizeBrand(b) {
+  const v = String(b || "").toLowerCase();
+  if (v.includes("hybrid")) return "HYBRID";
+  if (v.includes("im3")) return "IM3";
+  if (v.includes("3id")) return "3ID";
+  return String(b || "").toUpperCase();
+}
 
 function normalizeRegion(region) {
   if (!region) return "Unknown";
@@ -62,7 +72,59 @@ const GROUP_FIELD = {
   TL: "tlName",
 };
 
-export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL, dataDates }) {
+// Tema aksen Leaderboard mengikuti brand terpilih:
+//   default / HYBRID / tanpa filter -> teal (success)
+//   IM3  -> kuning (warning)
+//   3ID  -> magenta (brand)
+const THEMES = {
+  teal: {
+    eyebrow: "text-success-700", headerGrad: "from-success-50/70 to-white",
+    groupGrad: "from-success-600 to-success-500",
+    sub: "bg-success-50 text-success-900 border-success-300", subSticky: "bg-success-50",
+    subText: "text-success-900", badge: "bg-success-600 text-white",
+    filterActive: "border-success-300 bg-success-50 text-success-700", count: "text-success-700",
+    check: "accent-success-600", btn: "bg-success-600 hover:bg-success-700",
+    sortActive: "bg-success-600 text-white border-success-600",
+    rowHover: "hover:bg-success-50/50", bar: "bg-success-500",
+  },
+  yellow: {
+    eyebrow: "text-warning-700", headerGrad: "from-warning-50/70 to-white",
+    groupGrad: "from-warning-700 to-warning-600",
+    sub: "bg-warning-50 text-warning-800 border-warning-300", subSticky: "bg-warning-50",
+    subText: "text-warning-800", badge: "bg-warning-600 text-white",
+    filterActive: "border-warning-300 bg-warning-50 text-warning-800", count: "text-warning-700",
+    check: "accent-warning-500", btn: "bg-warning-600 hover:bg-warning-700",
+    sortActive: "bg-warning-600 text-white border-warning-600",
+    rowHover: "hover:bg-warning-50/60", bar: "bg-warning-500",
+  },
+  magenta: {
+    eyebrow: "text-brand-600", headerGrad: "from-brand-50/60 to-white",
+    groupGrad: "from-brand-600 to-brand-500",
+    sub: "bg-brand-50 text-brand-900 border-brand-300", subSticky: "bg-brand-50",
+    subText: "text-brand-900", badge: "bg-brand-600 text-white",
+    filterActive: "border-brand-300 bg-brand-50 text-brand-700", count: "text-brand-600",
+    check: "accent-brand-600", btn: "bg-brand-600 hover:bg-brand-700",
+    sortActive: "bg-brand-600 text-white border-brand-600",
+    rowHover: "hover:bg-brand-50/40", bar: "bg-brand-500",
+  },
+};
+
+// Pill brand berwarna: IM3 kuning, 3ID magenta, HYBRID teal.
+function brandPill(b) {
+  const map = {
+    IM3: "bg-warning-100 text-warning-800 border-warning-300",
+    "3ID": "bg-brand-50 text-brand-700 border-brand-200",
+    HYBRID: "bg-success-50 text-success-700 border-success-300",
+  };
+  const cls = map[b] || "bg-ink-100 text-ink-600 border-ink-200";
+  return (
+    <span className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-bold border ${cls}`}>
+      {b || "-"}
+    </span>
+  );
+}
+
+export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL, dataDates, month }) {
   const kpi = useKpi();
 
   const initialFilters = { BRAND: [], REGION: [], BRANCH: [], MC: [], TL: [], DSF: [] };
@@ -73,7 +135,23 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
   const [filters, setFilters] = useState(initialFilters);
   const [draftFilters, setDraftFilters] = useState(initialFilters);
   const [openFilter, setOpenFilter] = useState(null);
+  const [manpower, setManpower] = useState({});
   const tableRef = useRef(null);
+
+  // Tema aksen aktif berdasarkan filter brand tunggal (IM3=kuning, 3ID=magenta,
+  // HYBRID / tanpa filter / campuran = teal).
+  const TH = (() => {
+    const sel = filters.BRAND;
+    if (sel.length === 1) {
+      if (sel[0] === "IM3") return THEMES.yellow;
+      if (sel[0] === "3ID") return THEMES.magenta;
+    }
+    return THEMES.teal;
+  })();
+
+  useEffect(() => {
+    fetchManpower(month).then((m) => setManpower(m.byCode || {}));
+  }, [month]);
 
   // Subtotal valid untuk level aktif; kalau tidak, jatuh ke default level itu.
   const effGroupBy = (GROUP_OPTIONS[rankType] || ["none"]).includes(groupBy)
@@ -89,7 +167,7 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
       if (filters.MC.length && !filters.MC.includes(row.mc)) return false;
       if (filters.TL.length && !filters.TL.includes(row.namaTl)) return false;
       if (filters.DSF.length && !filters.DSF.includes(row.namaDsf)) return false;
-      if (filters.BRAND.length && !filters.BRAND.includes(row.brand)) return false;
+      if (filters.BRAND.length && !filters.BRAND.includes(normalizeBrand(row.brand))) return false;
       return true;
     });
   }, [dsfData, filters]);
@@ -98,7 +176,7 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
     const set = new Set();
     dsfData.forEach((row) => {
       switch (level) {
-        case "BRAND": set.add("IM3"); set.add("3ID"); break;
+        case "BRAND": set.add(normalizeBrand(row.brand)); break;
         case "REGION": set.add(normalizeRegion(row.region)); break;
         case "BRANCH": set.add(row.branch); break;
         case "MC": set.add(row.mc); break;
@@ -137,14 +215,16 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
       if (!grouped[key]) {
         grouped[key] = {
           id: key, name, branch: branch || row.branch || "-",
+          brand: normalizeBrand(row.brand),
           region: normalizeRegion(row.region), mc: row.mc || "-", tlName: row.namaTl || "-",
-          totalFWA: 0, targetFWA: 0, rebuyRevenue: 0, hajjRevenue: 0,
+          totalFWA: 0, targetFWA: 0, revFwa: 0, rebuyRevenue: 0, hajjRevenue: 0,
           totalIncentive: 0, dsfSet: new Set(), dsfIncentiveMap: new Map(),
         };
       }
 
       grouped[key].targetFWA += Number(row.targetFwa || row.TARGET_FWA || targetFwaPerDsf);
       grouped[key].totalFWA += Number(row.fwaUnits) || 0;
+      grouped[key].revFwa += Number(row.revFwa) || 0;
       grouped[key].rebuyRevenue += Number(row.rebuyRevenue) || 0;
       grouped[key].hajjRevenue =
         (grouped[key].hajjRevenue || 0) + (kpi.include_hajj ? Number(row.revHajj) || 0 : 0);
@@ -160,12 +240,14 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
 
     let result = Object.values(grouped).map((item) => {
       const dsfCount = item.dsfSet.size;
-      const totalRevenue = item.totalFWA * fwaPrice + item.rebuyRevenue + (item.hajjRevenue || 0);
+      const fwaRevenue = item.revFwa > 0 ? item.revFwa : item.totalFWA * fwaPrice;
+      const totalRevenue = fwaRevenue + item.rebuyRevenue + (item.hajjRevenue || 0);
       const targetRevenue = rankType === "DSF" ? baseRevenueTarget : baseRevenueTarget * dsfCount;
       const targetFWA = item.targetFWA;
       const achievement = targetRevenue ? (totalRevenue / targetRevenue) * 100 : 0;
       const fwaPercent = targetFWA ? (item.totalFWA / targetFWA) * 100 : 0;
-      return { ...item, dsfCount, totalRevenue, targetRevenue, targetFWA, achievement, fwaPercent };
+      const mp = rankType === "REGION" ? Number(manpower[item.id]) || 0 : 0;
+      return { ...item, dsfCount, totalRevenue, targetRevenue, targetFWA, achievement, fwaPercent, manpower: mp };
     });
 
     const cmp = (a, b) => {
@@ -181,14 +263,14 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
     };
     result.sort(cmp);
     return result.map((item, index) => ({ ...item, rank: index + 1 }));
-  }, [filteredData, rankType, sortBy, kpi]);
+  }, [filteredData, rankType, sortBy, kpi, manpower]);
 
   /* ===== Ringkasan (mengikuti filter aktif) ===== */
   const summary = useMemo(() => {
     const s = {
       count: rankedData.length, dsfCount: 0,
       totalFWA: 0, targetFWA: 0, rebuyRevenue: 0, hajjRevenue: 0,
-      totalRevenue: 0, targetRevenue: 0, totalIncentive: 0,
+      totalRevenue: 0, targetRevenue: 0, totalIncentive: 0, manpower: 0,
     };
     rankedData.forEach((i) => {
       s.dsfCount += i.dsfCount;
@@ -196,11 +278,24 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
       s.rebuyRevenue += i.rebuyRevenue; s.hajjRevenue += i.hajjRevenue || 0;
       s.totalRevenue += i.totalRevenue; s.targetRevenue += i.targetRevenue;
       s.totalIncentive += i.totalIncentive;
+      s.manpower += i.manpower || 0;
     });
     s.achievement = s.targetRevenue ? (s.totalRevenue / s.targetRevenue) * 100 : 0;
     s.fwaPercent = s.targetFWA ? (s.totalFWA / s.targetFWA) * 100 : 0;
     return s;
   }, [rankedData]);
+
+  // Jumlah DSF (individu) yang berhak insentif — mengikuti filter aktif.
+  const eligibleDsfCount = useMemo(() => {
+    const seen = new Set();
+    let n = 0;
+    for (const row of filteredData) {
+      if (seen.has(row.idDsf)) continue;
+      seen.add(row.idDsf);
+      if (hitungInsentif(row, kpi).incentive > 0) n++;
+    }
+    return n;
+  }, [filteredData, kpi]);
 
   /* ===== Subtotal per grup ===== */
   const groups = useMemo(() => {
@@ -267,19 +362,20 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
   /* ================= COLUMN CONFIG =================
      hide-class menentukan prioritas mobile. Header/body/subtotal/total
      semua memetakan array yang sama -> selalu selaras. */
-  const COLS = rankType === "DSF"
+  let COLS = rankType === "DSF"
     ? [
         { key: "rank", label: "#", align: "left", hide: "", cell: (i) => <span className="font-bold text-ink-900">{i.rank}</span>, total: () => "" },
         { key: "id", label: "ID DSF", align: "left", hide: "hidden lg:table-cell", cell: (i) => <span className="font-mono text-[11px] text-ink-500">{i.id}</span>, total: () => "" },
         { key: "name", label: "Nama DSF", align: "left", hide: "", isName: true, cell: (i) => <span className="font-semibold text-ink-800">{i.name}</span> },
+        { key: "brand", label: "Brand", align: "left", hide: "hidden sm:table-cell", cell: (i) => brandPill(i.brand), total: () => "" },
         { key: "branch", label: "Branch", align: "left", hide: "hidden md:table-cell", cell: (i) => <span className="text-ink-600">{i.branch}</span>, total: () => "" },
         { key: "targetFWA", label: "Tgt FWA", align: "right", hide: "hidden lg:table-cell", cell: (i) => i.targetFWA, total: (t) => t.targetFWA },
         { key: "totalFWA", label: "FWA", align: "right", hide: "", cell: (i) => <span className="font-semibold">{i.totalFWA}</span>, total: (t) => <span className="font-bold">{t.totalFWA}</span> },
         { key: "fwaPercent", label: "% FWA", align: "right", hide: "hidden md:table-cell", cell: (i) => <span className={`font-bold ${fwaPercentColor(i.fwaPercent)}`}>{i.fwaPercent.toFixed(0)}%</span>, total: (t) => <span className={`font-bold ${fwaPercentColor(t.fwaPercent)}`}>{t.fwaPercent.toFixed(0)}%</span> },
         { key: "rebuy", label: "Rebuy FWA", align: "right", hide: "hidden lg:table-cell", cell: (i) => rp(i.rebuyRevenue), total: (t) => rp(t.rebuyRevenue) },
         { key: "hajj", label: "Rebuy Haji", align: "right", hide: "hidden xl:table-cell", cell: (i) => rp(i.hajjRevenue || 0), total: (t) => rp(t.hajjRevenue || 0) },
-        { key: "revenue", label: "Revenue", align: "right", hide: "", cell: (i) => <span className="font-bold text-ink-900">{rp(i.totalRevenue)}</span>, total: (t) => <span className="font-bold text-ink-900">{rp(t.totalRevenue)}</span> },
         { key: "targetRev", label: "Target", align: "right", hide: "hidden lg:table-cell", cell: (i) => rp(i.targetRevenue), total: (t) => rp(t.targetRevenue) },
+        { key: "revenue", label: "Revenue", align: "right", hide: "", cell: (i) => <span className="font-bold text-ink-900">{rp(i.totalRevenue)}</span>, total: (t) => <span className="font-bold">{rp(t.totalRevenue)}</span> },
         { key: "achievement", label: "% Rev", align: "right", hide: "hidden sm:table-cell", cell: (i) => <span className={`font-bold ${achievementColor(i.achievement)}`}>{i.achievement.toFixed(0)}%</span>, total: (t) => <span className={`font-bold ${achievementColor(t.achievement)}`}>{t.achievement.toFixed(0)}%</span> },
         { key: "incentive", label: "Insentif", align: "right", hide: "", cell: (i) => <span className={`font-bold ${incentiveCellClass(i.totalIncentive)}`}>{rp(i.totalIncentive)}</span>, total: (t) => <span className={`font-bold ${incentiveCellClass(t.totalIncentive)}`}>{rp(t.totalIncentive)}</span> },
       ]
@@ -296,6 +392,19 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
         { key: "achievement", label: "% Rev", align: "right", hide: "hidden sm:table-cell", cell: (i) => <span className={`font-bold ${achievementColor(i.achievement)}`}>{i.achievement.toFixed(0)}%</span>, total: (t) => <span className={`font-bold ${achievementColor(t.achievement)}`}>{t.achievement.toFixed(0)}%</span> },
       ];
 
+  // Rebuy Haji hanya tampil bila bulan ini mengaktifkan Hajj (kpi.include_hajj),
+  // diatur admin per bulan — tidak hardcode. Mis. hanya April & Mei 2026.
+  if (!kpi.include_hajj) COLS = COLS.filter((c) => c.key !== "hajj");
+
+  // Kolom khusus level REGION: Manpower (headcount) + produktivitas.
+  if (rankType === "REGION") {
+    COLS.push(
+      { key: "manpower", label: "Manpower", align: "right", hide: "", cell: (i) => i.manpower || "-", total: (t) => <span className="font-bold">{t.manpower}</span> },
+      { key: "prodFwa", label: "FWA/MP", align: "right", hide: "hidden sm:table-cell", cell: (i) => (i.manpower ? (i.totalFWA / i.manpower).toFixed(1) : "-"), total: (t) => (t.manpower ? (t.totalFWA / t.manpower).toFixed(1) : "-") },
+      { key: "prodRev", label: "Rev/MP", align: "right", hide: "hidden lg:table-cell", cell: (i) => (i.manpower ? rp(Math.round(i.totalRevenue / i.manpower)) : "-"), total: (t) => (t.manpower ? rp(Math.round(t.totalRevenue / t.manpower)) : "-") },
+    );
+  }
+
   const alignCls = (a) => (a === "right" ? "text-right" : "text-left");
   const clickable = rankType === "DSF" || rankType === "TL";
 
@@ -304,13 +413,13 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
       <tr
         key={item.rank}
         onClick={() => handleRowClick(item)}
-        className={`border-t border-ink-100 transition ${clickable ? "cursor-pointer hover:bg-brand-50/40" : ""}`}
+        className={`border-t border-ink-100 transition ${clickable ? `cursor-pointer ${TH.rowHover}` : ""}`}
       >
         {COLS.map((c) => (
           <td
             key={c.key}
             className={`px-3 py-2.5 ${alignCls(c.align)} ${c.hide} ${
-              c.key === "name" ? "sticky left-0 bg-white" : ""
+              c.key === "name" ? "sticky left-0 z-10 bg-white" : ""
             }`}
           >
             {c.cell(item)}
@@ -321,19 +430,32 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
   }
 
   function renderTotalsRow(data, label, grand) {
+    const rowCls = grand
+      ? "bg-ink-900 text-white"
+      : `${TH.sub} border-y-2`;
+    const stickyBg = grand ? "bg-ink-900" : TH.subSticky;
     return (
-      <tr className={grand ? "bg-ink-900 text-white" : "bg-ink-100/80"}>
+      <tr className={rowCls}>
         {COLS.map((c) => (
           <td
             key={c.key}
-            className={`px-3 py-2.5 ${alignCls(c.align)} ${c.hide} ${
-              grand ? "font-bold" : "font-semibold"
-            } ${c.key === "name" ? `sticky left-0 ${grand ? "bg-ink-900" : "bg-ink-100"}` : ""}`}
+            className={`px-3 py-3 ${alignCls(c.align)} ${c.hide} font-extrabold ${
+              c.key === "name" ? `sticky left-0 z-10 ${stickyBg}` : ""
+            }`}
           >
             {c.isName ? (
-              <span className={grand ? "text-white" : "text-ink-900"}>{label}</span>
+              <span className="inline-flex items-center gap-2 whitespace-nowrap">
+                <span
+                  className={`text-[9px] font-extrabold uppercase tracking-wider px-1.5 py-0.5 rounded ${
+                    grand ? "bg-white text-ink-900" : TH.badge
+                  }`}
+                >
+                  {grand ? "Total" : "Subtotal"}
+                </span>
+                <span className={grand ? "text-white" : TH.subText}>{label}</span>
+              </span>
             ) : c.total ? (
-              <span className={grand ? "text-white" : ""}>{c.total(data)}</span>
+              <span className={grand ? "text-white [&_*]:text-white" : TH.subText}>{c.total(data)}</span>
             ) : (
               ""
             )}
@@ -352,10 +474,10 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
   return (
     <div className="bg-white rounded-2xl shadow-card border border-ink-200 overflow-hidden">
       {/* ===== HEADER STRIP ===== */}
-      <div className="px-4 sm:px-6 pt-5 pb-4 border-b border-ink-100 bg-gradient-to-br from-brand-50/60 to-white">
+      <div className={`px-4 sm:px-6 pt-5 pb-4 border-b border-ink-100 bg-gradient-to-br ${TH.headerGrad}`}>
         <div className="flex items-start justify-between gap-3 flex-wrap">
           <div>
-            <div className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-600">
+            <div className={`text-[11px] font-bold uppercase tracking-[0.14em] ${TH.eyebrow}`}>
               Leaderboard
             </div>
             <h2 className="text-xl sm:text-2xl font-extrabold text-ink-900 leading-tight mt-0.5">
@@ -413,12 +535,12 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
             valueLabel={`target ${rpShort(summary.targetRevenue)}`}
             badge={`${summary.achievement.toFixed(0)}%`}
             badgeClass={achievementColor(summary.achievement)}
-            accent="brand"
+            barClass={TH.bar}
           />
           <SummaryCard
             label="Total Insentif"
             value={rpShort(summary.totalIncentive)}
-            valueLabel={`Rebuy ${rpShort(summary.rebuyRevenue + summary.hajjRevenue)}`}
+            valueLabel={`${eligibleDsfCount.toLocaleString("id-ID")} DSF eligible`}
             accent="amber"
           />
         </div>
@@ -430,7 +552,7 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
         <div>
           <div className="flex items-center justify-between mb-2">
             <div className="text-xs font-bold uppercase tracking-wider text-ink-500">
-              Filter {activeFilterCount > 0 && <span className="text-brand-600">· {activeFilterCount} aktif</span>}
+              Filter {activeFilterCount > 0 && <span className={TH.count}>· {activeFilterCount} aktif</span>}
             </div>
             {activeFilterCount > 0 && (
               <button onClick={clearAllFilters} className="text-xs text-danger-600 font-semibold hover:underline">
@@ -450,7 +572,7 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
                       setOpenFilter(openFilter === level ? null : level);
                     }}
                     className={`w-full rounded-lg px-3 py-2 flex justify-between items-center text-xs sm:text-sm font-semibold transition border
-                      ${active ? "border-brand-300 bg-brand-50 text-brand-700" : "border-ink-200 bg-white text-ink-700 hover:border-ink-300"}`}
+                      ${active ? TH.filterActive : "border-ink-200 bg-white text-ink-700 hover:border-ink-300"}`}
                   >
                     <span className="truncate">
                       {toTitleCase(level)}
@@ -472,7 +594,7 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
                                 [level]: prev[level].length === options.length ? [] : options,
                               }))
                             }
-                            className="accent-brand-600"
+                            className={TH.check}
                           />
                           Pilih semua
                         </label>
@@ -489,7 +611,7 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
                                   return { ...prev, [level]: updated };
                                 })
                               }
-                              className="accent-brand-600"
+                              className={TH.check}
                             />
                             {val}
                           </label>
@@ -504,7 +626,7 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
                         </button>
                         <button
                           onClick={() => { setFilters(draftFilters); setOpenFilter(null); }}
-                          className="text-xs bg-brand-600 hover:bg-brand-700 text-white px-3 py-1.5 rounded-lg font-semibold"
+                          className={`text-xs ${TH.btn} text-white px-3 py-1.5 rounded-lg font-semibold`}
                         >
                           Terapkan
                         </button>
@@ -533,7 +655,7 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
                   key={o.key}
                   onClick={() => setSortBy(o.key)}
                   className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition
-                    ${sortBy === o.key ? "bg-brand-600 text-white border-brand-600" : "bg-white text-ink-600 border-ink-200 hover:bg-ink-50"}`}
+                    ${sortBy === o.key ? TH.sortActive : "bg-white text-ink-600 border-ink-200 hover:bg-ink-50"}`}
                 >
                   {o.label}
                 </button>
@@ -557,15 +679,15 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
       </div>
 
       {/* ===== TABLE ===== */}
-      <div ref={tableRef} className="overflow-x-auto border-t border-ink-200">
+      <div ref={tableRef} className="overflow-auto max-h-[72vh] border-t border-ink-200">
         <table className="min-w-full text-xs sm:text-sm whitespace-nowrap">
-          <thead className="bg-ink-50">
+          <thead className="bg-ink-50 sticky top-0 z-20 shadow-[0_1px_0_rgba(0,0,0,0.06)]">
             <tr>
               {COLS.map((c) => (
                 <th
                   key={c.key}
                   className={`px-3 py-2.5 font-bold text-ink-500 uppercase tracking-wider text-[10px] ${alignCls(c.align)} ${c.hide} ${
-                    c.key === "name" ? "sticky left-0 bg-ink-50" : ""
+                    c.key === "name" ? "sticky left-0 z-30 bg-ink-50" : ""
                   }`}
                 >
                   {c.label}
@@ -584,25 +706,38 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
             )}
 
             {groups
-              ? groups.map((g) => (
+              ? groups.map((g, gi) => (
                   <React.Fragment key={g.key}>
-                    <tr className="bg-brand-50/50">
-                      <td colSpan={COLS.length} className="px-3 py-1.5 sticky left-0 bg-brand-50/50">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-brand-700">
-                          {toTitleCase(effGroupBy)}: {g.key}
+                    {gi > 0 && (
+                      <tr aria-hidden="true">
+                        <td colSpan={COLS.length} className="h-2.5 bg-white p-0" />
+                      </tr>
+                    )}
+                    <tr>
+                      <td
+                        colSpan={COLS.length}
+                        className={`px-3 py-2 sticky left-0 bg-gradient-to-r ${TH.groupGrad}`}
+                      >
+                        <span className="inline-flex items-center gap-2">
+                          <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/70">
+                            {toTitleCase(effGroupBy)}
+                          </span>
+                          <span className="text-sm font-extrabold text-white">{g.key}</span>
+                          <span className="text-[11px] text-white/80 font-semibold bg-white/15 px-2 py-0.5 rounded-full">
+                            {g.items.length} {toTitleCase(rankType)}
+                          </span>
                         </span>
-                        <span className="text-[11px] text-ink-400 font-medium"> · {g.items.length} {toTitleCase(rankType)}</span>
                       </td>
                     </tr>
                     {g.items.map((item) => renderItemRow(item))}
-                    {renderTotalsRow(g, `Subtotal ${g.key}`, false)}
+                    {renderTotalsRow(g, g.key, false)}
                   </React.Fragment>
                 ))
               : rankedData.map((item) => renderItemRow(item))}
           </tbody>
 
           {rankedData.length > 0 && (
-            <tfoot>{renderTotalsRow(summary, "TOTAL", true)}</tfoot>
+            <tfoot>{renderTotalsRow(summary, "Keseluruhan", true)}</tfoot>
           )}
         </table>
       </div>
@@ -610,8 +745,8 @@ export default function RankingDashboard({ dsfData = [], onSelectDSF, onSelectTL
   );
 }
 
-function SummaryCard({ label, value, valueLabel, badge, badgeClass = "", accent = "ink" }) {
-  const accentBar = {
+function SummaryCard({ label, value, valueLabel, badge, badgeClass = "", accent = "ink", barClass }) {
+  const accentBar = barClass || {
     ink: "bg-ink-300",
     brand: "bg-brand-500",
     teal: "bg-success-500",

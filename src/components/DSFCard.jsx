@@ -1,5 +1,5 @@
 import CopyImageButton from "./CopyImageButton";
-import React, { useRef, useMemo } from "react";
+import React, { useRef, useMemo, useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
 import Pill from "./Pill";
@@ -11,6 +11,7 @@ import {
   maskMsisdn,
 } from "../utils";
 import { useKpi } from "../KpiContext";
+import { fetchFwaForDsf } from "../supabaseData";
 
 // Format nominal insentif ringkas, mis. 500000 -> "500K", 1000000 -> "1JT".
 function shortIncentive(n) {
@@ -66,9 +67,34 @@ export default function DSFCard({
   fwaData = [],
   adjData = [],
   month,
+  isAdmin = false,
 }) {
   const kpi = useKpi();
   const c = hitungInsentif(dsf, kpi);
+
+  // Ambil daftar MSISDN per-DSF dari Supabase (penuh bila admin, ter-mask bila
+  // tidak). Bila Supabase tak ada datanya, null -> fallback ke props CSV.
+  // Komponen di-key oleh (idDsf+month+admin) di App, jadi mount ulang tiap DSF
+  // dan state mulai dari null (tanpa setState sinkron di effect).
+  const [sbFwa, setSbFwa] = useState(null);
+  const [sbAdj, setSbAdj] = useState(null);
+  useEffect(() => {
+    let alive = true;
+    if (!dsf?.idDsf || !month) return;
+    Promise.all([
+      fetchFwaForDsf(month, dsf.idDsf, "fwa"),
+      fetchFwaForDsf(month, dsf.idDsf, "adj"),
+    ]).then(([f, a]) => {
+      if (!alive) return;
+      setSbFwa(f);
+      setSbAdj(a);
+    });
+    return () => { alive = false; };
+  }, [dsf?.idDsf, month]);
+
+  // Tampilan MSISDN: admin -> penuh; selain itu -> mask (idempotent, aman walau
+  // data dari view sudah ter-mask).
+  const showMsisdn = (v) => (isAdmin ? v : maskMsisdn(v));
 
   const ENABLE_TIPS = false;
   const tips = ENABLE_TIPS ? buildTips(dsf, kpi) : [];
@@ -172,8 +198,15 @@ export default function DSFCard({
 
   const [searchMsisdn, setSearchMsisdn] = React.useState("");
 
-  const parsedFwaData = useMemo(() => parseCSVData(fwaData), [fwaData]);
-  const parsedAdjData = useMemo(() => parseCSVData(adjData), [adjData]);
+  // Utamakan data Supabase (sudah role-correct); fallback ke props CSV.
+  const parsedFwaData = useMemo(
+    () => (sbFwa !== null ? sbFwa : parseCSVData(fwaData)),
+    [sbFwa, fwaData]
+  );
+  const parsedAdjData = useMemo(
+    () => (sbAdj !== null ? sbAdj : parseCSVData(adjData)),
+    [sbAdj, adjData]
+  );
 
   // RAW DATA
   const rawList = parsedFwaData.filter((row) => {
@@ -300,13 +333,15 @@ export default function DSFCard({
         />
 
         <div className="dash-right">
-          <div className="mini-card">
-            <div className="mini-label">Rebuy Haji</div>
-            <div className="mini-value">{formatIDR(dsf.revHajj || 0)}</div>
-            <div className="mini-subtext">
-              Update terakhir: {rebuyUpdateLabel}
+          {kpi.include_hajj && (
+            <div className="mini-card">
+              <div className="mini-label">Rebuy Haji</div>
+              <div className="mini-value">{formatIDR(dsf.revHajj || 0)}</div>
+              <div className="mini-subtext">
+                Update terakhir: {rebuyUpdateLabel}
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="mini-card">
             <div className="mini-label">Rebuy FWA</div>
@@ -408,7 +443,7 @@ export default function DSFCard({
                 filteredRawCounted.map((row, i) => (
                   <tr key={i} className="border-t border-ink-100 bg-brand-50">
                     <td className="p-3">{i + 1}</td>
-                    <td className="p-3 font-mono text-xs">{maskMsisdn(row.MSISDN)}</td>
+                    <td className="p-3 font-mono text-xs">{showMsisdn(row.MSISDN)}</td>
                     <td className="p-3">{formatGA(row.GA_DATE)}</td>
                     <td className="p-3">
                       {row?.DEVICE?.trim?.() || row?.DEVICE || "-"}
@@ -453,7 +488,7 @@ export default function DSFCard({
                   filteredRawInvalid.map((row, i) => (
                     <tr key={i} className="border-t border-ink-100 bg-danger-50">
                       <td className="p-3">{i + 1}</td>
-                      <td className="p-3 font-mono text-xs">{maskMsisdn(row.MSISDN)}</td>
+                      <td className="p-3 font-mono text-xs">{showMsisdn(row.MSISDN)}</td>
                       <td className="p-3">{formatGA(row.GA_DATE)}</td>
                       <td className="p-3">{row?.DEVICE?.trim?.() || row?.DEVICE || "-"}</td>
                       <td className="p-3 text-danger-700 font-semibold">{row.REMARKS}</td>
@@ -486,7 +521,7 @@ export default function DSFCard({
                   {filteredAdjValid.map((row, i) => (
                     <tr key={i} className="border-t border-ink-100 bg-success-50">
                       <td className="p-3">{i + 1}</td>
-                      <td className="p-3 font-mono text-xs">{maskMsisdn(row.MSISDN)}</td>
+                      <td className="p-3 font-mono text-xs">{showMsisdn(row.MSISDN)}</td>
                       <td className="p-3">{formatGA(row.GA_DATE)}</td>
                       <td className="p-3">
                         {row?.DEVICE?.trim?.() || row?.DEVICE || "-"}
@@ -526,7 +561,7 @@ export default function DSFCard({
                   {filteredAdjInvalid.map((row, i) => (
                     <tr key={i} className="border-t border-ink-100 bg-danger-100">
                       <td className="p-3">{i + 1}</td>
-                      <td className="p-3 font-mono text-xs">{maskMsisdn(row.MSISDN)}</td>
+                      <td className="p-3 font-mono text-xs">{showMsisdn(row.MSISDN)}</td>
                       <td className="p-3">{formatGA(row.GA_DATE)}</td>
                       <td className="p-3">{row?.DEVICE?.trim?.() || row?.DEVICE || "-"}</td>
                       <td className="p-3 text-danger-700 font-semibold">{row.REMARKS}</td>
